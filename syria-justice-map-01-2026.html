@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خريطة العدالة في سوريا | Syria Justice Map</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F4F6FB;
+  --bg-panel: #FFFFFF;
+  --bg-card: #F0F3FA;
+  --bg-hover: #E8ECF5;
+  --border: #DDE2EF;
+  --border-dark: #C8D0E5;
+  --text: #1C2140;
+  --text-2: #4A5270;
+  --text-3: #8A91AD;
+  --accent: #8B5C1A;
+  --accent-light: #C8941F;
+  --red: #C0392B;
+  --orange: #D35400;
+  --blue: #2471A3;
+  --purple: #6C3483;
+  --green: #1E7E4A;
+  --gray: #566073;
+  --pink: #943D5A;
+  --dark-red: #7B1C1C;
+  --shadow: 0 2px 12px rgba(28,33,64,0.10);
+  --shadow-lg: 0 8px 32px rgba(28,33,64,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:var(--text);height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+
+/* HEADER */
+.header{background:var(--bg-panel);border-bottom:2px solid var(--border);padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:1000;box-shadow:var(--shadow);}
+.header-brand{display:flex;align-items:center;gap:12px;}
+.header-logo{width:34px;height:34px;background:linear-gradient(135deg,var(--accent-light),var(--accent));border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:17px;box-shadow:0 2px 8px rgba(139,92,26,0.25);}
+.header-title-ar{font-size:15px;font-weight:700;color:var(--text);letter-spacing:0.01em;}
+.header-title-en{font-size:10px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;margin-top:1px;}
+.header-stats{display:flex;align-items:center;gap:6px;}
+.hstat{text-align:center;padding:4px 12px;background:var(--bg-card);border:1px solid var(--border);border-radius:7px;}
+.hstat-num{font-size:15px;font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;line-height:1;}
+.hstat-label{font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;}
+.lang-toggle{display:flex;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-right:6px;}
+.lang-btn{padding:5px 11px;font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--text-3);border:none;background:none;cursor:pointer;font-weight:500;transition:all .15s;}
+.lang-btn.active{background:var(--accent);color:#fff;font-weight:700;}
+
+/* MAIN */
+.main{display:flex;flex:1;overflow:hidden;position:relative;}
+#map{flex:1;z-index:1;}
+
+/* SIDEBAR */
+.sidebar{width:300px;background:var(--bg-panel);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0;z-index:500;box-shadow:2px 0 12px rgba(28,33,64,0.06);}
+.sidebar-tabs{display:flex;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--bg-card);}
+.tab-btn{flex:1;padding:11px 6px;font-size:11px;font-weight:500;color:var(--text-3);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;font-family:'IBM Plex Sans Arabic',sans-serif;}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg-panel);font-weight:700;}
+.tab-content{display:none;flex:1;overflow-y:auto;padding:14px;}
+.tab-content.active{display:block;}
+.tab-content::-webkit-scrollbar{width:3px;}
+.tab-content::-webkit-scrollbar-thumb{background:var(--border-dark);border-radius:2px;}
+
+/* FILTER */
+.fsec{margin-bottom:18px;}
+.flabel{font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;display:block;}
+.chips{display:flex;flex-wrap:wrap;gap:5px;}
+.chip{display:flex;align-items:center;gap:5px;padding:5px 9px;border-radius:5px;border:1px solid var(--border);background:var(--bg-card);cursor:pointer;font-size:11px;color:var(--text-2);transition:all .15s;font-family:'IBM Plex Sans Arabic',sans-serif;}
+.chip:hover{background:var(--bg-hover);border-color:var(--border-dark);}
+.chip.active{color:#fff;font-weight:600;border-color:transparent;}
+.cdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.ggrid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.gchip{padding:6px 4px;border-radius:5px;border:1px solid var(--border);background:var(--bg-card);cursor:pointer;font-size:11px;color:var(--text-2);text-align:center;transition:all .15s;font-family:'IBM Plex Sans Arabic',sans-serif;}
+.gchip:hover{background:var(--bg-hover);}
+.gchip.active{border-color:var(--accent);color:var(--accent);background:rgba(139,92,26,0.07);font-weight:600;}
+.confrow{display:flex;gap:5px;}
+.cfbtn{flex:1;padding:7px 4px;border-radius:5px;border:1px solid var(--border);background:var(--bg-card);cursor:pointer;font-size:10px;color:var(--text-2);text-align:center;transition:all .15s;font-family:'IBM Plex Sans Arabic',sans-serif;}
+.cfbtn:hover{background:var(--bg-hover);}
+.cfbtn.active{border-color:var(--accent);color:var(--accent);background:rgba(139,92,26,0.07);}
+.conf-H{color:#1E7E4A;font-weight:700;}
+.conf-M{color:#D35400;font-weight:700;}
+.conf-L{color:#C0392B;font-weight:700;}
+.rbtn{width:100%;padding:8px;background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--text-3);font-size:11px;cursor:pointer;font-family:'IBM Plex Sans Arabic',sans-serif;transition:all .2s;margin-top:4px;}
+.rbtn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* STATS */
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:14px;}
+.scard{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;}
+.scard-n{font-size:20px;font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;line-height:1;}
+.scard-l{font-size:9px;color:var(--text-3);margin-top:3px;line-height:1.4;}
+.abar{margin-bottom:9px;}
+.abar-top{display:flex;justify-content:space-between;margin-bottom:3px;}
+.abar-name{font-size:11px;color:var(--text-2);}
+.abar-count{font-size:11px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;}
+.abar-track{height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+.abar-fill{height:100%;border-radius:3px;transition:width .4s;}
+
+/* LIST */
+.sbox{width:100%;padding:8px 11px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;font-family:'IBM Plex Sans Arabic',sans-serif;outline:none;margin-bottom:10px;}
+.sbox:focus{border-color:var(--accent);}
+.sbox::placeholder{color:var(--text-3);}
+.fi{padding:9px 11px;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);margin-bottom:5px;cursor:pointer;transition:all .15s;}
+.fi:hover{border-color:var(--border-dark);background:var(--bg-hover);}
+.fi-hd{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
+.fi-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.fi-nar{font-size:12px;font-weight:500;color:var(--text);}
+.fi-nen{font-size:10px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;margin-top:1px;}
+.fi-meta{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap;}
+.fi-tag{font-size:9px;padding:2px 6px;border-radius:3px;background:var(--bg);color:var(--text-3);border:1px solid var(--border);font-family:'IBM Plex Mono',monospace;}
+#rcnt{font-size:10px;color:var(--text-3);margin-bottom:8px;font-family:'IBM Plex Mono',monospace;}
+
+/* LEGEND */
+.lrow{display:flex;align-items:center;gap:8px;padding:4px 0;}
+.ldot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.llbl{font-size:11px;color:var(--text-2);}
+
+/* POPUP */
+.leaflet-popup-content-wrapper{background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow-lg);color:var(--text);font-family:'IBM Plex Sans Arabic',sans-serif;padding:0;min-width:270px;max-width:310px;}
+.leaflet-popup-tip-container{display:none;}
+.leaflet-popup-content{margin:0;}
+.pw{padding:15px;}
+.pbadge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:4px;font-size:9px;font-weight:700;font-family:'IBM Plex Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:9px;}
+.pnar{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.3;}
+.pnen{font-size:10px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;margin-bottom:10px;}
+.pdiv{height:1px;background:var(--border);margin:10px 0;}
+.prow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px;gap:8px;}
+.prlbl{font-size:10px;color:var(--text-3);flex-shrink:0;padding-top:1px;}
+.prval{font-size:11px;color:var(--text-2);}
+.pvtags{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px;}
+.vtag{font-size:9px;padding:3px 7px;border-radius:3px;font-family:'IBM Plex Sans Arabic',sans-serif;font-weight:600;}
+.vt-torture{background:#FDEDEC;color:#C0392B;}
+.vt-disappear{background:#EAF2FB;color:#2471A3;}
+.vt-death{background:#F9EBEA;color:#922B21;}
+.vt-caesar{background:#FEF9E7;color:#8B5C1A;border:1px solid #F0C040;}
+.pcaesar{background:#FEF9E7;border:1px solid #F0C040;border-radius:6px;padding:8px 10px;margin-top:9px;display:flex;align-items:center;gap:8px;}
+.pcaesar-t{font-size:10px;color:var(--accent);}
+.pcoords{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-3);margin-top:9px;padding-top:9px;border-top:1px solid var(--border);direction:ltr;text-align:left;}
+.srctag{display:inline-flex;padding:2px 6px;border-radius:3px;border:1px solid var(--border);font-size:9px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;margin:2px;}
+
+/* LEAFLET */
+.leaflet-container{background:#E8EDF5;}
+.leaflet-tooltip{background:#fff;border:1px solid var(--border);border-radius:4px;color:var(--text);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:11px;padding:4px 8px;box-shadow:var(--shadow);}
+.leaflet-tooltip::before{display:none;}
+
+/* TOGGLE SIDEBAR */
+.stoggle{position:absolute;top:50%;right:300px;transform:translateY(-50%);z-index:600;width:22px;height:44px;background:var(--bg-panel);border:1px solid var(--border);border-right:none;border-radius:6px 0 0 6px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-3);font-size:11px;transition:color .2s;box-shadow:-2px 0 6px rgba(28,33,64,0.06);}
+.stoggle:hover{color:var(--accent);}
+
+/* MAP LEGEND BOTTOM */
+.map-legend{position:absolute;bottom:80px;left:12px;z-index:900;background:rgba(255,255,255,0.94);border:1px solid var(--border);border-radius:9px;padding:10px 13px;backdrop-filter:blur(6px);box-shadow:var(--shadow);}
+.ml-row{display:flex;align-items:center;gap:7px;padding:2px 0;font-size:10px;color:var(--text-2);}
+.ml-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.ml-diamond{width:9px;height:9px;background:#7B1C1C;border:1.5px solid #C0392B;transform:rotate(45deg);flex-shrink:0;}
+
+/* ===================== TIMELINE ===================== */
+.timeline-bar{position:absolute;bottom:0;left:0;right:0;z-index:800;background:rgba(255,255,255,0.97);border-top:2px solid var(--border);padding:10px 16px 10px;display:flex;flex-direction:column;gap:6px;box-shadow:0 -4px 16px rgba(28,33,64,0.10);}
+
+.tl-top{display:flex;align-items:center;gap:12px;}
+
+.tl-controls{display:flex;align-items:center;gap:6px;}
+.tl-play-btn{width:34px;height:34px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .15s;box-shadow:0 2px 8px rgba(139,92,26,0.25);flex-shrink:0;}
+.tl-play-btn:hover{background:var(--accent-light);}
+
+.tl-year-display{font-size:26px;font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;min-width:52px;text-align:center;line-height:1;}
+
+.tl-slider-wrap{flex:1;display:flex;flex-direction:column;gap:4px;}
+
+.tl-track-wrap{position:relative;height:20px;display:flex;align-items:center;}
+
+.tl-track{width:100%;height:5px;background:var(--border);border-radius:3px;position:relative;cursor:pointer;}
+.tl-progress{height:100%;background:linear-gradient(90deg,var(--accent-light),var(--accent));border-radius:3px;transition:width .1s;}
+.tl-thumb{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--accent);transform:translate(-50%,-50%);cursor:grab;box-shadow:0 2px 8px rgba(139,92,26,0.25);transition:box-shadow .15s;z-index:2;}
+.tl-thumb:active{cursor:grabbing;box-shadow:0 4px 14px rgba(139,92,26,0.35);}
+
+.tl-labels{display:flex;justify-content:space-between;padding:0 1px;}
+.tl-year-lbl{font-size:9px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;cursor:pointer;transition:color .15s;}
+.tl-year-lbl:hover{color:var(--accent);}
+.tl-year-lbl.current{color:var(--accent);font-weight:700;}
+
+.tl-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:180px;}
+.tl-event{font-size:10px;color:var(--text-2);background:var(--bg-card);border:1px solid var(--border);border-right:3px solid var(--accent);border-radius:4px;padding:3px 8px;max-width:180px;text-align:right;line-height:1.4;transition:all .3s;}
+.tl-count-badge{font-size:10px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;}
+
+/* MILESTONES on track */
+.tl-milestone{position:absolute;top:50%;width:8px;height:8px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid #fff;cursor:pointer;z-index:3;transition:transform .15s;}
+.tl-milestone:hover{transform:translate(-50%,-50%) scale(1.4);}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-brand">
+    <div class="header-logo">⚖</div>
+    <div>
+      <div class="header-title-ar">خريطة العدالة في سوريا</div>
+      <div class="header-title-en">Syria Justice Map · Caesar Families Association</div>
+    </div>
+  </div>
+  <div class="header-stats">
+    <div class="hstat"><div class="hstat-num" id="totalShown">97</div><div class="hstat-label" data-ar="موقع موثق" data-en="Verified Sites">موقع موثق</div></div>
+    <div class="hstat"><div class="hstat-num" style="color:#C0392B">45,342</div><div class="hstat-label" data-ar="وفاة بالتعذيب" data-en="Torture Deaths">وفاة بالتعذيب</div></div>
+    <div class="hstat"><div class="hstat-num" style="color:#2471A3">177,057</div><div class="hstat-label" data-ar="اختفاء قسري" data-en="Disappeared">اختفاء قسري</div></div>
+    <div class="hstat"><div class="hstat-num" style="color:#8B5C1A">6,821</div><div class="hstat-label" data-ar="ضحية — قيصر" data-en="Caesar Victims">ضحية — قيصر</div></div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnAr" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="main">
+  <div id="map"></div>
+
+  <!-- MAP LEGEND -->
+  <div class="map-legend">
+    <div class="ml-row"><div class="ml-dot" style="background:#C0392B"></div><span data-ar="مخابرات عسكرية" data-en="Military Intel">مخابرات عسكرية</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#D35400"></div><span data-ar="مخابرات جوية" data-en="Air Intel">مخابرات جوية</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#2471A3"></div><span data-ar="مخابرات عامة" data-en="Gen. Intel">مخابرات عامة</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#6C3483"></div><span data-ar="أمن سياسي" data-en="Pol. Security">أمن سياسي</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#1E7E4A"></div><span data-ar="سجون مدنية" data-en="Civil Prisons">سجون مدنية</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#566073"></div><span data-ar="شرطة عسكرية" data-en="Mil. Police">شرطة عسكرية</span></div>
+    <div class="ml-row"><div class="ml-dot" style="background:#943D5A"></div><span data-ar="مستشفى عسكري" data-en="Military Hospital">مستشفى عسكري</span></div>
+    <div class="ml-row"><div class="ml-diamond"></div><span data-ar="مقبرة جماعية" data-en="Mass Grave">مقبرة جماعية</span></div>
+  </div>
+
+  <!-- SIDEBAR TOGGLE -->
+  <div class="stoggle" id="stoggle" onclick="toggleSidebar()">◀</div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-tabs">
+      <button class="tab-btn active" onclick="switchTab('filters')" id="tab-filters" data-ar="فلاتر" data-en="Filters">فلاتر</button>
+      <button class="tab-btn" onclick="switchTab('stats')" id="tab-stats" data-ar="إحصاء" data-en="Stats">إحصاء</button>
+      <button class="tab-btn" onclick="switchTab('list')" id="tab-list" data-ar="قائمة" data-en="List">قائمة</button>
+      <button class="tab-btn" onclick="switchTab('legend')" id="tab-legend" data-ar="مفتاح" data-en="Legend">مفتاح</button>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="tab-content active" id="content-filters">
+      <div class="fsec">
+        <span class="flabel" data-ar="الجهاز الأمني" data-en="Security Agency">الجهاز الأمني</span>
+        <div class="chips" id="agencyFilter">
+          <div class="chip active" data-agency="MI" onclick="toggleAgency(this,'MI')" style="background:#C0392B;border-color:#C0392B;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="مخابرات عسكرية" data-en="Military Intel">مخابرات عسكرية</span></div>
+          <div class="chip active" data-agency="AFI" onclick="toggleAgency(this,'AFI')" style="background:#D35400;border-color:#D35400;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="مخابرات جوية" data-en="Air Intel">مخابرات جوية</span></div>
+          <div class="chip active" data-agency="GID" onclick="toggleAgency(this,'GID')" style="background:#2471A3;border-color:#2471A3;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="مخابرات عامة" data-en="Gen. Intel">مخابرات عامة</span></div>
+          <div class="chip active" data-agency="PSD" onclick="toggleAgency(this,'PSD')" style="background:#6C3483;border-color:#6C3483;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="أمن سياسي" data-en="Pol. Security">أمن سياسي</span></div>
+          <div class="chip active" data-agency="MoI" onclick="toggleAgency(this,'MoI')" style="background:#1E7E4A;border-color:#1E7E4A;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="سجون مدنية" data-en="Civil Prisons">سجون مدنية</span></div>
+          <div class="chip active" data-agency="MP" onclick="toggleAgency(this,'MP')" style="background:#566073;border-color:#566073;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="شرطة عسكرية" data-en="Mil. Police">شرطة عسكرية</span></div>
+          <div class="chip active" data-agency="HOSP" onclick="toggleAgency(this,'HOSP')" style="background:#943D5A;border-color:#943D5A;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="مستشفى" data-en="Hospital">مستشفى</span></div>
+          <div class="chip active" data-agency="GRAVE" onclick="toggleAgency(this,'GRAVE')" style="background:#7B1C1C;border-color:#7B1C1C;color:#fff"><span class="cdot" style="background:rgba(255,255,255,0.7)"></span><span data-ar="مقبرة جماعية" data-en="Mass Grave">مقبرة جماعية</span></div>
+        </div>
+      </div>
+      <div class="fsec">
+        <span class="flabel" data-ar="المحافظة" data-en="Governorate">المحافظة</span>
+        <div class="ggrid" id="govFilter">
+          <div class="gchip active" data-gov="all" onclick="setGov(this,'all')" data-ar="الكل" data-en="All">الكل</div>
+          <div class="gchip" data-gov="دمشق" onclick="setGov(this,'دمشق')" data-ar="دمشق" data-en="Damascus">دمشق</div>
+          <div class="gchip" data-gov="ريف دمشق" onclick="setGov(this,'ريف دمشق')" data-ar="ريف دمشق" data-en="Rif Dimashq">ريف دمشق</div>
+          <div class="gchip" data-gov="حمص" onclick="setGov(this,'حمص')" data-ar="حمص" data-en="Homs">حمص</div>
+          <div class="gchip" data-gov="حلب" onclick="setGov(this,'حلب')" data-ar="حلب" data-en="Aleppo">حلب</div>
+          <div class="gchip" data-gov="حماة" onclick="setGov(this,'حماة')" data-ar="حماة" data-en="Hama">حماة</div>
+          <div class="gchip" data-gov="درعا" onclick="setGov(this,'درعا')" data-ar="درعا" data-en="Daraa">درعا</div>
+          <div class="gchip" data-gov="إدلب" onclick="setGov(this,'إدلب')" data-ar="إدلب" data-en="Idlib">إدلب</div>
+          <div class="gchip" data-gov="اللاذقية" onclick="setGov(this,'اللاذقية')" data-ar="اللاذقية" data-en="Lattakia">اللاذقية</div>
+          <div class="gchip" data-gov="طرطوس" onclick="setGov(this,'طرطوس')" data-ar="طرطوس" data-en="Tartus">طرطوس</div>
+          <div class="gchip" data-gov="دير الزور" onclick="setGov(this,'دير الزور')" data-ar="دير الزور" data-en="Deir ez-Zor">دير الزور</div>
+          <div class="gchip" data-gov="السويداء" onclick="setGov(this,'السويداء')" data-ar="السويداء" data-en="Suwayda">السويداء</div>
+          <div class="gchip" data-gov="الحسكة" onclick="setGov(this,'الحسكة')" data-ar="الحسكة" data-en="Hasakah">الحسكة</div>
+        </div>
+      </div>
+      <div class="fsec">
+        <span class="flabel" data-ar="نوع الانتهاك" data-en="Violation Type">نوع الانتهاك</span>
+        <div class="chips" id="vFilter">
+          <div class="chip active" data-v="all" onclick="setV(this,'all')" data-ar="الكل" data-en="All">الكل</div>
+          <div class="chip" data-v="torture" onclick="setV(this,'torture')" data-ar="تعذيب" data-en="Torture">تعذيب</div>
+          <div class="chip" data-v="disappear" onclick="setV(this,'disappear')" data-ar="اختفاء قسري" data-en="Disappearance">اختفاء قسري</div>
+          <div class="chip" data-v="death" onclick="setV(this,'death')" data-ar="وفاة" data-en="Death">وفاة</div>
+          <div class="chip" data-v="caesar" onclick="setV(this,'caesar')" data-ar="ملف قيصر" data-en="Caesar">ملف قيصر</div>
+        </div>
+      </div>
+      <div class="fsec">
+        <span class="flabel" data-ar="مستوى الثقة" data-en="Confidence Level">مستوى الثقة</span>
+        <div class="confrow">
+          <div class="cfbtn active" data-c="all" onclick="setC(this,'all')" data-ar="الكل" data-en="All">الكل</div>
+          <div class="cfbtn" data-c="HIGH" onclick="setC(this,'HIGH')"><span class="conf-H">●</span> <span data-ar="عالٍ" data-en="High">عالٍ</span></div>
+          <div class="cfbtn" data-c="MEDIUM" onclick="setC(this,'MEDIUM')"><span class="conf-M">●</span> <span data-ar="متوسط" data-en="Med">متوسط</span></div>
+          <div class="cfbtn" data-c="LOW" onclick="setC(this,'LOW')"><span class="conf-L">●</span> <span data-ar="منخفض" data-en="Low">منخفض</span></div>
+        </div>
+      </div>
+      <button class="rbtn" onclick="resetFilters()" data-ar="↺ إعادة تعيين الفلاتر" data-en="↺ Reset All Filters">↺ إعادة تعيين الفلاتر</button>
+    </div>
+
+    <!-- STATS -->
+    <div class="tab-content" id="content-stats">
+
+      <!-- DYNAMIC FILTER STATS -->
+      <div style="font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px" id="statsYearLabel">السنة المعروضة: الكل</div>
+      <div class="sgrid">
+        <div class="scard"><div class="scard-n" id="statSites">—</div><div class="scard-l" data-ar="موقع مرئي حالياً" data-en="Sites currently visible">موقع مرئي حالياً</div></div>
+        <div class="scard"><div class="scard-n" id="statIIIM" style="color:#2471A3">—</div><div class="scard-l" data-ar="حالة IIIM موثقة" data-en="Documented IIIM cases">حالة IIIM موثقة</div></div>
+        <div class="scard"><div class="scard-n" id="statCaesar" style="color:#8B5C1A">—</div><div class="scard-l" data-ar="موقع مرتبط بقيصر" data-en="Caesar-linked sites">موقع مرتبط بقيصر</div></div>
+        <div class="scard"><div class="scard-n" id="statGovs" style="color:#1E7E4A">—</div><div class="scard-l" data-ar="محافظة مشمولة" data-en="Governorates covered">محافظة مشمولة</div></div>
+      </div>
+
+      <!-- VIOLATION BREAKDOWN -->
+      <div class="fsec" style="margin-top:4px">
+        <span class="flabel" data-ar="توزيع أنواع الانتهاكات" data-en="Violations Breakdown">توزيع أنواع الانتهاكات</span>
+        <div id="violationBars"></div>
+      </div>
+
+      <!-- AGENCY BARS -->
+      <div class="fsec">
+        <span class="flabel" data-ar="توزيع المواقع حسب الجهاز" data-en="Sites by Agency">توزيع المواقع حسب الجهاز</span>
+        <div id="agencyBars"></div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div style="height:1px;background:var(--border);margin:12px 0"></div>
+
+      <!-- GLOBAL REFERENCE STATS -->
+      <div style="font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px" data-ar="إحصاءات مرجعية (2011–2025)" data-en="Reference Statistics (2011–2025)">إحصاءات مرجعية (2011–2025)</div>
+      <div class="sgrid">
+        <div class="scard" style="border-right:3px solid #C0392B"><div class="scard-n" style="color:#C0392B">45,342</div><div class="scard-l" data-ar="وفاة موثقة تحت التعذيب (SNHR 2025)" data-en="Documented torture deaths (SNHR 2025)">وفاة تحت التعذيب</div></div>
+        <div class="scard" style="border-right:3px solid #2471A3"><div class="scard-n" style="color:#2471A3">177,057</div><div class="scard-l" data-ar="حالة اختفاء قسري (SNHR 2025)" data-en="Enforced disappearances (SNHR 2025)">اختفاء قسري</div></div>
+        <div class="scard" style="border-right:3px solid #8B5C1A"><div class="scard-n" style="color:#8B5C1A">6,821</div><div class="scard-l" data-ar="ضحية في صور قيصر (BKA)" data-en="Victims in Caesar photos (BKA)">ضحايا صور قيصر</div></div>
+        <div class="scard" style="border-right:3px solid #6C3483"><div class="scard-n" style="color:#6C3483">24,200</div><div class="scard-l" data-ar="محتجز أُفرج عنه ديسمبر 2024" data-en="Released Dec 2024">أُفرج عنهم 2024</div></div>
+      </div>
+
+      <div class="fsec">
+        <span class="flabel" data-ar="مصادر التوثيق" data-en="Sources">مصادر التوثيق</span>
+        <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">
+          <span class="srctag">IIIM/UN</span><span class="srctag">SNHR</span><span class="srctag">HRW</span>
+          <span class="srctag">Amnesty</span><span class="srctag">VDC</span><span class="srctag">ECCHR</span>
+          <span class="srctag">SJAC</span><span class="srctag">ADMSP</span><span class="srctag">COI/UN</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div class="tab-content" id="content-list">
+      <input type="text" class="sbox" id="sbox" placeholder="ابحث عن فرع أو موقع..." oninput="searchF(this.value)">
+      <div id="rcnt"></div>
+      <div id="flist"></div>
+    </div>
+
+    <!-- LEGEND -->
+    <div class="tab-content" id="content-legend">
+      <div class="fsec">
+        <span class="flabel" data-ar="الأجهزة الأمنية" data-en="Security Agencies">الأجهزة الأمنية</span>
+        <div class="lrow"><div class="ldot" style="background:#C0392B"></div><span class="llbl" data-ar="المخابرات العسكرية (MI)" data-en="Military Intelligence (MI)">المخابرات العسكرية (MI)</span></div>
+        <div class="lrow"><div class="ldot" style="background:#D35400"></div><span class="llbl" data-ar="المخابرات الجوية (AFI)" data-en="Air Force Intelligence (AFI)">المخابرات الجوية (AFI)</span></div>
+        <div class="lrow"><div class="ldot" style="background:#2471A3"></div><span class="llbl" data-ar="إدارة المخابرات العامة (GID)" data-en="General Intelligence (GID)">إدارة المخابرات العامة (GID)</span></div>
+        <div class="lrow"><div class="ldot" style="background:#6C3483"></div><span class="llbl" data-ar="الأمن السياسي (PSD)" data-en="Political Security (PSD)">الأمن السياسي (PSD)</span></div>
+        <div class="lrow"><div class="ldot" style="background:#1E7E4A"></div><span class="llbl" data-ar="السجون المدنية (وزارة الداخلية)" data-en="Civil Prisons (MoI)">السجون المدنية</span></div>
+        <div class="lrow"><div class="ldot" style="background:#566073"></div><span class="llbl" data-ar="الشرطة العسكرية" data-en="Military Police">الشرطة العسكرية</span></div>
+        <div class="lrow"><div class="ldot" style="background:#943D5A"></div><span class="llbl" data-ar="مستشفيات عسكرية (ملف قيصر)" data-en="Military Hospitals (Caesar)">مستشفيات عسكرية</span></div>
+        <div class="lrow"><div style="width:10px;height:10px;background:#7B1C1C;border:1.5px solid #C0392B;transform:rotate(45deg);flex-shrink:0;margin:2px"></div><span class="llbl" data-ar="مقابر جماعية موثقة" data-en="Documented Mass Graves">مقابر جماعية موثقة</span></div>
+      </div>
+      <div class="fsec">
+        <span class="flabel" data-ar="مستوى الثقة (IIIM)" data-en="Confidence Level (IIIM)">مستوى الثقة (IIIM)</span>
+        <div class="lrow"><span class="conf-H" style="font-size:14px">●</span><span class="llbl" data-ar="عالٍ — 3+ مصادر" data-en="High — 3+ source types">عالٍ — 3+ مصادر</span></div>
+        <div class="lrow"><span class="conf-M" style="font-size:14px">●</span><span class="llbl" data-ar="متوسط — مصدران" data-en="Medium — 2 sources">متوسط — مصدران</span></div>
+        <div class="lrow"><span class="conf-L" style="font-size:14px">●</span><span class="llbl" data-ar="منخفض — مصدر واحد" data-en="Low — single source">منخفض — مصدر واحد</span></div>
+      </div>
+      <div style="font-size:10px;color:var(--text-3);line-height:1.7;border-top:1px solid var(--border);padding-top:10px">
+        <strong style="color:var(--accent)">رابطة عائلات قيصر</strong><br>
+        النموذج الأولي · 2025<br>
+        البيانات: IIIM/UN · SNHR · HRW · Amnesty<br>
+        <em>بيانات مصادر مفتوحة — لأغراض التوثيق والتوعية.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE BAR -->
+  <div class="timeline-bar" id="timelineBar">
+    <div class="tl-top">
+      <div class="tl-controls">
+        <button class="tl-play-btn" id="playBtn" onclick="togglePlay()">▶</button>
+        <div class="tl-year-display" id="yearDisplay">2011</div>
+      </div>
+      <div class="tl-slider-wrap">
+        <div class="tl-track-wrap">
+          <div class="tl-track" id="tlTrack" onclick="trackClick(event)">
+            <div class="tl-progress" id="tlProgress" style="width:0%"></div>
+            <div class="tl-thumb" id="tlThumb" style="left:0%"></div>
+          </div>
+        </div>
+        <div class="tl-labels" id="tlLabels"></div>
+      </div>
+      <div class="tl-right">
+        <div class="tl-event" id="tlEvent">مارس 2011 — انطلاق المظاهرات في درعا</div>
+        <div class="tl-count-badge"><span id="tlActiveCount">0</span> <span data-ar="موقع نشط هذا العام" data-en="sites active this year">موقع نشط هذا العام</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// =============================================
+// DATA
+// =============================================
+const facilities = [
+  // DAMASCUS
+  {id:1,nameAr:"فرع 251 — الخطيب",nameEn:"GID Branch 251 (Al-Khatib)",agency:"GID",govAr:"دمشق",govEn:"Damascus",lat:33.520416,lng:36.311783,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:40,yearActive:2011,yearClosed:2024,detailAr:"أدين قائده أنور رسلان بتهم جرائم ضد الإنسانية في ألمانيا 2022 (سجن مؤبد).",detailEn:"Commander Anwar Raslan convicted for crimes against humanity in Germany 2022 (life sentence).",sources:["IIIM","HRW","ECCHR","Koblenz Court"]},
+  {id:2,nameAr:"فرع 215 — فصيلة المداهمة",nameEn:"MI Branch 215 (Raids)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.50747,lng:36.27322,conf:"HIGH",violations:["torture","disappear","death","caesar"],caesar:true,caesarImgs:13801,caesarVictims:3551,casesIIIM:67,yearActive:2011,yearClosed:2024,detailAr:"أكثر فروع المخابرات العسكرية دموية. 13,801 صورة في ملف قيصر (3,551 ضحية).",detailEn:"Most lethal MI branch. 13,801 Caesar images (3,551 victims).",sources:["IIIM","HRW","Germany BKA"]},
+  {id:3,nameAr:"فرع 227 — المنطقة",nameEn:"MI Branch 227 (Regional)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.510586,lng:36.274689,conf:"HIGH",violations:["torture","death","caesar"],caesar:true,caesarImgs:8001,caesarVictims:2049,casesIIIM:41,yearActive:2011,yearClosed:2024,detailAr:"ثاني أكبر مصدر في صور قيصر بـ 8,001 صورة و2,049 ضحية.",detailEn:"Second largest Caesar source: 8,001 images, 2,049 victims.",sources:["IIIM","HRW","Koblenz Court"]},
+  {id:4,nameAr:"فرع 235 — فلسطين",nameEn:"MI Branch 235 (Palestine Branch)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491397,lng:36.321224,conf:"HIGH",violations:["torture","disappear","death","caesar"],caesar:true,caesarImgs:482,caesarVictims:127,casesIIIM:98,yearActive:2011,yearClosed:2024,detailAr:"من أكثر الفروع رهبةً — 98 حالة موثقة لدى IIIM. طوابق تحت الأرض للتعذيب.",detailEn:"Most cited single facility in IIIM — 98 cases. Underground torture cells.",sources:["IIIM","HRW","Amnesty","VDC","ECCHR"]},
+  {id:5,nameAr:"فرع 248 — التحقيق",nameEn:"MI Branch 248 (Investigation)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.508058,lng:36.273223,conf:"HIGH",violations:["torture","death","caesar"],caesar:true,caesarImgs:206,caesarVictims:54,casesIIIM:48,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق في المخابرات العسكرية — 48 حالة موثقة.",detailEn:"MI Investigation Branch. 48 documented cases.",sources:["IIIM","HRW"]},
+  {id:6,nameAr:"فرع 285 — مقر المخابرات العامة",nameEn:"GID Branch 285 (HQ Investigation)",agency:"GID",govAr:"دمشق",govEn:"Damascus",lat:33.499805,lng:36.291313,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:38,yearActive:2011,yearClosed:2024,detailAr:"مقر إدارة المخابرات العامة وفرع التحقيق المركزي.",detailEn:"GID Headquarters and Central Investigation Branch.",sources:["IIIM","HRW"]},
+  {id:7,nameAr:"فرع 291 — المقر الرئيسي (مخابرات عسكرية)",nameEn:"MI Branch 291 (HQ Administrative)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.505453,lng:36.275056,conf:"HIGH",violations:["torture"],caesar:false,casesIIIM:34,yearActive:2011,yearClosed:2024,detailAr:"المقر الرئيسي لشعبة المخابرات العسكرية.",detailEn:"Military Intelligence Directorate Headquarters.",sources:["IIIM"]},
+  {id:8,nameAr:"الأمن السياسي — دمشق",nameEn:"Political Security Branch — Damascus",agency:"PSD",govAr:"دمشق",govEn:"Damascus",lat:33.529491,lng:36.291523,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:18,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة الأمن السياسي في دمشق.",detailEn:"Political Security Directorate branch in Damascus.",sources:["IIIM","HRW"]},
+  {id:9,nameAr:"المخابرات الجوية — المزة",nameEn:"AFI Investigation Branch — Mezzeh",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.48428,lng:36.22336,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:15,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق في مطار المزة العسكري. الجنرال جميل حسن — أمر اعتقال ألماني دولي.",detailEn:"AFI Investigation Branch at Mezzeh. General Jamil Hassan: international arrest warrant.",sources:["IIIM","HRW","ECCHR","VDC"]},
+  {id:10,nameAr:"المستشفى العسكري تشرين",nameEn:"Tishreen Military Hospital",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.565044,lng:36.332836,conf:"HIGH",violations:["death","caesar"],caesar:true,casesIIIM:3,yearActive:2011,yearClosed:2013,detailAr:"أحد مستشفيَي تسجيل جثث قيصر الرئيسيين.",detailEn:"One of two main hospitals for Caesar photo registration.",sources:["IIIM","HRW","SJAC"]},
+  {id:11,nameAr:"المستشفى العسكري 601 — المزة",nameEn:"Military Hospital 601 (Mezzeh)",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.51229,lng:36.25529,conf:"HIGH",violations:["death","caesar"],caesar:true,casesIIIM:7,yearActive:2011,yearClosed:2013,detailAr:"المستشفى الرئيسي لتسجيل الجثث في ملف قيصر. مرتبط بمحاكمة د. علاء م. (حكم مؤبد فرانكفورت 2025).",detailEn:"Main hospital for Caesar registrations. Linked to Dr. Alaa M. trial (life sentence Frankfurt 2025).",sources:["IIIM","HRW","ECCHR","Frankfurt Court"]},
+  {id:12,nameAr:"الأمن الجنائي — دمشق",nameEn:"Criminal Security — Damascus",agency:"MoI",govAr:"دمشق",govEn:"Damascus",lat:33.499362,lng:36.300753,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:19,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي التابع لوزارة الداخلية في دمشق.",detailEn:"Criminal Security branch under Ministry of Interior.",sources:["IIIM"]},
+  {id:41,nameAr:"فرع 216 — الدوريات",nameEn:"MI Branch 216 (Patrols)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491553,lng:36.319106,conf:"LOW",violations:["torture","death","caesar"],caesar:true,caesarImgs:1108,caesarVictims:292,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"فرع الدوريات. 1,108 صورة قيصر — 292 ضحية.",detailEn:"Patrols Branch. 1,108 Caesar images — 292 victims.",sources:["IIIM","OFAC","Germany BKA"]},
+  {id:42,nameAr:"فرع 220 — سعسع",nameEn:"MI Branch 220 (Sa'sa)",agency:"MI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.31061,lng:36.04622,conf:"MEDIUM",violations:["torture","death","caesar"],caesar:true,caesarImgs:210,caesarVictims:50,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"يغطي سعسع والقنيطرة. انتقل موقعه عام 2013.",detailEn:"Covers Sa'sa and Quneitra. Relocated in 2013.",sources:["IIIM","Enab Baladi"]},
+  {id:43,nameAr:"المخابرات الجوية — باب توما",nameEn:"AFI Branch — Bab Touma",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.517811,lng:36.313969,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:4,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات الجوية في دمشق القديمة.",detailEn:"AFI branch in Old Damascus.",sources:["IIIM","HRW"]},
+  {id:44,nameAr:"المخابرات الجوية — المعلومات",nameEn:"AFI Information Branch",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.523098,lng:36.321397,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع المعلومات للمخابرات الجوية في دمشق.",detailEn:"AFI Information Branch in Damascus.",sources:["IIIM","VDC"]},
+  {id:45,nameAr:"الشرطة العسكرية — القابون",nameEn:"Military Police — Al-Qaboun",agency:"MP",govAr:"دمشق",govEn:"Damascus",lat:33.553702,lng:36.331235,conf:"HIGH",violations:["torture","death"],caesar:false,casesIIIM:24,yearActive:2011,yearClosed:2024,detailAr:"المحكمة الميدانية العسكرية تُصدر أحكام إعدام في دقائق.",detailEn:"Military Field Court issuing death sentences within minutes.",sources:["IIIM","Amnesty","VDC"]},
+  {id:46,nameAr:"قسم شرطة كفرسوسة",nameEn:"Kafr Souseh Police Station",agency:"MoI",govAr:"دمشق",govEn:"Damascus",lat:33.500491,lng:36.278640,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:16,yearActive:2011,yearClosed:2024,detailAr:"مركز شرطة كفرسوسة للاحتجاز المؤقت.",detailEn:"Kafr Souseh police station — temporary detention.",sources:["IIIM"]},
+  {id:47,nameAr:"قسم شرطة ركن الدين",nameEn:"Rukn al-Din Police Station",agency:"MoI",govAr:"دمشق",govEn:"Damascus",lat:33.542119,lng:36.304402,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:27,yearActive:2011,yearClosed:2024,detailAr:"مركز شرطة ركن الدين للاحتجاز.",detailEn:"Rukn al-Din police station — detention site.",sources:["IIIM"]},
+  {id:48,nameAr:"الأمن السياسي — التحقيق",nameEn:"PSD Investigation Branch (Al-Fayhaa)",agency:"PSD",govAr:"دمشق",govEn:"Damascus",lat:33.526740,lng:36.302984,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:14,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق المركزي لإدارة الأمن السياسي.",detailEn:"PSD Central Investigation Branch.",sources:["IIIM","HRW"]},
+
+  // RIF DIMASHQ
+  {id:13,nameAr:"سجن صيدنايا العسكري",nameEn:"Saydnaya Military Prison",agency:"MP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.66562,lng:36.3289,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:80,yearActive:2011,yearClosed:2024,detailAr:"الأكثر دموية في المنظومة. 5,000–13,000 إعدام جماعياً شنقاً (منظمة العفو 2017). تحرّر ~2,000 محتجز ديسمبر 2024.",detailEn:"Most lethal facility. 5,000–13,000 mass hanged (Amnesty 2017). ~2,000 freed Dec 2024.",sources:["IIIM","Amnesty","Forensic Architecture","ADMSP"]},
+  {id:14,nameAr:"سجن عدرا المركزي",nameEn:"Adra Central Prison",agency:"MoI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.59112,lng:36.44034,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:204,yearActive:2011,yearClosed:2024,detailAr:"أكبر سجن مدني — طاقة 2,500 ويحوي أكثر من 7,000.",detailEn:"Largest civil prison — capacity 2,500 but held 7,000+.",sources:["IIIM","SNHR","Mapping MENA"]},
+  {id:15,nameAr:"المخابرات الجوية — حرستا",nameEn:"AFI Branch — Harasta",agency:"AFI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.545365,lng:36.351131,conf:"LOW",violations:["torture","death","disappear"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"فرع جنوب المنطقة. موثّقة فيه إعدامات ميدانية.",detailEn:"Southern Region branch. Extrajudicial executions documented.",sources:["IIIM","VDC"]},
+  {id:16,nameAr:"المستشفى العسكري حرستا",nameEn:"Harasta Military Hospital",agency:"HOSP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.579506,lng:36.379856,conf:"MEDIUM",violations:["death","caesar"],caesar:true,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"استُخدم لتسجيل جثث ضحايا فرع 251.",detailEn:"Used to register Branch 251 victims.",sources:["IIIM","HRW"]},
+  {id:49,nameAr:"الشرطة العسكرية — قطنا",nameEn:"Military Police — Qatana",agency:"MP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.43866,lng:36.07057,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"قسم الشرطة العسكرية في قطنا.",detailEn:"Military Police section in Qatana.",sources:["IIIM"]},
+  {id:55,nameAr:"الأمن الجنائي — حرستا",nameEn:"Criminal Security — Harasta",agency:"MoI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.550060,lng:36.360812,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:1,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي في حرستا.",detailEn:"Criminal Security branch in Harasta.",sources:["IIIM"]},
+
+  // HOMS
+  {id:17,nameAr:"فرع 261 — المخابرات العسكرية حمص",nameEn:"MI Branch 261 — Homs",agency:"MI",govAr:"حمص",govEn:"Homs",lat:34.720852,lng:36.705309,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:30,yearActive:2011,yearClosed:2024,detailAr:"من أسوأ مراكز الاحتجاز. خلايا 1×1.5م تحوي 5 محتجزين.",detailEn:"One of the worst sites. Cells 1×1.5m holding 5 detainees.",sources:["IIIM","VDC","Frankfurt Court","COI"]},
+  {id:18,nameAr:"سجن تدمر",nameEn:"Tadmur Prison (Palmyra)",agency:"MP",govAr:"حمص",govEn:"Homs",lat:34.55893,lng:38.28549,conf:"LOW",violations:["torture","death","disappear"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2015,detailAr:"مجزرة 1980: ~1,000 سجين في يوم. 17,000–25,000 قُتلوا 1980–2001. دمّره داعش 2015.",detailEn:"1980 massacre: ~1,000 killed. 17,000–25,000 killed 1980–2001. Destroyed by ISIS 2015.",sources:["IIIM","Amnesty","SHRC"]},
+  {id:19,nameAr:"السجن العسكري الثالث — البالونة",nameEn:"Third Military Prison — Al-Balouna",agency:"MP",govAr:"حمص",govEn:"Homs",lat:34.683646,lng:36.728532,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:64,yearActive:2011,yearClosed:2024,detailAr:"السجن العسكري الثالث في حمص.",detailEn:"Third Military Prison in Homs.",sources:["IIIM","ECCHR"]},
+  {id:20,nameAr:"المخابرات الجوية — حمص",nameEn:"AFI Central Region Branch — Homs",agency:"AFI",govAr:"حمص",govEn:"Homs",lat:34.750794,lng:36.714550,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:10,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي للمخابرات الجوية في حمص.",detailEn:"AFI regional branch in Homs.",sources:["IIIM","HRW"]},
+  {id:56,nameAr:"فرع المخابرات العامة 318 — حمص",nameEn:"GID Branch 318 — Homs",agency:"GID",govAr:"حمص",govEn:"Homs",lat:34.734831,lng:36.698090,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة المخابرات العامة في حمص.",detailEn:"GID branch in Homs.",sources:["IIIM","HRW"]},
+  {id:57,nameAr:"سجن حمص المركزي",nameEn:"Homs Central Prison",agency:"MoI",govAr:"حمص",govEn:"Homs",lat:34.755409,lng:36.723717,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:18,yearActive:2011,yearClosed:2024,detailAr:"أكبر سجن مدني في محافظة حمص.",detailEn:"Largest civil prison in Homs.",sources:["IIIM","SNHR"]},
+  {id:58,nameAr:"الأمن الجنائي — حمص",nameEn:"Criminal Security — Homs",agency:"MoI",govAr:"حمص",govEn:"Homs",lat:34.722,lng:36.706,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي في حمص.",detailEn:"Criminal Security branch in Homs.",sources:["IIIM","COI"]},
+  {id:60,nameAr:"فرع 221 — البادية",nameEn:"MI Branch 221 — Badia",agency:"MI",govAr:"حمص",govEn:"Homs",lat:34.55999,lng:38.27461,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:5,yearActive:2011,yearClosed:2014,detailAr:"فرع المخابرات العسكرية في منطقة البادية — تدمر.",detailEn:"MI branch in the Badia region near Palmyra.",sources:["IIIM"]},
+
+  // ALEPPO
+  {id:22,nameAr:"فرع 290 — المخابرات العسكرية حلب",nameEn:"MI Branch 290 — Aleppo",agency:"MI",govAr:"حلب",govEn:"Aleppo",lat:36.199165,lng:37.108498,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:38,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي الرئيسي للمخابرات العسكرية في حلب.",detailEn:"Main MI regional branch in Aleppo.",sources:["IIIM","HRW","SNHR","OFAC"]},
+  {id:23,nameAr:"سجن حلب المركزي",nameEn:"Aleppo Central Prison",agency:"MoI",govAr:"حلب",govEn:"Aleppo",lat:36.29587,lng:37.200627,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:18,yearActive:2011,yearClosed:2024,detailAr:"أكبر سجن في شمال سوريا — تعرّض لحصار مطوّل.",detailEn:"Largest prison in northern Syria — subject to prolonged siege.",sources:["IIIM","VDC","SNHR"]},
+  {id:24,nameAr:"المخابرات الجوية — حلب",nameEn:"AFI Northern Region Branch — Aleppo",agency:"AFI",govAr:"حلب",govEn:"Aleppo",lat:36.229216,lng:37.10687,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:9,yearActive:2011,yearClosed:2024,detailAr:"فرع المنطقة الشمالية للمخابرات الجوية.",detailEn:"AFI Northern Region branch.",sources:["IIIM","HRW"]},
+  {id:61,nameAr:"فرع المخابرات العامة 322 — حلب",nameEn:"GID Branch 322 — Aleppo",agency:"GID",govAr:"حلب",govEn:"Aleppo",lat:36.211922,lng:37.134705,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة المخابرات العامة في حلب.",detailEn:"GID branch in Aleppo.",sources:["IIIM","HRW"]},
+  {id:62,nameAr:"الأمن الجنائي — حلب",nameEn:"Criminal Security — Aleppo",agency:"MoI",govAr:"حلب",govEn:"Aleppo",lat:36.22018,lng:37.15133,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي في حلب.",detailEn:"Criminal Security branch in Aleppo.",sources:["IIIM"]},
+  {id:63,nameAr:"الشرطة العسكرية — حلب",nameEn:"Military Police — Aleppo",agency:"MP",govAr:"حلب",govEn:"Aleppo",lat:36.205146,lng:37.138803,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:16,yearActive:2011,yearClosed:2024,detailAr:"قسم الشرطة العسكرية في حلب.",detailEn:"Military Police section in Aleppo.",sources:["IIIM"]},
+  {id:64,nameAr:"ثكنات حنانو",nameEn:"Hanano Barracks",agency:"MP",govAr:"حلب",govEn:"Aleppo",lat:36.207821,lng:37.169455,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:4,yearActive:2012,yearClosed:2016,detailAr:"ثكنات حنانو — استُخدمت للاحتجاز خلال حصار حلب.",detailEn:"Hanano barracks — used for detention during Aleppo siege.",sources:["IIIM","VDC"]},
+  {id:65,nameAr:"قاعدة نيرب الجوية",nameEn:"Nairab Air Base",agency:"AFI",govAr:"حلب",govEn:"Aleppo",lat:36.182502,lng:37.215071,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2012,yearClosed:2024,detailAr:"القاعدة الجوية في حلب — استُخدمت للاحتجاز.",detailEn:"Air base in Aleppo — used for detentions.",sources:["IIIM"]},
+
+  // HAMA
+  {id:26,nameAr:"فرع 219 — المخابرات العسكرية حماة",nameEn:"MI Branch 219 — Hama",agency:"MI",govAr:"حماة",govEn:"Hama",lat:35.088199,lng:36.753954,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:24,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي للمخابرات العسكرية في حماة. وُثّق احتجاز أطفال.",detailEn:"MI regional branch in Hama. Detention of children documented.",sources:["IIIM","VDC","COI"]},
+  {id:27,nameAr:"فرع المخابرات العامة 320 — حماة",nameEn:"GID Branch 320 — Hama",agency:"GID",govAr:"حماة",govEn:"Hama",lat:35.116013,lng:36.757295,conf:"HIGH",violations:["torture"],caesar:false,casesIIIM:6,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة المخابرات العامة في حماة.",detailEn:"GID branch in Hama.",sources:["IIIM"]},
+  {id:28,nameAr:"سجن حماة المركزي",nameEn:"Hama Central Prison",agency:"MoI",govAr:"حماة",govEn:"Hama",lat:35.133783,lng:36.779031,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:6,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني المركزي في حماة — يضم محكمة مكافحة الإرهاب.",detailEn:"Central civil prison in Hama — housing Anti-Terrorism Court.",sources:["IIIM","SNHR"]},
+  {id:67,nameAr:"الشرطة العسكرية — حماة",nameEn:"Military Police — Hama",agency:"MP",govAr:"حماة",govEn:"Hama",lat:35.116066,lng:36.764430,conf:"HIGH",violations:["torture"],caesar:false,casesIIIM:12,yearActive:2011,yearClosed:2024,detailAr:"قسم الشرطة العسكرية في حماة.",detailEn:"Military Police section in Hama.",sources:["IIIM"]},
+  {id:68,nameAr:"الأمن السياسي — حماة",nameEn:"Political Security Branch — Hama",agency:"PSD",govAr:"حماة",govEn:"Hama",lat:35.174494,lng:36.759384,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن السياسي في حماة.",detailEn:"Political Security branch in Hama.",sources:["IIIM"]},
+
+  // DARAA
+  {id:29,nameAr:"فرع 265 قسم درعا",nameEn:"MI Branch 265 Section — Daraa",agency:"MI",govAr:"درعا",govEn:"Daraa",lat:32.627697,lng:36.09988,conf:"MEDIUM",violations:["torture","disappear","death"],caesar:false,casesIIIM:19,yearActive:2011,yearClosed:2024,detailAr:"قسم المخابرات العسكرية في درعا — مهد الثورة السورية.",detailEn:"MI section in Daraa — birthplace of the Syrian revolution.",sources:["IIIM","HRW","COI"]},
+  {id:70,nameAr:"فرع المخابرات العامة 315 — درعا",nameEn:"GID Branch 315 — Daraa",agency:"GID",govAr:"درعا",govEn:"Daraa",lat:32.626790,lng:36.122447,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة المخابرات العامة في درعا.",detailEn:"GID branch in Daraa.",sources:["IIIM"]},
+  {id:71,nameAr:"الأمن السياسي — درعا",nameEn:"Political Security — Daraa",agency:"PSD",govAr:"درعا",govEn:"Daraa",lat:32.630235,lng:36.108123,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"أول مراكز احتجاز متظاهري درعا مارس 2011.",detailEn:"First detention center for Daraa protesters March 2011.",sources:["IIIM","HRW","COI"]},
+  {id:72,nameAr:"سجن درعا المركزي",nameEn:"Daraa Central Prison",agency:"MoI",govAr:"درعا",govEn:"Daraa",lat:32.59565,lng:36.158272,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني في درعا.",detailEn:"Central civil prison in Daraa.",sources:["IIIM"]},
+
+  // IDLIB
+  {id:31,nameAr:"فرع 271 — المخابرات العسكرية إدلب",nameEn:"MI Branch 271 — Idlib",agency:"MI",govAr:"إدلب",govEn:"Idlib",lat:35.922901,lng:36.634163,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:13,yearActive:2011,yearClosed:2015,detailAr:"الفرع الإقليمي في إدلب. سقط بيد الفصائل عام 2015.",detailEn:"MI regional branch in Idlib. Fell to rebel factions 2015.",sources:["IIIM","HRW","SNHR"]},
+  {id:32,nameAr:"سجن إدلب المركزي",nameEn:"Idlib Central Prison",agency:"MoI",govAr:"إدلب",govEn:"Idlib",lat:35.948660,lng:36.562064,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2015,detailAr:"السجن المدني في إدلب (تحرّر 2015).",detailEn:"Civil prison in Idlib (liberated 2015).",sources:["IIIM"]},
+  {id:73,nameAr:"فرع المخابرات العامة 331 — إدلب",nameEn:"GID Branch 331 — Idlib",agency:"GID",govAr:"إدلب",govEn:"Idlib",lat:35.927,lng:36.630,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2015,detailAr:"فرع المخابرات العامة في إدلب.",detailEn:"GID branch in Idlib.",sources:["IIIM","COI"]},
+
+  // LATTAKIA
+  {id:33,nameAr:"فرع 223 — المخابرات العسكرية اللاذقية",nameEn:"MI Branch 223 — Lattakia",agency:"MI",govAr:"اللاذقية",govEn:"Lattakia",lat:35.52067,lng:35.794256,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:7,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي للمخابرات العسكرية في اللاذقية.",detailEn:"MI regional branch in Lattakia.",sources:["IIIM","HRW"]},
+  {id:75,nameAr:"فرع المخابرات العامة 325 — اللاذقية",nameEn:"GID Branch 325 — Lattakia",agency:"GID",govAr:"اللاذقية",govEn:"Lattakia",lat:35.529572,lng:35.803867,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:4,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات العامة في اللاذقية.",detailEn:"GID branch in Lattakia.",sources:["IIIM","HRW"]},
+  {id:76,nameAr:"المخابرات الجوية — اللاذقية",nameEn:"AFI Coastal Region — Lattakia",agency:"AFI",govAr:"اللاذقية",govEn:"Lattakia",lat:35.529188,lng:35.798612,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"قسم المنطقة الساحلية للمخابرات الجوية.",detailEn:"AFI Coastal Region section.",sources:["IIIM","HRW"]},
+  {id:77,nameAr:"سجن اللاذقية المركزي",nameEn:"Lattakia Central Prison",agency:"MoI",govAr:"اللاذقية",govEn:"Lattakia",lat:35.489667,lng:35.870596,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني في اللاذقية.",detailEn:"Central civil prison in Lattakia.",sources:["IIIM"]},
+
+  // TARTUS
+  {id:35,nameAr:"فرع 256 — المخابرات العسكرية طرطوس",nameEn:"MI Branch 256 — Tartus",agency:"MI",govAr:"طرطوس",govEn:"Tartus",lat:34.900165,lng:35.886750,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات العسكرية في طرطوس.",detailEn:"MI branch in Tartus.",sources:["IIIM","Syria Prisons Museum"]},
+  {id:36,nameAr:"سجن طرطوس المركزي",nameEn:"Tartus Central Prison",agency:"MoI",govAr:"طرطوس",govEn:"Tartus",lat:34.896,lng:35.883,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:6,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني المركزي في طرطوس.",detailEn:"Central civil prison in Tartus.",sources:["IIIM"]},
+
+  // DEIR EZ-ZOR / RAQQA
+  {id:37,nameAr:"فرع 243 — المخابرات العسكرية دير الزور",nameEn:"MI Branch 243 — Deir ez-Zor",agency:"MI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345233,lng:40.129953,conf:"MEDIUM",violations:["torture","disappear","death"],caesar:false,casesIIIM:12,yearActive:2011,yearClosed:2014,detailAr:"سقط بيد داعش 2014، استُعيد 2017.",detailEn:"Fell to ISIS 2014, recovered 2017.",sources:["IIIM","HRW"]},
+  {id:38,nameAr:"المخابرات الجوية — دير الزور",nameEn:"AFI Eastern Region — Deir ez-Zor",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345264,lng:40.128354,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2014,detailAr:"فرع المنطقة الشرقية للمخابرات الجوية.",detailEn:"AFI Eastern Region branch.",sources:["IIIM"]},
+  {id:81,nameAr:"فرع المخابرات العامة 327 — دير الزور",nameEn:"GID Branch 327 — Deir ez-Zor",agency:"GID",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.335332,lng:40.121097,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"فرع المخابرات العامة في دير الزور.",detailEn:"GID branch in Deir ez-Zor.",sources:["IIIM"]},
+  {id:82,nameAr:"الأمن السياسي — دير الزور",nameEn:"Political Security — Deir ez-Zor",agency:"PSD",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.339837,lng:40.153720,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"فرع الأمن السياسي في دير الزور.",detailEn:"Political Security branch in Deir ez-Zor.",sources:["IIIM"]},
+  {id:86,nameAr:"قاعدة دير الزور الجوية",nameEn:"Deir ez-Zor Air Base",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.285278,lng:40.176111,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"القاعدة الجوية في دير الزور.",detailEn:"Air base in Deir ez-Zor.",sources:["IIIM","HRW"]},
+  {id:87,nameAr:"فرع المخابرات العامة 335 — الرقة",nameEn:"GID Branch 335 — Raqqa",agency:"GID",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.959833,lng:38.992117,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"فرع المخابرات العامة في الرقة (سقط 2013).",detailEn:"GID branch in Raqqa (fell 2013).",sources:["IIIM"]},
+  {id:90,nameAr:"سجن الرقة المركزي",nameEn:"Raqqa Central Prison",agency:"MoI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:36.016580,lng:39.076705,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"السجن المدني في الرقة (سقط 2013).",detailEn:"Civil prison in Raqqa (fell 2013).",sources:["IIIM"]},
+
+  // SUWAYDA
+  {id:39,nameAr:"فرع 265 — المخابرات العسكرية السويداء",nameEn:"MI Branch 265 — Suwayda",agency:"MI",govAr:"السويداء",govEn:"Suwayda",lat:32.709818,lng:36.572734,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي في السويداء.",detailEn:"MI regional branch in Suwayda.",sources:["IIIM"]},
+  {id:40,nameAr:"سجن السويداء المركزي",nameEn:"Suwayda Central Prison",agency:"MoI",govAr:"السويداء",govEn:"Suwayda",lat:32.732727,lng:36.561328,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني في السويداء.",detailEn:"Central civil prison in Suwayda.",sources:["IIIM"]},
+
+  // HASAKAH
+  {id:91,nameAr:"فرع 222 — المخابرات العسكرية القامشلي",nameEn:"MI Branch 222 — Qamishli",agency:"MI",govAr:"الحسكة",govEn:"Hasakah",lat:37.050,lng:41.228,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:1,yearActive:2011,yearClosed:2014,detailAr:"فرع المخابرات العسكرية في القامشلي.",detailEn:"MI Branch 222 in Qamishli.",sources:["IIIM","Syria Prisons Museum"]},
+  {id:92,nameAr:"سجن الحسكة المركزي (غويران)",nameEn:"Hasakah Central Prison (Ghweran)",agency:"MoI",govAr:"الحسكة",govEn:"Hasakah",lat:36.486746,lng:40.744922,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"السجن المدني في الحسكة.",detailEn:"Central civil prison in Hasakah.",sources:["IIIM"]},
+
+  // MASS GRAVES
+  {id:50,nameAr:"مقبرة القطيفة الجماعية",nameEn:"Al-Qutayfah Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.7380,lng:36.6080,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2024,detailAr:"أكبر مقبرة جماعية موثقة — تقدير متحفظ 100,000 جثة. نُقلت في 'عملية نقل التراب' 2019–2021.",detailEn:"Largest documented mass grave — conservative estimate 100,000+ bodies. Relocated in 'Operation Move Earth' 2019–2021.",sources:["SETF","Reuters","ADMSP","HRW"]},
+  {id:51,nameAr:"مقبرة نجها الجماعية",nameEn:"Najha Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.3780,lng:36.4020,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2024,detailAr:"مقبرة جنوب دمشق — عشرات الآلاف من الجثث في خنادق تزيد على 90م.",detailEn:"Mass grave south of Damascus — tens of thousands in 90m+ trenches.",sources:["AP","Stephen Rapp","ADMSP"]},
+  {id:52,nameAr:"مقبرة تضامن الجماعية",nameEn:"Tadamon Mass Grave",agency:"GRAVE",govAr:"دمشق",govEn:"Damascus",lat:33.4850,lng:36.3100,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2013,detailAr:"مذبحة 16 أبريل 2013 — 288 ضحية موثقة بينهم 7 نساء و12 طفلاً.",detailEn:"April 16, 2013 massacre — 288 documented victims including 7 women and 12 children.",sources:["HRW","Ugur Umit Ungor"]},
+  {id:53,nameAr:"مقبرة الضمير الجماعية",nameEn:"Dhumair Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.6890,lng:36.8580,conf:"MEDIUM",violations:["death"],caesar:false,casesIIIM:0,yearActive:2019,yearClosed:2024,detailAr:"موقع إعادة دفن الجثث المنقولة من القطيفة (2019–2021).",detailEn:"Reburial site for bodies from al-Qutayfah (2019–2021).",sources:["Reuters"]}
+];
+
+// TIMELINE EVENTS
+const tlEvents = {
+  2011:{ar:"مارس 2011 — بدء الاعتقالات الجماعية في درعا ودمشق",en:"March 2011 — Mass arrests begin in Daraa and Damascus"},
+  2012:{ar:"2012 — توسع الاعتقالات إلى حمص وحماة وحلب",en:"2012 — Detentions expand to Homs, Hama and Aleppo"},
+  2013:{ar:"2013 — ذروة الاعتقالات وانشقاق قيصر في أغسطس",en:"2013 — Peak detentions; Caesar defects in August"},
+  2014:{ar:"2014 — داعش يسقط فروع الرقة ودير الزور",en:"2014 — ISIS overruns Raqqa and Deir ez-Zor branches"},
+  2015:{ar:"2015 — داعش يدمر سجن تدمر. سقوط إدلب",en:"2015 — ISIS destroys Tadmur Prison. Idlib falls"},
+  2016:{ar:"2016 — سقوط حلب. 30,000+ معتقل في صيدنايا",en:"2016 — Aleppo falls. 30,000+ detained at Saydnaya"},
+  2017:{ar:"2017 — استعادة دير الزور. تقرير منظمة العفو عن صيدنايا",en:"2017 — Deir ez-Zor recovered. Amnesty Saydnaya report"},
+  2018:{ar:"2018 — بدء إصدار شهادات وفاة دون إعادة الجثث",en:"2018 — Death notices issued without returning bodies"},
+  2019:{ar:"2019 — 'عملية نقل التراب': نقل جثث القطيفة سراً",en:"2019 — 'Operation Move Earth': Qutayfah bodies secretly relocated"},
+  2020:{ar:"2020 — الاحتجاز مستمر رغم كوفيد-19",en:"2020 — Detention continues despite COVID-19 outbreak"},
+  2021:{ar:"2021 — اكتمال نقل الجثث إلى الضمير",en:"2021 — Body relocation to Dhumair complete"},
+  2022:{ar:"2022 — محاكمة رسلان: إدانة أول جريمة دولة سورية",en:"2022 — Raslan trial: first Syrian state crime conviction"},
+  2023:{ar:"2023 — انتفاضة السويداء. اعتقالات مستمرة",en:"2023 — Suwayda uprising. Continued detentions"},
+  2024:{ar:"ديسمبر 2024 — سقوط النظام. تحرير ~24,000 محتجز",en:"December 2024 — Regime falls. ~24,000 detainees freed"}
+};
+
+// COLORS
+const AC={MI:'#C0392B',AFI:'#D35400',GID:'#2471A3',PSD:'#6C3483',MoI:'#1E7E4A',MP:'#566073',HOSP:'#943D5A',GRAVE:'#7B1C1C'};
+const ANar={MI:'مخابرات عسكرية',AFI:'مخابرات جوية',GID:'مخابرات عامة',PSD:'أمن سياسي',MoI:'سجون مدنية',MP:'شرطة عسكرية',HOSP:'مستشفى عسكري',GRAVE:'مقبرة جماعية'};
+const ANen={MI:'Military Intelligence',AFI:'Air Force Intel',GID:'General Intelligence',PSD:'Political Security',MoI:'Civil Prisons',MP:'Military Police',HOSP:'Military Hospital',GRAVE:'Mass Grave'};
+
+// MAP
+const map = L.map('map',{center:[34.8,38.9],zoom:6,zoomControl:false,attributionControl:false});
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(map);
+L.control.attribution({prefix:false,position:'bottomleft'}).addAttribution('<span style="font-size:9px;color:#aaa">© CartoDB · IIIM/UN Data</span>').addTo(map);
+
+// STATE
+let currentLang='ar';
+let activeAgencies=new Set(['MI','AFI','GID','PSD','MoI','MP','HOSP','GRAVE']);
+let activeGov='all',activeV='all',activeC='all';
+let currentYear=2011;
+let timelineActive=true;
+let playing=false;
+let playInterval=null;
+
+const markerLayer=L.layerGroup().addTo(map);
+let markersMap={};
+
+// RENDER
+function renderMarkers(){
+  markerLayer.clearLayers();
+  markersMap={};
+  let count=0;
+  facilities.forEach(f=>{
+    const visible=
+      activeAgencies.has(f.agency)&&
+      (activeGov==='all'||f.govAr===activeGov)&&
+      (activeV==='all'||f.violations.includes(activeV))&&
+      (activeC==='all'||f.conf===activeC)&&
+      (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear));
+    if(!visible)return;
+    const color=AC[f.agency];
+    let marker;
+    if(f.agency==='GRAVE'){
+      const icon=L.divIcon({className:'',html:`<div style="width:14px;height:14px;background:${color};border:2px solid #C0392B;transform:rotate(45deg);border-radius:2px;box-shadow:0 2px 8px rgba(192,57,43,0.35)"></div>`,iconSize:[14,14],iconAnchor:[7,7]});
+      marker=L.marker([f.lat,f.lng],{icon});
+    } else {
+      const sz=f.conf==='HIGH'?15:f.conf==='MEDIUM'?12:10;
+      const op=f.conf==='HIGH'?0.9:f.conf==='MEDIUM'?0.75:0.6;
+      const ring=f.caesar?`box-shadow:0 0 0 2.5px ${color},0 0 0 4.5px rgba(200,169,110,0.35);`:`box-shadow:0 1px 5px rgba(0,0,0,0.25);`;
+      const icon=L.divIcon({className:'',html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:${color};border:2px solid rgba(255,255,255,0.7);${ring}opacity:${op};cursor:pointer;transition:transform .15s;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'"></div>`,iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
+      marker=L.marker([f.lat,f.lng],{icon});
+    }
+    marker.bindTooltip(currentLang==='ar'?f.nameAr:f.nameEn,{permanent:false,direction:'top'});
+    marker.bindPopup(()=>buildPopup(f),{maxWidth:310,className:''});
+    markerLayer.addLayer(marker);
+    markersMap[f.id]=marker;
+    count++;
+  });
+  updateStats();
+  renderList();
+}
+
+function buildPopup(f){
+  const L2=currentLang;
+  const name=L2==='ar'?f.nameAr:f.nameEn;
+  const detail=L2==='ar'?f.detailAr:f.detailEn;
+  const ag=L2==='ar'?ANar[f.agency]:ANen[f.agency];
+  const gov=L2==='ar'?f.govAr:f.govEn;
+  const c=f.conf;
+  const cc={'HIGH':'conf-H','MEDIUM':'conf-M','LOW':'conf-L'};
+  const vArMap={torture:'تعذيب',disappear:'اختفاء قسري',death:'وفاة',caesar:'ملف قيصر'};
+  const vEnMap={torture:'Torture',disappear:'Disappearance',death:'Death',caesar:'Caesar Files'};
+  const vCls={torture:'vt-torture',disappear:'vt-disappear',death:'vt-death',caesar:'vt-caesar'};
+  const vtags=f.violations.map(v=>`<span class="vtag ${vCls[v]}">${L2==='ar'?vArMap[v]:vEnMap[v]}</span>`).join('');
+  const cblock=f.caesar&&f.caesarImgs?`<div class="pcaesar"><span style="font-size:15px">📁</span><div class="pcaesar-t"><strong>${L2==='ar'?'ملف قيصر:':'Caesar:'}</strong> ${f.caesarImgs?.toLocaleString()} ${L2==='ar'?'صورة':'imgs'} · ${f.caesarVictims?.toLocaleString()} ${L2==='ar'?'ضحية':'victims'}</div></div>`:'';
+  const yr=`${f.yearActive}–${f.yearClosed===2024?L2==='ar'?'2024 (سقط النظام)':'2024 (regime fall)':f.yearClosed}`;
+  return `<div class="pw" dir="${L2==='ar'?'rtl':'ltr'}">
+    <div class="pbadge" style="background:${AC[f.agency]}22;color:${AC[f.agency]}">● ${ag}</div>
+    <div class="pnar">${name}</div>
+    <div class="pnen">${L2==='ar'?f.nameEn:f.nameAr}</div>
+    <div class="pdiv"></div>
+    <div class="prow"><span class="prlbl">${L2==='ar'?'المحافظة':'Gov.'}</span><span class="prval">${gov}</span></div>
+    <div class="prow"><span class="prlbl">${L2==='ar'?'الفترة النشطة':'Active period'}</span><span class="prval" style="font-family:'IBM Plex Mono',monospace">${yr}</span></div>
+    ${f.casesIIIM>0?`<div class="prow"><span class="prlbl">${L2==='ar'?'حالات IIIM':'IIIM cases'}</span><span class="prval" style="font-weight:700;color:var(--accent)">${f.casesIIIM}</span></div>`:''}
+    <div class="prow"><span class="prlbl">${L2==='ar'?'الثقة':'Conf.'}</span><span class="prval ${cc[c]}">${c}</span></div>
+    <div style="font-size:10px;color:var(--text-2);line-height:1.6;margin-top:7px">${detail}</div>
+    <div class="pvtags">${vtags}</div>
+    ${cblock}
+    <div class="pcoords">📍 ${f.lat.toFixed(5)}, ${f.lng.toFixed(5)}<br><span style="opacity:.6">${f.sources.join(' · ')}</span></div>
+  </div>`;
+}
+
+// FILTERS
+function toggleAgency(el,ag){
+  if(activeAgencies.has(ag)){
+    if(activeAgencies.size<2)return;
+    activeAgencies.delete(ag);
+    el.classList.remove('active');
+    el.style.cssText='';
+  } else {
+    activeAgencies.add(ag);
+    el.classList.add('active');
+    el.style.background=AC[ag];el.style.borderColor=AC[ag];el.style.color='#fff';
+  }
+  renderMarkers();
+}
+function setGov(el,g){document.querySelectorAll('.gchip').forEach(c=>c.classList.remove('active'));el.classList.add('active');activeGov=g;renderMarkers();}
+function setV(el,v){document.querySelectorAll('#vFilter .chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');activeV=v;renderMarkers();}
+function setC(el,c){document.querySelectorAll('.cfbtn').forEach(b=>b.classList.remove('active'));el.classList.add('active');activeC=c;renderMarkers();}
+function resetFilters(){
+  activeAgencies=new Set(['MI','AFI','GID','PSD','MoI','MP','HOSP','GRAVE']);
+  activeGov='all';activeV='all';activeC='all';
+  document.querySelectorAll('#agencyFilter .chip').forEach(el=>{
+    const ag=el.dataset.agency;
+    el.classList.add('active');
+    el.style.background=AC[ag];el.style.borderColor=AC[ag];el.style.color='#fff';
+  });
+  document.querySelectorAll('.gchip').forEach(c=>c.classList.remove('active'));
+  document.querySelector('.gchip[data-gov="all"]').classList.add('active');
+  document.querySelectorAll('#vFilter .chip').forEach(c=>c.classList.remove('active'));
+  document.querySelector('#vFilter .chip[data-v="all"]').classList.add('active');
+  document.querySelectorAll('.cfbtn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.cfbtn[data-c="all"]').classList.add('active');
+  renderMarkers();
+}
+
+// STATS — fully dynamic
+function updateStats(){
+  const L2=currentLang;
+
+  // Get currently visible facilities (same filter logic as renderMarkers)
+  const visible=facilities.filter(f=>
+    activeAgencies.has(f.agency)&&
+    (activeGov==='all'||f.govAr===activeGov)&&
+    (activeV==='all'||f.violations.includes(activeV))&&
+    (activeC==='all'||f.conf===activeC)&&
+    (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear))
+  );
+
+  const count=visible.length;
+  const totalIIIM=visible.reduce((s,f)=>s+f.casesIIIM,0);
+  const caesarCount=visible.filter(f=>f.caesar).length;
+  const govSet=new Set(visible.map(f=>f.govAr));
+  govSet.delete(undefined);
+  const govCount=govSet.size;
+
+  // Update header count
+  document.getElementById('statSites').textContent=count;
+  document.getElementById('totalShown').textContent=count;
+  document.getElementById('tlActiveCount').textContent=count;
+
+  // Update dynamic stat cards
+  const el_iiim=document.getElementById('statIIIM');
+  const el_caesar=document.getElementById('statCaesar');
+  const el_govs=document.getElementById('statGovs');
+  if(el_iiim) el_iiim.textContent=totalIIIM.toLocaleString();
+  if(el_caesar) el_caesar.textContent=caesarCount;
+  if(el_govs) el_govs.textContent=govCount;
+
+  // Year label
+  const ylbl=document.getElementById('statsYearLabel');
+  if(ylbl){
+    ylbl.textContent=timelineActive?
+      (L2==='ar'?`السنة المعروضة: ${currentYear}`:`Year shown: ${currentYear}`):
+      (L2==='ar'?'الكل (بدون فلتر زمني)':'All years (no time filter)');
+  }
+
+  // Agency bars
+  const agCounts={};
+  visible.forEach(f=>{agCounts[f.agency]=(agCounts[f.agency]||0)+1;});
+  const mx=Math.max(...Object.values(agCounts),1);
+  const agBar=document.getElementById('agencyBars');
+  if(agBar){
+    agBar.innerHTML=Object.entries(agCounts)
+      .sort((a,b)=>b[1]-a[1])
+      .map(([ag,cnt])=>`<div class="abar">
+        <div class="abar-top">
+          <span class="abar-name" style="color:${AC[ag]}">${L2==='ar'?ANar[ag]:ANen[ag]}</span>
+          <span class="abar-count">${cnt}</span>
+        </div>
+        <div class="abar-track">
+          <div class="abar-fill" style="width:${(cnt/mx*100).toFixed(0)}%;background:${AC[ag]}"></div>
+        </div>
+      </div>`).join('');
+  }
+
+  // Violation bars
+  const vCounts={torture:0,disappear:0,death:0,caesar:0};
+  visible.forEach(f=>f.violations.forEach(v=>{if(vCounts[v]!==undefined)vCounts[v]++;}));
+  const vMax=Math.max(...Object.values(vCounts),1);
+  const vNameAr={torture:'تعذيب',disappear:'اختفاء قسري',death:'وفاة',caesar:'صلة بقيصر'};
+  const vNameEn={torture:'Torture',disappear:'Disappearance',death:'Death',caesar:'Caesar link'};
+  const vColors={torture:'#C0392B',disappear:'#2471A3',death:'#7B1C1C',caesar:'#8B5C1A'};
+  const vBar=document.getElementById('violationBars');
+  if(vBar){
+    vBar.innerHTML=Object.entries(vCounts)
+      .sort((a,b)=>b[1]-a[1])
+      .map(([v,cnt])=>`<div class="abar">
+        <div class="abar-top">
+          <span class="abar-name" style="color:${vColors[v]}">${L2==='ar'?vNameAr[v]:vNameEn[v]}</span>
+          <span class="abar-count">${cnt}</span>
+        </div>
+        <div class="abar-track">
+          <div class="abar-fill" style="width:${(cnt/vMax*100).toFixed(0)}%;background:${vColors[v]}"></div>
+        </div>
+      </div>`).join('');
+  }
+}
+
+// LIST
+function renderList(q=''){
+  const L2=currentLang;
+  const list=facilities.filter(f=>{
+    const show=activeAgencies.has(f.agency)&&
+      (activeGov==='all'||f.govAr===activeGov)&&
+      (activeV==='all'||f.violations.includes(activeV))&&
+      (activeC==='all'||f.conf===activeC)&&
+      (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear));
+    if(!show)return false;
+    if(q){const qq=q.toLowerCase();return f.nameAr.includes(qq)||f.nameEn.toLowerCase().includes(qq)||f.govAr.includes(qq);}
+    return true;
+  });
+  document.getElementById('rcnt').textContent=L2==='ar'?`${list.length} موقع`:`${list.length} sites`;
+  document.getElementById('flist').innerHTML=list.map(f=>`
+    <div class="fi" onclick="flyTo(${f.id})">
+      <div class="fi-hd"><div class="fi-dot" style="background:${AC[f.agency]}"></div>
+        <div><div class="fi-nar">${L2==='ar'?f.nameAr:f.nameEn}</div><div class="fi-nen">${L2==='ar'?f.nameEn:f.nameAr}</div></div>
+      </div>
+      <div class="fi-meta">
+        <span class="fi-tag">${L2==='ar'?f.govAr:f.govEn}</span>
+        <span class="fi-tag">${L2==='ar'?ANar[f.agency]:ANen[f.agency]}</span>
+        <span class="fi-tag">${f.yearActive}–${f.yearClosed}</span>
+      </div>
+    </div>`).join('');
+}
+function searchF(q){renderList(q);}
+function flyTo(id){
+  const f=facilities.find(x=>x.id===id);
+  if(!f)return;
+  map.flyTo([f.lat,f.lng],13,{duration:1.2});
+  setTimeout(()=>{if(markersMap[id])markersMap[id].openPopup();},1300);
+}
+
+// TABS
+function switchTab(t){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('tab-'+t).classList.add('active');
+  document.getElementById('content-'+t).classList.add('active');
+  if(t==='list')renderList();
+  if(t==='stats')updateStats();
+}
+
+// SIDEBAR
+let sidebarOpen=true;
+function toggleSidebar(){
+  const sb=document.getElementById('sidebar');
+  const tg=document.getElementById('stoggle');
+  sidebarOpen=!sidebarOpen;
+  sb.style.display=sidebarOpen?'flex':'none';
+  tg.style.right=sidebarOpen?'300px':'0';
+  tg.innerHTML=sidebarOpen?'◀':'▶';
+  setTimeout(()=>map.invalidateSize(),300);
+}
+
+// =============================================
+// TIMELINE
+// =============================================
+const YEARS=[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+
+// Build year labels
+function buildTimelineLabels(){
+  const container=document.getElementById('tlLabels');
+  container.innerHTML=YEARS.map(y=>`<span class="tl-year-lbl${y===currentYear?' current':''}" onclick="jumpYear(${y})">${y}</span>`).join('');
+}
+
+// Update slider position
+function updateSlider(year){
+  currentYear=year;
+  const pct=((year-2011)/(2024-2011))*100;
+  document.getElementById('tlProgress').style.width=pct+'%';
+  document.getElementById('tlThumb').style.left=pct+'%';
+  document.getElementById('yearDisplay').textContent=year;
+  const ev=tlEvents[year];
+  if(ev) document.getElementById('tlEvent').textContent=currentLang==='ar'?ev.ar:ev.en;
+  document.querySelectorAll('.tl-year-lbl').forEach(el=>{
+    el.classList.toggle('current',parseInt(el.textContent)===year);
+  });
+  renderMarkers();
+}
+
+function jumpYear(y){updateSlider(y);}
+
+// Track click
+function trackClick(e){
+  const track=document.getElementById('tlTrack');
+  const rect=track.getBoundingClientRect();
+  const pct=(e.clientX-rect.left)/rect.width;
+  const year=Math.round(2011+pct*(2024-2011));
+  const clamped=Math.max(2011,Math.min(2024,year));
+  updateSlider(clamped);
+}
+
+// Drag
+const thumb=document.getElementById('tlThumb');
+let dragging=false;
+thumb.addEventListener('mousedown',e=>{dragging=true;e.preventDefault();});
+document.addEventListener('mousemove',e=>{
+  if(!dragging)return;
+  const track=document.getElementById('tlTrack');
+  const rect=track.getBoundingClientRect();
+  const pct=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));
+  const year=Math.round(2011+pct*(2024-2011));
+  updateSlider(year);
+});
+document.addEventListener('mouseup',()=>{dragging=false;});
+
+// Touch
+thumb.addEventListener('touchstart',e=>{dragging=true;e.preventDefault();},{passive:false});
+document.addEventListener('touchmove',e=>{
+  if(!dragging)return;
+  const track=document.getElementById('tlTrack');
+  const rect=track.getBoundingClientRect();
+  const pct=Math.max(0,Math.min(1,(e.touches[0].clientX-rect.left)/rect.width));
+  const year=Math.round(2011+pct*(2024-2011));
+  updateSlider(year);},{passive:false});
+document.addEventListener('touchend',()=>{dragging=false;});
+
+// Play/pause
+function togglePlay(){
+  playing=!playing;
+  document.getElementById('playBtn').textContent=playing?'⏸':'▶';
+  if(playing){
+    if(currentYear===2024)updateSlider(2011);
+    playInterval=setInterval(()=>{
+      if(currentYear>=2024){clearInterval(playInterval);playing=false;document.getElementById('playBtn').textContent='▶';return;}
+      updateSlider(currentYear+1);
+    },1200);
+  } else {
+    clearInterval(playInterval);
+  }
+}
+
+// LANG
+function setLang(lang){
+  currentLang=lang;
+  document.getElementById('btnAr').classList.toggle('active',lang==='ar');
+  document.getElementById('btnEn').classList.toggle('active',lang==='en');
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-ar]').forEach(el=>{
+    const k=lang==='ar'?'ar':'en';
+    if(el.dataset[k])el.textContent=el.dataset[k];
+  });
+  document.getElementById('sbox').placeholder=lang==='ar'?'ابحث عن فرع أو موقع...':'Search facility or location...';
+  const ev=tlEvents[currentYear];
+  if(ev)document.getElementById('tlEvent').textContent=lang==='ar'?ev.ar:ev.en;
+  renderMarkers();
+  updateStats();
+  renderList();
+}
+
+// INIT
+buildTimelineLabels();
+updateSlider(2011);
+updateStats();
+renderList();
+</script>
+</body>
+</html>
