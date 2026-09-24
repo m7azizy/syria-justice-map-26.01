@@ -52,11 +52,12 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 #map{flex:1;z-index:1;}
 
 /* SIDEBAR */
-.sidebar{width:300px;background:var(--bg-panel);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0;z-index:500;box-shadow:2px 0 12px rgba(28,33,64,0.06);}
+.sidebar{order:-1;width:300px;background:var(--bg-panel);border-inline-end:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0;z-index:500;box-shadow:2px 0 12px rgba(28,33,64,0.06);}
 .sidebar-tabs{display:flex;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--bg-card);}
 .tab-btn{flex:1;padding:11px 6px;font-size:11px;font-weight:500;color:var(--text-3);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;font-family:'IBM Plex Sans Arabic',sans-serif;}
 .tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);background:var(--bg-panel);font-weight:700;}
-.tab-content{display:none;flex:1;overflow-y:auto;padding:14px;}
+.tab-content{display:none;flex:1;overflow-y:auto;padding:14px 14px 96px;}
+.sidebar.closed{display:none;}
 .tab-content.active{display:block;}
 .tab-content::-webkit-scrollbar{width:3px;}
 .tab-content::-webkit-scrollbar-thumb{background:var(--border-dark);border-radius:2px;}
@@ -143,11 +144,11 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 .leaflet-tooltip::before{display:none;}
 
 /* TOGGLE SIDEBAR */
-.stoggle{position:absolute;top:50%;right:300px;transform:translateY(-50%);z-index:600;width:22px;height:44px;background:var(--bg-panel);border:1px solid var(--border);border-right:none;border-radius:6px 0 0 6px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-3);font-size:11px;transition:color .2s;box-shadow:-2px 0 6px rgba(28,33,64,0.06);}
+.stoggle{position:absolute;top:50%;inset-inline-start:300px;transform:translateY(-50%);z-index:600;width:22px;height:44px;background:var(--bg-panel);border:1px solid var(--border);border-right:none;border-radius:6px 0 0 6px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-3);font-size:11px;transition:color .2s;box-shadow:-2px 0 6px rgba(28,33,64,0.06);}
 .stoggle:hover{color:var(--accent);}
 
 /* MAP LEGEND BOTTOM */
-.map-legend{position:absolute;bottom:80px;left:12px;z-index:900;background:rgba(255,255,255,0.94);border:1px solid var(--border);border-radius:9px;padding:10px 13px;backdrop-filter:blur(6px);box-shadow:var(--shadow);}
+.map-legend{position:absolute;bottom:80px;inset-inline-end:12px;z-index:900;background:rgba(255,255,255,0.94);border:1px solid var(--border);border-radius:9px;padding:10px 13px;backdrop-filter:blur(6px);box-shadow:var(--shadow);}
 .ml-row{display:flex;align-items:center;gap:7px;padding:2px 0;font-size:10px;color:var(--text-2);}
 .ml-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
 .ml-diamond{width:9px;height:9px;background:#7B1C1C;border:1.5px solid #C0392B;transform:rotate(45deg);flex-shrink:0;}
@@ -163,7 +164,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 
 .tl-year-display{font-size:26px;font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace;min-width:52px;text-align:center;line-height:1;}
 
-.tl-slider-wrap{flex:1;display:flex;flex-direction:column;gap:4px;}
+.tl-slider-wrap{flex:1;display:flex;flex-direction:column;gap:4px;direction:ltr;}
 
 .tl-track-wrap{position:relative;height:20px;display:flex;align-items:center;}
 
@@ -177,13 +178,66 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 .tl-year-lbl:hover{color:var(--accent);}
 .tl-year-lbl.current{color:var(--accent);font-weight:700;}
 
-.tl-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:180px;}
-.tl-event{font-size:10px;color:var(--text-2);background:var(--bg-card);border:1px solid var(--border);border-right:3px solid var(--accent);border-radius:4px;padding:3px 8px;max-width:180px;text-align:right;line-height:1.4;transition:all .3s;}
+.tl-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:180px;max-width:220px;}
+.tl-event{font-size:10px;color:var(--text-2);background:var(--bg-card);border:1px solid var(--border);border-inline-start:3px solid var(--accent);border-radius:4px;padding:3px 8px;max-width:220px;text-align:start;line-height:1.4;transition:all .3s;}
 .tl-count-badge{font-size:10px;color:var(--text-3);font-family:'IBM Plex Mono',monospace;}
 
 /* MILESTONES on track */
 .tl-milestone{position:absolute;top:50%;width:8px;height:8px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid #fff;cursor:pointer;z-index:3;transition:transform .15s;}
 .tl-milestone:hover{transform:translate(-50%,-50%) scale(1.4);}
+/* Numbers like "6,786+" must keep LTR order inside RTL text */
+.hstat-num,.scard-n{direction:ltr;unicode-bidi:isolate;}
+/* Keep Leaflet zoom/attribution above the timeline bar */
+.leaflet-bottom{bottom:78px;}
+.tl-slider-wrap{min-width:0;}
+
+/* ALL-YEARS TOGGLE */
+.tl-all-btn{padding:6px 9px;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-2);font-size:10px;cursor:pointer;font-family:'IBM Plex Sans Arabic',sans-serif;white-space:nowrap;transition:all .15s;}
+.tl-all-btn:hover{border-color:var(--accent);color:var(--accent);}
+.tl-all-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700;}
+.timeline-bar.all-years .tl-progress,.timeline-bar.all-years .tl-thumb{opacity:.35;}
+.timeline-bar.all-years .tl-year-lbl.current{color:var(--text-3);font-weight:400;}
+.yl-short{display:none;}
+
+/* POPUP ADDITIONS */
+.ptrials{background:#EEF3FA;border:1px solid #C9D6EA;border-radius:6px;padding:7px 9px;margin-top:9px;}
+.ptrials-h{font-size:10px;font-weight:700;color:#2471A3;margin-bottom:4px;}
+.ptrial{font-size:10px;color:var(--text-2);line-height:1.5;}
+.ptrial-d{font-family:'IBM Plex Mono',monospace;color:var(--text-3);}
+.pwarn{font-size:10px;color:#9A5B00;background:#FFF6E5;border:1px solid #F3D19C;border-radius:5px;padding:5px 8px;margin-top:9px;}
+.psrc a{color:var(--text-2);text-decoration:underline dotted;}
+.psrc a:hover{color:var(--accent);}
+
+/* STATS / TRIALS */
+a.scard.ref{text-decoration:none;display:block;transition:border-color .15s;}
+a.scard.ref:hover{border-color:var(--accent);}
+.trial .fi-nar{margin-bottom:2px;}
+.trial-v{font-size:11px;color:var(--text);font-weight:600;margin-top:4px;}
+.fi-link{cursor:pointer;color:var(--text-2);}
+.fi-link:hover{border-color:var(--accent);color:var(--accent);}
+a.fi-tag{text-decoration:none;}
+
+/* MOBILE */
+@media (max-width:768px){
+  .header{padding:0 10px;height:50px;}
+  .header-title-en,.hstat{display:none;}
+  .header-title-ar{font-size:13px;}
+  .header-logo{width:28px;height:28px;font-size:14px;}
+  .sidebar{position:absolute;top:0;bottom:0;inset-inline-start:0;width:min(86vw,340px);z-index:1100;box-shadow:var(--shadow-lg);}
+  .stoggle{z-index:1101;}
+  .map-legend{display:none;}
+  .timeline-bar{padding:8px 10px;}
+  .tl-top{gap:8px;}
+  .tl-right{display:none;}
+  .tl-year-display{font-size:18px;min-width:40px;}
+  .tl-play-btn{width:30px;height:30px;font-size:12px;}
+  .tl-all-btn{padding:5px 6px;font-size:9px;}
+  .yl-full{display:none;}
+  .yl-short{display:inline;}
+  .tl-year-lbl:nth-child(even){visibility:hidden;}
+  .leaflet-bottom{bottom:64px;}
+  .leaflet-popup-content-wrapper{min-width:240px;max-width:calc(100vw - 40px);}
+}
 </style>
 </head>
 <body>
@@ -198,10 +252,10 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
     </div>
   </div>
   <div class="header-stats">
-    <div class="hstat"><div class="hstat-num" id="totalShown">97</div><div class="hstat-label" data-ar="موقع موثق" data-en="Verified Sites">موقع موثق</div></div>
+    <div class="hstat"><div class="hstat-num" id="totalShown">—</div><div class="hstat-label" data-ar="موقع معروض" data-en="Sites shown">موقع معروض</div></div>
     <div class="hstat"><div class="hstat-num" style="color:#C0392B">45,342</div><div class="hstat-label" data-ar="وفاة بالتعذيب" data-en="Torture Deaths">وفاة بالتعذيب</div></div>
-    <div class="hstat"><div class="hstat-num" style="color:#2471A3">177,057</div><div class="hstat-label" data-ar="اختفاء قسري" data-en="Disappeared">اختفاء قسري</div></div>
-    <div class="hstat"><div class="hstat-num" style="color:#8B5C1A">6,821</div><div class="hstat-label" data-ar="ضحية — قيصر" data-en="Caesar Victims">ضحية — قيصر</div></div>
+    <div class="hstat"><div class="hstat-num" style="color:#2471A3">160,123</div><div class="hstat-label" data-ar="مختفٍ لدى النظام" data-en="Disappeared by regime">مختفٍ لدى النظام</div></div>
+    <div class="hstat"><div class="hstat-num" style="color:#8B5C1A">6,786+</div><div class="hstat-label" data-ar="ضحية — قيصر" data-en="Caesar Victims">ضحية — قيصر</div></div>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btnAr" onclick="setLang('ar')">AR</button>
       <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
@@ -233,6 +287,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
       <button class="tab-btn active" onclick="switchTab('filters')" id="tab-filters" data-ar="فلاتر" data-en="Filters">فلاتر</button>
       <button class="tab-btn" onclick="switchTab('stats')" id="tab-stats" data-ar="إحصاء" data-en="Stats">إحصاء</button>
       <button class="tab-btn" onclick="switchTab('list')" id="tab-list" data-ar="قائمة" data-en="List">قائمة</button>
+      <button class="tab-btn" onclick="switchTab('trials')" id="tab-trials" data-ar="محاكمات" data-en="Trials">محاكمات</button>
       <button class="tab-btn" onclick="switchTab('legend')" id="tab-legend" data-ar="مفتاح" data-en="Legend">مفتاح</button>
     </div>
 
@@ -266,6 +321,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
           <div class="gchip" data-gov="طرطوس" onclick="setGov(this,'طرطوس')" data-ar="طرطوس" data-en="Tartus">طرطوس</div>
           <div class="gchip" data-gov="دير الزور" onclick="setGov(this,'دير الزور')" data-ar="دير الزور" data-en="Deir ez-Zor">دير الزور</div>
           <div class="gchip" data-gov="السويداء" onclick="setGov(this,'السويداء')" data-ar="السويداء" data-en="Suwayda">السويداء</div>
+          <div class="gchip" data-gov="الرقة" onclick="setGov(this,'الرقة')" data-ar="الرقة" data-en="Raqqa">الرقة</div>
           <div class="gchip" data-gov="الحسكة" onclick="setGov(this,'الحسكة')" data-ar="الحسكة" data-en="Hasakah">الحسكة</div>
         </div>
       </div>
@@ -319,22 +375,16 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
       <div style="height:1px;background:var(--border);margin:12px 0"></div>
 
       <!-- GLOBAL REFERENCE STATS -->
-      <div style="font-size:10px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px" data-ar="إحصاءات مرجعية (2011–2025)" data-en="Reference Statistics (2011–2025)">إحصاءات مرجعية (2011–2025)</div>
+      <div class="flabel" data-ar="أرقام عامة مرجعية (2011–2026)" data-en="Reference Figures (2011–2026)">أرقام عامة مرجعية (2011–2026)</div>
       <div class="sgrid">
-        <div class="scard" style="border-right:3px solid #C0392B"><div class="scard-n" style="color:#C0392B">45,342</div><div class="scard-l" data-ar="وفاة موثقة تحت التعذيب (SNHR 2025)" data-en="Documented torture deaths (SNHR 2025)">وفاة تحت التعذيب</div></div>
-        <div class="scard" style="border-right:3px solid #2471A3"><div class="scard-n" style="color:#2471A3">177,057</div><div class="scard-l" data-ar="حالة اختفاء قسري (SNHR 2025)" data-en="Enforced disappearances (SNHR 2025)">اختفاء قسري</div></div>
-        <div class="scard" style="border-right:3px solid #8B5C1A"><div class="scard-n" style="color:#8B5C1A">6,821</div><div class="scard-l" data-ar="ضحية في صور قيصر (BKA)" data-en="Victims in Caesar photos (BKA)">ضحايا صور قيصر</div></div>
-        <div class="scard" style="border-right:3px solid #6C3483"><div class="scard-n" style="color:#6C3483">24,200</div><div class="scard-l" data-ar="محتجز أُفرج عنه ديسمبر 2024" data-en="Released Dec 2024">أُفرج عنهم 2024</div></div>
+        <a class="scard ref" style="border-inline-start:3px solid #C0392B" href="https://snhr.org/blog/2025/06/26/on-the-international-day-in-support-of-victims-of-torture-new-information-reveals-the-deaths-of-thousands-of-forcibly-disappeared-persons-in-the-detention-centers-of-the-former-syrian-regime-raising/" target="_blank" rel="noopener"><div class="scard-n" style="color:#C0392B">45,342</div><div class="scard-l" data-ar="وفاة تحت التعذيب — SNHR يونيو 2025" data-en="Torture deaths — SNHR Jun 2025">وفاة تحت التعذيب — SNHR يونيو 2025</div></a>
+        <a class="scard ref" style="border-inline-start:3px solid #2471A3" href="https://snhr.org/blog/2025/08/30/fourteenth-annual-report-on-enforced-disappearances-in-syria-on-the-occasion-of-the-international-day-of-the-victims-of-enforced-disappearances/" target="_blank" rel="noopener"><div class="scard-n" style="color:#2471A3">160,123</div><div class="scard-l" data-ar="معتقل ومختفٍ لدى النظام السابق — SNHR أغسطس 2025" data-en="Detained/disappeared by former regime — SNHR Aug 2025">معتقل ومختفٍ لدى النظام السابق — SNHR أغسطس 2025</div></a>
+        <a class="scard ref" style="border-inline-start:3px solid #6C3483" href="https://snhr.org/blog/2024/12/28/opening-detention-centers-has-revealed-the-still-going-humanitarian-catastrophe-over-112414-individuals-are-still-forcibly-disappeared-at-the-hands-of-the-assad-regime/" target="_blank" rel="noopener"><div class="scard-n" style="color:#6C3483">24,200</div><div class="scard-l" data-ar="أُفرج عنهم ديسمبر 2024 — وبقي 112,414 مفقوداً" data-en="Freed Dec 2024 — 112,414 still missing">أُفرج عنهم ديسمبر 2024 — وبقي 112,414 مفقوداً</div></a>
+        <a class="scard ref" style="border-inline-start:3px solid #8B5C1A" href="https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities" target="_blank" rel="noopener"><div class="scard-n" style="color:#8B5C1A">6,786+</div><div class="scard-l" data-ar="ضحية في 28,707 صورة من صور قيصر — HRW" data-en="Victims in 28,707 Caesar photos — HRW">ضحية في 28,707 صورة من صور قيصر — HRW</div></a>
+        <a class="scard ref" style="border-inline-start:3px solid #7B1C1C" href="https://syriadirect.org/in-search-of-closure-syrians-work-to-unearth-the-secrets-of-assads-mass-graves/" target="_blank" rel="noopener"><div class="scard-n" style="color:#7B1C1C">66</div><div class="scard-l" data-ar="موقع مقبرة جماعية مشتبه به — ICMP" data-en="Suspected mass grave sites — ICMP">موقع مقبرة جماعية مشتبه به — ICMP</div></a>
+        <a class="scard ref" style="border-inline-start:3px solid #2471A3" href="https://www.ohchr.org/en/hr-bodies/hrc/iici-syria/web-agony" target="_blank" rel="noopener"><div class="scard-n" style="color:#2471A3">2,000+</div><div class="scard-l" data-ar="شهادة في تقرير «شبكة العذاب» — COI يناير 2025" data-en="Testimonies in 'Web of Agony' — COI Jan 2025">شهادة في تقرير «شبكة العذاب» — COI يناير 2025</div></a>
       </div>
-
-      <div class="fsec">
-        <span class="flabel" data-ar="مصادر التوثيق" data-en="Sources">مصادر التوثيق</span>
-        <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">
-          <span class="srctag">IIIM/UN</span><span class="srctag">SNHR</span><span class="srctag">HRW</span>
-          <span class="srctag">Amnesty</span><span class="srctag">VDC</span><span class="srctag">ECCHR</span>
-          <span class="srctag">SJAC</span><span class="srctag">ADMSP</span><span class="srctag">COI/UN</span>
-        </div>
-      </div>
+      <div style="font-size:10px;color:var(--text-3);line-height:1.6;margin-bottom:14px" data-ar="حدّدت IIIM ‏111 منشأة احتجاز، منها 94 بإحداثيات، بشهادات 332 معتقلاً سابقاً. الخريطة تعرض ما أمكن التحقق من موقعه." data-en="IIIM identified 111 detention facilities (94 with coordinates) from 332 former detainees. The map shows those whose location could be verified.">حدّدت IIIM ‏111 منشأة احتجاز، منها 94 بإحداثيات، بشهادات 332 معتقلاً سابقاً. الخريطة تعرض ما أمكن التحقق من موقعه.</div>
     </div>
 
     <!-- LIST -->
@@ -342,6 +392,12 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
       <input type="text" class="sbox" id="sbox" placeholder="ابحث عن فرع أو موقع..." oninput="searchF(this.value)">
       <div id="rcnt"></div>
       <div id="flist"></div>
+    </div>
+
+    <!-- TRIALS -->
+    <div class="tab-content" id="content-trials">
+      <span class="flabel" data-ar="محاكمات مرتبطة بمواقع الخريطة" data-en="Trials linked to map sites">محاكمات مرتبطة بمواقع الخريطة</span>
+      <div id="trialList"></div>
     </div>
 
     <!-- LEGEND -->
@@ -365,8 +421,8 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
       </div>
       <div style="font-size:10px;color:var(--text-3);line-height:1.7;border-top:1px solid var(--border);padding-top:10px">
         <strong style="color:var(--accent)">رابطة عائلات قيصر</strong><br>
-        النموذج الأولي · 2025<br>
-        البيانات: IIIM/UN · SNHR · HRW · Amnesty<br>
+        النموذج الأولي · تحديث سبتمبر 2026<br>
+        البيانات: IIIM/UN · COI/UN · SNHR · HRW · Amnesty · SJAC<br>
         <em>بيانات مصادر مفتوحة — لأغراض التوثيق والتوعية.</em>
       </div>
     </div>
@@ -377,6 +433,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
     <div class="tl-top">
       <div class="tl-controls">
         <button class="tl-play-btn" id="playBtn" onclick="togglePlay()">▶</button>
+        <button class="tl-all-btn" id="allYearsBtn" onclick="setAllYears(timelineActive)" data-ar="كل السنوات" data-en="All years">كل السنوات</button>
         <div class="tl-year-display" id="yearDisplay">2011</div>
       </div>
       <div class="tl-slider-wrap">
@@ -389,7 +446,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
         <div class="tl-labels" id="tlLabels"></div>
       </div>
       <div class="tl-right">
-        <div class="tl-event" id="tlEvent">مارس 2011 — انطلاق المظاهرات في درعا</div>
+        <div class="tl-event" id="tlEvent"></div>
         <div class="tl-count-badge"><span id="tlActiveCount">0</span> <span data-ar="موقع نشط هذا العام" data-en="sites active this year">موقع نشط هذا العام</span></div>
       </div>
     </div>
@@ -403,20 +460,20 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 // =============================================
 const facilities = [
   // DAMASCUS
-  {id:1,nameAr:"فرع 251 — الخطيب",nameEn:"GID Branch 251 (Al-Khatib)",agency:"GID",govAr:"دمشق",govEn:"Damascus",lat:33.520416,lng:36.311783,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:40,yearActive:2011,yearClosed:2024,detailAr:"أدين قائده أنور رسلان بتهم جرائم ضد الإنسانية في ألمانيا 2022 (سجن مؤبد).",detailEn:"Commander Anwar Raslan convicted for crimes against humanity in Germany 2022 (life sentence).",sources:["IIIM","HRW","ECCHR","Koblenz Court"]},
-  {id:2,nameAr:"فرع 215 — فصيلة المداهمة",nameEn:"MI Branch 215 (Raids)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.50747,lng:36.27322,conf:"HIGH",violations:["torture","disappear","death","caesar"],caesar:true,caesarImgs:13801,caesarVictims:3551,casesIIIM:67,yearActive:2011,yearClosed:2024,detailAr:"أكثر فروع المخابرات العسكرية دموية. 13,801 صورة في ملف قيصر (3,551 ضحية).",detailEn:"Most lethal MI branch. 13,801 Caesar images (3,551 victims).",sources:["IIIM","HRW","Germany BKA"]},
-  {id:3,nameAr:"فرع 227 — المنطقة",nameEn:"MI Branch 227 (Regional)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.510586,lng:36.274689,conf:"HIGH",violations:["torture","death","caesar"],caesar:true,caesarImgs:8001,caesarVictims:2049,casesIIIM:41,yearActive:2011,yearClosed:2024,detailAr:"ثاني أكبر مصدر في صور قيصر بـ 8,001 صورة و2,049 ضحية.",detailEn:"Second largest Caesar source: 8,001 images, 2,049 victims.",sources:["IIIM","HRW","Koblenz Court"]},
-  {id:4,nameAr:"فرع 235 — فلسطين",nameEn:"MI Branch 235 (Palestine Branch)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491397,lng:36.321224,conf:"HIGH",violations:["torture","disappear","death","caesar"],caesar:true,caesarImgs:482,caesarVictims:127,casesIIIM:98,yearActive:2011,yearClosed:2024,detailAr:"من أكثر الفروع رهبةً — 98 حالة موثقة لدى IIIM. طوابق تحت الأرض للتعذيب.",detailEn:"Most cited single facility in IIIM — 98 cases. Underground torture cells.",sources:["IIIM","HRW","Amnesty","VDC","ECCHR"]},
-  {id:5,nameAr:"فرع 248 — التحقيق",nameEn:"MI Branch 248 (Investigation)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.508058,lng:36.273223,conf:"HIGH",violations:["torture","death","caesar"],caesar:true,caesarImgs:206,caesarVictims:54,casesIIIM:48,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق في المخابرات العسكرية — 48 حالة موثقة.",detailEn:"MI Investigation Branch. 48 documented cases.",sources:["IIIM","HRW"]},
+  {id:1,nameAr:"فرع 251 — الخطيب",nameEn:"GID Branch 251 (Al-Khatib)",agency:"GID",govAr:"دمشق",govEn:"Damascus",lat:33.520416,lng:36.311783,conf:"HIGH",violations:["torture","disappear","death"],caesar:false,casesIIIM:40,yearActive:2011,yearClosed:2024,detailAr:"أدين رئيس قسم التحقيق فيه أنور رسلان في كوبلنز (يناير 2022، مؤبد) بالمشاركة في 4,000 حالة تعذيب و27 جريمة قتل. القسم 40 التابع له: إدانة إياد الغريب (فبراير 2021، 4.5 سنوات).",detailEn:"Head of investigations Anwar Raslan convicted in Koblenz (Jan 2022, life) as accomplice to 4,000 cases of torture and 27 murders. Subordinate Section 40: Eyad al-Gharib convicted (Feb 2021, 4.5 years).",sources:["IIIM","HRW","ECCHR","Koblenz Court"]},
+  {id:2,nameAr:"فرع 215 — فصيلة المداهمة",nameEn:"MI Branch 215 (Raids)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.50747,lng:36.27322,conf:"HIGH",violations:["torture","disappear","death"],caesar:true,caesarImgs:13801,caesarVictims:3556,casesIIIM:67,yearActive:2011,yearClosed:2024,detailAr:"أكثر فروع المخابرات العسكرية دموية (\"فرع الموت\"). 3,556 ضحية في صور قيصر وفق تصنيف رابطة عائلات المعتقلين والمفقودين. الفرعان 215 و227 وحدهما يمثلان أكثر من 80% من الجثث.",detailEn:"Most lethal MI branch (\"Branch of Death\"). 3,556 victims in the Caesar photos per SAFMCD breakdown. Branches 215 and 227 alone account for over 80% of bodies.",sources:["IIIM","HRW","Germany BKA","SAFMCD"]},
+  {id:3,nameAr:"فرع 227 — المنطقة",nameEn:"MI Branch 227 (Regional)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.510586,lng:36.274689,conf:"HIGH",violations:["torture","death"],caesar:true,caesarImgs:8001,caesarVictims:2047,casesIIIM:41,yearActive:2011,yearClosed:2024,detailAr:"ثاني أكبر مصدر في صور قيصر: 2,047 ضحية وفق رابطة عائلات المعتقلين والمفقودين.",detailEn:"Second largest Caesar source: 2,047 victims per SAFMCD.",sources:["IIIM","HRW","Koblenz Court","SAFMCD"]},
+  {id:4,nameAr:"فرع 235 — فلسطين",nameEn:"MI Branch 235 (Palestine Branch)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491397,lng:36.321224,conf:"HIGH",violations:["torture","disappear","death"],caesar:true,caesarImgs:482,caesarVictims:128,casesIIIM:98,yearActive:2011,yearClosed:2024,detailAr:"من أكثر الفروع رهبةً — 98 حالة موثقة لدى IIIM. طوابق تحت الأرض للتعذيب. 128 ضحية في صور قيصر. شهادات عنه أمام محكمة كوبلنز في محاكمة اليرموك (منذ نوفمبر 2025).",detailEn:"One of the most feared branches — 98 IIIM cases. Underground torture cells. 128 Caesar victims. Testimony about it before Koblenz court in the Yarmouk trial (since Nov 2025).",sources:["IIIM","HRW","Amnesty","VDC","ECCHR","SAFMCD","SJAC Yarmouk"]},
+  {id:5,nameAr:"فرع 248 — التحقيق",nameEn:"MI Branch 248 (Investigation)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.508058,lng:36.273223,conf:"HIGH",violations:["torture","death"],caesar:true,caesarImgs:206,caesarVictims:54,casesIIIM:48,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق في المخابرات العسكرية — 48 حالة موثقة.",detailEn:"MI Investigation Branch. 48 documented cases.",sources:["IIIM","HRW"]},
   {id:6,nameAr:"فرع 285 — مقر المخابرات العامة",nameEn:"GID Branch 285 (HQ Investigation)",agency:"GID",govAr:"دمشق",govEn:"Damascus",lat:33.499805,lng:36.291313,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:38,yearActive:2011,yearClosed:2024,detailAr:"مقر إدارة المخابرات العامة وفرع التحقيق المركزي.",detailEn:"GID Headquarters and Central Investigation Branch.",sources:["IIIM","HRW"]},
   {id:7,nameAr:"فرع 291 — المقر الرئيسي (مخابرات عسكرية)",nameEn:"MI Branch 291 (HQ Administrative)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.505453,lng:36.275056,conf:"HIGH",violations:["torture"],caesar:false,casesIIIM:34,yearActive:2011,yearClosed:2024,detailAr:"المقر الرئيسي لشعبة المخابرات العسكرية.",detailEn:"Military Intelligence Directorate Headquarters.",sources:["IIIM"]},
   {id:8,nameAr:"الأمن السياسي — دمشق",nameEn:"Political Security Branch — Damascus",agency:"PSD",govAr:"دمشق",govEn:"Damascus",lat:33.529491,lng:36.291523,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:18,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة الأمن السياسي في دمشق.",detailEn:"Political Security Directorate branch in Damascus.",sources:["IIIM","HRW"]},
-  {id:9,nameAr:"المخابرات الجوية — المزة",nameEn:"AFI Investigation Branch — Mezzeh",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.48428,lng:36.22336,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:15,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق في مطار المزة العسكري. الجنرال جميل حسن — أمر اعتقال ألماني دولي.",detailEn:"AFI Investigation Branch at Mezzeh. General Jamil Hassan: international arrest warrant.",sources:["IIIM","HRW","ECCHR","VDC"]},
-  {id:10,nameAr:"المستشفى العسكري تشرين",nameEn:"Tishreen Military Hospital",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.565044,lng:36.332836,conf:"HIGH",violations:["death","caesar"],caesar:true,casesIIIM:3,yearActive:2011,yearClosed:2013,detailAr:"أحد مستشفيَي تسجيل جثث قيصر الرئيسيين.",detailEn:"One of two main hospitals for Caesar photo registration.",sources:["IIIM","HRW","SJAC"]},
-  {id:11,nameAr:"المستشفى العسكري 601 — المزة",nameEn:"Military Hospital 601 (Mezzeh)",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.51229,lng:36.25529,conf:"HIGH",violations:["death","caesar"],caesar:true,casesIIIM:7,yearActive:2011,yearClosed:2013,detailAr:"المستشفى الرئيسي لتسجيل الجثث في ملف قيصر. مرتبط بمحاكمة د. علاء م. (حكم مؤبد فرانكفورت 2025).",detailEn:"Main hospital for Caesar registrations. Linked to Dr. Alaa M. trial (life sentence Frankfurt 2025).",sources:["IIIM","HRW","ECCHR","Frankfurt Court"]},
+  {id:9,nameAr:"المخابرات الجوية — سجن مطار المزة العسكري",nameEn:"AFI Investigation Branch — Mezzeh Military Airport",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.48428,lng:36.22336,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:15,yearActive:2011,yearClosed:2024,detailAr:"فرع التحقيق وسجن مطار المزة. وثّق مركز العدالة والمساءلة أكثر من 1,150 وفاة ومقبرتين جماعيتين مشتبهاً بهما داخل المطار، وحمتهما الهيئة الوطنية للمفقودين (سبتمبر 2026). محكمة باريس حكمت غيابياً بالمؤبد على جميل حسن وعبد السلام محمود في قضية الدباغ (مايو 2024)، ولائحة اتهام أمريكية بحقهما. تنسب رابطة عائلات المعتقلين نحو 350 ضحية في صور قيصر إلى المخابرات الجوية.",detailEn:"Mezzeh airport investigation branch and prison. SJAC documented 1,150+ deaths and two suspected mass graves inside the airport, protected by the National Commission for the Missing (Sep 2026). Paris court sentenced Jamil Hassan and Abdel Salam Mahmoud to life in absentia in the Dabbagh case (May 2024); US indictment against both. SAFMCD attributes ~350 Caesar victims to AFI.",sources:["IIIM","HRW","SJAC Mezzeh","Dabbagh Paris","US DOJ","Enab Baladi Mezzeh"]},
+  {id:10,nameAr:"المستشفى العسكري تشرين",nameEn:"Tishreen Military Hospital",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.565044,lng:36.332836,conf:"HIGH",violations:["death"],caesar:true,casesIIIM:3,yearActive:2011,yearClosed:2018,detailAr:"أحد المستشفيين الرئيسيين لتسجيل جثث قيصر (2011–2013). شهادة \"حفّار القبور\": نُقلت منه الجثث بشاحنات مبرّدة إلى نجها والقطيفة حتى 2018.",detailEn:"One of the two main hospitals for Caesar registrations (2011–2013). \"Gravedigger\" testimony: bodies trucked in refrigerated lorries to Najha and Qutayfah until 2018.",sources:["IIIM","HRW","SJAC","MEE"]},
+  {id:11,nameAr:"المستشفى العسكري 601 — المزة",nameEn:"Military Hospital 601 (Mezzeh)",agency:"HOSP",govAr:"دمشق",govEn:"Damascus",lat:33.51229,lng:36.25529,conf:"HIGH",violations:["death"],caesar:true,casesIIIM:7,yearActive:2011,yearClosed:2018,detailAr:"المستشفى الرئيسي لتسجيل الجثث في ملف قيصر (2011–2013). مرتبط بمحاكمة د. علاء م. (مؤبد، فرانكفورت 16 يونيو 2025). استمر نقل الجثث منه إلى المقابر حتى 2018.",detailEn:"Main hospital for Caesar registrations (2011–2013). Linked to Dr. Alaa M. (life, Frankfurt 16 June 2025). Bodies continued to be trucked to graves until 2018.",sources:["IIIM","HRW","ECCHR","Frankfurt Court","MEE"]},
   {id:12,nameAr:"الأمن الجنائي — دمشق",nameEn:"Criminal Security — Damascus",agency:"MoI",govAr:"دمشق",govEn:"Damascus",lat:33.499362,lng:36.300753,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:19,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي التابع لوزارة الداخلية في دمشق.",detailEn:"Criminal Security branch under Ministry of Interior.",sources:["IIIM"]},
-  {id:41,nameAr:"فرع 216 — الدوريات",nameEn:"MI Branch 216 (Patrols)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491553,lng:36.319106,conf:"LOW",violations:["torture","death","caesar"],caesar:true,caesarImgs:1108,caesarVictims:292,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"فرع الدوريات. 1,108 صورة قيصر — 292 ضحية.",detailEn:"Patrols Branch. 1,108 Caesar images — 292 victims.",sources:["IIIM","OFAC","Germany BKA"]},
-  {id:42,nameAr:"فرع 220 — سعسع",nameEn:"MI Branch 220 (Sa'sa)",agency:"MI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.31061,lng:36.04622,conf:"MEDIUM",violations:["torture","death","caesar"],caesar:true,caesarImgs:210,caesarVictims:50,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"يغطي سعسع والقنيطرة. انتقل موقعه عام 2013.",detailEn:"Covers Sa'sa and Quneitra. Relocated in 2013.",sources:["IIIM","Enab Baladi"]},
+  {id:41,nameAr:"فرع 216 — الدوريات",nameEn:"MI Branch 216 (Patrols)",agency:"MI",govAr:"دمشق",govEn:"Damascus",lat:33.491553,lng:36.319106,conf:"LOW",violations:["torture","death"],caesar:true,caesarImgs:1108,caesarVictims:297,casesIIIM:5,yearActive:2011,yearClosed:2024,detailAr:"فرع الدوريات. 297 ضحية في صور قيصر وفق رابطة عائلات المعتقلين والمفقودين.",detailEn:"Patrols Branch. 297 Caesar victims per SAFMCD.",sources:["IIIM","OFAC","Germany BKA","SAFMCD"]},
+  {id:42,nameAr:"فرع 220 — سعسع",nameEn:"MI Branch 220 (Sa'sa)",agency:"MI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.31061,lng:36.04622,conf:"MEDIUM",violations:["torture","death"],caesar:true,caesarImgs:210,caesarVictims:50,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"يغطي سعسع والقنيطرة. انتقل موقعه عام 2013.",detailEn:"Covers Sa'sa and Quneitra. Relocated in 2013.",sources:["IIIM","Enab Baladi"]},
   {id:43,nameAr:"المخابرات الجوية — باب توما",nameEn:"AFI Branch — Bab Touma",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.517811,lng:36.313969,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:4,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات الجوية في دمشق القديمة.",detailEn:"AFI branch in Old Damascus.",sources:["IIIM","HRW"]},
   {id:44,nameAr:"المخابرات الجوية — المعلومات",nameEn:"AFI Information Branch",agency:"AFI",govAr:"دمشق",govEn:"Damascus",lat:33.523098,lng:36.321397,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع المعلومات للمخابرات الجوية في دمشق.",detailEn:"AFI Information Branch in Damascus.",sources:["IIIM","VDC"]},
   {id:45,nameAr:"الشرطة العسكرية — القابون",nameEn:"Military Police — Al-Qaboun",agency:"MP",govAr:"دمشق",govEn:"Damascus",lat:33.553702,lng:36.331235,conf:"HIGH",violations:["torture","death"],caesar:false,casesIIIM:24,yearActive:2011,yearClosed:2024,detailAr:"المحكمة الميدانية العسكرية تُصدر أحكام إعدام في دقائق.",detailEn:"Military Field Court issuing death sentences within minutes.",sources:["IIIM","Amnesty","VDC"]},
@@ -428,12 +485,12 @@ const facilities = [
   {id:13,nameAr:"سجن صيدنايا العسكري",nameEn:"Saydnaya Military Prison",agency:"MP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.66562,lng:36.3289,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:80,yearActive:2011,yearClosed:2024,detailAr:"الأكثر دموية في المنظومة. 5,000–13,000 إعدام جماعياً شنقاً (منظمة العفو 2017). تحرّر ~2,000 محتجز ديسمبر 2024.",detailEn:"Most lethal facility. 5,000–13,000 mass hanged (Amnesty 2017). ~2,000 freed Dec 2024.",sources:["IIIM","Amnesty","Forensic Architecture","ADMSP"]},
   {id:14,nameAr:"سجن عدرا المركزي",nameEn:"Adra Central Prison",agency:"MoI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.59112,lng:36.44034,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:204,yearActive:2011,yearClosed:2024,detailAr:"أكبر سجن مدني — طاقة 2,500 ويحوي أكثر من 7,000.",detailEn:"Largest civil prison — capacity 2,500 but held 7,000+.",sources:["IIIM","SNHR","Mapping MENA"]},
   {id:15,nameAr:"المخابرات الجوية — حرستا",nameEn:"AFI Branch — Harasta",agency:"AFI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.545365,lng:36.351131,conf:"LOW",violations:["torture","death","disappear"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"فرع جنوب المنطقة. موثّقة فيه إعدامات ميدانية.",detailEn:"Southern Region branch. Extrajudicial executions documented.",sources:["IIIM","VDC"]},
-  {id:16,nameAr:"المستشفى العسكري حرستا",nameEn:"Harasta Military Hospital",agency:"HOSP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.579506,lng:36.379856,conf:"MEDIUM",violations:["death","caesar"],caesar:true,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"استُخدم لتسجيل جثث ضحايا فرع 251.",detailEn:"Used to register Branch 251 victims.",sources:["IIIM","HRW"]},
+  {id:16,nameAr:"المستشفى العسكري حرستا",nameEn:"Harasta Military Hospital",agency:"HOSP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.579506,lng:36.379856,conf:"MEDIUM",violations:["death"],caesar:true,casesIIIM:2,yearActive:2011,yearClosed:2018,detailAr:"استُخدم لتسجيل جثث ضحايا فرع 251. من المستشفيات التي نُقلت منها الجثث إلى نجها والقطيفة حتى 2018.",detailEn:"Used to register Branch 251 victims. One of the hospitals from which bodies were trucked to Najha and Qutayfah until 2018.",sources:["IIIM","HRW","MEE"]},
   {id:49,nameAr:"الشرطة العسكرية — قطنا",nameEn:"Military Police — Qatana",agency:"MP",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.43866,lng:36.07057,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"قسم الشرطة العسكرية في قطنا.",detailEn:"Military Police section in Qatana.",sources:["IIIM"]},
   {id:55,nameAr:"الأمن الجنائي — حرستا",nameEn:"Criminal Security — Harasta",agency:"MoI",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.550060,lng:36.360812,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:1,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن الجنائي في حرستا.",detailEn:"Criminal Security branch in Harasta.",sources:["IIIM"]},
 
   // HOMS
-  {id:17,nameAr:"فرع 261 — المخابرات العسكرية حمص",nameEn:"MI Branch 261 — Homs",agency:"MI",govAr:"حمص",govEn:"Homs",lat:34.720852,lng:36.705309,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:30,yearActive:2011,yearClosed:2024,detailAr:"من أسوأ مراكز الاحتجاز. خلايا 1×1.5م تحوي 5 محتجزين.",detailEn:"One of the worst sites. Cells 1×1.5m holding 5 detainees.",sources:["IIIM","VDC","Frankfurt Court","COI"]},
+  {id:17,nameAr:"فرع 261 — المخابرات العسكرية حمص",nameEn:"MI Branch 261 — Homs",agency:"MI",govAr:"حمص",govEn:"Homs",lat:34.720852,lng:36.705309,conf:"HIGH",violations:["torture","death","disappear"],caesar:false,casesIIIM:30,yearActive:2011,yearClosed:2024,detailAr:"من أسوأ مراكز الاحتجاز. خلايا 1×1.5م تحوي 5 محتجزين. عمل فيه الطبيب علاء م. إلى جانب المستشفى العسكري 608 في حمص (حكم مؤبد، فرانكفورت يونيو 2025).",detailEn:"One of the worst sites. Cells 1×1.5m holding 5 detainees. Dr. Alaa M. worked here and at Military Hospital 608 in Homs (life sentence, Frankfurt June 2025).",sources:["IIIM","VDC","Frankfurt Court","COI","Frankfurt Court"]},
   {id:18,nameAr:"سجن تدمر",nameEn:"Tadmur Prison (Palmyra)",agency:"MP",govAr:"حمص",govEn:"Homs",lat:34.55893,lng:38.28549,conf:"LOW",violations:["torture","death","disappear"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2015,detailAr:"مجزرة 1980: ~1,000 سجين في يوم. 17,000–25,000 قُتلوا 1980–2001. دمّره داعش 2015.",detailEn:"1980 massacre: ~1,000 killed. 17,000–25,000 killed 1980–2001. Destroyed by ISIS 2015.",sources:["IIIM","Amnesty","SHRC"]},
   {id:19,nameAr:"السجن العسكري الثالث — البالونة",nameEn:"Third Military Prison — Al-Balouna",agency:"MP",govAr:"حمص",govEn:"Homs",lat:34.683646,lng:36.728532,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:64,yearActive:2011,yearClosed:2024,detailAr:"السجن العسكري الثالث في حمص.",detailEn:"Third Military Prison in Homs.",sources:["IIIM","ECCHR"]},
   {id:20,nameAr:"المخابرات الجوية — حمص",nameEn:"AFI Central Region Branch — Homs",agency:"AFI",govAr:"حمص",govEn:"Homs",lat:34.750794,lng:36.714550,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:10,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي للمخابرات الجوية في حمص.",detailEn:"AFI regional branch in Homs.",sources:["IIIM","HRW"]},
@@ -462,7 +519,7 @@ const facilities = [
   // DARAA
   {id:29,nameAr:"فرع 265 قسم درعا",nameEn:"MI Branch 265 Section — Daraa",agency:"MI",govAr:"درعا",govEn:"Daraa",lat:32.627697,lng:36.09988,conf:"MEDIUM",violations:["torture","disappear","death"],caesar:false,casesIIIM:19,yearActive:2011,yearClosed:2024,detailAr:"قسم المخابرات العسكرية في درعا — مهد الثورة السورية.",detailEn:"MI section in Daraa — birthplace of the Syrian revolution.",sources:["IIIM","HRW","COI"]},
   {id:70,nameAr:"فرع المخابرات العامة 315 — درعا",nameEn:"GID Branch 315 — Daraa",agency:"GID",govAr:"درعا",govEn:"Daraa",lat:32.626790,lng:36.122447,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع إدارة المخابرات العامة في درعا.",detailEn:"GID branch in Daraa.",sources:["IIIM"]},
-  {id:71,nameAr:"الأمن السياسي — درعا",nameEn:"Political Security — Daraa",agency:"PSD",govAr:"درعا",govEn:"Daraa",lat:32.630235,lng:36.108123,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"أول مراكز احتجاز متظاهري درعا مارس 2011.",detailEn:"First detention center for Daraa protesters March 2011.",sources:["IIIM","HRW","COI"]},
+  {id:71,nameAr:"الأمن السياسي — درعا",nameEn:"Political Security — Daraa",agency:"PSD",govAr:"درعا",govEn:"Daraa",lat:32.630235,lng:36.108123,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"أول مراكز احتجاز متظاهري درعا مارس 2011. رئيسه عاطف نجيب أُدين في أول محاكمة سورية لجرائم النظام (دمشق، 11 أغسطس 2026) وحُكم عليه بالإعدام مع سبعة آخرين غيابياً منهم بشار الأسد.",detailEn:"First detention center for Daraa protesters, March 2011. Its head Atef Najib was convicted in Syria’s first trial of regime crimes (Damascus, 11 Aug 2026) and sentenced to death alongside seven others in absentia, including Bashar al-Assad.",sources:["IIIM","HRW","COI","Najib Damascus"]},
   {id:72,nameAr:"سجن درعا المركزي",nameEn:"Daraa Central Prison",agency:"MoI",govAr:"درعا",govEn:"Daraa",lat:32.59565,lng:36.158272,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني في درعا.",detailEn:"Central civil prison in Daraa.",sources:["IIIM"]},
 
   // IDLIB
@@ -481,27 +538,28 @@ const facilities = [
   {id:36,nameAr:"سجن طرطوس المركزي",nameEn:"Tartus Central Prison",agency:"MoI",govAr:"طرطوس",govEn:"Tartus",lat:34.896,lng:35.883,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:6,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني المركزي في طرطوس.",detailEn:"Central civil prison in Tartus.",sources:["IIIM"]},
 
   // DEIR EZ-ZOR / RAQQA
-  {id:37,nameAr:"فرع 243 — المخابرات العسكرية دير الزور",nameEn:"MI Branch 243 — Deir ez-Zor",agency:"MI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345233,lng:40.129953,conf:"MEDIUM",violations:["torture","disappear","death"],caesar:false,casesIIIM:12,yearActive:2011,yearClosed:2014,detailAr:"سقط بيد داعش 2014، استُعيد 2017.",detailEn:"Fell to ISIS 2014, recovered 2017.",sources:["IIIM","HRW"]},
-  {id:38,nameAr:"المخابرات الجوية — دير الزور",nameEn:"AFI Eastern Region — Deir ez-Zor",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345264,lng:40.128354,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2014,detailAr:"فرع المنطقة الشرقية للمخابرات الجوية.",detailEn:"AFI Eastern Region branch.",sources:["IIIM"]},
-  {id:81,nameAr:"فرع المخابرات العامة 327 — دير الزور",nameEn:"GID Branch 327 — Deir ez-Zor",agency:"GID",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.335332,lng:40.121097,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"فرع المخابرات العامة في دير الزور.",detailEn:"GID branch in Deir ez-Zor.",sources:["IIIM"]},
-  {id:82,nameAr:"الأمن السياسي — دير الزور",nameEn:"Political Security — Deir ez-Zor",agency:"PSD",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.339837,lng:40.153720,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"فرع الأمن السياسي في دير الزور.",detailEn:"Political Security branch in Deir ez-Zor.",sources:["IIIM"]},
-  {id:86,nameAr:"قاعدة دير الزور الجوية",nameEn:"Deir ez-Zor Air Base",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.285278,lng:40.176111,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"القاعدة الجوية في دير الزور.",detailEn:"Air base in Deir ez-Zor.",sources:["IIIM","HRW"]},
-  {id:87,nameAr:"فرع المخابرات العامة 335 — الرقة",nameEn:"GID Branch 335 — Raqqa",agency:"GID",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.959833,lng:38.992117,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"فرع المخابرات العامة في الرقة (سقط 2013).",detailEn:"GID branch in Raqqa (fell 2013).",sources:["IIIM"]},
-  {id:90,nameAr:"سجن الرقة المركزي",nameEn:"Raqqa Central Prison",agency:"MoI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:36.016580,lng:39.076705,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"السجن المدني في الرقة (سقط 2013).",detailEn:"Civil prison in Raqqa (fell 2013).",sources:["IIIM"]},
-
+  {id:37,nameAr:"فرع 243 — المخابرات العسكرية دير الزور",nameEn:"MI Branch 243 — Deir ez-Zor",agency:"MI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345233,lng:40.129953,conf:"MEDIUM",violations:["torture","disappear","death"],caesar:false,casesIIIM:12,yearActive:2011,yearClosed:2024,detailAr:"احتفظ النظام بنصف مدينة دير الزور طوال حصار داعش (2014–2017)، فاستمرت فروعه الأمنية فيه حتى 2024. يحتاج موقع الفرع الدقيق ضمن الأحياء المحاصرة إلى تحقق.",detailEn:"The regime held half of Deir ez-Zor city throughout the ISIS siege (2014–2017), so its security branches kept operating until 2024. Exact branch location within the besieged districts needs verification.",sources:["IIIM","HRW","Deir ez-Zor siege"],needsVerification:true},
+  {id:38,nameAr:"المخابرات الجوية — دير الزور",nameEn:"AFI Eastern Region — Deir ez-Zor",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.345264,lng:40.128354,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:3,yearActive:2011,yearClosed:2024,detailAr:"فرع المنطقة الشرقية للمخابرات الجوية. بقي في القسم الخاضع للنظام خلال الحصار (2014–2017).",detailEn:"AFI Eastern Region branch. Remained in the regime-held part of the city during the siege (2014–2017).",sources:["IIIM","Deir ez-Zor siege"],needsVerification:true},
+  {id:81,nameAr:"فرع المخابرات العامة 327 — دير الزور",nameEn:"GID Branch 327 — Deir ez-Zor",agency:"GID",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.335332,lng:40.121097,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات العامة (أمن الدولة) في دير الزور. استمر خلال الحصار (2014–2017) بقيادة دعاس حسن علي.",detailEn:"GID (State Security) branch in Deir ez-Zor. Kept operating through the siege (2014–2017) under Daas Hassan Ali.",sources:["IIIM","Deir ez-Zor siege"],needsVerification:true},
+  {id:82,nameAr:"الأمن السياسي — دير الزور",nameEn:"Political Security — Deir ez-Zor",agency:"PSD",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.339837,lng:40.15372,conf:"MEDIUM",violations:["torture"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"فرع الأمن السياسي في دير الزور. بقي في القسم الخاضع للنظام خلال الحصار (2014–2017).",detailEn:"Political Security branch in Deir ez-Zor. Remained in the regime-held part of the city during the siege (2014–2017).",sources:["IIIM","Deir ez-Zor siege"],needsVerification:true},
+  {id:86,nameAr:"قاعدة دير الزور الجوية",nameEn:"Deir ez-Zor Air Base",agency:"AFI",govAr:"دير الزور",govEn:"Deir ez-Zor",lat:35.285278,lng:40.176111,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"مطار دير الزور العسكري. صمد تحت حصار داعش (2014–2017) وبقي بيد النظام حتى 2024.",detailEn:"Deir ez-Zor military airbase. Held out under the ISIS siege (2014–2017) and stayed in regime hands until 2024.",sources:["IIIM","HRW","Deir ez-Zor siege"]},
+  {id:87,nameAr:"فرع المخابرات العامة 335 — الرقة",nameEn:"GID Branch 335 — Raqqa",agency:"GID",govAr:"الرقة",govEn:"Raqqa",lat:35.959833,lng:38.992117,conf:"HIGH",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"فرع المخابرات العامة في الرقة (سقط 2013).",detailEn:"GID branch in Raqqa (fell 2013).",sources:["IIIM"]},
+  {id:90,nameAr:"سجن الرقة المركزي",nameEn:"Raqqa Central Prison",agency:"MoI",govAr:"الرقة",govEn:"Raqqa",lat:36.01658,lng:39.076705,conf:"MEDIUM",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2013,detailAr:"السجن المدني في الرقة (سقط 2013).",detailEn:"Civil prison in Raqqa (fell 2013).",sources:["IIIM"]},
   // SUWAYDA
   {id:39,nameAr:"فرع 265 — المخابرات العسكرية السويداء",nameEn:"MI Branch 265 — Suwayda",agency:"MI",govAr:"السويداء",govEn:"Suwayda",lat:32.709818,lng:36.572734,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2024,detailAr:"الفرع الإقليمي في السويداء.",detailEn:"MI regional branch in Suwayda.",sources:["IIIM"]},
   {id:40,nameAr:"سجن السويداء المركزي",nameEn:"Suwayda Central Prison",agency:"MoI",govAr:"السويداء",govEn:"Suwayda",lat:32.732727,lng:36.561328,conf:"LOW",violations:["torture"],caesar:false,casesIIIM:8,yearActive:2011,yearClosed:2024,detailAr:"السجن المدني في السويداء.",detailEn:"Central civil prison in Suwayda.",sources:["IIIM"]},
 
   // HASAKAH
-  {id:91,nameAr:"فرع 222 — المخابرات العسكرية القامشلي",nameEn:"MI Branch 222 — Qamishli",agency:"MI",govAr:"الحسكة",govEn:"Hasakah",lat:37.050,lng:41.228,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:1,yearActive:2011,yearClosed:2014,detailAr:"فرع المخابرات العسكرية في القامشلي.",detailEn:"MI Branch 222 in Qamishli.",sources:["IIIM","Syria Prisons Museum"]},
+  {id:91,nameAr:"فرع 222 — المخابرات العسكرية القامشلي",nameEn:"MI Branch 222 — Qamishli",agency:"MI",govAr:"الحسكة",govEn:"Hasakah",lat:37.05,lng:41.228,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:1,yearActive:2011,yearClosed:2024,detailAr:"فرع المخابرات العسكرية في القامشلي، ضمن \"المربع الأمني\" الذي احتفظ به النظام وسط مناطق قسد حتى ديسمبر 2024.",detailEn:"MI Branch 222 in Qamishli, inside the regime \"security square\" held amid SDF-controlled areas until December 2024.",sources:["IIIM","Syria Prisons Museum","Enab Baladi Qamishli"]},
   {id:92,nameAr:"سجن الحسكة المركزي (غويران)",nameEn:"Hasakah Central Prison (Ghweran)",agency:"MoI",govAr:"الحسكة",govEn:"Hasakah",lat:36.486746,lng:40.744922,conf:"LOW",violations:["torture","disappear"],caesar:false,casesIIIM:2,yearActive:2011,yearClosed:2014,detailAr:"السجن المدني في الحسكة.",detailEn:"Central civil prison in Hasakah.",sources:["IIIM"]},
 
   // MASS GRAVES
-  {id:50,nameAr:"مقبرة القطيفة الجماعية",nameEn:"Al-Qutayfah Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.7380,lng:36.6080,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2024,detailAr:"أكبر مقبرة جماعية موثقة — تقدير متحفظ 100,000 جثة. نُقلت في 'عملية نقل التراب' 2019–2021.",detailEn:"Largest documented mass grave — conservative estimate 100,000+ bodies. Relocated in 'Operation Move Earth' 2019–2021.",sources:["SETF","Reuters","ADMSP","HRW"]},
-  {id:51,nameAr:"مقبرة نجها الجماعية",nameEn:"Najha Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.3780,lng:36.4020,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2024,detailAr:"مقبرة جنوب دمشق — عشرات الآلاف من الجثث في خنادق تزيد على 90م.",detailEn:"Mass grave south of Damascus — tens of thousands in 90m+ trenches.",sources:["AP","Stephen Rapp","ADMSP"]},
-  {id:52,nameAr:"مقبرة تضامن الجماعية",nameEn:"Tadamon Mass Grave",agency:"GRAVE",govAr:"دمشق",govEn:"Damascus",lat:33.4850,lng:36.3100,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2013,detailAr:"مذبحة 16 أبريل 2013 — 288 ضحية موثقة بينهم 7 نساء و12 طفلاً.",detailEn:"April 16, 2013 massacre — 288 documented victims including 7 women and 12 children.",sources:["HRW","Ugur Umit Ungor"]},
-  {id:53,nameAr:"مقبرة الضمير الجماعية",nameEn:"Dhumair Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.6890,lng:36.8580,conf:"MEDIUM",violations:["death"],caesar:false,casesIIIM:0,yearActive:2019,yearClosed:2024,detailAr:"موقع إعادة دفن الجثث المنقولة من القطيفة (2019–2021).",detailEn:"Reburial site for bodies from al-Qutayfah (2019–2021).",sources:["Reuters"]}
+  {id:50,nameAr:"مقبرة القطيفة الجماعية",nameEn:"Al-Qutayfah Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.738,lng:36.608,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2026,detailAr:"من أكبر المقابر الجماعية. تقدّر منظمة فريق الطوارئ السوري (SETF) وجود 100,000 جثة على الأقل. نُقل جزء كبير منها سراً إلى الضمير في \"عملية نقل التراب\" (2019–2021) وفق تحقيق رويترز.",detailEn:"One of the largest mass graves. Syrian Emergency Task Force (SETF) estimates at least 100,000 bodies. Large parts secretly moved to Dhumair in \"Operation Move Earth\" (2019–2021) per Reuters.",sources:["SETF","Reuters","Stephen Rapp"]},
+  {id:51,nameAr:"مقبرة نجها الجماعية",nameEn:"Najha Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.378,lng:36.402,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2026,detailAr:"مقبرة جنوب دمشق — عشرات الآلاف من الجثث في خنادق بعمق 3 أمتار وطول يصل إلى 90 متراً. نُقلت إليها الجثث من مستشفيات تشرين والمزة وحرستا حتى 2018.",detailEn:"Mass grave south of Damascus — tens of thousands of bodies in trenches 3m deep and up to 90m long. Bodies trucked from Tishreen, Mezzeh and Harasta hospitals until 2018.",sources:["AP","Stephen Rapp","ADMSP","MEE"]},
+  {id:52,nameAr:"مقبرة تضامن الجماعية",nameEn:"Tadamon Mass Grave",agency:"GRAVE",govAr:"دمشق",govEn:"Damascus",lat:33.485,lng:36.31,conf:"HIGH",violations:["death"],caesar:false,casesIIIM:0,yearActive:2013,yearClosed:2026,detailAr:"مجزرة 16 أبريل 2013. يُظهر الفيديو المسرّب إعدام 41 شخصاً على الأقل، وتقدّر مصادر أخرى عدد الضحايا بنحو 288. زارت هيومن رايتس ووتش الموقع في ديسمبر 2024 ووجدت رفاتاً بشرية.",detailEn:"April 16, 2013 massacre. Leaked video shows the execution of at least 41 people; other sources estimate around 288 victims. HRW visited in December 2024 and found human remains.",sources:["Ugur Umit Ungor","HRW Tadamon","COI"]},
+  {id:53,nameAr:"مقبرة الضمير الجماعية",nameEn:"Dhumair Mass Grave",agency:"GRAVE",govAr:"ريف دمشق",govEn:"Rif Dimashq",lat:33.689,lng:36.858,conf:"MEDIUM",violations:["death"],caesar:false,casesIIIM:0,yearActive:2019,yearClosed:2026,detailAr:"موقع إعادة دفن الجثث المنقولة من القطيفة (2019–2021): 34 خندقاً على الأقل بطول كيلومترين. أمّنته الحكومة وفتحت تحقيقاً جنائياً (ديسمبر 2025)، والنبش مقرر في 2027.",detailEn:"Reburial site for bodies moved from al-Qutayfah (2019–2021): at least 34 trenches, 2 km long. Secured by the government with a criminal investigation opened (Dec 2025); exhumation scheduled for 2027.",sources:["Reuters","Reuters Dhumair 2025"],coordNote:{ar:"رويترز لم تنشر الموقع الدقيق؛ الإحداثيات تقديرية لمنطقة الضمير",en:"Reuters withheld the exact site; coordinates approximate the Dhumair area"}},
+  // ADDED 2026-09 (see docs/research-2026-09.md)
+  {id:93,nameAr:"المخابرات الجوية — سجن مطار حماة العسكري",nameEn:"AFI — Hama Military Airport Prison",agency:"AFI",govAr:"حماة",govEn:"Hama",lat:35.1183,lng:36.7111,conf:"LOW",needsVerification:true,violations:["torture","death","disappear"],caesar:false,casesIIIM:0,yearActive:2011,yearClosed:2024,detailAr:"حوّلت المخابرات الجوية حظائر المطار إلى سجن مكتظ بالمحتجزين. الإحداثيات لموقع المطار العام؛ لم تتسنَّ مطابقتها بملحق IIIM بعد.",detailEn:"Air Force Intelligence turned airport hangars into an overcrowded prison. Coordinates mark the airbase; not yet matched against IIIM Annex B.",sources:["Naharnet Hama"]},
 ];
 
 // TIMELINE EVENTS
@@ -511,16 +569,65 @@ const tlEvents = {
   2013:{ar:"2013 — ذروة الاعتقالات وانشقاق قيصر في أغسطس",en:"2013 — Peak detentions; Caesar defects in August"},
   2014:{ar:"2014 — داعش يسقط فروع الرقة ودير الزور",en:"2014 — ISIS overruns Raqqa and Deir ez-Zor branches"},
   2015:{ar:"2015 — داعش يدمر سجن تدمر. سقوط إدلب",en:"2015 — ISIS destroys Tadmur Prison. Idlib falls"},
-  2016:{ar:"2016 — سقوط حلب. 30,000+ معتقل في صيدنايا",en:"2016 — Aleppo falls. 30,000+ detained at Saydnaya"},
+  2016:{ar:"2016 — سقوط حلب. صيدنايا يتسع لـ10–20 ألف محتجز (العفو الدولية)",en:"2016 — Aleppo falls. Saydnaya holds 10–20 thousand detainees (Amnesty)"},
   2017:{ar:"2017 — استعادة دير الزور. تقرير منظمة العفو عن صيدنايا",en:"2017 — Deir ez-Zor recovered. Amnesty Saydnaya report"},
   2018:{ar:"2018 — بدء إصدار شهادات وفاة دون إعادة الجثث",en:"2018 — Death notices issued without returning bodies"},
   2019:{ar:"2019 — 'عملية نقل التراب': نقل جثث القطيفة سراً",en:"2019 — 'Operation Move Earth': Qutayfah bodies secretly relocated"},
   2020:{ar:"2020 — الاحتجاز مستمر رغم كوفيد-19",en:"2020 — Detention continues despite COVID-19 outbreak"},
   2021:{ar:"2021 — اكتمال نقل الجثث إلى الضمير",en:"2021 — Body relocation to Dhumair complete"},
-  2022:{ar:"2022 — محاكمة رسلان: إدانة أول جريمة دولة سورية",en:"2022 — Raslan trial: first Syrian state crime conviction"},
+  2022:{ar:"2022 — الحكم المؤبد على أنور رسلان في كوبلنز",en:"2022 — Anwar Raslan sentenced to life in Koblenz"},
   2023:{ar:"2023 — انتفاضة السويداء. اعتقالات مستمرة",en:"2023 — Suwayda uprising. Continued detentions"},
-  2024:{ar:"ديسمبر 2024 — سقوط النظام. تحرير ~24,000 محتجز",en:"December 2024 — Regime falls. ~24,000 detainees freed"}
+  2024:{ar:"ديسمبر 2024 — سقوط النظام. الإفراج عن ~24,200 محتجز وبقاء 112,414 مفقوداً",en:"December 2024 — Regime falls. ~24,200 freed; 112,414 still missing"},
+  2025:{ar:"2025 — تقرير «شبكة العذاب» الأممي، تأسيس الهيئة الوطنية للمفقودين، تحقيق رويترز عن الضمير",en:"2025 — UN 'Web of Agony' report, National Commission for the Missing, Reuters Dhumair probe"},
+  2026:{ar:"2026 — أول حكم سوري بجرائم النظام (عاطف نجيب)، وحماية مقابر مطار المزة",en:"2026 — First Syrian verdict on regime crimes (Atef Najib); Mezzeh airport graves protected"}
 };
+
+// SOURCES — keys match facility.sources entries (see docs/research-2026-09.md)
+const SOURCES={
+  'IIIM':{org:'IIIM / UN',title:'The Syrian Government Detention System as a Tool of Violent Repression (2024)',url:'https://iiim.un.org/the-syrian-government-detention-system-as-a-tool-of-violent-repression/'},
+  'COI':{org:'COI / UN',title:'Web of Agony (Jan 2025)',url:'https://www.ohchr.org/en/hr-bodies/hrc/iici-syria/web-agony'},
+  'HRW':{org:'Human Rights Watch',title:'If the Dead Could Speak (2015)',url:'https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities'},
+  'HRW Tadamon':{org:'Human Rights Watch',title:'Mass Grave in Damascus Should be Protected (Dec 2024)',url:'https://www.hrw.org/news/2024/12/16/syria-mass-grave-damascus-should-be-protected-investigated'},
+  'Amnesty':{org:'Amnesty International',title:'Human Slaughterhouse (2017)',url:'https://www.amnesty.org/en/documents/mde24/5415/2017/en/'},
+  'SNHR':{org:'SNHR',title:'Syrian Network for Human Rights',url:'https://snhr.org/'},
+  'ECCHR':{org:'ECCHR',title:'Caesar photos document systematic torture',url:'https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/'},
+  'Germany BKA':{org:'ECCHR / BKA',title:'Caesar photos — German forensic analysis',url:'https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/'},
+  'SAFMCD':{org:'SAFMCD via HRW',title:'Caesar photos breakdown by branch',url:'https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities'},
+  'Koblenz Court':{org:'SJAC',title:'The Trial of Anwar Raslan and Eyad al-Gharib',url:'https://syriaaccountability.org/the-trial-of-anwar-raslan-and-eyad-al-gharib/'},
+  'Frankfurt Court':{org:'SJAC',title:'Frankfurt Court Sentences Alaa M. to Life (Jun 2025)',url:'https://syriaaccountability.org/frankfurt-court-sentences-syrian-doctor-alaa-m-to-life-imprisonment/'},
+  'SJAC':{org:'SJAC',title:'Syria Justice and Accountability Centre',url:'https://syriaaccountability.org/'},
+  'SJAC Yarmouk':{org:'SJAC',title:'Inside the Yarmouk Trial (Koblenz)',url:'https://syriaaccountability.org/inside-the-yarmouk-trial-of-jihad-et-al-22/'},
+  'SJAC Mezzeh':{org:'The New Arab',title:'Syria moves to protect mass grave sites at Mezzeh airport',url:'https://www.newarab.com/news/syria-moves-protect-mass-grave-sites-mezzeh-airport'},
+  'Enab Baladi Mezzeh':{org:'Enab Baladi',title:'A thousand detainees killed at Mezzeh Military Airport',url:'https://english.enabbaladi.net/archives/2025/02/a-thousand-detainees-killed-at-mezzeh-military-airport-in-syria/'},
+  'Dabbagh Paris':{org:'Human Rights Watch',title:'Syrian Officials Convicted in France (May 2024)',url:'https://www.hrw.org/news/2024/05/27/syrian-officials-convicted-crimes-against-humanity-france'},
+  'US DOJ':{org:'US DOJ / FBI',title:'Charges unsealed against two former Syrian intelligence officials',url:'https://fbi.gov/news/press-releases/criminal-charges-unsealed-against-two-former-high-ranking-syrian-government-intelligence-officials-for-war-crimes-against-americans-and-other-civilians'},
+  'Najib Damascus':{org:'Human Rights Watch',title:'Q&A: Syria’s First Trials for Assad-Era Crimes (Aug 2026)',url:'https://www.hrw.org/news/2026/08/23/questions-answers-syrias-first-and-future-trials-for-assad-era-crimes'},
+  'Solna Yarmouk':{org:'SJAC',title:'A Landmark Conviction for Yarmouk in Sweden (May 2026)',url:'https://syriaaccountability.org/a-landmark-conviction-for-yarmouk-in-sweden-comes-with-lessons/'},
+  'Reuters':{org:'Reuters',title:'Assad government secretly moved mass grave (Oct 2025)',url:'https://www.usnews.com/news/world/articles/2025-10-14/exclusive-assad-government-secretly-moved-mass-grave-to-cover-up-killings-reuters-investigation-finds'},
+  'Reuters Dhumair 2025':{org:'Reuters',title:'Syria secures Assad-era mass grave (Dec 2025)',url:'https://www.usnews.com/news/world/articles/2025-12-29/syria-secures-assad-era-mass-grave-revealed-by-reuters-and-opens-criminal-investigation'},
+  'SETF':{org:'CNN / SETF',title:'Hundreds of thousands could be buried in mass graves (Dec 2024)',url:'https://www.cnn.com/2024/12/17/middleeast/syria-assad-regime-mass-graves-intl/index.html'},
+  'Stephen Rapp':{org:'Times of Israel / Reuters',title:'Mass graves expose Assad’s machinery of death',url:'https://www.timesofisrael.com/war-crimes-prosecutor-says-syrian-mass-graves-expose-assads-machinery-of-death/'},
+  'MEE':{org:'Middle East Eye',title:'How Assad’s Syria moved the bodies of its victims',url:'https://www.middleeasteye.net/news/how-assad-syria-moved-bodies-victims'},
+  'Ugur Umit Ungor':{org:'Tadamon research',title:'Tadamon massacre',url:'https://en.wikipedia.org/wiki/Tadamon_massacre'},
+  'Deir ez-Zor siege':{org:'Atlantic Council',title:'Inside ISIS’s Siege on Deir Ezzor',url:'https://www.atlanticcouncil.org/blogs/syriasource/inside-isis-s-siege-on-deir-ezzor/'},
+  'Enab Baladi Qamishli':{org:'Enab Baladi',title:'SDF lifts siege on security square in Qamishli (2024)',url:'https://english.enabbaladi.net/archives/2024/08/after-al-hasakah-sdf-lifts-siege-on-security-square-in-qamishli/'},
+  'Naharnet Hama':{org:'AFP via Naharnet',title:'Hama Military Airport Turned into Feared Prison',url:'https://m.naharnet.com/stories/en/58939-syrian-activists-hama-military-airport-turned-into-feared-prison'},
+  'NCMP':{org:'Enab Baladi',title:'National Commission for the Missing finds remains (May 2026)',url:'https://english.enabbaladi.net/archives/2026/05/national-commission-for-the-missing-finds-remains-near-damascus/'},
+  'Enab Baladi':{org:'Enab Baladi',title:'Enab Baladi',url:'https://english.enabbaladi.net/'},
+  'Forensic Architecture':{org:'Amnesty / Forensic Architecture',title:'Saydnaya: Inside a Syrian Torture Prison',url:'https://saydnaya.amnesty.org/'}
+};
+
+// TRIALS — linked to facilities by id
+const trials=[
+  {date:'2021-02-24',ar:'إياد الغريب — كوبلنز',en:'Eyad al-Gharib — Koblenz',verdictAr:'4.5 سنوات',verdictEn:'4.5 years',facilityIds:[1],src:'Koblenz Court'},
+  {date:'2022-01-13',ar:'أنور رسلان — كوبلنز',en:'Anwar Raslan — Koblenz',verdictAr:'مؤبد (4,000 حالة تعذيب، 27 قتلاً)',verdictEn:'Life (4,000 torture cases, 27 murders)',facilityIds:[1],src:'Koblenz Court'},
+  {date:'2024-05-24',ar:'قضية الدباغ — باريس (غيابياً)',en:'Dabbagh case — Paris (in absentia)',verdictAr:'مؤبد لعلي مملوك وجميل حسن وعبد السلام محمود',verdictEn:'Life for Ali Mamlouk, Jamil Hassan, Abdel Salam Mahmoud',facilityIds:[9],src:'Dabbagh Paris'},
+  {date:'2024-12',ar:'لائحة اتهام أمريكية — جميل حسن وعبد السلام محمود',en:'US indictment — Jamil Hassan & Abdel Salam Mahmoud',verdictAr:'اتهام (لم تُعقد محاكمة)',verdictEn:'Indictment (no trial yet)',facilityIds:[9],src:'US DOJ'},
+  {date:'2025-06-16',ar:'الطبيب علاء م. — فرانكفورت',en:'Dr. Alaa M. — Frankfurt',verdictAr:'مؤبد مع احتجاز وقائي',verdictEn:'Life with preventive detention',facilityIds:[11,17],src:'Frankfurt Court'},
+  {date:'2025-11-19',ar:'محاكمة اليرموك — كوبلنز',en:'Yarmouk trial — Koblenz',verdictAr:'جارية',verdictEn:'Ongoing',facilityIds:[4],src:'SJAC Yarmouk'},
+  {date:'2026-05-04',ar:'محمود س. (اليرموك) — سولنا، السويد',en:'Mahmoud S. (Yarmouk) — Solna, Sweden',verdictAr:'مؤبد',verdictEn:'Life',facilityIds:[],src:'Solna Yarmouk'},
+  {date:'2026-08-11',ar:'عاطف نجيب وآخرون — دمشق',en:'Atef Najib et al. — Damascus',verdictAr:'إعدام للمتهمين الثمانية (سبعة غيابياً منهم بشار الأسد)',verdictEn:'Death for all eight (seven in absentia, incl. Bashar al-Assad)',facilityIds:[71],src:'Najib Damascus'}
+];
 
 // COLORS
 const AC={MI:'#C0392B',AFI:'#D35400',GID:'#2471A3',PSD:'#6C3483',MoI:'#1E7E4A',MP:'#566073',HOSP:'#943D5A',GRAVE:'#7B1C1C'};
@@ -546,18 +653,19 @@ const markerLayer=L.layerGroup().addTo(map);
 let markersMap={};
 
 // RENDER
+function isVisible(f){
+  return activeAgencies.has(f.agency)&&
+    (activeGov==='all'||f.govAr===activeGov)&&
+    (activeV==='all'||(activeV==='caesar'?f.caesar:f.violations.includes(activeV)))&&
+    (activeC==='all'||f.conf===activeC)&&
+    (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear));
+}
 function renderMarkers(){
   markerLayer.clearLayers();
   markersMap={};
   let count=0;
   facilities.forEach(f=>{
-    const visible=
-      activeAgencies.has(f.agency)&&
-      (activeGov==='all'||f.govAr===activeGov)&&
-      (activeV==='all'||f.violations.includes(activeV))&&
-      (activeC==='all'||f.conf===activeC)&&
-      (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear));
-    if(!visible)return;
+    if(!isVisible(f))return;
     const color=AC[f.agency];
     let marker;
     if(f.agency==='GRAVE'){
@@ -591,9 +699,15 @@ function buildPopup(f){
   const vArMap={torture:'تعذيب',disappear:'اختفاء قسري',death:'وفاة',caesar:'ملف قيصر'};
   const vEnMap={torture:'Torture',disappear:'Disappearance',death:'Death',caesar:'Caesar Files'};
   const vCls={torture:'vt-torture',disappear:'vt-disappear',death:'vt-death',caesar:'vt-caesar'};
-  const vtags=f.violations.map(v=>`<span class="vtag ${vCls[v]}">${L2==='ar'?vArMap[v]:vEnMap[v]}</span>`).join('');
-  const cblock=f.caesar&&f.caesarImgs?`<div class="pcaesar"><span style="font-size:15px">📁</span><div class="pcaesar-t"><strong>${L2==='ar'?'ملف قيصر:':'Caesar:'}</strong> ${f.caesarImgs?.toLocaleString()} ${L2==='ar'?'صورة':'imgs'} · ${f.caesarVictims?.toLocaleString()} ${L2==='ar'?'ضحية':'victims'}</div></div>`:'';
-  const yr=`${f.yearActive}–${f.yearClosed===2024?L2==='ar'?'2024 (سقط النظام)':'2024 (regime fall)':f.yearClosed}`;
+  const vtags=[...f.violations,...(f.caesar?['caesar']:[])].map(v=>`<span class="vtag ${vCls[v]}">${L2==='ar'?vArMap[v]:vEnMap[v]}</span>`).join('');
+  const srcLinks=f.sources.map(k=>{const s=SOURCES[k];return s?`<a href="${s.url}" target="_blank" rel="noopener" title="${s.title}">${s.org}</a>`:k;}).join(' · ');
+  const related=trials.filter(t=>t.facilityIds.includes(f.id));
+  const tblock=related.length?`<div class="ptrials"><div class="ptrials-h">⚖ ${L2==='ar'?'محاكمات مرتبطة':'Related trials'}</div>${related.map(t=>`<div class="ptrial"><span class="ptrial-d">${t.date.slice(0,7)}</span> ${L2==='ar'?t.ar:t.en} — <strong>${L2==='ar'?t.verdictAr:t.verdictEn}</strong></div>`).join('')}</div>`:'';
+  const warn=f.needsVerification?`<div class="pwarn">⚠ ${L2==='ar'?'بحاجة إلى تحقق إضافي من الموقع أو الفترة':'Location or period needs further verification'}</div>`:'';
+  const cnote=f.coordNote?`<br><span style="opacity:.8">${L2==='ar'?f.coordNote.ar:f.coordNote.en}</span>`:'';
+  const cblock=f.caesar&&f.caesarVictims?`<div class="pcaesar"><span style="font-size:15px">📁</span><div class="pcaesar-t"><strong>${L2==='ar'?'ملف قيصر:':'Caesar:'}</strong> ${f.caesarVictims.toLocaleString()} ${L2==='ar'?'ضحية':'victims'}${f.caesarImgs?` · ${f.caesarImgs.toLocaleString()} ${L2==='ar'?'صورة':'imgs'}`:''}</div></div>`:'';
+  const endLbl=f.yearClosed===2024?(L2==='ar'?'2024 (سقط النظام)':'2024 (regime fall)'):f.yearClosed>=2026?(L2==='ar'?'حتى الآن':'present'):f.yearClosed;
+  const yr=`${f.yearActive}–${endLbl}`;
   return `<div class="pw" dir="${L2==='ar'?'rtl':'ltr'}">
     <div class="pbadge" style="background:${AC[f.agency]}22;color:${AC[f.agency]}">● ${ag}</div>
     <div class="pnar">${name}</div>
@@ -606,7 +720,9 @@ function buildPopup(f){
     <div style="font-size:10px;color:var(--text-2);line-height:1.6;margin-top:7px">${detail}</div>
     <div class="pvtags">${vtags}</div>
     ${cblock}
-    <div class="pcoords">📍 ${f.lat.toFixed(5)}, ${f.lng.toFixed(5)}<br><span style="opacity:.6">${f.sources.join(' · ')}</span></div>
+    ${tblock}
+    ${warn}
+    <div class="pcoords">📍 ${f.lat.toFixed(5)}, ${f.lng.toFixed(5)}${cnote}<br><span class="psrc">${srcLinks}</span></div>
   </div>`;
 }
 
@@ -648,14 +764,7 @@ function resetFilters(){
 function updateStats(){
   const L2=currentLang;
 
-  // Get currently visible facilities (same filter logic as renderMarkers)
-  const visible=facilities.filter(f=>
-    activeAgencies.has(f.agency)&&
-    (activeGov==='all'||f.govAr===activeGov)&&
-    (activeV==='all'||f.violations.includes(activeV))&&
-    (activeC==='all'||f.conf===activeC)&&
-    (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear))
-  );
+  const visible=facilities.filter(isVisible);
 
   const count=visible.length;
   const totalIIIM=visible.reduce((s,f)=>s+f.casesIIIM,0);
@@ -706,7 +815,7 @@ function updateStats(){
 
   // Violation bars
   const vCounts={torture:0,disappear:0,death:0,caesar:0};
-  visible.forEach(f=>f.violations.forEach(v=>{if(vCounts[v]!==undefined)vCounts[v]++;}));
+  visible.forEach(f=>{f.violations.forEach(v=>{if(vCounts[v]!==undefined)vCounts[v]++;});if(f.caesar)vCounts.caesar++;});
   const vMax=Math.max(...Object.values(vCounts),1);
   const vNameAr={torture:'تعذيب',disappear:'اختفاء قسري',death:'وفاة',caesar:'صلة بقيصر'};
   const vNameEn={torture:'Torture',disappear:'Disappearance',death:'Death',caesar:'Caesar link'};
@@ -728,18 +837,12 @@ function updateStats(){
 }
 
 // LIST
-function renderList(q=''){
+function renderList(q=document.getElementById('sbox').value){
   const L2=currentLang;
-  const list=facilities.filter(f=>{
-    const show=activeAgencies.has(f.agency)&&
-      (activeGov==='all'||f.govAr===activeGov)&&
-      (activeV==='all'||f.violations.includes(activeV))&&
-      (activeC==='all'||f.conf===activeC)&&
-      (!timelineActive||(f.yearActive<=currentYear&&f.yearClosed>=currentYear));
-    if(!show)return false;
-    if(q){const qq=q.toLowerCase();return f.nameAr.includes(qq)||f.nameEn.toLowerCase().includes(qq)||f.govAr.includes(qq);}
-    return true;
-  });
+  const qq=q.trim().toLowerCase();
+  const list=facilities.filter(f=>isVisible(f)&&(!qq||
+    f.nameAr.includes(qq)||f.nameEn.toLowerCase().includes(qq)||
+    f.govAr.includes(qq)||f.govEn.toLowerCase().includes(qq)));
   document.getElementById('rcnt').textContent=L2==='ar'?`${list.length} موقع`:`${list.length} sites`;
   document.getElementById('flist').innerHTML=list.map(f=>`
     <div class="fi" onclick="flyTo(${f.id})">
@@ -769,43 +872,85 @@ function switchTab(t){
   document.getElementById('content-'+t).classList.add('active');
   if(t==='list')renderList();
   if(t==='stats')updateStats();
+  if(t==='trials')renderTrials();
+}
+
+// TRIALS
+function renderTrials(){
+  const L2=currentLang;
+  document.getElementById('trialList').innerHTML=trials.slice().sort((a,b)=>b.date.localeCompare(a.date)).map((t,i)=>{
+    const s=SOURCES[t.src];
+    const sites=t.facilityIds.map(id=>facilities.find(f=>f.id===id)).filter(Boolean);
+    return `<div class="fi trial">
+      <div class="fi-nar">${L2==='ar'?t.ar:t.en}</div>
+      <div class="fi-nen">${t.date}</div>
+      <div class="trial-v">${L2==='ar'?t.verdictAr:t.verdictEn}</div>
+      <div class="fi-meta">
+        ${sites.map(f=>`<span class="fi-tag fi-link" onclick="showFacility(${f.id})">📍 ${L2==='ar'?f.nameAr:f.nameEn}</span>`).join('')}
+        ${s?`<a class="fi-tag" href="${s.url}" target="_blank" rel="noopener">${s.org} ↗</a>`:''}
+      </div>
+    </div>`;}).join('');
+}
+// Show a facility even if the current year/filters hide it
+function showFacility(id){
+  const f=facilities.find(x=>x.id===id);
+  if(!f)return;
+  if(!isVisible(f)){resetFilters();setAllYears(true);}
+  if(isMobile())toggleSidebar(false);
+  flyTo(id);
 }
 
 // SIDEBAR
-let sidebarOpen=true;
-function toggleSidebar(){
+const isMobile=()=>window.matchMedia('(max-width:768px)').matches;
+let sidebarOpen=!isMobile();
+function toggleSidebar(force){
   const sb=document.getElementById('sidebar');
   const tg=document.getElementById('stoggle');
-  sidebarOpen=!sidebarOpen;
-  sb.style.display=sidebarOpen?'flex':'none';
-  tg.style.right=sidebarOpen?'300px':'0';
-  tg.innerHTML=sidebarOpen?'◀':'▶';
+  sidebarOpen=typeof force==='boolean'?force:!sidebarOpen;
+  sb.classList.toggle('closed',!sidebarOpen);
+  tg.style.insetInlineStart=sidebarOpen?sb.offsetWidth+'px':'0';
+  // Arrow points toward the map edge the panel collapses into
+  const rtl=document.documentElement.dir==='rtl';
+  tg.innerHTML=(sidebarOpen===rtl)?'▶':'◀';
   setTimeout(()=>map.invalidateSize(),300);
 }
 
 // =============================================
 // TIMELINE
 // =============================================
-const YEARS=[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+const YEAR_MIN=2011,YEAR_MAX=2026;
+const YEARS=Array.from({length:YEAR_MAX-YEAR_MIN+1},(_,i)=>YEAR_MIN+i);
+const yearFromPct=pct=>Math.max(YEAR_MIN,Math.min(YEAR_MAX,Math.round(YEAR_MIN+pct*(YEAR_MAX-YEAR_MIN))));
 
 // Build year labels
 function buildTimelineLabels(){
   const container=document.getElementById('tlLabels');
-  container.innerHTML=YEARS.map(y=>`<span class="tl-year-lbl${y===currentYear?' current':''}" onclick="jumpYear(${y})">${y}</span>`).join('');
+  container.innerHTML=YEARS.map(y=>`<span class="tl-year-lbl${y===currentYear?' current':''}" data-year="${y}" onclick="jumpYear(${y})"><span class="yl-full">${y}</span><span class="yl-short">'${String(y).slice(2)}</span></span>`).join('');
 }
 
 // Update slider position
 function updateSlider(year){
   currentYear=year;
-  const pct=((year-2011)/(2024-2011))*100;
+  const pct=((year-YEAR_MIN)/(YEAR_MAX-YEAR_MIN))*100;
   document.getElementById('tlProgress').style.width=pct+'%';
   document.getElementById('tlThumb').style.left=pct+'%';
-  document.getElementById('yearDisplay').textContent=year;
-  const ev=tlEvents[year];
-  if(ev) document.getElementById('tlEvent').textContent=currentLang==='ar'?ev.ar:ev.en;
   document.querySelectorAll('.tl-year-lbl').forEach(el=>{
-    el.classList.toggle('current',parseInt(el.textContent)===year);
+    el.classList.toggle('current',+el.dataset.year===year);
   });
+  setAllYears(false);
+}
+
+// All-years mode shows every site regardless of its active period
+function setAllYears(on){
+  timelineActive=!on;
+  document.getElementById('timelineBar').classList.toggle('all-years',on);
+  document.getElementById('allYearsBtn').classList.toggle('active',on);
+  if(on&&playing)togglePlay();
+  document.getElementById('yearDisplay').textContent=on?(currentLang==='ar'?'الكل':'All'):currentYear;
+  const ev=tlEvents[currentYear];
+  document.getElementById('tlEvent').textContent=on?
+    (currentLang==='ar'?'كل المواقع الموثقة 2011–2026':'All documented sites 2011–2026'):
+    (ev?(currentLang==='ar'?ev.ar:ev.en):'');
   renderMarkers();
 }
 
@@ -813,37 +958,23 @@ function jumpYear(y){updateSlider(y);}
 
 // Track click
 function trackClick(e){
-  const track=document.getElementById('tlTrack');
-  const rect=track.getBoundingClientRect();
-  const pct=(e.clientX-rect.left)/rect.width;
-  const year=Math.round(2011+pct*(2024-2011));
-  const clamped=Math.max(2011,Math.min(2024,year));
-  updateSlider(clamped);
+  const rect=document.getElementById('tlTrack').getBoundingClientRect();
+  updateSlider(yearFromPct((e.clientX-rect.left)/rect.width));
 }
 
-// Drag
+// Drag (mouse + touch)
 const thumb=document.getElementById('tlThumb');
 let dragging=false;
+function dragTo(clientX){
+  const rect=document.getElementById('tlTrack').getBoundingClientRect();
+  const y=yearFromPct((clientX-rect.left)/rect.width);
+  if(y!==currentYear||!timelineActive)updateSlider(y);
+}
 thumb.addEventListener('mousedown',e=>{dragging=true;e.preventDefault();});
-document.addEventListener('mousemove',e=>{
-  if(!dragging)return;
-  const track=document.getElementById('tlTrack');
-  const rect=track.getBoundingClientRect();
-  const pct=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));
-  const year=Math.round(2011+pct*(2024-2011));
-  updateSlider(year);
-});
+document.addEventListener('mousemove',e=>{if(dragging)dragTo(e.clientX);});
 document.addEventListener('mouseup',()=>{dragging=false;});
-
-// Touch
 thumb.addEventListener('touchstart',e=>{dragging=true;e.preventDefault();},{passive:false});
-document.addEventListener('touchmove',e=>{
-  if(!dragging)return;
-  const track=document.getElementById('tlTrack');
-  const rect=track.getBoundingClientRect();
-  const pct=Math.max(0,Math.min(1,(e.touches[0].clientX-rect.left)/rect.width));
-  const year=Math.round(2011+pct*(2024-2011));
-  updateSlider(year);},{passive:false});
+document.addEventListener('touchmove',e=>{if(dragging)dragTo(e.touches[0].clientX);},{passive:false});
 document.addEventListener('touchend',()=>{dragging=false;});
 
 // Play/pause
@@ -851,9 +982,9 @@ function togglePlay(){
   playing=!playing;
   document.getElementById('playBtn').textContent=playing?'⏸':'▶';
   if(playing){
-    if(currentYear===2024)updateSlider(2011);
+    if(currentYear===YEAR_MAX||!timelineActive)updateSlider(YEAR_MIN);
     playInterval=setInterval(()=>{
-      if(currentYear>=2024){clearInterval(playInterval);playing=false;document.getElementById('playBtn').textContent='▶';return;}
+      if(currentYear>=YEAR_MAX){clearInterval(playInterval);playing=false;document.getElementById('playBtn').textContent='▶';return;}
       updateSlider(currentYear+1);
     },1200);
   } else {
@@ -873,18 +1004,16 @@ function setLang(lang){
     if(el.dataset[k])el.textContent=el.dataset[k];
   });
   document.getElementById('sbox').placeholder=lang==='ar'?'ابحث عن فرع أو موقع...':'Search facility or location...';
-  const ev=tlEvents[currentYear];
-  if(ev)document.getElementById('tlEvent').textContent=lang==='ar'?ev.ar:ev.en;
-  renderMarkers();
-  updateStats();
-  renderList();
+  setAllYears(!timelineActive);
+  renderTrials();
+  toggleSidebar(sidebarOpen);
 }
 
 // INIT
 buildTimelineLabels();
-updateSlider(2011);
-updateStats();
-renderList();
+toggleSidebar(sidebarOpen);
+updateSlider(YEAR_MIN);
+renderTrials();
 </script>
 </body>
 </html>
