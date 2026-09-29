@@ -140,6 +140,7 @@ body{font-family:'IBM Plex Sans Arabic',sans-serif;background:var(--bg);color:va
 
 /* LEAFLET */
 .leaflet-container{background:#E8EDF5;}
+.leaflet-tile-pane{filter:grayscale(.75) brightness(1.04) contrast(.9);}
 .leaflet-tooltip{background:#fff;border:1px solid var(--border);border-radius:4px;color:var(--text);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:11px;padding:4px 8px;box-shadow:var(--shadow);}
 .leaflet-tooltip::before{display:none;}
 
@@ -637,8 +638,9 @@ const ANen={MI:'Military Intelligence',AFI:'Air Force Intel',GID:'General Intell
 // MAP
 const map = L.map('map',{center:[34.8,38.9],zoom:6,zoomControl:false,attributionControl:false});
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(map);
-L.control.attribution({prefix:false,position:'bottomleft'}).addAttribution('<span style="font-size:9px;color:#aaa">© CartoDB · IIIM/UN Data</span>').addTo(map);
+// CARTO basemaps now require an API key on public domains; OpenStreetMap needs none (attribution required).
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
+L.control.attribution({prefix:false,position:'bottomleft'}).addAttribution('<span style="font-size:9px;color:#777">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · IIIM/UN Data</span>').addTo(map);
 
 // STATE
 let currentLang='ar';
