@@ -1,0 +1,3605 @@
+[
+ {
+  "id": 1,
+  "nameAr": "فرع 251 — الخطيب",
+  "nameEn": "GID Branch 251 (Al-Khatib)",
+  "agency": "GID",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.520416,
+  "lng": 36.311783,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أدين رئيس قسم التحقيق فيه أنور رسلان في كوبلنز (يناير 2022، مؤبد) بالمشاركة في 4,000 حالة تعذيب و27 جريمة قتل.",
+  "detailEn": "Head of investigations Anwar Raslan convicted in Koblenz (Jan 2022, life) as accomplice to 4,000 cases of torture and 27 murders.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "ECCHR",
+   "Koblenz Court"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 251 Internal Branch",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikimapia label; VDC Report on Khateeb Branch, August 2013; witness evidence",
+   "experiences": 40,
+   "torture": 28,
+   "inhumane": 28,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 2,
+  "nameAr": "فرع 215 — فصيلة المداهمة",
+  "nameEn": "MI Branch 215 (Raids)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50747015,
+  "lng": 36.27322107,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 13801,
+  "caesarVictims": 3556,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أكثر فروع المخابرات العسكرية دموية (\"فرع الموت\"). 3,556 ضحية في صور قيصر وفق تصنيف رابطة عائلات المعتقلين والمفقودين. الفرعان 215 و227 وحدهما يمثلان أكثر من 80% من الجثث.",
+  "detailEn": "Most lethal MI branch (\"Branch of Death\"). 3,556 victims in the Caesar photos per SAFMCD breakdown. Branches 215 and 227 alone account for over 80% of bodies.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "Germany BKA",
+   "SAFMCD"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Unit 215 Raids/Assaults",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 67,
+   "torture": 55,
+   "inhumane": 49,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 3,
+  "nameAr": "فرع 227 — المنطقة",
+  "nameEn": "MI Branch 227 (Regional)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.510586,
+  "lng": 36.274689,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 8001,
+  "caesarVictims": 2047,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "ثاني أكبر مصدر في صور قيصر: 2,047 ضحية وفق رابطة عائلات المعتقلين والمفقودين.",
+  "detailEn": "Second largest Caesar source: 2,047 victims per SAFMCD.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "Koblenz Court",
+   "SAFMCD"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 227 Damascus",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikimapia label; HRW Report Torture Archipelago, July 2012; VDC Report about the Horrors of Almantiqa district; VDC Report on Branch 215, September 2013; Government document; witness evidence",
+   "experiences": 41,
+   "torture": 34,
+   "inhumane": 34,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 4,
+  "nameAr": "فرع 235 — فلسطين",
+  "nameEn": "MI Branch 235 (Palestine Branch)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.49139675,
+  "lng": 36.32122393,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 482,
+  "caesarVictims": 128,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "من أكثر الفروع رهبةً، و98 تجربة احتجاز موثقة لدى IIIM هي الأعلى بين أفرع المخابرات. طوابق تحت الأرض للتعذيب. 128 ضحية في صور قيصر. تُركت ملفات المعتقلين مبعثرة فيه بعد سقوط النظام.",
+  "detailEn": "One of the most feared branches; its 98 IIIM-documented detention experiences are the highest of any intelligence branch. Underground torture cells. 128 Caesar victims. Detainee files were left scattered inside after the regime fell.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "Amnesty",
+   "VDC",
+   "ECCHR",
+   "SAFMCD",
+   "SJAC Yarmouk"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 235 Palestine Branch",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 98,
+   "torture": 64,
+   "inhumane": 62,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 5,
+  "nameAr": "فرع 248 — التحقيق",
+  "nameEn": "MI Branch 248 (Investigation)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50805795,
+  "lng": 36.27322322,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 206,
+  "caesarVictims": 54,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع التحقيق في المخابرات العسكرية — 48 حالة موثقة.",
+  "detailEn": "MI Investigation Branch. 48 documented cases.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 248 Investigation Branch",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 48,
+   "torture": 32,
+   "inhumane": 25,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 6,
+  "nameAr": "فرع 285 — مقر المخابرات العامة",
+  "nameEn": "GID Branch 285 (HQ Investigation)",
+  "agency": "GID",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.499805,
+  "lng": 36.291313,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "مقر إدارة المخابرات العامة وفرع التحقيق المركزي.",
+  "detailEn": "GID Headquarters and Central Investigation Branch.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 285 Investigation Branch",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 38,
+   "torture": 25,
+   "inhumane": 20,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 7,
+  "nameAr": "فرع 291 — المقر الرئيسي (مخابرات عسكرية)",
+  "nameEn": "MI Branch 291 (HQ Administrative)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50545323,
+  "lng": 36.27505572,
+  "conf": "HIGH",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "المقر الرئيسي لشعبة المخابرات العسكرية.",
+  "detailEn": "Military Intelligence Directorate Headquarters.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 291",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "HRW Report Torture Archipelago, July 2012; Government document; witness evidence",
+   "experiences": 34,
+   "torture": 25,
+   "inhumane": 21,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 8,
+  "nameAr": "الأمن السياسي — دمشق",
+  "nameEn": "Political Security Branch — Damascus",
+  "agency": "PSD",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.52949056,
+  "lng": 36.29152274,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع إدارة الأمن السياسي في دمشق.",
+  "detailEn": "Political Security Directorate branch in Damascus.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Damascus",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin (nearby); geolocation (YouTube) and assessment of security features",
+   "experiences": 18,
+   "torture": 6,
+   "inhumane": 7,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  }
+ },
+ {
+  "id": 9,
+  "nameAr": "المخابرات الجوية — سجن مطار المزة العسكري",
+  "nameEn": "AFI Investigation Branch — Mezzeh Military Airport",
+  "agency": "AFI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.48427692,
+  "lng": 36.2233575,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع التحقيق وسجن مطار المزة. وثّق مركز العدالة والمساءلة أكثر من 1,150 وفاة ومقبرتين جماعيتين مشتبهاً بهما داخل المطار، وحمتهما الهيئة الوطنية للمفقودين (سبتمبر 2026). محكمة باريس حكمت غيابياً بالمؤبد على جميل حسن وعبد السلام محمود في قضية الدباغ (مايو 2024)، ولائحة اتهام أمريكية بحقهما. تنسب رابطة عائلات المعتقلين نحو 350 ضحية في صور قيصر إلى المخابرات الجوية.",
+  "detailEn": "Mezzeh airport investigation branch and prison. SJAC documented 1,150+ deaths and two suspected mass graves inside the airport, protected by the National Commission for the Missing (Sep 2026). Paris court sentenced Jamil Hassan and Abdel Salam Mahmoud to life in absentia in the Dabbagh case (May 2024); US indictment against both. SAFMCD attributes ~350 Caesar victims to AFI.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "SJAC Mezzeh",
+   "Dabbagh Paris",
+   "US DOJ",
+   "Enab Baladi Mezzeh"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Facilities Mezzeh Airbase",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; VDC Report They Cannot be Human, November 2013; witness evidence",
+   "experiences": null,
+   "torture": null,
+   "inhumane": null,
+   "parent": null,
+   "category": null
+  }
+ },
+ {
+  "id": 10,
+  "nameAr": "المستشفى العسكري تشرين",
+  "nameEn": "Tishreen Military Hospital",
+  "agency": "HOSP",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.565044,
+  "lng": 36.332836,
+  "conf": "HIGH",
+  "violations": [
+   "death"
+  ],
+  "caesar": true,
+  "yearActive": 2011,
+  "yearClosed": 2018,
+  "detailAr": "أحد المستشفيين الرئيسيين لتسجيل جثث قيصر (2011–2013). شهادة \"حفّار القبور\": نُقلت منه الجثث بشاحنات مبرّدة إلى نجها والقطيفة حتى 2018.",
+  "detailEn": "One of the two main hospitals for Caesar registrations (2011–2013). \"Gravedigger\" testimony: bodies trucked in refrigerated lorries to Najha and Qutayfah until 2018.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "SJAC",
+   "MEE"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Tishreen Military Hospital",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; satellite imagery; MoD of Syria image of exterior (geolocated image of exterior to these coordinates)",
+   "experiences": 3,
+   "torture": 3,
+   "inhumane": 2,
+   "parent": "Medical Services Directorate",
+   "category": "Hospitals"
+  }
+ },
+ {
+  "id": 11,
+  "nameAr": "المستشفى العسكري 601 — المزة",
+  "nameEn": "Military Hospital 601 (Mezzeh)",
+  "agency": "HOSP",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.5122933,
+  "lng": 36.25528953,
+  "conf": "HIGH",
+  "violations": [
+   "death"
+  ],
+  "caesar": true,
+  "yearActive": 2011,
+  "yearClosed": 2018,
+  "detailAr": "المستشفى الرئيسي لتسجيل الجثث في ملف قيصر (2011–2013). مرتبط بمحاكمة د. علاء م. (مؤبد، فرانكفورت 16 يونيو 2025). استمر نقل الجثث منه إلى المقابر حتى 2018.",
+  "detailEn": "Main hospital for Caesar registrations (2011–2013). Linked to Dr. Alaa M. (life, Frankfurt 16 June 2025). Bodies continued to be trucked to graves until 2018.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "ECCHR",
+   "Frankfurt Court",
+   "MEE"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Hospital 601",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; satellite imagery; witness evidence",
+   "experiences": 7,
+   "torture": 7,
+   "inhumane": 5,
+   "parent": "Medical Services Directorate",
+   "category": "Hospitals"
+  }
+ },
+ {
+  "id": 12,
+  "nameAr": "الأمن الجنائي — دمشق",
+  "nameEn": "Criminal Security — Damascus",
+  "agency": "MoI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.49936159,
+  "lng": 36.30075294,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن الجنائي التابع لوزارة الداخلية في دمشق.",
+  "detailEn": "Criminal Security branch under Ministry of Interior.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Damascus",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; witness evidence",
+   "experiences": 19,
+   "torture": 5,
+   "inhumane": 3,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  }
+ },
+ {
+  "id": 13,
+  "nameAr": "سجن صيدنايا العسكري (السجن العسكري الأول)",
+  "nameEn": "Saydnaya Military Prison (First Military Prison)",
+  "agency": "MP",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.66562,
+  "lng": 36.3289,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الأكثر دموية في المنظومة. 5,000–13,000 إعدام جماعياً شنقاً (منظمة العفو 2017). تحرّر ~2,000 محتجز ديسمبر 2024.",
+  "detailEn": "Most lethal facility. 5,000–13,000 mass hanged (Amnesty 2017). ~2,000 freed Dec 2024.",
+  "sources": [
+   "IIIM",
+   "Amnesty",
+   "Forensic Architecture",
+   "ADMSP"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "First Military Prison",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Amnesty International Report Human Slaughterhouse, February 2017; witness evidence",
+   "experiences": 52,
+   "torture": 41,
+   "inhumane": 39,
+   "parent": "Military Police",
+   "category": "Military Prisons"
+  }
+ },
+ {
+  "id": 14,
+  "nameAr": "سجن عدرا المركزي",
+  "nameEn": "Adra Central Prison",
+  "agency": "MoI",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.59111979,
+  "lng": 36.44034368,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أكبر سجن مدني — طاقة 2,500 ويحوي أكثر من 7,000.",
+  "detailEn": "Largest civil prison — capacity 2,500 but held 7,000+.",
+  "sources": [
+   "IIIM",
+   "SNHR",
+   "Mapping MENA"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Adra Central Prison",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikimapia label; open source reporting; geolocation (media article); witness evidence",
+   "experiences": 204,
+   "torture": 17,
+   "inhumane": 37,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 15,
+  "nameAr": "المخابرات الجوية — حرستا",
+  "nameEn": "AFI Branch — Harasta",
+  "agency": "AFI",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.545365,
+  "lng": 36.351131,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع جنوب المنطقة. موثّقة فيه إعدامات ميدانية.",
+  "detailEn": "Southern Region branch. Extrajudicial executions documented.",
+  "sources": [
+   "IIIM",
+   "VDC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Branch Harasta",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Wikimapia label",
+   "experiences": 8,
+   "torture": 5,
+   "inhumane": 4,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 16,
+  "nameAr": "المستشفى العسكري حرستا",
+  "nameEn": "Harasta Military Hospital",
+  "agency": "HOSP",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.579506,
+  "lng": 36.379856,
+  "conf": "MEDIUM",
+  "violations": [
+   "death"
+  ],
+  "caesar": true,
+  "yearActive": 2011,
+  "yearClosed": 2018,
+  "detailAr": "استُخدم لتسجيل جثث ضحايا فرع 251. من المستشفيات التي نُقلت منها الجثث إلى نجها والقطيفة حتى 2018.",
+  "detailEn": "Used to register Branch 251 victims. One of the hospitals from which bodies were trucked to Najha and Qutayfah until 2018.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "MEE"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Harasta Military Hospital",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; satellite imagery",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 2,
+   "parent": "Medical Services Directorate",
+   "category": "Hospitals"
+  }
+ },
+ {
+  "id": 17,
+  "nameAr": "فرع 261 — المخابرات العسكرية حمص",
+  "nameEn": "MI Branch 261 — Homs",
+  "agency": "MI",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.72085232,
+  "lng": 36.70530898,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "من أسوأ مراكز الاحتجاز. خلايا 1×1.5م تحوي 5 محتجزين. عمل فيه الطبيب علاء م. إلى جانب المستشفى العسكري 608 في حمص (حكم مؤبد، فرانكفورت يونيو 2025).",
+  "detailEn": "One of the worst sites. Cells 1×1.5m holding 5 detainees. Dr. Alaa M. worked here and at Military Hospital 608 in Homs (life sentence, Frankfurt June 2025).",
+  "sources": [
+   "IIIM",
+   "VDC",
+   "Frankfurt Court",
+   "COI",
+   "Frankfurt Court"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 261 Homs",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; geolocation (Facebook/Meta images); SNHR report, June 2013; VDC Special Report on Military Security Branch 261, March 2014; witness evidence",
+   "experiences": 30,
+   "torture": 26,
+   "inhumane": 21,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 18,
+  "nameAr": "سجن تدمر العسكري (السجن العسكري الثاني)",
+  "nameEn": "Tadmur Military Prison (Second Military Prison)",
+  "agency": "MP",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.55892987,
+  "lng": 38.28548684,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2015,
+  "detailAr": "مجزرة 1980: ~1,000 سجين في يوم. 17,000–25,000 قُتلوا 1980–2001. دمّره داعش 2015.",
+  "detailEn": "1980 massacre: ~1,000 killed. 17,000–25,000 killed 1980–2001. Destroyed by ISIS 2015.",
+  "sources": [
+   "IIIM",
+   "Amnesty",
+   "SHRC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Second Military Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": 3,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Military Police",
+   "category": "Military Prisons"
+  }
+ },
+ {
+  "id": 19,
+  "nameAr": "السجن العسكري الثالث — البالونة",
+  "nameEn": "Third Military Prison — Al-Balouna",
+  "agency": "MP",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.68364619,
+  "lng": 36.72853167,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن العسكري الثالث في حمص.",
+  "detailEn": "Third Military Prison in Homs.",
+  "sources": [
+   "IIIM",
+   "ECCHR"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Third Military Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": 64,
+   "torture": 22,
+   "inhumane": 19,
+   "parent": "Military Police",
+   "category": "Military Prisons"
+  }
+ },
+ {
+  "id": 20,
+  "nameAr": "المخابرات الجوية — حمص",
+  "nameEn": "AFI Central Region Branch — Homs",
+  "agency": "AFI",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.75079363,
+  "lng": 36.71454999,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الفرع الإقليمي للمخابرات الجوية في حمص.",
+  "detailEn": "AFI regional branch in Homs.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Branch Homs",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; HRW Report Torture Archipelago, July 2012",
+   "experiences": 10,
+   "torture": 9,
+   "inhumane": 8,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 22,
+  "nameAr": "فرع 290 — المخابرات العسكرية حلب",
+  "nameEn": "MI Branch 290 — Aleppo",
+  "agency": "MI",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.199165,
+  "lng": 37.108498,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الفرع الإقليمي الرئيسي للمخابرات العسكرية في حلب.",
+  "detailEn": "Main MI regional branch in Aleppo.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "SNHR",
+   "OFAC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 290 Aleppo",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; media articles; witness evidence",
+   "experiences": 38,
+   "torture": 29,
+   "inhumane": 24,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 23,
+  "nameAr": "سجن حلب المركزي",
+  "nameEn": "Aleppo Central Prison",
+  "agency": "MoI",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.29587,
+  "lng": 37.200627,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أكبر سجن في شمال سوريا — تعرّض لحصار مطوّل.",
+  "detailEn": "Largest prison in northern Syria — subject to prolonged siege.",
+  "sources": [
+   "IIIM",
+   "VDC",
+   "SNHR"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Aleppo Central Prison",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikimapia label; satellite imagery; VDC Special Report on Aleppo Central Prison, March 2014; witness evidence",
+   "experiences": 18,
+   "torture": 2,
+   "inhumane": 3,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 24,
+  "nameAr": "المخابرات الجوية — حلب",
+  "nameEn": "AFI Northern Region Branch — Aleppo",
+  "agency": "AFI",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.229216,
+  "lng": 37.10687,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المنطقة الشمالية للمخابرات الجوية.",
+  "detailEn": "AFI Northern Region branch.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Section Aleppo",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; witness evidence",
+   "experiences": 9,
+   "torture": 8,
+   "inhumane": 6,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 26,
+  "nameAr": "فرع 219 — المخابرات العسكرية حماة",
+  "nameEn": "MI Branch 219 — Hama",
+  "agency": "MI",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.08819943,
+  "lng": 36.75395378,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الفرع الإقليمي للمخابرات العسكرية في حماة. وُثّق احتجاز أطفال.",
+  "detailEn": "MI regional branch in Hama. Detention of children documented.",
+  "sources": [
+   "IIIM",
+   "VDC",
+   "COI"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 219 Hama",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; VDC Report, Children in Military Intelligence Branches, October 2013; witness evidence",
+   "experiences": 24,
+   "torture": 21,
+   "inhumane": 16,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 27,
+  "nameAr": "فرع المخابرات العامة 320 — حماة",
+  "nameEn": "GID Branch 320 — Hama",
+  "agency": "GID",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.11601339,
+  "lng": 36.75729544,
+  "conf": "HIGH",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع إدارة المخابرات العامة في حماة.",
+  "detailEn": "GID branch in Hama.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 320 Hama",
+   "location": 2,
+   "conf": "HIGH",
+   "geoSources": "Google Maps label (no pin); \"Hama Today,\" 11 January 2022, State Security tasked with pursuing US Dollar file in Hama; witness evidence",
+   "experiences": 6,
+   "torture": 5,
+   "inhumane": 3,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  },
+  "coordNote": {
+   "ar": "الإحداثيات للموقع بعد 2012 حسب IIIM؛ الموقع السابق غير محدد",
+   "en": "Coordinates are the post-2012 location per IIIM; the earlier site is not identified"
+  }
+ },
+ {
+  "id": 28,
+  "nameAr": "سجن حماة المركزي",
+  "nameEn": "Hama Central Prison",
+  "agency": "MoI",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.13378289,
+  "lng": 36.77903139,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن المدني المركزي في حماة — يضم محكمة مكافحة الإرهاب.",
+  "detailEn": "Central civil prison in Hama — housing Anti-Terrorism Court.",
+  "sources": [
+   "IIIM",
+   "SNHR"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Hama Central Prison",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; SNHR Report, Anti- Terrorism Court, July 2015",
+   "experiences": 6,
+   "torture": 0,
+   "inhumane": 1,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 29,
+  "nameAr": "فرع 265 قسم درعا",
+  "nameEn": "MI Branch 265 Section — Daraa",
+  "agency": "MI",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.627697,
+  "lng": 36.09988,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "قسم المخابرات العسكرية في درعا — مهد الثورة السورية.",
+  "detailEn": "MI section in Daraa — birthplace of the Syrian revolution.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "COI"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Section Daraa",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps; Wikimapia label; HRW Report Torture Archipelago, July 2012",
+   "experiences": 19,
+   "torture": 15,
+   "inhumane": 11,
+   "parent": "Military Intelligence Department - Branch 265",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 31,
+  "nameAr": "فرع 271 — المخابرات العسكرية إدلب",
+  "nameEn": "MI Branch 271 — Idlib",
+  "agency": "MI",
+  "govAr": "إدلب",
+  "govEn": "Idlib",
+  "lat": 35.922901,
+  "lng": 36.634163,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2015,
+  "detailAr": "الفرع الإقليمي في إدلب. سقط بيد الفصائل عام 2015.",
+  "detailEn": "MI regional branch in Idlib. Fell to rebel factions 2015.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "SNHR"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 271 Idlib",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; geolocation (YouTube); HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 13,
+   "torture": 10,
+   "inhumane": 7,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 32,
+  "nameAr": "سجن إدلب المركزي",
+  "nameEn": "Idlib Central Prison",
+  "agency": "MoI",
+  "govAr": "إدلب",
+  "govEn": "Idlib",
+  "lat": 35.94866049,
+  "lng": 36.5620638,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2015,
+  "detailAr": "السجن المدني في إدلب (تحرّر 2015).",
+  "detailEn": "Civil prison in Idlib (liberated 2015).",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Idlib Central Prison",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin (Idlib prison); Wikimapia label (Idlib Central Prison); geolocation (media articles)",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 2,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 33,
+  "nameAr": "فرع 223 — المخابرات العسكرية اللاذقية",
+  "nameEn": "MI Branch 223 — Lattakia",
+  "agency": "MI",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.52067,
+  "lng": 35.794256,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الفرع الإقليمي للمخابرات العسكرية في اللاذقية.",
+  "detailEn": "MI regional branch in Lattakia.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 223 Lattakia",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 7,
+   "torture": 7,
+   "inhumane": 7,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 36,
+  "nameAr": "سجن طرطوس المركزي",
+  "nameEn": "Tartus Central Prison",
+  "agency": "MoI",
+  "govAr": "طرطوس",
+  "govEn": "Tartus",
+  "lat": 34.90016458,
+  "lng": 35.88674993,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن المدني المركزي في طرطوس.",
+  "detailEn": "Central civil prison in Tartus.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Tartus Central Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": 6,
+   "torture": 1,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 37,
+  "nameAr": "فرع 243 — المخابرات العسكرية دير الزور",
+  "nameEn": "MI Branch 243 — Deir ez-Zor",
+  "agency": "MI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.345233,
+  "lng": 40.129953,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "احتفظ النظام بنصف مدينة دير الزور طوال حصار داعش (2014–2017)، فاستمرت فروعه الأمنية فيه حتى 2024. يحتاج موقع الفرع الدقيق ضمن الأحياء المحاصرة إلى تحقق.",
+  "detailEn": "The regime held half of Deir ez-Zor city throughout the ISIS siege (2014–2017), so its security branches kept operating until 2024. Exact branch location within the besieged districts needs verification.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "Deir ez-Zor siege"
+  ],
+  "needsVerification": true,
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 243 Deir-Ezzor",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; witness evidence; geolocation (YouTube)",
+   "experiences": 12,
+   "torture": 9,
+   "inhumane": 7,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 38,
+  "nameAr": "المخابرات الجوية — دير الزور",
+  "nameEn": "AFI Eastern Region — Deir ez-Zor",
+  "agency": "AFI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.345264,
+  "lng": 40.128354,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المنطقة الشرقية للمخابرات الجوية. بقي في القسم الخاضع للنظام خلال الحصار (2014–2017).",
+  "detailEn": "AFI Eastern Region branch. Remained in the regime-held part of the city during the siege (2014–2017).",
+  "sources": [
+   "IIIM",
+   "Deir ez-Zor siege"
+  ],
+  "needsVerification": true,
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Branch Deir-Ezzor",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; witness evidence",
+   "experiences": 3,
+   "torture": 3,
+   "inhumane": 1,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 39,
+  "nameAr": "فرع 265 — المخابرات العسكرية السويداء",
+  "nameEn": "MI Branch 265 — Suwayda",
+  "agency": "MI",
+  "govAr": "السويداء",
+  "govEn": "Suwayda",
+  "lat": 32.70981813,
+  "lng": 36.57273413,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "الفرع الإقليمي في السويداء.",
+  "detailEn": "MI regional branch in Suwayda.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 265 Suweida",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": 2,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 40,
+  "nameAr": "سجن السويداء المركزي",
+  "nameEn": "Suwayda Central Prison",
+  "agency": "MoI",
+  "govAr": "السويداء",
+  "govEn": "Suwayda",
+  "lat": 32.7327271,
+  "lng": 36.5613275,
+  "conf": "LOW",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن المدني في السويداء.",
+  "detailEn": "Central civil prison in Suwayda.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Suweida Central Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 8,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 41,
+  "nameAr": "فرع 216 — الدوريات",
+  "nameEn": "MI Branch 216 (Patrols)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.491553,
+  "lng": 36.319106,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 1108,
+  "caesarVictims": 297,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الدوريات. 297 ضحية في صور قيصر وفق رابطة عائلات المعتقلين والمفقودين.",
+  "detailEn": "Patrols Branch. 297 Caesar victims per SAFMCD.",
+  "sources": [
+   "IIIM",
+   "OFAC",
+   "Germany BKA",
+   "SAFMCD"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 216 Patrols Branch",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Witness evidence",
+   "experiences": 5,
+   "torture": 3,
+   "inhumane": 3,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 42,
+  "nameAr": "فرع 220 — سعسع (الموقع الثاني)",
+  "nameEn": "MI Branch 220 (Sa'sa) — Location 2",
+  "agency": "MI",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.31061311,
+  "lng": 36.04622317,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "death"
+  ],
+  "caesar": true,
+  "caesarImgs": 210,
+  "caesarVictims": 50,
+  "yearActive": 2013,
+  "yearClosed": 2024,
+  "detailAr": "يغطي سعسع والقنيطرة. انتقل موقعه عام 2013.",
+  "detailEn": "Covers Sa'sa and Quneitra. Relocated in 2013.",
+  "sources": [
+   "IIIM",
+   "Enab Baladi"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 220 Quneitra",
+   "location": 2,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; witness evidence",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 1,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  },
+  "relocation": {
+   "group": 42,
+   "ar": "نُقل الفرع إلى موقع ثانٍ عام 2013 (IIIM).",
+   "en": "Branch relocated to a second site in 2013 (IIIM)."
+  }
+ },
+ {
+  "id": 43,
+  "nameAr": "المخابرات الجوية — باب توما",
+  "nameEn": "AFI Branch — Bab Touma",
+  "agency": "AFI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.517811,
+  "lng": 36.313969,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المخابرات الجوية في دمشق القديمة.",
+  "detailEn": "AFI branch in Old Damascus.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Branch Bab Touma",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": null,
+   "torture": null,
+   "inhumane": null,
+   "parent": null,
+   "category": null
+  }
+ },
+ {
+  "id": 44,
+  "nameAr": "المخابرات الجوية — المعلومات",
+  "nameEn": "AFI Information Branch",
+  "agency": "AFI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.5230977,
+  "lng": 36.321397,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المعلومات للمخابرات الجوية في دمشق.",
+  "detailEn": "AFI Information Branch in Damascus.",
+  "sources": [
+   "IIIM",
+   "VDC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Information Branch",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; VDC Report They Cannot be Human, November 2013",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 45,
+  "nameAr": "الشرطة العسكرية — القابون",
+  "nameEn": "Military Police — Al-Qaboun",
+  "agency": "MP",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.55370221,
+  "lng": 36.33123541,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "death"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "المحكمة الميدانية العسكرية تُصدر أحكام إعدام في دقائق.",
+  "detailEn": "Military Field Court issuing death sentences within minutes.",
+  "sources": [
+   "IIIM",
+   "Amnesty",
+   "VDC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Facilities al- Qaboun, Damascus",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikipedia label; VDC Report, Children in Military Intelligence Branches, October 2013; witness evidence",
+   "experiences": null,
+   "torture": null,
+   "inhumane": null,
+   "parent": null,
+   "category": null
+  }
+ },
+ {
+  "id": 46,
+  "nameAr": "قسم شرطة كفرسوسة",
+  "nameEn": "Kafr Souseh Police Station",
+  "agency": "MoI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50049083,
+  "lng": 36.27864048,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "مركز شرطة كفرسوسة للاحتجاز المؤقت.",
+  "detailEn": "Kafr Souseh police station — temporary detention.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Police Station Kafr Susah",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; geolocation (YouTube)",
+   "experiences": 16,
+   "torture": 0,
+   "inhumane": 4,
+   "parent": "Ministry of the Interior",
+   "category": "Police Stations"
+  }
+ },
+ {
+  "id": 47,
+  "nameAr": "قسم شرطة ركن الدين",
+  "nameEn": "Rukn al-Din Police Station",
+  "agency": "MoI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.54211936,
+  "lng": 36.30440187,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "مركز شرطة ركن الدين للاحتجاز.",
+  "detailEn": "Rukn al-Din police station — detention site.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Rukn al-Din Police Station",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; geolocation (Facebook/Meta images and videos)",
+   "experiences": 27,
+   "torture": 1,
+   "inhumane": 6,
+   "parent": "Ministry of the Interior",
+   "category": "Police Stations"
+  }
+ },
+ {
+  "id": 48,
+  "nameAr": "الأمن السياسي — التحقيق",
+  "nameEn": "PSD Investigation Branch (Al-Fayhaa)",
+  "agency": "PSD",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.52674033,
+  "lng": 36.3029838,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع التحقيق المركزي لإدارة الأمن السياسي.",
+  "detailEn": "PSD Central Investigation Branch.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Department Investigation Branch",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 14,
+   "torture": 11,
+   "inhumane": 6,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  }
+ },
+ {
+  "id": 49,
+  "nameAr": "الشرطة العسكرية — قطنا",
+  "nameEn": "Military Police — Qatana",
+  "agency": "MP",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.43865731,
+  "lng": 36.07057182,
+  "conf": "LOW",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "قسم الشرطة العسكرية في قطنا.",
+  "detailEn": "Military Police section in Qatana.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Qatana",
+   "location": 2,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "relocation": {
+   "group": 49,
+   "ar": "للمنشأة موقعان خلال الفترة؛ تاريخ الانتقال غير محدد (IIIM).",
+   "en": "Two locations during the period; relocation date not specified (IIIM)."
+  }
+ },
+ {
+  "id": 55,
+  "nameAr": "الأمن الجنائي — حرستا",
+  "nameEn": "Criminal Security — Harasta",
+  "agency": "MoI",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.55006044,
+  "lng": 36.36081223,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن الجنائي في حرستا.",
+  "detailEn": "Criminal Security branch in Harasta.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Harasta",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; geolocation (YouTube; Facebook/Meta)",
+   "experiences": 1,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  }
+ },
+ {
+  "id": 56,
+  "nameAr": "فرع المخابرات العامة 318 — حمص",
+  "nameEn": "GID Branch 318 — Homs",
+  "agency": "GID",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.734831,
+  "lng": 36.69809,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع إدارة المخابرات العامة في حمص.",
+  "detailEn": "GID branch in Homs.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 318 Homs",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "HRW Report Torture Archipelago, July 2012; witness evidence",
+   "experiences": 5,
+   "torture": 4,
+   "inhumane": 3,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 57,
+  "nameAr": "سجن حمص المركزي",
+  "nameEn": "Homs Central Prison",
+  "agency": "MoI",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.7554092,
+  "lng": 36.72371727,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أكبر سجن مدني في محافظة حمص.",
+  "detailEn": "Largest civil prison in Homs.",
+  "sources": [
+   "IIIM",
+   "SNHR"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Homs Central Prison",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; OpenStreetMap label; Wikimapia label; geolocation (media articles)",
+   "experiences": 18,
+   "torture": 1,
+   "inhumane": 2,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 58,
+  "nameAr": "الأمن الجنائي — حمص",
+  "nameEn": "Criminal Security — Homs",
+  "agency": "MoI",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.722,
+  "lng": 36.706,
+  "conf": "LOW",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن الجنائي في حمص.",
+  "detailEn": "Criminal Security branch in Homs.",
+  "sources": [
+   "COI"
+  ],
+  "geoSource": "other",
+  "needsVerification": true,
+  "coordNote": {
+   "ar": "إحداثيات تقريبية من مصادر مفتوحة؛ لم تحدّد IIIM موقع هذه المنشأة",
+   "en": "Approximate open-source coordinates; IIIM did not geolocate this facility"
+  }
+ },
+ {
+  "id": 60,
+  "nameAr": "فرع 221 — البادية",
+  "nameEn": "MI Branch 221 — Badia",
+  "agency": "MI",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.55999671,
+  "lng": 38.2746096,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2014,
+  "detailAr": "فرع المخابرات العسكرية في منطقة البادية — تدمر.",
+  "detailEn": "MI branch in the Badia region near Palmyra.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 221 Tadmur/Badia",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Wikimapia label",
+   "experiences": 5,
+   "torture": 5,
+   "inhumane": 5,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  }
+ },
+ {
+  "id": 61,
+  "nameAr": "فرع المخابرات العامة 322 — حلب",
+  "nameEn": "GID Branch 322 — Aleppo",
+  "agency": "GID",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.211922,
+  "lng": 37.134705,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع إدارة المخابرات العامة في حلب.",
+  "detailEn": "GID branch in Aleppo.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 322 Aleppo",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012",
+   "experiences": 5,
+   "torture": 5,
+   "inhumane": 4,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 62,
+  "nameAr": "الأمن الجنائي — حلب",
+  "nameEn": "Criminal Security — Aleppo",
+  "agency": "MoI",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.22018,
+  "lng": 37.15133,
+  "conf": "LOW",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن الجنائي في حلب.",
+  "detailEn": "Criminal Security branch in Aleppo.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Aleppo",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": 8,
+   "torture": 3,
+   "inhumane": 3,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  }
+ },
+ {
+  "id": 63,
+  "nameAr": "الشرطة العسكرية — حلب",
+  "nameEn": "Military Police — Aleppo",
+  "agency": "MP",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.205146,
+  "lng": 37.138803,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "قسم الشرطة العسكرية في حلب.",
+  "detailEn": "Military Police section in Aleppo.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Aleppo",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; witness evidence",
+   "experiences": 16,
+   "torture": 1,
+   "inhumane": 3,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  }
+ },
+ {
+  "id": 64,
+  "nameAr": "ثكنات حنانو",
+  "nameEn": "Hanano Barracks",
+  "agency": "ARMY",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.2078213,
+  "lng": 37.16945506,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2012,
+  "yearClosed": 2016,
+  "detailAr": "ثكنات حنانو — استُخدمت للاحتجاز خلال حصار حلب.",
+  "detailEn": "Hanano barracks — used for detention during Aleppo siege.",
+  "sources": [
+   "IIIM",
+   "VDC"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Hanano Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Command of the Army and Armed Forces",
+   "category": "Army Unit Facilities"
+  }
+ },
+ {
+  "id": 65,
+  "nameAr": "قاعدة نيرب الجوية",
+  "nameEn": "Nairab Air Base",
+  "agency": "ARMY",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.182502,
+  "lng": 37.215071,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2012,
+  "yearClosed": 2024,
+  "detailAr": "القاعدة الجوية في حلب — استُخدمت للاحتجاز.",
+  "detailEn": "Air base in Aleppo — used for detentions.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Nairab Air Base",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Command of the Army and Armed Forces",
+   "category": "Air Force Facilities"
+  }
+ },
+ {
+  "id": 67,
+  "nameAr": "الشرطة العسكرية — حماة",
+  "nameEn": "Military Police — Hama",
+  "agency": "MP",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.1160656,
+  "lng": 36.76442948,
+  "conf": "HIGH",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "قسم الشرطة العسكرية في حماة.",
+  "detailEn": "Military Police section in Hama.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Hama",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; geolocation (YouTube; media article); witness evidence",
+   "experiences": 12,
+   "torture": 0,
+   "inhumane": 1,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  }
+ },
+ {
+  "id": 68,
+  "nameAr": "الأمن السياسي — حماة",
+  "nameEn": "Political Security Branch — Hama",
+  "agency": "PSD",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.1744942,
+  "lng": 36.7593842,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن السياسي في حماة.",
+  "detailEn": "Political Security branch in Hama.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Hama",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; OpenStreetMap label; witness evidence",
+   "experiences": 3,
+   "torture": 2,
+   "inhumane": 1,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  }
+ },
+ {
+  "id": 70,
+  "nameAr": "فرع المخابرات العامة 315 — درعا",
+  "nameEn": "GID Branch 315 — Daraa",
+  "agency": "GID",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.62678992,
+  "lng": 36.12244689,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع إدارة المخابرات العامة في درعا.",
+  "detailEn": "GID branch in Daraa.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 315 Daraa",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 71,
+  "nameAr": "الأمن السياسي — درعا",
+  "nameEn": "Political Security — Daraa",
+  "agency": "PSD",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.630235,
+  "lng": 36.108123,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "أول مراكز احتجاز متظاهري درعا مارس 2011. رئيسه عاطف نجيب أُدين في أول محاكمة سورية لجرائم النظام (دمشق، 11 أغسطس 2026) وحُكم عليه بالإعدام مع سبعة آخرين غيابياً منهم بشار الأسد.",
+  "detailEn": "First detention center for Daraa protesters, March 2011. Its head Atef Najib was convicted in Syria’s first trial of regime crimes (Damascus, 11 Aug 2026) and sentenced to death alongside seven others in absentia, including Bashar al-Assad.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "COI",
+   "Najib Damascus"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Daraa",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012",
+   "experiences": 2,
+   "torture": 0,
+   "inhumane": 1,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  }
+ },
+ {
+  "id": 72,
+  "nameAr": "سجن درعا المركزي",
+  "nameEn": "Daraa Central Prison",
+  "agency": "MoI",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.59565,
+  "lng": 36.158272,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن المدني في درعا.",
+  "detailEn": "Central civil prison in Daraa.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Daraa Central Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps; Wikimapia label",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 73,
+  "nameAr": "فرع المخابرات العامة 331 — إدلب",
+  "nameEn": "GID Branch 331 — Idlib",
+  "agency": "GID",
+  "govAr": "إدلب",
+  "govEn": "Idlib",
+  "lat": 35.927,
+  "lng": 36.63,
+  "conf": "LOW",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2015,
+  "detailAr": "فرع المخابرات العامة في إدلب.",
+  "detailEn": "GID branch in Idlib.",
+  "sources": [
+   "IIIM",
+   "COI"
+  ],
+  "iiim": {
+   "experiences": 3,
+   "note": "listed in IIIM facility table without coordinates"
+  },
+  "geoSource": "other",
+  "needsVerification": true,
+  "coordNote": {
+   "ar": "إحداثيات تقريبية من مصادر مفتوحة؛ لم تحدّد IIIM موقع هذه المنشأة",
+   "en": "Approximate open-source coordinates; IIIM did not geolocate this facility"
+  }
+ },
+ {
+  "id": 75,
+  "nameAr": "فرع المخابرات العامة 325 — اللاذقية",
+  "nameEn": "GID Branch 325 — Lattakia",
+  "agency": "GID",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.529572,
+  "lng": 35.803867,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المخابرات العامة في اللاذقية.",
+  "detailEn": "GID branch in Lattakia.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 325 Lattakia",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; HRW Report Torture Archipelago, July 2012;",
+   "experiences": 4,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 76,
+  "nameAr": "المخابرات الجوية — اللاذقية",
+  "nameEn": "AFI Coastal Region — Lattakia",
+  "agency": "AFI",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.5291878168722,
+  "lng": 35.7986121834681,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "قسم المنطقة الساحلية للمخابرات الجوية.",
+  "detailEn": "AFI Coastal Region section.",
+  "sources": [
+   "IIIM",
+   "HRW"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Section Lattakia",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps; HRW Report Torture Archipelago, July 2012; Wikimapia label; Geolocation (YouTube)",
+   "experiences": 3,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Air Force Intelligence Directorate",
+   "category": "Air Force Intelligence Facilities"
+  }
+ },
+ {
+  "id": 77,
+  "nameAr": "سجن اللاذقية المركزي",
+  "nameEn": "Lattakia Central Prison",
+  "agency": "MoI",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.48966685,
+  "lng": 35.87059556,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "السجن المدني في اللاذقية.",
+  "detailEn": "Central civil prison in Lattakia.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Lattakia Civilian Prison",
+   "location": 2,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; geolocation (YouTube)",
+   "experiences": 5,
+   "torture": 1,
+   "inhumane": 2,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  },
+  "relocation": {
+   "group": 77,
+   "ar": "للسجن موقعان خلال الفترة؛ تاريخ الانتقال غير محدد (IIIM).",
+   "en": "Two locations during the period; relocation date not specified (IIIM)."
+  }
+ },
+ {
+  "id": 81,
+  "nameAr": "فرع المخابرات العامة 327 — دير الزور",
+  "nameEn": "GID Branch 327 — Deir ez-Zor",
+  "agency": "GID",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.33533174,
+  "lng": 40.1210971,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المخابرات العامة (أمن الدولة) في دير الزور. استمر خلال الحصار (2014–2017) بقيادة دعاس حسن علي.",
+  "detailEn": "GID (State Security) branch in Deir ez-Zor. Kept operating through the siege (2014–2017) under Daas Hassan Ali.",
+  "sources": [
+   "IIIM",
+   "Deir ez-Zor siege"
+  ],
+  "needsVerification": true,
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 327 Deir-Ezzor",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 82,
+  "nameAr": "الأمن السياسي — دير الزور",
+  "nameEn": "Political Security — Deir ez-Zor",
+  "agency": "PSD",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.33983709,
+  "lng": 40.15371963,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع الأمن السياسي في دير الزور. بقي في القسم الخاضع للنظام خلال الحصار (2014–2017).",
+  "detailEn": "Political Security branch in Deir ez-Zor. Remained in the regime-held part of the city during the siege (2014–2017).",
+  "sources": [
+   "IIIM",
+   "Deir ez-Zor siege"
+  ],
+  "needsVerification": true,
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Deir- Ezzor",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; geolocation (YouTube)",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 0,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  }
+ },
+ {
+  "id": 86,
+  "nameAr": "قاعدة دير الزور الجوية",
+  "nameEn": "Deir ez-Zor Air Base",
+  "agency": "AFI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.285278,
+  "lng": 40.176111,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "مطار دير الزور العسكري. صمد تحت حصار داعش (2014–2017) وبقي بيد النظام حتى 2024.",
+  "detailEn": "Deir ez-Zor military airbase. Held out under the ISIS siege (2014–2017) and stayed in regime hands until 2024.",
+  "sources": [
+   "IIIM",
+   "HRW",
+   "Deir ez-Zor siege"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Deir-Ezzor Air Base",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; witness evidence",
+   "experiences": null,
+   "torture": null,
+   "inhumane": null,
+   "parent": null,
+   "category": null
+  }
+ },
+ {
+  "id": 87,
+  "nameAr": "فرع المخابرات العامة 335 — الرقة",
+  "nameEn": "GID Branch 335 — Raqqa",
+  "agency": "GID",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 35.959833,
+  "lng": 38.992117,
+  "conf": "HIGH",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "فرع المخابرات العامة في الرقة (سقط 2013). رئيسه خالد الحلبي (2011–2013) أدانته محكمة في فيينا بالتعذيب (يوليو 2026، 8 سنوات).",
+  "detailEn": "GID branch in Raqqa (fell 2013). Its head Khaled al-Halabi (2011–2013) was convicted of torture by a Vienna court (July 2026, 8 years).",
+  "sources": [
+   "IIIM",
+   "Halabi Vienna"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 335 Raqqa",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; geolocation (YouTube); witness evidence",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  }
+ },
+ {
+  "id": 90,
+  "nameAr": "سجن الرقة المركزي",
+  "nameEn": "Raqqa Central Prison",
+  "agency": "MoI",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 36.0165796,
+  "lng": 39.0767054,
+  "conf": "MEDIUM",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "السجن المدني في الرقة (سقط 2013).",
+  "detailEn": "Civil prison in Raqqa (fell 2013).",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Raqqa Central Prison",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; geolocation (YouTube)",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 91,
+  "nameAr": "فرع 222 — المخابرات العسكرية القامشلي",
+  "nameEn": "MI Branch 222 — Qamishli",
+  "agency": "MI",
+  "govAr": "الحسكة",
+  "govEn": "Hasakah",
+  "lat": 37.05,
+  "lng": 41.228,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "فرع المخابرات العسكرية في القامشلي، ضمن \"المربع الأمني\" الذي احتفظ به النظام وسط مناطق قسد حتى ديسمبر 2024.",
+  "detailEn": "MI Branch 222 in Qamishli, inside the regime \"security square\" held amid SDF-controlled areas until December 2024.",
+  "sources": [
+   "IIIM",
+   "Syria Prisons Museum",
+   "Enab Baladi Qamishli"
+  ],
+  "iiim": {
+   "experiences": 1,
+   "note": "listed in IIIM facility table without coordinates"
+  },
+  "geoSource": "other",
+  "needsVerification": true,
+  "coordNote": {
+   "ar": "إحداثيات تقريبية من مصادر مفتوحة؛ لم تحدّد IIIM موقع هذه المنشأة",
+   "en": "Approximate open-source coordinates; IIIM did not geolocate this facility"
+  }
+ },
+ {
+  "id": 92,
+  "nameAr": "سجن الحسكة المركزي (غويران)",
+  "nameEn": "Hasakah Central Prison (Ghweran)",
+  "agency": "MoI",
+  "govAr": "الحسكة",
+  "govEn": "Hasakah",
+  "lat": 36.486746,
+  "lng": 40.744922,
+  "conf": "LOW",
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2014,
+  "detailAr": "السجن المدني في الحسكة.",
+  "detailEn": "Central civil prison in Hasakah.",
+  "sources": [
+   "IIIM"
+  ],
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Al-Hasakah Central Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  }
+ },
+ {
+  "id": 93,
+  "nameAr": "المخابرات الجوية — سجن مطار حماة العسكري",
+  "nameEn": "AFI — Hama Military Airport Prison",
+  "agency": "AFI",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.1183,
+  "lng": 36.7111,
+  "conf": "LOW",
+  "needsVerification": true,
+  "violations": [
+   "torture",
+   "death",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "حوّلت المخابرات الجوية حظائر المطار إلى سجن مكتظ بالمحتجزين. الإحداثيات لموقع المطار العام؛ لم تتسنَّ مطابقتها بملحق IIIM بعد.",
+  "detailEn": "Air Force Intelligence turned airport hangars into an overcrowded prison. Coordinates mark the airbase; not yet matched against IIIM Annex B.",
+  "sources": [
+   "Naharnet Hama"
+  ],
+  "geoSource": "other",
+  "coordNote": {
+   "ar": "إحداثيات تقريبية من مصادر مفتوحة؛ لم تحدّد IIIM موقع هذه المنشأة",
+   "en": "Approximate open-source coordinates; IIIM did not geolocate this facility"
+  }
+ },
+ {
+  "id": 100,
+  "nameAr": "قيادة القوى الجوية والدفاع الجوي (آمرية الطيران)",
+  "nameEn": "Air Force and Air Defence Command (Amiriya al-Tayran)",
+  "agency": "ARMY",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.51600099,
+  "lng": 36.28245737,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Command",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label (Amiriya al-Tayran); witness evidence",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "General Command of the Army and Armed Forces",
+   "category": "Air Force Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 101,
+  "nameAr": "المخابرات الجوية — قسم درعا",
+  "nameEn": "AFI Section — Daraa",
+  "agency": "AFI",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.622852,
+  "lng": 36.124829,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Section Daraa",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; HRW Report Torture Archipelago, July 2012",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Air Force Intelligence Southern Region Branch",
+   "category": "Air Force Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 102,
+  "nameAr": "المخابرات الجوية — قسم حماة",
+  "nameEn": "AFI Section — Hama",
+  "agency": "AFI",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.120517,
+  "lng": 36.734806,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Section Hama",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 0,
+   "parent": "Air Force Intelligence Central Region Branch",
+   "category": "Air Force Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 2 حالة تعذيب أو سوء معاملة و0 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 2 of torture/ill-treatment and 0 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 103,
+  "nameAr": "المخابرات الجوية — قسم الرقة",
+  "nameEn": "AFI Section — Raqqa",
+  "agency": "AFI",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 35.95116176,
+  "lng": 39.00970279,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Air Force Intelligence Section Raqqa",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; witness evidence",
+   "experiences": 1,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Air Force Intelligence Eastern Region Branch",
+   "category": "Air Force Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 1 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 1 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 104,
+  "nameAr": "مشفى المجتهد (مشفى دمشق)",
+  "nameEn": "Al-Mojtahed Hospital (Damascus Hospital)",
+  "agency": "HOSP",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50011,
+  "lng": 36.29541,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Al-Mojtahed Hospital",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": null,
+   "inhumane": null,
+   "parent": null,
+   "category": null
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 105,
+  "nameAr": "فرع مكافحة المخدرات — دير الزور",
+  "nameEn": "Counter Narcotics Branch — Deir ez-Zor",
+  "agency": "MoI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.32005979,
+  "lng": 40.10399562,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Counter Narcotics Branch Deir- Ezzor",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Geolocation (YouTube); witness evidence",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Other Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 106,
+  "nameAr": "فرع الأمن الجنائي — درعا",
+  "nameEn": "Criminal Security — Daraa",
+  "agency": "MoI",
+  "govAr": "درعا",
+  "govEn": "Daraa",
+  "lat": 32.62784122,
+  "lng": 36.12220075,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Daraa",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 107,
+  "nameAr": "فرع الأمن الجنائي — دير الزور",
+  "nameEn": "Criminal Security — Deir ez-Zor",
+  "agency": "MoI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.31992042,
+  "lng": 40.10356562,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Deir- Ezzor",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 108,
+  "nameAr": "فرع الأمن الجنائي — حماة",
+  "nameEn": "Criminal Security — Hama",
+  "agency": "MoI",
+  "govAr": "حماة",
+  "govEn": "Hama",
+  "lat": 35.1188,
+  "lng": 36.74283,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Hama",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; OpenStreetMap label",
+   "experiences": 4,
+   "torture": 1,
+   "inhumane": 3,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 4 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و3 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 4 documented detention experiences, including 1 of torture/ill-treatment and 3 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 109,
+  "nameAr": "فرع الأمن الجنائي — اللاذقية",
+  "nameEn": "Criminal Security — Lattakia",
+  "agency": "MoI",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.52911412,
+  "lng": 35.80515847,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Lattakia",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 1,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 1 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 1 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 110,
+  "nameAr": "فرع الأمن الجنائي — الرقة",
+  "nameEn": "Criminal Security — Raqqa",
+  "agency": "MoI",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 35.95048362,
+  "lng": 38.99894952,
+  "conf": "HIGH",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Criminal Security Branch Raqqa",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Google Maps pin; Wikimapia label; geolocation (YouTube); witness evidence",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Criminal Security Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 111,
+  "nameAr": "سجن دير الزور المركزي",
+  "nameEn": "Deir ez-Zor Central Prison",
+  "agency": "MoI",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.33947795,
+  "lng": 40.11951042,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Deir-Ezzor Central Prison",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 112,
+  "nameAr": "المشفى العسكري — دير الزور",
+  "nameEn": "Deir ez-Zor Military Hospital",
+  "agency": "HOSP",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.34246148,
+  "lng": 40.13295412,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Deir-Ezzor Military Hospital",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; witness evidence",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Medical Services Directorate",
+   "category": "Hospitals"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 113,
+  "nameAr": "فرع 275 — الفرع الإداري (المخابرات العامة)",
+  "nameEn": "GID Branch 275 (Administrative)",
+  "agency": "GID",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.49698561,
+  "lng": 36.29045803,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 275 Administrative Branch",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Witness evidence",
+   "experiences": 3,
+   "torture": 2,
+   "inhumane": 1,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 3 تجربة احتجاز موثقة بشهادات، منها 2 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 3 documented detention experiences, including 2 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 114,
+  "nameAr": "فرع 279 — الفرع الخارجي (المخابرات العامة)",
+  "nameEn": "GID Branch 279 (External)",
+  "agency": "GID",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.494435,
+  "lng": 36.287048,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 279 External Branch",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; witness evidence",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 115,
+  "nameAr": "فرع 295 — فرع المداهمة (المخابرات العامة)",
+  "nameEn": "GID Branch 295 (Raids)",
+  "agency": "GID",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.40880669,
+  "lng": 36.38124202,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "General Intelligence Branch 295 Raids Branch",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Witness evidence",
+   "experiences": 1,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 1 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 1 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 116,
+  "nameAr": "سجن اللاذقية المركزي — الموقع الأول",
+  "nameEn": "Lattakia Central Prison — Location 1",
+  "agency": "MoI",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.52893991,
+  "lng": 35.77770165,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Lattakia Civilian Prison",
+   "location": 1,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; OpenStreetMap label",
+   "experiences": 5,
+   "torture": 1,
+   "inhumane": 2,
+   "parent": "Ministry of the Interior",
+   "category": "Civilian Prisons"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 5 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و2 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 5 documented detention experiences, including 1 of torture/ill-treatment and 2 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ],
+  "relocation": {
+   "group": 77,
+   "ar": "للسجن موقعان خلال الفترة؛ تاريخ الانتقال غير محدد (IIIM).",
+   "en": "Two locations during the period; relocation date not specified (IIIM)."
+  }
+ },
+ {
+  "id": 117,
+  "nameAr": "فرع 220 — سعسع (الموقع الأول)",
+  "nameEn": "MI Branch 220 (Sa'sa) — Location 1",
+  "agency": "MI",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.28620049,
+  "lng": 36.02538973,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 220 Quneitra",
+   "location": 1,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; witness evidence",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 1,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 2 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 2 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ],
+  "relocation": {
+   "group": 42,
+   "ar": "نُقل الفرع إلى موقع ثانٍ عام 2013 (IIIM).",
+   "en": "Branch relocated to a second site in 2013 (IIIM)."
+  }
+ },
+ {
+  "id": 118,
+  "nameAr": "مفرزة الرقة — الفرع 243",
+  "nameEn": "Raqqa Detachment — MI Branch 243",
+  "agency": "MI",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 35.96309974,
+  "lng": 38.99211549,
+  "conf": "HIGH",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Raqqa Detachment, Military Intelligence Branch 243 Deir- Ezzor",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; geolocation (YouTube); witness evidence",
+   "experiences": 2,
+   "torture": 2,
+   "inhumane": 2,
+   "parent": "Military Intelligence Department - Branch 243",
+   "category": "Military Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 2 حالة تعذيب أو سوء معاملة و2 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 2 of torture/ill-treatment and 2 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 119,
+  "nameAr": "فرع 293 — شؤون الضباط",
+  "nameEn": "MI Branch 293 (Officers’ Affairs)",
+  "agency": "MI",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.50516394,
+  "lng": 36.27512858,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Intelligence Branch 293 Officers’ Affairs Branch",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Witness evidence",
+   "experiences": 11,
+   "torture": 7,
+   "inhumane": 7,
+   "parent": "Military Intelligence Department",
+   "category": "Military Intelligence Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 11 تجربة احتجاز موثقة بشهادات، منها 7 حالة تعذيب أو سوء معاملة و7 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 11 documented detention experiences, including 7 of torture/ill-treatment and 7 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 120,
+  "nameAr": "الشرطة العسكرية — دير الزور",
+  "nameEn": "Military Police — Deir ez-Zor",
+  "agency": "MP",
+  "govAr": "دير الزور",
+  "govEn": "Deir ez-Zor",
+  "lat": 35.339805,
+  "lng": 40.135916,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Deir-Ezzor",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Wikimapia label; witness evidence",
+   "experiences": 3,
+   "torture": 1,
+   "inhumane": 0,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 3 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و0 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 3 documented detention experiences, including 1 of torture/ill-treatment and 0 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 121,
+  "nameAr": "الشرطة العسكرية — حمص",
+  "nameEn": "Military Police — Homs",
+  "agency": "MP",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.69154616,
+  "lng": 36.7142254,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Homs",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; witness evidence",
+   "experiences": 15,
+   "torture": 0,
+   "inhumane": 2,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 15 تجربة احتجاز موثقة بشهادات، منها 0 حالة تعذيب أو سوء معاملة و2 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 15 documented detention experiences, including 0 of torture/ill-treatment and 2 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 122,
+  "nameAr": "الشرطة العسكرية — إدلب",
+  "nameEn": "Military Police — Idlib",
+  "agency": "MP",
+  "govAr": "إدلب",
+  "govEn": "Idlib",
+  "lat": 35.92223495,
+  "lng": 36.63355042,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Idlib",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Geolocation (Twitter/X); witness evidence",
+   "experiences": 5,
+   "torture": 0,
+   "inhumane": 1,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2015,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 5 تجربة احتجاز موثقة بشهادات، منها 0 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 5 documented detention experiences, including 0 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 123,
+  "nameAr": "الشرطة العسكرية — الرقة",
+  "nameEn": "Military Police — Raqqa",
+  "agency": "MP",
+  "govAr": "الرقة",
+  "govEn": "Raqqa",
+  "lat": 35.94572334,
+  "lng": 39.01227557,
+  "conf": "HIGH",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Raqqa",
+   "location": null,
+   "conf": "HIGH",
+   "geoSources": "Wikimapia label; geolocation (YouTube); witness evidence",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 0,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2013,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و0 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 1 of torture/ill-treatment and 0 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 124,
+  "nameAr": "الشرطة العسكرية — طرطوس",
+  "nameEn": "Military Police — Tartus",
+  "agency": "MP",
+  "govAr": "طرطوس",
+  "govEn": "Tartus",
+  "lat": 34.885719,
+  "lng": 35.882351,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Branch Tartus",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 2,
+   "torture": 1,
+   "inhumane": 1,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 2 تجربة احتجاز موثقة بشهادات، منها 1 حالة تعذيب أو سوء معاملة و1 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 125,
+  "nameAr": "الشرطة العسكرية — قطنا (الموقع الأول)",
+  "nameEn": "Military Police — Qatana, Location 1",
+  "agency": "MP",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.43377568,
+  "lng": 36.08515595,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Military Police Qatana",
+   "location": 1,
+   "conf": "LOW",
+   "geoSources": "Geolocation (YouTube)",
+   "experiences": null,
+   "torture": 0,
+   "inhumane": 0,
+   "parent": "Military Police",
+   "category": "Military Police Facilities"
+  },
+  "violations": [],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM) ووثّقت موقعها، دون شهادات تفصيلية ضمن عيّنة التحليل.",
+  "detailEn": "Facility identified and geolocated by IIIM, without detailed testimony in its analysed sample.",
+  "sources": [
+   "IIIM"
+  ],
+  "relocation": {
+   "group": 49,
+   "ar": "للمنشأة موقعان خلال الفترة؛ تاريخ الانتقال غير محدد (IIIM).",
+   "en": "Two locations during the period; relocation date not specified (IIIM)."
+  }
+ },
+ {
+  "id": 126,
+  "nameAr": "فرع الأمن السياسي — حلب",
+  "nameEn": "Political Security — Aleppo",
+  "agency": "PSD",
+  "govAr": "حلب",
+  "govEn": "Aleppo",
+  "lat": 36.21403,
+  "lng": 37.159769,
+  "conf": "LOW",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Aleppo",
+   "location": null,
+   "conf": "LOW",
+   "geoSources": "Google Maps pin; Wikimapia label",
+   "experiences": 5,
+   "torture": 4,
+   "inhumane": 4,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 5 تجربة احتجاز موثقة بشهادات، منها 4 حالة تعذيب أو سوء معاملة و4 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 5 documented detention experiences, including 4 of torture/ill-treatment and 4 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 127,
+  "nameAr": "فرع الأمن السياسي — حمص",
+  "nameEn": "Political Security — Homs",
+  "agency": "PSD",
+  "govAr": "حمص",
+  "govEn": "Homs",
+  "lat": 34.72159013,
+  "lng": 36.70229927,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Homs",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Geolocation (YouTube); VDC Special Report on Military Security Branch 261, March 2014",
+   "experiences": 11,
+   "torture": 7,
+   "inhumane": 7,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 11 تجربة احتجاز موثقة بشهادات، منها 7 حالة تعذيب أو سوء معاملة و7 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 11 documented detention experiences, including 7 of torture/ill-treatment and 7 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 128,
+  "nameAr": "فرع الأمن السياسي — اللاذقية",
+  "nameEn": "Political Security — Lattakia",
+  "agency": "PSD",
+  "govAr": "اللاذقية",
+  "govEn": "Lattakia",
+  "lat": 35.527367,
+  "lng": 35.804268,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Political Security Branch Lattakia",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; Wikimapia label; HRW Report Torture Archipelago, July 2012",
+   "experiences": 5,
+   "torture": 4,
+   "inhumane": 3,
+   "parent": "Political Security",
+   "category": "Political Security Facilities"
+  },
+  "violations": [
+   "torture"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "منشأة حدّدتها الآلية الدولية (IIIM): 5 تجربة احتجاز موثقة بشهادات، منها 4 حالة تعذيب أو سوء معاملة و3 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Facility identified by IIIM: 5 documented detention experiences, including 4 of torture/ill-treatment and 3 of inhumane conditions.",
+  "sources": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": 129,
+  "nameAr": "القسم 40 — فرع 251 (فرع الأربعين)",
+  "nameEn": "Section 40 — GID Branch 251 (al-Arbaeen)",
+  "agency": "GID",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.52506391,
+  "lng": 36.2896355,
+  "conf": "MEDIUM",
+  "geoSource": "IIIM",
+  "iiim": {
+   "name": "Section 40, General Intelligence Branch 251 Internal Branch",
+   "location": null,
+   "conf": "MEDIUM",
+   "geoSources": "Google Maps pin; VDC Report on Khateeb Branch, August 2013; witness evidence",
+   "experiences": 8,
+   "torture": 6,
+   "inhumane": 3,
+   "parent": "General Intelligence Directorate",
+   "category": "General Intelligence Facilities"
+  },
+  "violations": [
+   "torture",
+   "disappear"
+  ],
+  "caesar": false,
+  "yearActive": 2011,
+  "yearClosed": 2024,
+  "detailAr": "القسم 40 التابع لفرع 251. أدانت محكمة كوبلنز إياد الغريب (فبراير 2021، 4.5 سنوات) بالمساعدة في اعتقال متظاهرين ونقلهم إلى الفرع 251. منشأة حدّدتها الآلية الدولية (IIIM): 8 تجربة احتجاز موثقة بشهادات، منها 6 حالة تعذيب أو سوء معاملة و3 حالة ظروف احتجاز لاإنسانية.",
+  "detailEn": "Section 40, subordinate to Branch 251. Koblenz court convicted Eyad al-Gharib (Feb 2021, 4.5 years) for helping arrest protesters and transfer them to Branch 251. Facility identified by IIIM: 8 documented detention experiences, including 6 of torture/ill-treatment and 3 of inhumane conditions.",
+  "sources": [
+   "IIIM",
+   "Koblenz Court"
+  ]
+ }
+]

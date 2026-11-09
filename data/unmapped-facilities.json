@@ -1,0 +1,134 @@
+[
+ {
+  "nameEn": "12th Armoured Brigade",
+  "nameAr": "اللواء 12 دبابات",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "3rd Armoured Division",
+  "nameAr": "الفرقة الثالثة دبابات",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "4th Armoured Division",
+  "nameAr": "الفرقة الرابعة دبابات",
+  "experiences": 7,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "52nd Mechanised Brigade",
+  "nameAr": "اللواء 52 ميكا",
+  "experiences": null,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "9th Armoured Division",
+  "nameAr": "الفرقة التاسعة دبابات",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Air Force Intelligence Directorate (HQ)",
+  "nameAr": "إدارة المخابرات الجوية",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "AFI Investigation Branch (Mezzeh airbase)",
+  "nameAr": "فرع التحقيق — المخابرات الجوية (مطار المزة)",
+  "experiences": 15,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "AFI Special Tasks Branch (Mezzeh airbase)",
+  "nameAr": "فرع المهام الخاصة — المخابرات الجوية (مطار المزة)",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "AFI al-Tabqa Section",
+  "nameAr": "المخابرات الجوية — قسم الطبقة",
+  "experiences": 1,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Criminal Security Directorate",
+  "nameAr": "إدارة الأمن الجنائي",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "GID Branch 331 — Idlib",
+  "nameAr": "فرع 331 — إدلب (المخابرات العامة)",
+  "experiences": 3,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "MI Branch 211 (Signals)",
+  "nameAr": "فرع 211 — الإشارة",
+  "experiences": 1,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "MI al-Suqaylabiyah Detachment (Branch 219)",
+  "nameAr": "مفرزة السقيلبية — الفرع 219",
+  "experiences": 4,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "MI Branch 222 — Qamishli",
+  "nameAr": "فرع 222 — القامشلي",
+  "experiences": 1,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "MI al-Thawrah Detachment (Branch 243)",
+  "nameAr": "مفرزة الثورة — الفرع 243",
+  "experiences": 1,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "MI Branch 256 — Tartus",
+  "nameAr": "فرع 256 — طرطوس",
+  "experiences": 3,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Military Police — Damascus",
+  "nameAr": "الشرطة العسكرية — دمشق",
+  "experiences": 24,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Military Police — Daraa",
+  "nameAr": "الشرطة العسكرية — درعا",
+  "experiences": 2,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Military Police — Lattakia",
+  "nameAr": "الشرطة العسكرية — اللاذقية",
+  "experiences": 4,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Military Police — Qamishli",
+  "nameAr": "الشرطة العسكرية — القامشلي",
+  "experiences": 1,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Political Security — Raqqa",
+  "nameAr": "الأمن السياسي — الرقة",
+  "experiences": null,
+  "source": "IIIM"
+ },
+ {
+  "nameEn": "Political Security — Tartus",
+  "nameAr": "الأمن السياسي — طرطوس",
+  "experiences": 1,
+  "source": "IIIM"
+ }
+]
