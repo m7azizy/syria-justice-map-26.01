@@ -22,10 +22,19 @@ export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;',
 
 // Renders source keys as links (org name, with the title as tooltip)
 export function srcLinks(keys, sep = ' · ') {
-  return (keys || []).map(k => {
+  // Group links by displayed organisation so one outlet cited twice reads "SJAC 1, 2", not "SJAC · SJAC"
+  const groups = new Map();
+  for (const k of keys || []) {
     const s = D.sources[k];
-    return s?.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.org)}</a>` : esc(k);
-  }).join(sep);
+    if (!s?.url) { groups.set(k, null); continue; }
+    const org = (getLang() === 'ar' && s.orgAr) || s.org;
+    if (!groups.has(org)) groups.set(org, []);
+    groups.get(org).push(s);
+  }
+  const a = (s, txt) => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(txt)}</a>`;
+  return [...groups].map(([org, list]) => !list ? esc(org)
+    : list.length === 1 ? a(list[0], org)
+    : `${esc(org)} <sup class="num">${list.map((s, i) => a(s, i + 1)).join(',')}</sup>`).join(sep);
 }
 
 export const siteName = s => L(s, 'name');

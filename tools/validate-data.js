@@ -32,6 +32,7 @@ for (const f of facilities) {
   if (f.violations.includes('caesar')) err(`facility #${f.id}: caesar belongs in the caesar flag`);
   if (f.geoSource === 'IIIM' && !f.iiim) err(`facility #${f.id}: IIIM geolocation without iiim block`);
   if (f.geoSource !== 'IIIM' && !f.needsVerification) err(`facility #${f.id}: non-IIIM location must be flagged needsVerification`);
+  if (f.iiim?.parent && !f.iiim.parentAr) err(`facility #${f.id}: iiim.parent needs an Arabic parentAr`);
 }
 for (const f of facilities) for (const a of f.accountability || []) {
   // Badges describe the facility, never a person: names belong only in trials.json

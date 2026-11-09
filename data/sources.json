@@ -2,267 +2,320 @@
  "IIIM": {
   "org": "IIIM / UN",
   "title": "The Syrian Government Detention System as a Tool of Violent Repression (2024)",
-  "url": "https://iiim.un.org/the-syrian-government-detention-system-as-a-tool-of-violent-repression/"
+  "url": "https://iiim.un.org/the-syrian-government-detention-system-as-a-tool-of-violent-repression/",
+  "orgAr": "الآلية الدولية / الأمم المتحدة"
  },
  "COI": {
   "org": "COI / UN",
   "title": "Web of Agony (Jan 2025)",
-  "url": "https://www.ohchr.org/en/hr-bodies/hrc/iici-syria/web-agony"
+  "url": "https://www.ohchr.org/en/hr-bodies/hrc/iici-syria/web-agony",
+  "orgAr": "لجنة التحقيق / الأمم المتحدة"
  },
  "HRW": {
   "org": "Human Rights Watch",
   "title": "If the Dead Could Speak (2015)",
-  "url": "https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities"
+  "url": "https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities",
+  "orgAr": "هيومن رايتس ووتش"
  },
  "HRW Tadamon": {
   "org": "Human Rights Watch",
   "title": "Mass Grave in Damascus Should be Protected (Dec 2024)",
-  "url": "https://www.hrw.org/news/2024/12/16/syria-mass-grave-damascus-should-be-protected-investigated"
+  "url": "https://www.hrw.org/news/2024/12/16/syria-mass-grave-damascus-should-be-protected-investigated",
+  "orgAr": "هيومن رايتس ووتش"
  },
  "Amnesty": {
   "org": "Amnesty International",
   "title": "Human Slaughterhouse (2017)",
-  "url": "https://www.amnesty.org/en/documents/mde24/5415/2017/en/"
+  "url": "https://www.amnesty.org/en/documents/mde24/5415/2017/en/",
+  "orgAr": "منظمة العفو الدولية"
  },
  "SNHR": {
   "org": "SNHR",
   "title": "Syrian Network for Human Rights",
-  "url": "https://snhr.org/"
+  "url": "https://snhr.org/",
+  "orgAr": "الشبكة السورية لحقوق الإنسان"
  },
  "ECCHR": {
   "org": "ECCHR",
   "title": "Caesar photos document systematic torture",
-  "url": "https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/"
+  "url": "https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/",
+  "orgAr": "المركز الأوروبي للحقوق الدستورية"
  },
  "Germany BKA": {
   "org": "ECCHR / BKA",
   "title": "Caesar photos — German forensic analysis",
-  "url": "https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/"
+  "url": "https://www.ecchr.eu/en/case/caesar-photos-document-systematic-torture/",
+  "orgAr": "المركز الأوروبي / الشرطة الألمانية"
  },
  "SAFMCD": {
   "org": "SAFMCD via HRW",
   "title": "Caesar photos breakdown by branch",
-  "url": "https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities"
+  "url": "https://www.hrw.org/report/2015/12/16/if-dead-could-speak/mass-deaths-and-torture-syrias-detention-facilities",
+  "orgAr": "رابطة عائلات قيصر عبر هيومن رايتس ووتش"
  },
  "Koblenz Court": {
   "org": "SJAC",
   "title": "The Trial of Anwar Raslan and Eyad al-Gharib",
-  "url": "https://syriaaccountability.org/the-trial-of-anwar-raslan-and-eyad-al-gharib/"
+  "url": "https://syriaaccountability.org/the-trial-of-anwar-raslan-and-eyad-al-gharib/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "Frankfurt Court": {
   "org": "SJAC",
   "title": "Frankfurt Court Sentences Alaa M. to Life (Jun 2025)",
-  "url": "https://syriaaccountability.org/frankfurt-court-sentences-syrian-doctor-alaa-m-to-life-imprisonment/"
+  "url": "https://syriaaccountability.org/frankfurt-court-sentences-syrian-doctor-alaa-m-to-life-imprisonment/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC": {
   "org": "SJAC",
   "title": "Syria Justice and Accountability Centre",
-  "url": "https://syriaaccountability.org/"
+  "url": "https://syriaaccountability.org/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC Yarmouk": {
   "org": "SJAC",
   "title": "Inside the Yarmouk Trial (Koblenz)",
-  "url": "https://syriaaccountability.org/inside-the-yarmouk-trial-of-jihad-et-al-22/"
+  "url": "https://syriaaccountability.org/inside-the-yarmouk-trial-of-jihad-et-al-22/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC Mezzeh": {
   "org": "The New Arab",
   "title": "Syria moves to protect mass grave sites at Mezzeh airport",
-  "url": "https://www.newarab.com/news/syria-moves-protect-mass-grave-sites-mezzeh-airport"
+  "url": "https://www.newarab.com/news/syria-moves-protect-mass-grave-sites-mezzeh-airport",
+  "orgAr": "العربي الجديد"
  },
  "Enab Baladi Mezzeh": {
   "org": "Enab Baladi",
   "title": "A thousand detainees killed at Mezzeh Military Airport",
-  "url": "https://english.enabbaladi.net/archives/2025/02/a-thousand-detainees-killed-at-mezzeh-military-airport-in-syria/"
+  "url": "https://english.enabbaladi.net/archives/2025/02/a-thousand-detainees-killed-at-mezzeh-military-airport-in-syria/",
+  "orgAr": "عنب بلدي"
  },
  "Dabbagh Paris": {
   "org": "Human Rights Watch",
   "title": "Syrian Officials Convicted in France (May 2024)",
-  "url": "https://www.hrw.org/news/2024/05/27/syrian-officials-convicted-crimes-against-humanity-france"
+  "url": "https://www.hrw.org/news/2024/05/27/syrian-officials-convicted-crimes-against-humanity-france",
+  "orgAr": "هيومن رايتس ووتش"
  },
  "US DOJ": {
   "org": "US DOJ / FBI",
   "title": "Charges unsealed against two former Syrian intelligence officials",
-  "url": "https://fbi.gov/news/press-releases/criminal-charges-unsealed-against-two-former-high-ranking-syrian-government-intelligence-officials-for-war-crimes-against-americans-and-other-civilians"
+  "url": "https://fbi.gov/news/press-releases/criminal-charges-unsealed-against-two-former-high-ranking-syrian-government-intelligence-officials-for-war-crimes-against-americans-and-other-civilians",
+  "orgAr": "وزارة العدل الأمريكية"
  },
  "Najib Damascus": {
   "org": "Human Rights Watch",
   "title": "Q&A: Syria’s First Trials for Assad-Era Crimes (Aug 2026)",
-  "url": "https://www.hrw.org/news/2026/08/23/questions-answers-syrias-first-and-future-trials-for-assad-era-crimes"
+  "url": "https://www.hrw.org/news/2026/08/23/questions-answers-syrias-first-and-future-trials-for-assad-era-crimes",
+  "orgAr": "هيومن رايتس ووتش"
  },
  "Solna Yarmouk": {
   "org": "SJAC",
   "title": "A Landmark Conviction for Yarmouk in Sweden (May 2026)",
-  "url": "https://syriaaccountability.org/a-landmark-conviction-for-yarmouk-in-sweden-comes-with-lessons/"
+  "url": "https://syriaaccountability.org/a-landmark-conviction-for-yarmouk-in-sweden-comes-with-lessons/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "Reuters": {
   "org": "Reuters",
   "title": "Assad government secretly moved mass grave (Oct 2025)",
-  "url": "https://www.usnews.com/news/world/articles/2025-10-14/exclusive-assad-government-secretly-moved-mass-grave-to-cover-up-killings-reuters-investigation-finds"
+  "url": "https://www.usnews.com/news/world/articles/2025-10-14/exclusive-assad-government-secretly-moved-mass-grave-to-cover-up-killings-reuters-investigation-finds",
+  "orgAr": "رويترز"
  },
  "Reuters Dhumair 2025": {
   "org": "Reuters",
   "title": "Syria secures Assad-era mass grave (Dec 2025)",
-  "url": "https://www.usnews.com/news/world/articles/2025-12-29/syria-secures-assad-era-mass-grave-revealed-by-reuters-and-opens-criminal-investigation"
+  "url": "https://www.usnews.com/news/world/articles/2025-12-29/syria-secures-assad-era-mass-grave-revealed-by-reuters-and-opens-criminal-investigation",
+  "orgAr": "رويترز"
  },
  "SETF": {
   "org": "CNN / SETF",
   "title": "Hundreds of thousands could be buried in mass graves (Dec 2024)",
-  "url": "https://www.cnn.com/2024/12/17/middleeast/syria-assad-regime-mass-graves-intl/index.html"
+  "url": "https://www.cnn.com/2024/12/17/middleeast/syria-assad-regime-mass-graves-intl/index.html",
+  "orgAr": "سي إن إن"
  },
  "Stephen Rapp": {
   "org": "Times of Israel / Reuters",
   "title": "Mass graves expose Assad’s machinery of death",
-  "url": "https://www.timesofisrael.com/war-crimes-prosecutor-says-syrian-mass-graves-expose-assads-machinery-of-death/"
+  "url": "https://www.timesofisrael.com/war-crimes-prosecutor-says-syrian-mass-graves-expose-assads-machinery-of-death/",
+  "orgAr": "رويترز"
  },
  "MEE": {
   "org": "Middle East Eye",
   "title": "How Assad’s Syria moved the bodies of its victims",
-  "url": "https://www.middleeasteye.net/news/how-assad-syria-moved-bodies-victims"
+  "url": "https://www.middleeasteye.net/news/how-assad-syria-moved-bodies-victims",
+  "orgAr": "ميدل إيست آي"
  },
  "Ugur Umit Ungor": {
   "org": "Tadamon research",
   "title": "Tadamon massacre",
-  "url": "https://en.wikipedia.org/wiki/Tadamon_massacre"
+  "url": "https://en.wikipedia.org/wiki/Tadamon_massacre",
+  "orgAr": "بحث التضامن"
  },
  "Deir ez-Zor siege": {
   "org": "Atlantic Council",
   "title": "Inside ISIS’s Siege on Deir Ezzor",
-  "url": "https://www.atlanticcouncil.org/blogs/syriasource/inside-isis-s-siege-on-deir-ezzor/"
+  "url": "https://www.atlanticcouncil.org/blogs/syriasource/inside-isis-s-siege-on-deir-ezzor/",
+  "orgAr": "المجلس الأطلسي"
  },
  "Enab Baladi Qamishli": {
   "org": "Enab Baladi",
   "title": "SDF lifts siege on security square in Qamishli (2024)",
-  "url": "https://english.enabbaladi.net/archives/2024/08/after-al-hasakah-sdf-lifts-siege-on-security-square-in-qamishli/"
+  "url": "https://english.enabbaladi.net/archives/2024/08/after-al-hasakah-sdf-lifts-siege-on-security-square-in-qamishli/",
+  "orgAr": "عنب بلدي"
  },
  "Naharnet Hama": {
   "org": "AFP via Naharnet",
   "title": "Hama Military Airport Turned into Feared Prison",
-  "url": "https://m.naharnet.com/stories/en/58939-syrian-activists-hama-military-airport-turned-into-feared-prison"
+  "url": "https://m.naharnet.com/stories/en/58939-syrian-activists-hama-military-airport-turned-into-feared-prison",
+  "orgAr": "فرانس برس"
  },
  "NCMP": {
   "org": "Enab Baladi",
   "title": "National Commission for the Missing finds remains (May 2026)",
-  "url": "https://english.enabbaladi.net/archives/2026/05/national-commission-for-the-missing-finds-remains-near-damascus/"
+  "url": "https://english.enabbaladi.net/archives/2026/05/national-commission-for-the-missing-finds-remains-near-damascus/",
+  "orgAr": "عنب بلدي"
  },
  "Enab Baladi": {
   "org": "Enab Baladi",
   "title": "Enab Baladi",
-  "url": "https://english.enabbaladi.net/"
+  "url": "https://english.enabbaladi.net/",
+  "orgAr": "عنب بلدي"
  },
  "Forensic Architecture": {
   "org": "Amnesty / Forensic Architecture",
   "title": "Saydnaya: Inside a Syrian Torture Prison",
-  "url": "https://saydnaya.amnesty.org/"
+  "url": "https://saydnaya.amnesty.org/",
+  "orgAr": "العفو الدولية / العمارة الجنائية"
  },
  "VDC": {
   "org": "Violations Documentation Center",
   "title": "Violations Documentation Center in Syria",
-  "url": "https://vdc-sy.net/"
+  "url": "https://vdc-sy.net/",
+  "orgAr": "مركز توثيق الانتهاكات"
  },
  "Syria Prisons Museum": {
   "org": "Prisons Museum",
   "title": "Syria Prisons Museum",
-  "url": "https://prisons.museum/en/syria/topics/sednaya-prison"
+  "url": "https://prisons.museum/en/syria/topics/sednaya-prison",
+  "orgAr": "متحف السجون"
  },
  "Halabi Vienna": {
   "org": "Al Jazeera",
   "title": "Ex-Syrian intelligence chief in Raqqa convicted of torture in Austria (Jul 2026)",
-  "url": "https://www.aljazeera.com/news/2026/7/6/ex-syrian-intelligence-chief-in-raqqa-convicted-of-torture-in-austria"
+  "url": "https://www.aljazeera.com/news/2026/7/6/ex-syrian-intelligence-chief-in-raqqa-convicted-of-torture-in-austria",
+  "orgAr": "الجزيرة"
  },
  "Mouafak Berlin": {
   "org": "SCM",
   "title": "Berlin Higher Regional Court sentences Mouafak D. (Feb 2023)",
-  "url": "https://scm.org/en/the-higher-regional-court-in-berlin-sentenced-palestinian-syrian-moafak/"
+  "url": "https://scm.org/en/the-higher-regional-court-in-berlin-sentenced-palestinian-syrian-moafak/",
+  "orgAr": "المركز السوري للإعلام وحرية التعبير"
  },
  "Mustafa A Hague": {
   "org": "Al Jazeera",
   "title": "Dutch court convicts Syrian pro-government fighter (Jan 2024)",
-  "url": "https://www.aljazeera.com/news/2024/1/22/dutch-court-convicts-syrian-fighter-on-war-crimes-charges"
+  "url": "https://www.aljazeera.com/news/2024/1/22/dutch-court-convicts-syrian-fighter-on-war-crimes-charges",
+  "orgAr": "الجزيرة"
  },
  "Ammar Stuttgart": {
   "org": "Library of Congress / ANHA",
   "title": "Germany upholds life sentence for Ammar A.",
-  "url": "https://hawarnews.com/en/germany-upholds-life-sentence-for-syrian-man-convicted-of-war-crimes"
+  "url": "https://hawarnews.com/en/germany-upholds-life-sentence-for-syrian-man-convicted-of-war-crimes",
+  "orgAr": "مكتبة الكونغرس / وكالة هاوار"
  },
  "TRIAL Rifaat": {
   "org": "TRIAL International",
   "title": "Rifaat al-Assad case",
-  "url": "https://trialinternational.org/case/rifaat-al-assad/"
+  "url": "https://trialinternational.org/case/rifaat-al-assad/",
+  "orgAr": "ترايال الدولية"
  },
  "TRIAL UJAR 2026": {
   "org": "TRIAL International",
   "title": "Universal Jurisdiction Annual Review 2026",
-  "url": "https://trialinternational.org/wp-content/uploads/2026/04/UJAR_2026_digital.pdf"
+  "url": "https://trialinternational.org/wp-content/uploads/2026/04/UJAR_2026_digital.pdf",
+  "orgAr": "ترايال الدولية"
  },
  "JusticeInfo trials": {
   "org": "JusticeInfo.net",
   "title": "Syria: a map of trials since the fall of Assad (Nov 2026)",
-  "url": "https://www.justiceinfo.net/en/168158-syria-a-map-of-trials-since-the-fall-of-assad.html"
+  "url": "https://www.justiceinfo.net/en/168158-syria-a-map-of-trials-since-the-fall-of-assad.html",
+  "orgAr": "جستس إنفو"
  },
  "HRW first verdicts": {
   "org": "Human Rights Watch",
   "title": "Syria: First Assad-Era Verdicts a Test for Justice (Aug 2026)",
-  "url": "https://www.hrw.org/news/2026/08/23/syria-first-assad-era-verdicts-a-test-for-justice"
+  "url": "https://www.hrw.org/news/2026/08/23/syria-first-assad-era-verdicts-a-test-for-justice",
+  "orgAr": "هيومن رايتس ووتش"
  },
  "SNHR 2026": {
   "org": "SNHR",
   "title": "Fifteen Years of Enforced Disappearance in Syria (30 Aug 2026)",
-  "url": "https://snhr.org/blog/2026/08/30/fifteen-years-of-enforced-disappearance-in-syria-the-right-of-families-to-the-truth-is-a-continuing-obligation/"
+  "url": "https://snhr.org/blog/2026/08/30/fifteen-years-of-enforced-disappearance-in-syria-the-right-of-families-to-the-truth-is-a-continuing-obligation/",
+  "orgAr": "الشبكة السورية لحقوق الإنسان"
  },
  "SNHR 2024 release": {
   "org": "SNHR",
   "title": "Opening Detention Centers... 112,414 still forcibly disappeared (Dec 2024)",
-  "url": "https://snhr.org/blog/2024/12/28/opening-detention-centers-has-revealed-the-still-going-humanitarian-catastrophe-over-112414-individuals-are-still-forcibly-disappeared-at-the-hands-of-the-assad-regime/"
+  "url": "https://snhr.org/blog/2024/12/28/opening-detention-centers-has-revealed-the-still-going-humanitarian-catastrophe-over-112414-individuals-are-still-forcibly-disappeared-at-the-hands-of-the-assad-regime/",
+  "orgAr": "الشبكة السورية لحقوق الإنسان"
  },
  "Enab SNHR 2026": {
   "org": "Enab Baladi",
   "title": "Over 177,000 forcibly disappeared in Syria since 2011 (Aug 2026)",
-  "url": "https://english.enabbaladi.net/archives/2026/08/over-177000-forcibly-disappeared-in-syria-since-2011/"
+  "url": "https://english.enabbaladi.net/archives/2026/08/over-177000-forcibly-disappeared-in-syria-since-2011/",
+  "orgAr": "عنب بلدي"
  },
  "ICIJ Damascus Dossier": {
   "org": "ICIJ / NDR",
   "title": "Inside the Damascus Dossier: From leaked images to verified data (Dec 2025)",
-  "url": "https://www.icij.org/investigations/damascus-dossier/inside-the-damascus-dossier-from-leaked-images-to-verified-data/"
+  "url": "https://www.icij.org/investigations/damascus-dossier/inside-the-damascus-dossier-from-leaked-images-to-verified-data/",
+  "orgAr": "الاتحاد الدولي للصحفيين الاستقصائيين"
  },
  "Reuters DNA": {
   "org": "Reuters via Arab News",
   "title": "Syria’s first DNA-based identifications offer hope (Oct 2026)",
-  "url": "https://www.arabnews.com/middle-east/syrias-first-dna-based-identifications-offer-hope-for-families-of-the-missing-3007338"
+  "url": "https://www.arabnews.com/middle-east/syrias-first-dna-based-identifications-offer-hope-for-families-of-the-missing-3007338",
+  "orgAr": "رويترز"
  },
  "SJAC DNA": {
   "org": "SJAC",
   "title": "The First Genetic Identification of a Missing Person in Syria (Oct 2026)",
-  "url": "https://syriaaccountability.org/the-first-genetic-identification-of-a-missing-person-in-syria/"
+  "url": "https://syriaaccountability.org/the-first-genetic-identification-of-a-missing-person-in-syria/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC State of Justice 2026": {
   "org": "SJAC",
   "title": "The State of Justice in Syria 2026",
-  "url": "https://syriaaccountability.org/content/files/2026/04/State-of-Justice-in-Syria-2026.pdf"
+  "url": "https://syriaaccountability.org/content/files/2026/04/State-of-Justice-in-Syria-2026.pdf",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC one year": {
   "org": "SJAC",
   "title": "One Year On: The State of Transitional Justice in Syria",
-  "url": "https://syriaaccountability.org/one-year-on-the-state-of-transitional-justice-in-syria/"
+  "url": "https://syriaaccountability.org/one-year-on-the-state-of-transitional-justice-in-syria/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "SJAC TJ law": {
   "org": "SJAC",
   "title": "Syria’s Draft Transitional Justice Law: Gaps in scope, crimes, and safeguards",
-  "url": "https://syriaaccountability.org/syrias-draft-transitional-justice-law-gaps-in-scope-crimes-and-safeguards/"
+  "url": "https://syriaaccountability.org/syrias-draft-transitional-justice-law-gaps-in-scope-crimes-and-safeguards/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "STJ TJ 2026": {
   "org": "Syrians for Truth and Justice",
   "title": "Syria’s transitional justice challenge: From ambition to reality (Oct 2026)",
-  "url": "https://stj-sy.org/en/syrias-transitional-justice-challenge-from-ambition-to-reality/"
+  "url": "https://stj-sy.org/en/syrias-transitional-justice-challenge-from-ambition-to-reality/",
+  "orgAr": "سوريون من أجل الحقيقة والعدالة"
  },
  "Amnesty TJ 2026": {
   "org": "Amnesty International",
   "title": "Syria: Ending Impunity, Protecting Rights (Jul 2026)",
-  "url": "https://www.amnesty.org/en/wp-content/uploads/2026/07/MDE2409242026ENGLISH.pdf"
+  "url": "https://www.amnesty.org/en/wp-content/uploads/2026/07/MDE2409242026ENGLISH.pdf",
+  "orgAr": "منظمة العفو الدولية"
  },
  "HLP draft law": {
   "org": "Syria Report",
   "title": "Draft Transitional Justice Law to Include Compensation for HLP Violations",
-  "url": "https://hlp.syria-report.com/hlp/draft-transitional-justice-law-to-include-compensation-for-hlp-violations/"
+  "url": "https://hlp.syria-report.com/hlp/draft-transitional-justice-law-to-include-compensation-for-hlp-violations/",
+  "orgAr": "سيريا ريبورت"
  },
  "TIMEP victims": {
   "org": "TIMEP",
@@ -272,27 +325,32 @@
  "COI HRC61": {
   "org": "COI / UN",
   "title": "Report of the Commission of Inquiry, A/HRC/61/62 (Mar 2026)",
-  "url": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session61/advance-version/a-hrc-61-62-auv.pdf"
+  "url": "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/sessions-regular/session61/advance-version/a-hrc-61-62-auv.pdf",
+  "orgAr": "لجنة التحقيق / الأمم المتحدة"
  },
  "EUAA 2026": {
   "org": "EUAA",
   "title": "Syria: Country Focus (Jul 2026)",
-  "url": "https://www.euaa.europa.eu/sites/default/files/publications/2026-07/2026_07_EUAA_COI_Report_Syria_Country_Focus.pdf"
+  "url": "https://www.euaa.europa.eu/sites/default/files/publications/2026-07/2026_07_EUAA_COI_Report_Syria_Country_Focus.pdf",
+  "orgAr": "وكالة اللجوء الأوروبية"
  },
  "IIMP 2026": {
   "org": "UN News",
   "title": "Syria ‘not alone’ in locating missing persons (Jul 2026)",
-  "url": "https://news.un.org/en/story/2026/07/1168010"
+  "url": "https://news.un.org/en/story/2026/07/1168010",
+  "orgAr": "أخبار الأمم المتحدة"
  },
  "ABC graves": {
   "org": "ABC News",
   "title": "The Missing number in the hundreds of thousands (Feb 2026)",
-  "url": "https://www.abc.net.au/news/2026-02-17/the-missing-are-syrias-victims-of-the-assad-regime/106131984"
+  "url": "https://www.abc.net.au/news/2026-02-17/the-missing-are-syrias-victims-of-the-assad-regime/106131984",
+  "orgAr": "إيه بي سي نيوز"
  },
  "Syria Direct graves": {
   "org": "Syria Direct",
   "title": "Syrians work to unearth the secrets of Assad’s mass graves",
-  "url": "https://syriadirect.org/in-search-of-closure-syrians-work-to-unearth-the-secrets-of-assads-mass-graves/"
+  "url": "https://syriadirect.org/in-search-of-closure-syrians-work-to-unearth-the-secrets-of-assads-mass-graves/",
+  "orgAr": "سوريا على طول"
  },
  "Just Security ICC": {
   "org": "Just Security",
@@ -302,72 +360,86 @@
  "Enab Victory Conference": {
   "org": "Enab Baladi",
   "title": "Syria: What comes after declaration of victory (Feb 2025)",
-  "url": "https://english.enabbaladi.net/archives/2025/02/syria-what-comes-after-declaration-of-victory/"
+  "url": "https://english.enabbaladi.net/archives/2025/02/syria-what-comes-after-declaration-of-victory/",
+  "orgAr": "عنب بلدي"
  },
  "Euronews Saydnaya": {
   "org": "Euronews",
   "title": "Saydnaya residents demand links with notorious prison end (May 2026)",
-  "url": "https://www.euronews.com/2026/05/05/saydnaya-residents-demand-links-between-notorious-syrian-prison-and-holy-city-must-end"
+  "url": "https://www.euronews.com/2026/05/05/saydnaya-residents-demand-links-between-notorious-syrian-prison-and-holy-city-must-end",
+  "orgAr": "يورونيوز"
  },
  "Berlin Sednaya exhibition": {
   "org": "Berlin-Hohenschönhausen Memorial",
   "title": "SEDNAYA exhibition (Mar–Sep 2026)",
-  "url": "https://www.stiftung-hsh.de/en/visit/exhibitions/translate-to-english-sednaya"
+  "url": "https://www.stiftung-hsh.de/en/visit/exhibitions/translate-to-english-sednaya",
+  "orgAr": "نصب برلين-هوهنشونهاوزن التذكاري"
  },
  "Truth Guardians": {
   "org": "Syria in Transition",
   "title": "The Truth Guardians",
-  "url": "https://www.syriaintransition.com/en/home/archive/issue-35/the-truth-guardians"
+  "url": "https://www.syriaintransition.com/en/home/archive/issue-35/the-truth-guardians",
+  "orgAr": "سوريا في مرحلة انتقالية"
  },
  "Mezzeh protocol": {
   "org": "Reuters via US News",
   "title": "Syrian private airport plans spark outcry over mass graves (Sep 2026)",
-  "url": "https://www.usnews.com/news/world/articles/2026-09-12/syrian-private-airport-plans-spark-outcry-over-mass-graves-land-rights"
+  "url": "https://www.usnews.com/news/world/articles/2026-09-12/syrian-private-airport-plans-spark-outcry-over-mass-graves-land-rights",
+  "orgAr": "رويترز"
  },
  "Amnesty 2017": {
   "org": "Amnesty International",
   "title": "Human Slaughterhouse (2017)",
-  "url": "https://www.amnesty.org/en/documents/mde24/5415/2017/en/"
+  "url": "https://www.amnesty.org/en/documents/mde24/5415/2017/en/",
+  "orgAr": "منظمة العفو الدولية"
  },
  "UN SG TJ 2023": {
   "org": "United Nations",
   "title": "Guidance Note of the Secretary-General on Transitional Justice (2023)",
-  "url": "https://www.ohchr.org/en/transitional-justice"
+  "url": "https://www.ohchr.org/en/transitional-justice",
+  "orgAr": "الأمم المتحدة"
  },
  "TJET": {
   "org": "Transitional Justice Evaluation Tools",
   "title": "TJET database",
-  "url": "https://transitionaljusticedata.org/en/faq.html"
+  "url": "https://transitionaljusticedata.org/en/faq.html",
+  "orgAr": "أدوات تقييم العدالة الانتقالية"
  },
  "JFL monitoring": {
   "org": "Justice for Life",
   "title": "Transitional Justice in Syria: Foundation and the Evaluation of Effectiveness",
-  "url": "https://jfl.ngo/en/transitional-justice-in-syria-foundation-and-the-evaluation-of-effectiveness/"
+  "url": "https://jfl.ngo/en/transitional-justice-in-syria-foundation-and-the-evaluation-of-effectiveness/",
+  "orgAr": "العدالة من أجل الحياة"
  },
  "SJAC State of Justice 2025": {
   "org": "SJAC",
   "title": "The State of Justice in Syria 2025",
-  "url": "https://syriaaccountability.org/content/files/2025/03/The-State-of-Justice-in-Syria-2025--English-1.pdf"
+  "url": "https://syriaaccountability.org/content/files/2025/03/The-State-of-Justice-in-Syria-2025--English-1.pdf",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "ADMSP": {
   "org": "ADMSP",
   "title": "Association of Detainees and the Missing in Sednaya Prison",
-  "url": "https://www.admsp.org/"
+  "url": "https://www.admsp.org/",
+  "orgAr": "رابطة معتقلي ومفقودي صيدنايا"
  },
  "SHRC": {
   "org": "SHRC",
   "title": "Syrian Human Rights Committee",
-  "url": "https://www.shrc.org/en/"
+  "url": "https://www.shrc.org/en/",
+  "orgAr": "اللجنة السورية لحقوق الإنسان"
  },
  "OFAC": {
   "org": "US Treasury OFAC",
   "title": "OFAC sanctions designations",
-  "url": "https://ofac.treasury.gov/"
+  "url": "https://ofac.treasury.gov/",
+  "orgAr": "وزارة الخزانة الأمريكية"
  },
  "DOJ Alsheikh": {
   "org": "US Department of Justice",
   "title": "Former Syrian prison official sentenced for torture and immigration fraud (Sep 2026)",
-  "url": "https://www.justice.gov/opa/pr/former-syrian-prison-official-sentenced-torture-and-immigration-fraud"
+  "url": "https://www.justice.gov/opa/pr/former-syrian-prison-official-sentenced-torture-and-immigration-fraud",
+  "orgAr": "وزارة العدل الأمريكية"
  },
  "Al-Monitor Alsheikh": {
   "org": "Al-Monitor",
@@ -382,82 +454,98 @@
  "IIIM Bulletin 15": {
   "org": "IIIM / UN",
   "title": "IIIM Bulletin N° 15",
-  "url": "https://iiim.un.org/iiim-bulletin-n-15/"
+  "url": "https://iiim.un.org/iiim-bulletin-n-15/",
+  "orgAr": "الآلية الدولية / الأمم المتحدة"
  },
  "IIIM first evidence": {
   "org": "IIIM / UN",
   "title": "First Evidence Collection Conducted in Syria (Feb 2026)",
-  "url": "https://iiim.un.org/first-evidence-collection-conducted-in-syria/"
+  "url": "https://iiim.un.org/first-evidence-collection-conducted-in-syria/",
+  "orgAr": "الآلية الدولية / الأمم المتحدة"
  },
  "Fahad Koblenz": {
   "org": "AFP via Yahoo",
   "title": "Syrian man on trial in Germany for deaths of 70 prisoners in Damascus",
-  "url": "https://www.yahoo.com/news/articles/syrian-man-trial-germany-deaths-140823316.html"
+  "url": "https://www.yahoo.com/news/articles/syrian-man-trial-germany-deaths-140823316.html",
+  "orgAr": "فرانس برس"
  },
  "SJAC Ahmad H": {
   "org": "SJAC",
   "title": "Inside the Ahmad H. Trial #22: Ten-Year Sentence",
-  "url": "https://syriaaccountability.org/inside-the-ahmad-h-trial-22-ten-year-sentence-for-crimes-against-humanity-and-war-crimes/"
+  "url": "https://syriaaccountability.org/inside-the-ahmad-h-trial-22-ten-year-sentence-for-crimes-against-humanity-and-war-crimes/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "JusticeInfo who": {
   "org": "JusticeInfo.net",
   "title": "Justice for Syria: who is doing what?",
-  "url": "https://www.justiceinfo.net/en/153370-justice-for-syria-who-is-doing-what.html"
+  "url": "https://www.justiceinfo.net/en/153370-justice-for-syria-who-is-doing-what.html",
+  "orgAr": "جستس إنفو"
  },
  "ICJ 188": {
   "org": "International Court of Justice",
   "title": "Application of the Convention against Torture (Canada and the Netherlands v. Syria)",
-  "url": "https://www.icj-cij.org/case/188"
+  "url": "https://www.icj-cij.org/case/188",
+  "orgAr": "محكمة العدل الدولية"
  },
  "Stuttgart Reuters": {
   "org": "Reuters via US News",
   "title": "Syrian man handed life sentence in Germany for war crimes (Jun 2025)",
-  "url": "https://www.usnews.com/news/world/articles/2025-06-03/syrian-man-handed-life-sentence-in-germany-for-war-crimes"
+  "url": "https://www.usnews.com/news/world/articles/2025-06-03/syrian-man-handed-life-sentence-in-germany-for-war-crimes",
+  "orgAr": "رويترز"
  },
  "Amjad referral": {
   "org": "Syrian Observer",
   "title": "Amjad Youssef’s confession puts the Tadamon massacre back at the center",
-  "url": "https://syrianobserver.com/syrian-actors/amjad-youssefs-confession-puts-the-tadamon-massacre-back-at-the-center-of-syrias-justice-debate.html"
+  "url": "https://syrianobserver.com/syrian-actors/amjad-youssefs-confession-puts-the-tadamon-massacre-back-at-the-center-of-syrias-justice-debate.html",
+  "orgAr": "المراقب السوري"
  },
  "TRT Amjad": {
   "org": "TRT World",
   "title": "Syria says it has arrested key suspect in 2013 Tadamon massacre",
-  "url": "https://www.trtworld.com/article/7cd53a3e8fdb"
+  "url": "https://www.trtworld.com/article/7cd53a3e8fdb",
+  "orgAr": "تي آر تي"
  },
  "Enab Sasa": {
   "org": "Enab Baladi",
   "title": "Arrest of former Sa’sa branch chief (Dec 2025)",
-  "url": "https://english.enabbaladi.net/archives/2025/12/arrest-of-former-sasa-branch-chief-under-the-previous-regime/"
+  "url": "https://english.enabbaladi.net/archives/2025/12/arrest-of-former-sasa-branch-chief-under-the-previous-regime/",
+  "orgAr": "عنب بلدي"
  },
  "Enab arrests 2026": {
   "org": "Enab Baladi",
   "title": "Arrests target senior Assad regime figures (May 2026)",
-  "url": "https://english.enabbaladi.net/archives/2026/05/arrests-target-senior-assad-regime-figures/"
+  "url": "https://english.enabbaladi.net/archives/2026/05/arrests-target-senior-assad-regime-figures/",
+  "orgAr": "عنب بلدي"
  },
  "WaPo Dossier": {
   "org": "Washington Post",
   "title": "Trove of Syrian military photos shows 10,000 victims",
-  "url": "https://www.washingtonpost.com/world/interactive/2025/syria-assad-deaths-torture-photos/"
+  "url": "https://www.washingtonpost.com/world/interactive/2025/syria-assad-deaths-torture-photos/",
+  "orgAr": "واشنطن بوست"
  },
  "ICIJ FAQ": {
   "org": "ICIJ",
   "title": "Frequently asked questions about the Damascus Dossier",
-  "url": "https://www.icij.org/investigations/damascus-dossier/syria-damascus-dossier-investigation-faqs/"
+  "url": "https://www.icij.org/investigations/damascus-dossier/syria-damascus-dossier-investigation-faqs/",
+  "orgAr": "الاتحاد الدولي للصحفيين الاستقصائيين"
  },
  "ADMSP Buried": {
   "org": "ADMSP",
   "title": "Buried in Silence (2023)",
-  "url": "https://www.admsp.org/wp-content/uploads/2023/10/BURIED-IN-SILENCE.pdf"
+  "url": "https://www.admsp.org/wp-content/uploads/2023/10/BURIED-IN-SILENCE.pdf",
+  "orgAr": "رابطة معتقلي ومفقودي صيدنايا"
  },
  "AA Tadamon 2026": {
   "org": "Anadolu",
   "title": "New mass grave uncovered in Syrian capital (Feb 2026)",
-  "url": "https://www.aa.com.tr/en/middle-east/new-mass-grave-uncovered-in-syrian-capital/3820592"
+  "url": "https://www.aa.com.tr/en/middle-east/new-mass-grave-uncovered-in-syrian-capital/3820592",
+  "orgAr": "الأناضول"
  },
  "North Press 3548": {
   "org": "North Press",
   "title": "Syrian Interior Ministry arrests 3,548 Assad regime military personnel (Jun 2026)",
-  "url": "https://npasyria.com/en/138408/"
+  "url": "https://npasyria.com/en/138408/",
+  "orgAr": "نورث برس"
  },
  "Slate 500": {
   "org": "Slate",
@@ -467,32 +555,38 @@
  "CIJA": {
   "org": "CIJA",
   "title": "Commission for International Justice and Accountability — Syrian regime",
-  "url": "https://www.cijaonline.org/syrian-regime"
+  "url": "https://www.cijaonline.org/syrian-regime",
+  "orgAr": "لجنة العدالة والمساءلة الدولية"
  },
  "Frontline ICMP": {
   "org": "PBS Frontline",
   "title": "Syrian war human toll: deaths, disappearances, mass graves",
-  "url": "https://www.pbs.org/wgbh/frontline/article/syrian-war-human-toll-deaths-disappearances-mass-graves-displacement/"
+  "url": "https://www.pbs.org/wgbh/frontline/article/syrian-war-human-toll-deaths-disappearances-mass-graves-displacement/",
+  "orgAr": "فرونتلاين"
  },
  "SNHR June 2025": {
   "org": "SNHR",
   "title": "45,342 torture deaths, 45,032 in former-regime centres (Jun 2025)",
-  "url": "https://snhr.org/blog/2025/06/26/on-the-international-day-in-support-of-victims-of-torture-new-information-reveals-the-deaths-of-thousands-of-forcibly-disappeared-persons-in-the-detention-centers-of-the-former-syrian-regime-raising/"
+  "url": "https://snhr.org/blog/2025/06/26/on-the-international-day-in-support-of-victims-of-torture-new-information-reveals-the-deaths-of-thousands-of-forcibly-disappeared-persons-in-the-detention-centers-of-the-former-syrian-regime-raising/",
+  "orgAr": "الشبكة السورية لحقوق الإنسان"
  },
  "Caesar Act repeal": {
   "org": "The National",
   "title": "Trump signs bill that includes repeal of Caesar Act (Dec 2025)",
-  "url": "https://www.thenationalnews.com/news/us/2025/12/10/syria-caesar-act-repeal/"
+  "url": "https://www.thenationalnews.com/news/us/2025/12/10/syria-caesar-act-repeal/",
+  "orgAr": "ذا ناشونال"
  },
  "Cassation 2025": {
   "org": "SJAC",
   "title": "French court rules justice begins where sovereignty ends (Jul 2025)",
-  "url": "https://syriaaccountability.org/french-court-rules-justice-begins-where-sovereignty-ends-even-for-assad/"
+  "url": "https://syriaaccountability.org/french-court-rules-justice-begins-where-sovereignty-ends-even-for-assad/",
+  "orgAr": "المركز السوري للعدالة والمساءلة"
  },
  "IIIM Bulletin 14": {
   "org": "IIIM / UN",
   "title": "IIIM Bulletin N° 14 (Arabic detention report)",
-  "url": "https://iiim.un.org/iiim-bulletin-n-14/"
+  "url": "https://iiim.un.org/iiim-bulletin-n-14/",
+  "orgAr": "الآلية الدولية / الأمم المتحدة"
  },
  "Bournemouth Protocol": {
   "org": "MaGPIE",
@@ -502,11 +596,13 @@
  "OHCHR indicators": {
   "org": "OHCHR",
   "title": "Human Rights Indicators: A Guide to Measurement and Implementation (2012)",
-  "url": "https://www.ohchr.org/en/publications/policy-and-methodological-publications/human-rights-indicators-guide-measurement-and"
+  "url": "https://www.ohchr.org/en/publications/policy-and-methodological-publications/human-rights-indicators-guide-measurement-and",
+  "orgAr": "المفوضية السامية لحقوق الإنسان"
  },
  "Association research": {
   "org": "Caesar Families Association",
   "title": "Syria Justice Map — Phase 2 internal research (Nov 2026)",
-  "url": "https://caesarfamilies.org/en/syria-justice-map-first-edition/"
+  "url": "https://caesarfamilies.org/en/syria-justice-map-first-edition/",
+  "orgAr": "رابطة عائلات قيصر"
  }
 }

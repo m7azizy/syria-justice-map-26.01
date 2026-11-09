@@ -35,7 +35,8 @@
    "torture": 28,
    "inhumane": 28,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "accountability": [
    {
@@ -87,7 +88,8 @@
    "torture": 55,
    "inhumane": 49,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -127,7 +129,8 @@
    "torture": 34,
    "inhumane": 34,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   },
   "accountability": [
    {
@@ -182,7 +185,8 @@
    "torture": 64,
    "inhumane": 62,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -220,7 +224,8 @@
    "torture": 32,
    "inhumane": 25,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -257,7 +262,8 @@
    "torture": 25,
    "inhumane": 20,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -291,7 +297,8 @@
    "torture": 25,
    "inhumane": 21,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -327,7 +334,8 @@
    "torture": 6,
    "inhumane": 7,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   }
  },
  {
@@ -406,7 +414,8 @@
    "torture": 3,
    "inhumane": 2,
    "parent": "Medical Services Directorate",
-   "category": "Hospitals"
+   "category": "Hospitals",
+   "parentAr": "إدارة الخدمات الطبية العسكرية"
   }
  },
  {
@@ -444,7 +453,8 @@
    "torture": 7,
    "inhumane": 5,
    "parent": "Medical Services Directorate",
-   "category": "Hospitals"
+   "category": "Hospitals",
+   "parentAr": "إدارة الخدمات الطبية العسكرية"
   }
  },
  {
@@ -478,7 +488,8 @@
    "torture": 5,
    "inhumane": 3,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -517,7 +528,8 @@
    "torture": 41,
    "inhumane": 39,
    "parent": "Military Police",
-   "category": "Military Prisons"
+   "category": "Military Prisons",
+   "parentAr": "الشرطة العسكرية"
   }
  },
  {
@@ -554,7 +566,8 @@
    "torture": 17,
    "inhumane": 37,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -591,7 +604,8 @@
    "torture": 5,
    "inhumane": 4,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -629,7 +643,8 @@
    "torture": 2,
    "inhumane": 2,
    "parent": "Medical Services Directorate",
-   "category": "Hospitals"
+   "category": "Hospitals",
+   "parentAr": "إدارة الخدمات الطبية العسكرية"
   },
   "damascusDossier": true
  },
@@ -670,7 +685,8 @@
    "torture": 26,
    "inhumane": 21,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -708,7 +724,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Military Police",
-   "category": "Military Prisons"
+   "category": "Military Prisons",
+   "parentAr": "الشرطة العسكرية"
   }
  },
  {
@@ -744,7 +761,8 @@
    "torture": 22,
    "inhumane": 19,
    "parent": "Military Police",
-   "category": "Military Prisons"
+   "category": "Military Prisons",
+   "parentAr": "الشرطة العسكرية"
   }
  },
  {
@@ -780,7 +798,8 @@
    "torture": 9,
    "inhumane": 8,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -819,7 +838,8 @@
    "torture": 29,
    "inhumane": 24,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -857,7 +877,8 @@
    "torture": 2,
    "inhumane": 3,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -893,7 +914,8 @@
    "torture": 8,
    "inhumane": 6,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -931,7 +953,8 @@
    "torture": 21,
    "inhumane": 16,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -965,7 +988,8 @@
    "torture": 5,
    "inhumane": 3,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "coordNote": {
    "ar": "الإحداثيات للموقع بعد 2012 حسب IIIM؛ الموقع السابق غير محدد",
@@ -1005,7 +1029,8 @@
    "torture": 0,
    "inhumane": 1,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1043,7 +1068,8 @@
    "torture": 15,
    "inhumane": 11,
    "parent": "Military Intelligence Department - Branch 265",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية – الفرع 265"
   }
  },
  {
@@ -1081,7 +1107,8 @@
    "torture": 10,
    "inhumane": 7,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1115,7 +1142,8 @@
    "torture": 1,
    "inhumane": 2,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1151,7 +1179,8 @@
    "torture": 7,
    "inhumane": 7,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1186,7 +1215,8 @@
    "torture": 1,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1225,7 +1255,8 @@
    "torture": 9,
    "inhumane": 7,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1261,7 +1292,8 @@
    "torture": 3,
    "inhumane": 1,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -1296,7 +1328,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1330,7 +1363,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1370,7 +1404,8 @@
    "torture": 3,
    "inhumane": 3,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1408,7 +1443,8 @@
    "torture": 2,
    "inhumane": 1,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   },
   "relocation": {
    "group": 42,
@@ -1496,7 +1532,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -1567,7 +1604,8 @@
    "torture": 0,
    "inhumane": 4,
    "parent": "Ministry of the Interior",
-   "category": "Police Stations"
+   "category": "Police Stations",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1601,7 +1639,8 @@
    "torture": 1,
    "inhumane": 6,
    "parent": "Ministry of the Interior",
-   "category": "Police Stations"
+   "category": "Police Stations",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1637,7 +1676,8 @@
    "torture": 11,
    "inhumane": 6,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   }
  },
  {
@@ -1671,7 +1711,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "relocation": {
    "group": 49,
@@ -1710,7 +1751,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1746,7 +1788,8 @@
    "torture": 4,
    "inhumane": 3,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -1782,7 +1825,8 @@
    "torture": 1,
    "inhumane": 2,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1845,7 +1889,8 @@
    "torture": 5,
    "inhumane": 5,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   }
  },
  {
@@ -1881,7 +1926,8 @@
    "torture": 5,
    "inhumane": 4,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -1915,7 +1961,8 @@
    "torture": 3,
    "inhumane": 3,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -1949,7 +1996,8 @@
    "torture": 1,
    "inhumane": 3,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   }
  },
  {
@@ -1985,7 +2033,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Command of the Army and Armed Forces",
-   "category": "Army Unit Facilities"
+   "category": "Army Unit Facilities",
+   "parentAr": "القيادة العامة للجيش والقوات المسلحة"
   }
  },
  {
@@ -2020,7 +2069,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Command of the Army and Armed Forces",
-   "category": "Air Force Facilities"
+   "category": "Air Force Facilities",
+   "parentAr": "القيادة العامة للجيش والقوات المسلحة"
   }
  },
  {
@@ -2054,7 +2104,8 @@
    "torture": 0,
    "inhumane": 1,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   }
  },
  {
@@ -2088,7 +2139,8 @@
    "torture": 2,
    "inhumane": 1,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   }
  },
  {
@@ -2123,7 +2175,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -2161,7 +2214,8 @@
    "torture": 0,
    "inhumane": 1,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   }
  },
  {
@@ -2196,7 +2250,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -2264,7 +2319,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -2300,7 +2356,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Air Force Intelligence Directorate",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "إدارة المخابرات الجوية"
   }
  },
  {
@@ -2335,7 +2392,8 @@
    "torture": 1,
    "inhumane": 2,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   },
   "relocation": {
    "group": 77,
@@ -2377,7 +2435,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -2413,7 +2472,8 @@
    "torture": 2,
    "inhumane": 0,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   }
  },
  {
@@ -2486,7 +2546,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   }
  },
  {
@@ -2521,7 +2582,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -2591,7 +2653,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   }
  },
  {
@@ -2644,7 +2707,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "General Command of the Army and Armed Forces",
-   "category": "Air Force Facilities"
+   "category": "Air Force Facilities",
+   "parentAr": "القيادة العامة للجيش والقوات المسلحة"
   },
   "violations": [
    "torture"
@@ -2678,7 +2742,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Air Force Intelligence Southern Region Branch",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "المخابرات الجوية – فرع المنطقة الجنوبية"
   },
   "violations": [
    "torture"
@@ -2723,7 +2788,8 @@
    "torture": 2,
    "inhumane": 0,
    "parent": "Air Force Intelligence Central Region Branch",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "المخابرات الجوية – فرع المنطقة الوسطى"
   },
   "violations": [
    "torture"
@@ -2757,7 +2823,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Air Force Intelligence Eastern Region Branch",
-   "category": "Air Force Intelligence Facilities"
+   "category": "Air Force Intelligence Facilities",
+   "parentAr": "المخابرات الجوية – فرع المنطقة الشرقية"
   },
   "violations": [
    "torture"
@@ -2823,7 +2890,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Other Facilities"
+   "category": "Other Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [],
   "caesar": false,
@@ -2855,7 +2923,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [],
   "caesar": false,
@@ -2887,7 +2956,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [],
   "caesar": false,
@@ -2919,7 +2989,8 @@
    "torture": 1,
    "inhumane": 3,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [
    "torture"
@@ -2953,7 +3024,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [
    "torture"
@@ -2987,7 +3059,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Criminal Security Facilities"
+   "category": "Criminal Security Facilities",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [],
   "caesar": false,
@@ -3019,7 +3092,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [],
   "caesar": false,
@@ -3051,7 +3125,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Medical Services Directorate",
-   "category": "Hospitals"
+   "category": "Hospitals",
+   "parentAr": "إدارة الخدمات الطبية العسكرية"
   },
   "violations": [],
   "caesar": false,
@@ -3083,7 +3158,8 @@
    "torture": 2,
    "inhumane": 1,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "violations": [
    "torture"
@@ -3117,7 +3193,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "violations": [],
   "caesar": false,
@@ -3149,7 +3226,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "violations": [
    "torture"
@@ -3183,7 +3261,8 @@
    "torture": 1,
    "inhumane": 2,
    "parent": "Ministry of the Interior",
-   "category": "Civilian Prisons"
+   "category": "Civilian Prisons",
+   "parentAr": "وزارة الداخلية"
   },
   "violations": [
    "torture"
@@ -3222,7 +3301,8 @@
    "torture": 2,
    "inhumane": 1,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   },
   "violations": [
    "torture"
@@ -3272,7 +3352,8 @@
    "torture": 2,
    "inhumane": 2,
    "parent": "Military Intelligence Department - Branch 243",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية – الفرع 243"
   },
   "violations": [
    "torture"
@@ -3306,7 +3387,8 @@
    "torture": 7,
    "inhumane": 7,
    "parent": "Military Intelligence Department",
-   "category": "Military Intelligence Facilities"
+   "category": "Military Intelligence Facilities",
+   "parentAr": "شعبة المخابرات العسكرية"
   },
   "violations": [
    "torture"
@@ -3340,7 +3422,8 @@
    "torture": 1,
    "inhumane": 0,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [
    "torture"
@@ -3374,7 +3457,8 @@
    "torture": 0,
    "inhumane": 2,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [],
   "caesar": false,
@@ -3406,7 +3490,8 @@
    "torture": 0,
    "inhumane": 1,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [],
   "caesar": false,
@@ -3438,7 +3523,8 @@
    "torture": 1,
    "inhumane": 0,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [
    "torture"
@@ -3472,7 +3558,8 @@
    "torture": 1,
    "inhumane": 1,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [
    "torture"
@@ -3506,7 +3593,8 @@
    "torture": 0,
    "inhumane": 0,
    "parent": "Military Police",
-   "category": "Military Police Facilities"
+   "category": "Military Police Facilities",
+   "parentAr": "الشرطة العسكرية"
   },
   "violations": [],
   "caesar": false,
@@ -3543,7 +3631,8 @@
    "torture": 4,
    "inhumane": 4,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   },
   "violations": [
    "torture"
@@ -3577,7 +3666,8 @@
    "torture": 7,
    "inhumane": 7,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   },
   "violations": [
    "torture"
@@ -3611,7 +3701,8 @@
    "torture": 4,
    "inhumane": 3,
    "parent": "Political Security",
-   "category": "Political Security Facilities"
+   "category": "Political Security Facilities",
+   "parentAr": "شعبة الأمن السياسي"
   },
   "violations": [
    "torture"
@@ -3645,7 +3736,8 @@
    "torture": 6,
    "inhumane": 3,
    "parent": "General Intelligence Directorate",
-   "category": "General Intelligence Facilities"
+   "category": "General Intelligence Facilities",
+   "parentAr": "إدارة المخابرات العامة"
   },
   "violations": [
    "torture",
