@@ -217,7 +217,8 @@ svg text{font-family:'IBM Plex Mono',monospace;fill:var(--text-3);}
 .ind-h{display:flex;justify-content:space-between;align-items:center;gap:10px;}
 .ind-n{font-size:12.5px;font-weight:600;}
 .score{display:flex;gap:3px;flex-shrink:0;}
-.score i{width:14px;height:8px;border-radius:2px;background:var(--border);}
+.score i{width:12px;height:8px;border-radius:2px;background:var(--border);}
+.ind-type{color:var(--text-3);font-weight:500;}
 .score i.f{background:var(--c);}
 .ind-s{font-size:10px;color:var(--c);font-weight:700;margin-top:2px;}
 .ind-e{font-size:11.5px;color:var(--text-2);line-height:1.7;margin-top:4px;}
@@ -231,6 +232,21 @@ svg text{font-family:'IBM Plex Mono',monospace;fill:var(--text-3);}
 .ms-t{font-size:12.5px;}
 .gaps li{font-size:12.5px;line-height:1.9;margin-inline-start:18px;}
 .disclaimer{font-size:11px;color:var(--warn);background:rgba(228,169,74,.1);border:1px solid rgba(228,169,74,.4);border-radius:8px;padding:9px 12px;margin-bottom:14px;}
+
+/* STJPI */
+.index-card{border-top:4px solid var(--accent);}
+.index-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.index-row b{font-size:44px;color:var(--accent);line-height:1;}
+.index-band{font-size:14px;font-weight:700;color:var(--text);margin-inline-start:10px;}
+.index-bar{position:relative;height:12px;border-radius:6px;background:linear-gradient(90deg,#C0392B33,#D38B1F33 50%,#1E7E4A33);margin-top:12px;direction:ltr;}
+[dir="rtl"] .index-bar{direction:rtl;background:linear-gradient(-90deg,#C0392B33,#D38B1F33 50%,#1E7E4A33);}
+.index-range{position:absolute;top:0;bottom:0;background:rgba(200,148,31,.45);border-radius:6px;}
+.index-pt{position:absolute;top:-4px;width:4px;height:20px;background:var(--accent);border-radius:2px;transform:translateX(-50%);}
+[dir="rtl"] .index-pt{transform:translateX(50%);}
+.index-bar span{position:absolute;top:0;bottom:0;width:1px;background:var(--bg-panel);}
+.index-legend{display:grid;grid-template-columns:repeat(4,1fr);font-size:10px;color:var(--text-3);margin-top:4px;text-align:center;}
+.box-acc{background:rgba(108,52,131,.08);border:1px solid rgba(108,52,131,.35);}
+.grave-area{stroke-dasharray:4 4;}
 
 /* MOBILE */
 @media (max-width:900px){

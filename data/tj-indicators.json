@@ -1,38 +1,45 @@
 {
  "asOf": "2026-11-09",
  "framework": {
-  "ar": "يستند التقييم إلى ركائز العدالة الانتقالية في مذكرة الأمين العام للأمم المتحدة (2023) وولاية المقرر الخاص المعني بالحقيقة والعدالة وجبر الضرر وضمانات عدم التكرار، مع إفراد ملف المفقودين لثقله في الحالة السورية. الترميز ترتيبي من 0 إلى 3 لكل مؤشر، مستوحى من منهجية مشروع أدوات تقييم العدالة الانتقالية (TJET)، ولا يُجمع في رقم مركّب واحد تفادياً للدقة الزائفة.",
-  "en": "The assessment follows the pillars of the UN Secretary-General's Guidance Note on Transitional Justice (2023) and the mandate of the Special Rapporteur on truth, justice, reparation and guarantees of non-recurrence, with missing persons treated as a separate pillar given its weight in Syria. Each indicator is coded ordinally 0–3, inspired by the Transitional Justice Evaluation Tools (TJET) approach, and is not aggregated into a single composite score to avoid false precision.",
+  "ar": "يتبع المؤشر ركائز العدالة الانتقالية في مذكرة الأمين العام للأمم المتحدة (2023) وولاية المقرر الخاص المعني بالحقيقة والعدالة وجبر الضرر وضمانات عدم التكرار، ويصنّف كل مؤشر هيكلياً أو عملياً أو نتائج وفق نموذج مؤشرات حقوق الإنسان للمفوضية السامية. يُرمَّز كل مؤشر من 0 إلى 4، ودرجة الركن متوسط مؤشراته، والمؤشر المركّب متوسط موزون للأركان محوَّل إلى 100. المنهجية مقترحة في بحث رابطة عائلات قيصر (نوفمبر 2026)، ويُحدَّث التقييم كل ثلاثة أشهر.",
+  "en": "The index follows the transitional justice pillars of the UN Secretary-General’s Guidance Note (2023) and the mandate of the Special Rapporteur on truth, justice, reparation and guarantees of non-recurrence, and classifies each indicator as structural, process or outcome following OHCHR’s human rights indicators model. Each indicator is coded 0–4; a pillar score is the mean of its indicators, and the composite is the weighted mean of pillars scaled to 100. The method was proposed in the Caesar Families Association research (November 2026); the assessment is updated quarterly.",
   "src": [
    "UN SG TJ 2023",
+   "OHCHR indicators",
+   "Association research",
    "TJET"
   ]
  },
  "scale": [
   {
    "v": 0,
-   "ar": "لم يبدأ",
-   "en": "Not started"
+   "ar": "غائب",
+   "en": "Absent"
   },
   {
    "v": 1,
-   "ar": "بدأ أو على الورق",
-   "en": "Initiated / on paper"
+   "ar": "مُعلن أو مسودة",
+   "en": "Announced / draft"
   },
   {
    "v": 2,
-   "ar": "تقدّم جزئي",
-   "en": "Partial progress"
+   "ar": "مؤسسة قائمة وأنشطة أولية",
+   "en": "Institution in place, initial activity"
   },
   {
    "v": 3,
-   "ar": "متقدّم",
-   "en": "Advanced"
+   "ar": "نتائج جزئية قابلة للقياس",
+   "en": "Partial measurable results"
+  },
+  {
+   "v": 4,
+   "ar": "نتائج واسعة ومطابقة للمعايير",
+   "en": "Broad, standards-compliant results"
   }
  ],
  "disclaimer": {
-  "ar": "تقييم تحليلي من إعداد فريق الخريطة استناداً إلى المصادر المذكورة، وليس حكماً رسمياً. يُحدَّث مع كل إصدار.",
-  "en": "An analytical assessment by the map team based on the cited sources, not an official ruling. Updated with each release."
+  "ar": "تقييم تحليلي لرابطة عائلات قيصر استناداً إلى المصادر المذكورة، وليس حكماً رسمياً. الرقم المركّب تلخيص تقريبي يُقرأ مع درجات الأركان وأدلتها.",
+  "en": "An analytical assessment by the Caesar Families Association based on the cited sources, not an official ruling. The composite is an approximate summary to be read with the pillar scores and their evidence."
  },
  "pillars": [
   {
@@ -52,7 +59,8 @@
      "src": [
       "SJAC one year",
       "STJ TJ 2026"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "t2",
@@ -65,11 +73,12 @@
      "src": [
       "SJAC TJ law",
       "Amnesty TJ 2026"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "t3",
-     "score": 2,
+     "score": 1,
      "ar": "حماية أرشيف الأجهزة الأمنية",
      "en": "Securing security-service archives",
      "evAr": "وصلت السلطات إلى أرشيف الفروع ومراكز الاحتجاز، وحفظ مركز العدالة والمساءلة أكثر من 400 ألف وثيقة، وجمعت هيئة المفقودين 96 ألف ملف؛ لكن وثائق كثيرة تبعثرت أو أُتلفت في الأيام الأولى.",
@@ -79,7 +88,8 @@
       "SJAC State of Justice 2025",
       "SJAC State of Justice 2026",
       "Reuters DNA"
-     ]
+     ],
+     "type": "process"
     },
     {
      "id": "t4",
@@ -91,9 +101,25 @@
      "date": "2026-11",
      "src": [
       "SJAC one year"
+     ],
+     "type": "outcome"
+    },
+    {
+     "id": "t5",
+     "score": 2,
+     "type": "process",
+     "ar": "التعاون مع الآلية الدولية (IIIM)",
+     "en": "Cooperation with the IIIM",
+     "evAr": "سُلّمت النسخة العربية من تقرير الاحتجاز في دمشق (سبتمبر 2025)، وجرى أول جمع أدلة ميداني للآلية داخل سوريا في فرع الخطيب (20 فبراير 2026).",
+     "evEn": "The Arabic detention report was handed over in Damascus (Sep 2025) and the IIIM carried out its first on-site evidence collection in Syria at al-Khatib (20 Feb 2026).",
+     "date": "2026-02-20",
+     "src": [
+      "IIIM Bulletin 14",
+      "IIIM first evidence"
      ]
     }
-   ]
+   ],
+   "weight": 15
   },
   {
    "id": "justice",
@@ -103,41 +129,47 @@
    "indicators": [
     {
      "id": "j1",
-     "score": 2,
+     "score": 3,
      "ar": "محاكمات وطنية",
      "en": "Domestic trials",
-     "evAr": "16 محاكمة في دمشق منذ أبريل 2026، وأحكام في 12 قضية من أصل 61، ونيابات عدالة انتقالية في حمص واللاذقية.",
-     "evEn": "16 trials in Damascus since April 2026, judgments in 12 of 61 cases, and transitional justice prosecution offices in Homs and Latakia.",
+     "evAr": "16 محاكمة في دمشق منذ أبريل 2026، وأحكام في 12 قضية من أصل 61، ونيابات عدالة انتقالية في حمص واللاذقية. أعلن مسؤولون هدف 500 محاكمة خلال خمس سنوات، واحتُجز 3,548 عسكرياً وأمنياً سابقاً.",
+     "evEn": "16 trials in Damascus since April 2026, judgments in 12 of 61 cases, and transitional justice prosecution offices in Homs and Latakia. Officials announced a target of 500 trials in five years; 3,548 former military and security personnel are detained.",
      "date": "2026-11",
      "src": [
-      "JusticeInfo trials"
-     ]
+      "JusticeInfo trials",
+      "Slate 500",
+      "North Press 3548"
+     ],
+     "type": "outcome"
     },
     {
      "id": "j2",
      "score": 1,
      "ar": "معايير المحاكمة العادلة",
      "en": "Fair-trial standards",
-     "evAr": "محاكمات غيابية وجلسات سرية وأحكام إعدام، ومخاوف بشأن حق الدفاع وحماية الشهود.",
-     "evEn": "Trials in absentia, closed hearings and death sentences, with concerns over defence rights and witness protection.",
+     "evAr": "العمل بقانون العقوبات لعام 1949 الذي لا يجرّم الجرائم ضد الإنسانية ولا يتضمن مسؤولية القيادة، مع محاكمات غيابية وجلسات سرية وأحكام إعدام ومخاوف بشأن حق الدفاع.",
+     "evEn": "Proceedings under the 1949 Penal Code, which does not criminalise crimes against humanity or provide for command responsibility, with trials in absentia, closed hearings, death sentences and concerns over defence rights.",
      "date": "2026-08",
      "src": [
       "HRW first verdicts",
       "Najib Damascus"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "j3",
      "score": 3,
      "ar": "الولاية القضائية العالمية",
      "en": "Universal jurisdiction",
-     "evAr": "أحكام في ألمانيا وفرنسا وهولندا والسويد والنمسا ضد مسؤولين وعناصر في النظام والميليشيات الموالية، وقضايا جارية.",
-     "evEn": "Convictions in Germany, France, the Netherlands, Sweden and Austria against regime officials and allied militia members, with cases ongoing.",
+     "evAr": "أحكام في ألمانيا وفرنسا وهولندا والسويد والنمسا والولايات المتحدة، آخرها 60 سنة لمدير سجن عدرا السابق (سبتمبر 2026)، وقضايا جارية.",
+     "evEn": "Convictions in Germany, France, the Netherlands, Sweden, Austria and the United States, most recently 60 years for a former Adra Prison head (Sep 2026), with cases ongoing.",
      "date": "2026-07",
      "src": [
       "TRIAL UJAR 2026",
-      "Halabi Vienna"
-     ]
+      "Halabi Vienna",
+      "DOJ Alsheikh"
+     ],
+     "type": "outcome"
     },
     {
      "id": "j4",
@@ -149,9 +181,24 @@
      "date": "2026-08",
      "src": [
       "Just Security ICC"
+     ],
+     "type": "structural"
+    },
+    {
+     "id": "j5",
+     "score": 2,
+     "type": "process",
+     "ar": "مسؤولية الدولة أمام محكمة العدل الدولية",
+     "en": "State responsibility before the ICJ",
+     "evAr": "قضية كندا وهولندا ضد سوريا بموجب اتفاقية مناهضة التعذيب جارية؛ تدابير مؤقتة منذ نوفمبر 2023، وكانت مهلة المذكرة السورية المضادة 5 أكتوبر 2026.",
+     "evEn": "Canada and the Netherlands v. Syria under the Convention against Torture is ongoing; provisional measures since November 2023, with Syria’s counter-memorial due 5 October 2026.",
+     "date": "2026-10-05",
+     "src": [
+      "ICJ 188"
      ]
     }
-   ]
+   ],
+   "weight": 25
   },
   {
    "id": "missing",
@@ -169,7 +216,8 @@
      "date": "2026-10",
      "src": [
       "Reuters DNA"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "m2",
@@ -182,7 +230,8 @@
      "src": [
       "Reuters Dhumair 2025",
       "Mezzeh protocol"
-     ]
+     ],
+     "type": "process"
     },
     {
      "id": "m3",
@@ -195,7 +244,8 @@
      "src": [
       "Reuters DNA",
       "SJAC DNA"
-     ]
+     ],
+     "type": "outcome"
     },
     {
      "id": "m4",
@@ -207,9 +257,11 @@
      "date": "2026-07",
      "src": [
       "IIMP 2026"
-     ]
+     ],
+     "type": "process"
     }
-   ]
+   ],
+   "weight": 25
   },
   {
    "id": "reparations",
@@ -227,7 +279,8 @@
      "date": "2026-01",
      "src": [
       "SJAC TJ law"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "r2",
@@ -239,7 +292,8 @@
      "date": "2026-02",
      "src": [
       "TIMEP victims"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "r3",
@@ -251,9 +305,11 @@
      "date": "2026",
      "src": [
       "HLP draft law"
-     ]
+     ],
+     "type": "structural"
     }
-   ]
+   ],
+   "weight": 10
   },
   {
    "id": "nonrecurrence",
@@ -271,7 +327,8 @@
      "date": "2025-01-29",
      "src": [
       "Enab Victory Conference"
-     ]
+     ],
+     "type": "structural"
     },
     {
      "id": "n2",
@@ -284,7 +341,8 @@
      "src": [
       "SJAC one year"
      ],
-     "confidence": "low"
+     "confidence": "low",
+     "type": "process"
     },
     {
      "id": "n3",
@@ -297,14 +355,16 @@
      "src": [
       "EUAA 2026",
       "COI HRC61"
-     ]
+     ],
+     "type": "outcome"
     }
-   ]
+   ],
+   "weight": 15
   },
   {
    "id": "memory",
-   "ar": "الذاكرة",
-   "en": "Memory",
+   "ar": "المشاركة والذاكرة",
+   "en": "Participation & memory",
    "color": "#943D5A",
    "indicators": [
     {
@@ -317,7 +377,8 @@
      "date": "2026-05",
      "src": [
       "Euronews Saydnaya"
-     ]
+     ],
+     "type": "process"
     },
     {
      "id": "me2",
@@ -331,9 +392,25 @@
       "Syria Prisons Museum",
       "Berlin Sednaya exhibition",
       "Truth Guardians"
+     ],
+     "type": "process"
+    },
+    {
+     "id": "me3",
+     "score": 1,
+     "type": "process",
+     "ar": "مشاركة الضحايا وأسرهم",
+     "en": "Participation of victims and families",
+     "evAr": "مشاورات ميدانية للهيئة في 12 محافظة، لكن دون آلية رسمية لتمثيل الضحايا في الهيئتين أو في صياغة القانون.",
+     "evEn": "The commission held field consultations in 12 governorates, but there is no formal mechanism for victim representation in the commissions or the drafting of the law.",
+     "date": "2026-10",
+     "src": [
+      "SJAC one year",
+      "SJAC TJ law"
      ]
     }
-   ]
+   ],
+   "weight": 10
   }
  ],
  "milestones": [
@@ -344,6 +421,15 @@
    "pillar": "truth",
    "src": [
     "SNHR 2024 release"
+   ]
+  },
+  {
+   "date": "2024-12-21",
+   "ar": "أول زيارة للآلية الدولية إلى سوريا",
+   "en": "IIIM’s first visit to Syria",
+   "pillar": "truth",
+   "src": [
+    "IIIM"
    ]
   },
   {
@@ -383,6 +469,24 @@
    ]
   },
   {
+   "date": "2025-07-25",
+   "ar": "محكمة النقض الفرنسية ترفض الحصانة الوظيفية لمسؤولين سوريين",
+   "en": "French Court of Cassation rejects functional immunity for Syrian officials",
+   "pillar": "justice",
+   "src": [
+    "Cassation 2025"
+   ]
+  },
+  {
+   "date": "2025-09",
+   "ar": "النسخة العربية لتقرير الآلية عن الاحتجاز",
+   "en": "Arabic edition of the IIIM detention report",
+   "pillar": "truth",
+   "src": [
+    "IIIM Bulletin 14"
+   ]
+  },
+  {
    "date": "2025-10-14",
    "ar": "تحقيق رويترز عن «عملية نقل التراب»",
    "en": "Reuters 'Operation Move Earth' investigation",
@@ -401,6 +505,15 @@
    ]
   },
   {
+   "date": "2025-12-18",
+   "ar": "إلغاء «قانون قيصر» — ولم تنتهِ «قضية قيصر»",
+   "en": "Caesar Act repealed — the Caesar case continues",
+   "pillar": "nonrecurrence",
+   "src": [
+    "Caesar Act repeal"
+   ]
+  },
+  {
    "date": "2025-12-29",
    "ar": "تأمين مقبرة الضمير وفتح تحقيق جنائي",
    "en": "Dhumair grave secured; criminal probe opened",
@@ -410,12 +523,39 @@
    ]
   },
   {
+   "date": "2026-02-20",
+   "ar": "أول جمع أدلة للآلية داخل سوريا (فرع الخطيب)",
+   "en": "First IIIM evidence collection in Syria (al-Khatib)",
+   "pillar": "truth",
+   "src": [
+    "IIIM first evidence"
+   ]
+  },
+  {
+   "date": "2026-04-24",
+   "ar": "توقيف المتهم الرئيسي في مجزرة التضامن",
+   "en": "Main Tadamon massacre suspect arrested",
+   "pillar": "justice",
+   "src": [
+    "TRT Amjad"
+   ]
+  },
+  {
    "date": "2026-04-26",
    "ar": "أول محاكمة لمسؤول من النظام في دمشق",
    "en": "First trial of a regime official in Damascus",
    "pillar": "justice",
    "src": [
     "JusticeInfo trials"
+   ]
+  },
+  {
+   "date": "2026-06-16",
+   "ar": "إعلان احتجاز 3,548 عسكرياً وأمنياً سابقاً",
+   "en": "3,548 former military and security personnel reported detained",
+   "pillar": "justice",
+   "src": [
+    "North Press 3548"
    ]
   },
   {
@@ -455,6 +595,24 @@
    ]
   },
   {
+   "date": "2026-09-17",
+   "ar": "الحكم بالسجن 60 سنة على مدير سجن عدرا السابق في الولايات المتحدة",
+   "en": "Former Adra Prison head sentenced to 60 years in the US",
+   "pillar": "justice",
+   "src": [
+    "DOJ Alsheikh"
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "ar": "مهلة المذكرة السورية أمام محكمة العدل الدولية",
+   "en": "Syria’s ICJ counter-memorial deadline",
+   "pillar": "justice",
+   "src": [
+    "ICJ 188"
+   ]
+  },
+  {
    "date": "2026-10-20",
    "ar": "أول تعرّف على مفقودين بالحمض النووي",
    "en": "First DNA identifications of missing persons",
@@ -484,6 +642,55 @@
   {
    "ar": "سجل وطني للضحايا وبرنامج تعويضات فعلي",
    "en": "A national victims registry and an operating reparations programme"
+  }
+ ],
+ "name": {
+  "ar": "مؤشر تقدّم العدالة الانتقالية في سوريا (STJPI)",
+  "en": "Syria Transitional Justice Progress Index (STJPI)"
+ },
+ "types": {
+  "structural": {
+   "ar": "هيكلي",
+   "en": "Structural"
+  },
+  "process": {
+   "ar": "عملي",
+   "en": "Process"
+  },
+  "outcome": {
+   "ar": "نتائج",
+   "en": "Outcome"
+  }
+ },
+ "bands": [
+  {
+   "max": 25,
+   "ar": "بدايات",
+   "en": "Initial"
+  },
+  {
+   "max": 50,
+   "ar": "تقدّم مبكر وغير متوازن",
+   "en": "Early and uneven progress"
+  },
+  {
+   "max": 75,
+   "ar": "تقدّم ملموس",
+   "en": "Substantial progress"
+  },
+  {
+   "max": 100,
+   "ar": "متقدّم",
+   "en": "Advanced"
+  }
+ ],
+ "uncertainty": 5,
+ "history": [
+  {
+   "date": "2026-11",
+   "noteAr": "التقييم الأول",
+   "noteEn": "First assessment",
+   "value": 33
   }
  ]
 }

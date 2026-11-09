@@ -39,9 +39,9 @@ const sum = o => Object.values(o).reduce((a, b) => a + b, 0);
 
 // Dot timeline of verdicts and openings, 2020–2026
 function timeChart() {
-  const y0 = 2020, y1 = 2027, W = 460, H = 150, pad = 24;
+  const y0 = 2020, y1 = 2027, W = 460, H = 170, pad = 24;
   const x = d => { const [y, m = 6] = d.split('-').map(Number); return pad + ((y + (m - 1) / 12) - y0) / (y1 - y0) * (W - 2 * pad); };
-  const lanes = { national: 40, universal: 85, extraterritorial: 120 };
+  const lanes = { national: 34, universal: 70, extraterritorial: 104, interstate: 136 };
   const axis = Array.from({ length: y1 - y0 }, (_, i) => y0 + i).map(y =>
     `<line x1="${x(y + '-01')}" x2="${x(y + '-01')}" y1="20" y2="${H - 14}" stroke="var(--border)"/><text x="${x(y + '-01') + 3}" y="${H - 2}" font-size="9">${y}</text>`).join('');
   const lane = Object.entries(lanes).map(([k, yy]) => `<text x="${pad}" y="${yy - 12}" style="font-family:inherit;font-size:10px">${t('j_' + k)}</text>`).join('');
@@ -54,7 +54,7 @@ function timeChart() {
 function filters() {
   const btn = (k, v, label) => `<button class="chip plain" data-tf="${k}" data-tv="${v}" aria-pressed="${F[k] === v}">${label}</button>`;
   return `<div class="filters-row">${btn('status', 'all', t('allStatus'))}${['convicted', 'ongoing', 'indicted', 'closed'].map(s => btn('status', s, t('st_' + s))).join('')}</div>
-    <div class="filters-row">${btn('jur', 'all', t('allJur'))}${['universal', 'extraterritorial', 'national'].map(s => btn('jur', s, t('j_' + s))).join('')}</div>
+    <div class="filters-row">${btn('jur', 'all', t('allJur'))}${['universal', 'extraterritorial', 'national', 'interstate'].map(s => btn('jur', s, t('j_' + s))).join('')}</div>
     <div class="filters-row">${btn('country', 'all', t('all'))}${Object.keys(COUNTRIES).filter(c => D.trials.some(x => x.country === c)).map(c => btn('country', c, L(COUNTRIES[c]))).join('')}</div>`;
 }
 
