@@ -1,0 +1,489 @@
+{
+ "asOf": "2026-11-09",
+ "framework": {
+  "ar": "يستند التقييم إلى ركائز العدالة الانتقالية في مذكرة الأمين العام للأمم المتحدة (2023) وولاية المقرر الخاص المعني بالحقيقة والعدالة وجبر الضرر وضمانات عدم التكرار، مع إفراد ملف المفقودين لثقله في الحالة السورية. الترميز ترتيبي من 0 إلى 3 لكل مؤشر، مستوحى من منهجية مشروع أدوات تقييم العدالة الانتقالية (TJET)، ولا يُجمع في رقم مركّب واحد تفادياً للدقة الزائفة.",
+  "en": "The assessment follows the pillars of the UN Secretary-General's Guidance Note on Transitional Justice (2023) and the mandate of the Special Rapporteur on truth, justice, reparation and guarantees of non-recurrence, with missing persons treated as a separate pillar given its weight in Syria. Each indicator is coded ordinally 0–3, inspired by the Transitional Justice Evaluation Tools (TJET) approach, and is not aggregated into a single composite score to avoid false precision.",
+  "src": [
+   "UN SG TJ 2023",
+   "TJET"
+  ]
+ },
+ "scale": [
+  {
+   "v": 0,
+   "ar": "لم يبدأ",
+   "en": "Not started"
+  },
+  {
+   "v": 1,
+   "ar": "بدأ أو على الورق",
+   "en": "Initiated / on paper"
+  },
+  {
+   "v": 2,
+   "ar": "تقدّم جزئي",
+   "en": "Partial progress"
+  },
+  {
+   "v": 3,
+   "ar": "متقدّم",
+   "en": "Advanced"
+  }
+ ],
+ "disclaimer": {
+  "ar": "تقييم تحليلي من إعداد فريق الخريطة استناداً إلى المصادر المذكورة، وليس حكماً رسمياً. يُحدَّث مع كل إصدار.",
+  "en": "An analytical assessment by the map team based on the cited sources, not an official ruling. Updated with each release."
+ },
+ "pillars": [
+  {
+   "id": "truth",
+   "ar": "الحقيقة",
+   "en": "Truth",
+   "color": "#2471A3",
+   "indicators": [
+    {
+     "id": "t1",
+     "score": 2,
+     "ar": "هيئة وطنية للعدالة الانتقالية",
+     "en": "National Transitional Justice Commission",
+     "evAr": "أُنشئت بالمرسوم 20 (مايو 2025)؛ مكاتب دمشق افتُتحت مطلع 2026 وفروع في حمص ودير الزور ومشاورات في 12 محافظة، لكن دون أرقام منشورة عن الشهادات أو الملفات.",
+     "evEn": "Created by Decree 20 (May 2025); Damascus offices opened early 2026, branches in Homs and Deir ez-Zor, consultations in 12 governorates, but no published figures on testimonies or files.",
+     "date": "2026-10",
+     "src": [
+      "SJAC one year",
+      "STJ TJ 2026"
+     ]
+    },
+    {
+     "id": "t2",
+     "score": 1,
+     "ar": "قانون للعدالة الانتقالية",
+     "en": "Transitional justice law",
+     "evAr": "مسودة قانون متعثرة؛ نطاقها محصور بجرائم النظام السابق، وأبدى مقررون أمميون مخاوف من بنودها.",
+     "evEn": "A stalled draft law whose scope is limited to former-regime crimes; UN Special Procedures raised concerns about its provisions.",
+     "date": "2026-10",
+     "src": [
+      "SJAC TJ law",
+      "Amnesty TJ 2026"
+     ]
+    },
+    {
+     "id": "t3",
+     "score": 2,
+     "ar": "حماية أرشيف الأجهزة الأمنية",
+     "en": "Securing security-service archives",
+     "evAr": "وصلت السلطات إلى أرشيف الفروع ومراكز الاحتجاز، وحفظ مركز العدالة والمساءلة أكثر من 400 ألف وثيقة، وجمعت هيئة المفقودين 96 ألف ملف؛ لكن وثائق كثيرة تبعثرت أو أُتلفت في الأيام الأولى.",
+     "evEn": "Authorities accessed branch and detention archives; SJAC preserved 400,000+ documents and the Missing Persons Commission collected 96,000 files, but many records were scattered or destroyed in the first days.",
+     "date": "2026-10",
+     "src": [
+      "SJAC State of Justice 2025",
+      "SJAC State of Justice 2026",
+      "Reuters DNA"
+     ]
+    },
+    {
+     "id": "t4",
+     "score": 0,
+     "ar": "تقرير حقيقة علني",
+     "en": "Public truth report",
+     "evAr": "لم يصدر أي تقرير رسمي علني عن الحقيقة حتى نوفمبر 2026.",
+     "evEn": "No official public truth report as of November 2026.",
+     "date": "2026-11",
+     "src": [
+      "SJAC one year"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "justice",
+   "ar": "العدالة",
+   "en": "Justice",
+   "color": "#8B5C1A",
+   "indicators": [
+    {
+     "id": "j1",
+     "score": 2,
+     "ar": "محاكمات وطنية",
+     "en": "Domestic trials",
+     "evAr": "16 محاكمة في دمشق منذ أبريل 2026، وأحكام في 12 قضية من أصل 61، ونيابات عدالة انتقالية في حمص واللاذقية.",
+     "evEn": "16 trials in Damascus since April 2026, judgments in 12 of 61 cases, and transitional justice prosecution offices in Homs and Latakia.",
+     "date": "2026-11",
+     "src": [
+      "JusticeInfo trials"
+     ]
+    },
+    {
+     "id": "j2",
+     "score": 1,
+     "ar": "معايير المحاكمة العادلة",
+     "en": "Fair-trial standards",
+     "evAr": "محاكمات غيابية وجلسات سرية وأحكام إعدام، ومخاوف بشأن حق الدفاع وحماية الشهود.",
+     "evEn": "Trials in absentia, closed hearings and death sentences, with concerns over defence rights and witness protection.",
+     "date": "2026-08",
+     "src": [
+      "HRW first verdicts",
+      "Najib Damascus"
+     ]
+    },
+    {
+     "id": "j3",
+     "score": 3,
+     "ar": "الولاية القضائية العالمية",
+     "en": "Universal jurisdiction",
+     "evAr": "أحكام في ألمانيا وفرنسا وهولندا والسويد والنمسا ضد مسؤولين وعناصر في النظام والميليشيات الموالية، وقضايا جارية.",
+     "evEn": "Convictions in Germany, France, the Netherlands, Sweden and Austria against regime officials and allied militia members, with cases ongoing.",
+     "date": "2026-07",
+     "src": [
+      "TRIAL UJAR 2026",
+      "Halabi Vienna"
+     ]
+    },
+    {
+     "id": "j4",
+     "score": 0,
+     "ar": "اختصاص المحكمة الجنائية الدولية",
+     "en": "ICC jurisdiction",
+     "evAr": "لم تنضم سوريا لنظام روما ولم تودع إعلاناً بموجب المادة 12(3) حتى أغسطس 2026.",
+     "evEn": "Syria has not joined the Rome Statute nor lodged an Article 12(3) declaration as of August 2026.",
+     "date": "2026-08",
+     "src": [
+      "Just Security ICC"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "missing",
+   "ar": "المفقودون والمقابر",
+   "en": "Missing persons & graves",
+   "color": "#7B1C1C",
+   "indicators": [
+    {
+     "id": "m1",
+     "score": 2,
+     "ar": "هيئة وطنية للمفقودين",
+     "en": "National Commission for the Missing",
+     "evAr": "أُنشئت بالمرسوم 19 (مايو 2025)؛ برنامج وطني منذ 30 أغسطس 2026 يستقبل نحو 100 بلاغ يومياً.",
+     "evEn": "Created by Decree 19 (May 2025); a national programme since 30 August 2026 receives about 100 reports a day.",
+     "date": "2026-10",
+     "src": [
+      "Reuters DNA"
+     ]
+    },
+    {
+     "id": "m2",
+     "score": 1,
+     "ar": "حماية المقابر الجماعية وتوثيقها",
+     "en": "Protecting and documenting mass graves",
+     "evAr": "تأمين مقبرة الضمير (ديسمبر 2025) وبروتوكول لحماية مواقع مطار المزة (سبتمبر 2026)، لكن دون إطار وطني موحد لحماية المواقع والأدلة.",
+     "evEn": "Dhumair secured (Dec 2025) and a protocol to protect Mezzeh airport sites (Sep 2026), but no unified national framework for sites and evidence.",
+     "date": "2026-09",
+     "src": [
+      "Reuters Dhumair 2025",
+      "Mezzeh protocol"
+     ]
+    },
+    {
+     "id": "m3",
+     "score": 1,
+     "ar": "التعرّف بالحمض النووي",
+     "en": "DNA identification",
+     "evAr": "أول 3 تعرّفات في 2026؛ مختبر مع الصليب الأحمر بحلول مايو 2027 وآخر مع اللجنة الدولية لشؤون المفقودين.",
+     "evEn": "First 3 identifications in 2026; a laboratory with the ICRC by May 2027 and another with ICMP.",
+     "date": "2026-10",
+     "src": [
+      "Reuters DNA",
+      "SJAC DNA"
+     ]
+    },
+    {
+     "id": "m4",
+     "score": 1,
+     "ar": "التعاون مع المؤسسة الأممية للمفقودين",
+     "en": "Cooperation with the UN missing-persons institution",
+     "evAr": "وصول جزئي، ولم يُسمح بعد بفتح مكتب للمؤسسة داخل سوريا (يوليو 2026).",
+     "evEn": "Partial access; no IIMP office in Syria has been allowed yet (July 2026).",
+     "date": "2026-07",
+     "src": [
+      "IIMP 2026"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reparations",
+   "ar": "جبر الضرر",
+   "en": "Reparations",
+   "color": "#1E7E4A",
+   "indicators": [
+    {
+     "id": "r1",
+     "score": 1,
+     "ar": "صندوق تعويضات",
+     "en": "Compensation fund",
+     "evAr": "منصوص عليه في مسودة القانون فقط؛ مصادر التمويل والمعايير غير محسومة.",
+     "evEn": "Provided for only in the draft law; funding and criteria undecided.",
+     "date": "2026-01",
+     "src": [
+      "SJAC TJ law"
+     ]
+    },
+    {
+     "id": "r2",
+     "score": 1,
+     "ar": "سجل وطني للضحايا",
+     "en": "National victims registry",
+     "evAr": "مقترح في المسودة، مع جدل حول تعريف الضحية وشمول ضحايا الأطراف الأخرى.",
+     "evEn": "Proposed in the draft, amid debate over the definition of victims and inclusion of other parties' victims.",
+     "date": "2026-02",
+     "src": [
+      "TIMEP victims"
+     ]
+    },
+    {
+     "id": "r3",
+     "score": 1,
+     "ar": "تعويض انتهاكات السكن والأراضي والملكية",
+     "en": "Housing, land and property redress",
+     "evAr": "مدرج في مسودة القانون دون آلية تنفيذ قائمة.",
+     "evEn": "Included in the draft law without an operating mechanism.",
+     "date": "2026",
+     "src": [
+      "HLP draft law"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nonrecurrence",
+   "ar": "ضمانات عدم التكرار",
+   "en": "Non-recurrence",
+   "color": "#6C3483",
+   "indicators": [
+    {
+     "id": "n1",
+     "score": 2,
+     "ar": "حلّ أجهزة القمع السابقة",
+     "en": "Dissolving the former repressive apparatus",
+     "evAr": "أُعلن حل جيش النظام السابق وجميع أجهزته الأمنية في مؤتمر 29 يناير 2025.",
+     "evEn": "Dissolution of the former army and all its security agencies announced on 29 January 2025.",
+     "date": "2025-01-29",
+     "src": [
+      "Enab Victory Conference"
+     ]
+    },
+    {
+     "id": "n2",
+     "score": 0,
+     "ar": "التدقيق في المسؤولين (Vetting)",
+     "en": "Vetting of officials",
+     "evAr": "لم نجد آلية تدقيق معلنة في سجلات العاملين في الأجهزة السابقة.",
+     "evEn": "We found no announced vetting mechanism for former security personnel.",
+     "date": "2026-11",
+     "src": [
+      "SJAC one year"
+     ],
+     "confidence": "low"
+    },
+    {
+     "id": "n3",
+     "score": 1,
+     "ar": "وقف الاحتجاز التعسفي",
+     "en": "Ending arbitrary detention",
+     "evAr": "وثّقت لجنة التحقيق إساءات في 18 منشأة احتجاز رسمية و12 مكاناً مؤقتاً بين ديسمبر 2024 ويناير 2026.",
+     "evEn": "The Commission of Inquiry documented abuse in 18 official and 12 makeshift detention places between December 2024 and January 2026.",
+     "date": "2026-07",
+     "src": [
+      "EUAA 2026",
+      "COI HRC61"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "memory",
+   "ar": "الذاكرة",
+   "en": "Memory",
+   "color": "#943D5A",
+   "indicators": [
+    {
+     "id": "me1",
+     "score": 1,
+     "ar": "تحويل مواقع الاحتجاز إلى مواقع ذاكرة",
+     "en": "Turning detention sites into memory sites",
+     "evAr": "أشارت الحكومة إلى احتمال تحويل صيدنايا إلى متحف أو مستشفى، دون قرار معلن.",
+     "evEn": "The government has suggested Saydnaya could become a museum or a hospital, without an announced decision.",
+     "date": "2026-05",
+     "src": [
+      "Euronews Saydnaya"
+     ]
+    },
+    {
+     "id": "me2",
+     "score": 2,
+     "ar": "مبادرات الذاكرة المجتمعية",
+     "en": "Civil-society memory initiatives",
+     "evAr": "متحف سجون سوريا الافتراضي، ومعرض صيدنايا في برلين (2026)، ومؤسسة حرّاس الحقيقة (أبريل 2026)، وخريطة العدالة هذه.",
+     "evEn": "The virtual Syria Prisons Museum, the Sednaya exhibition in Berlin (2026), the Truth Guardians foundation (April 2026), and this justice map.",
+     "date": "2026",
+     "src": [
+      "Syria Prisons Museum",
+      "Berlin Sednaya exhibition",
+      "Truth Guardians"
+     ]
+    }
+   ]
+  }
+ ],
+ "milestones": [
+  {
+   "date": "2024-12-08",
+   "ar": "سقوط النظام وفتح السجون",
+   "en": "Regime falls; prisons opened",
+   "pillar": "truth",
+   "src": [
+    "SNHR 2024 release"
+   ]
+  },
+  {
+   "date": "2025-01-27",
+   "ar": "تقرير «شبكة العذاب» للجنة التحقيق الأممية",
+   "en": "UN COI 'Web of Agony' report",
+   "pillar": "truth",
+   "src": [
+    "COI"
+   ]
+  },
+  {
+   "date": "2025-01-29",
+   "ar": "إعلان حل الأجهزة الأمنية السابقة",
+   "en": "Former security agencies dissolved",
+   "pillar": "nonrecurrence",
+   "src": [
+    "Enab Victory Conference"
+   ]
+  },
+  {
+   "date": "2025-05-17",
+   "ar": "إنشاء هيئتي العدالة الانتقالية والمفقودين",
+   "en": "Transitional Justice and Missing Persons commissions created",
+   "pillar": "truth",
+   "src": [
+    "SJAC one year"
+   ]
+  },
+  {
+   "date": "2025-06-16",
+   "ar": "حكم علاء م. في فرانكفورت",
+   "en": "Alaa M. verdict in Frankfurt",
+   "pillar": "justice",
+   "src": [
+    "Frankfurt Court"
+   ]
+  },
+  {
+   "date": "2025-10-14",
+   "ar": "تحقيق رويترز عن «عملية نقل التراب»",
+   "en": "Reuters 'Operation Move Earth' investigation",
+   "pillar": "missing",
+   "src": [
+    "Reuters"
+   ]
+  },
+  {
+   "date": "2025-12",
+   "ar": "«ملف دمشق»: أكثر من 33 ألف صورة لمعتقلين متوفين",
+   "en": "Damascus Dossier: 33,000+ photos of dead detainees",
+   "pillar": "truth",
+   "src": [
+    "ICIJ Damascus Dossier"
+   ]
+  },
+  {
+   "date": "2025-12-29",
+   "ar": "تأمين مقبرة الضمير وفتح تحقيق جنائي",
+   "en": "Dhumair grave secured; criminal probe opened",
+   "pillar": "missing",
+   "src": [
+    "Reuters Dhumair 2025"
+   ]
+  },
+  {
+   "date": "2026-04-26",
+   "ar": "أول محاكمة لمسؤول من النظام في دمشق",
+   "en": "First trial of a regime official in Damascus",
+   "pillar": "justice",
+   "src": [
+    "JusticeInfo trials"
+   ]
+  },
+  {
+   "date": "2026-07-06",
+   "ar": "إدانة خالد الحلبي في فيينا",
+   "en": "Khaled al-Halabi convicted in Vienna",
+   "pillar": "justice",
+   "src": [
+    "Halabi Vienna"
+   ]
+  },
+  {
+   "date": "2026-08-11",
+   "ar": "الحكم في قضية عاطف نجيب",
+   "en": "Verdict in the Atef Najib case",
+   "pillar": "justice",
+   "src": [
+    "JusticeInfo trials"
+   ]
+  },
+  {
+   "date": "2026-08-30",
+   "ar": "إطلاق البرنامج الوطني لبلاغات المفقودين",
+   "en": "National missing-persons reporting programme launched",
+   "pillar": "missing",
+   "src": [
+    "Reuters DNA"
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "ar": "بروتوكول حماية المقابر في مطار المزة",
+   "en": "Protocol to protect Mezzeh airport grave sites",
+   "pillar": "missing",
+   "src": [
+    "Mezzeh protocol"
+   ]
+  },
+  {
+   "date": "2026-10-20",
+   "ar": "أول تعرّف على مفقودين بالحمض النووي",
+   "en": "First DNA identifications of missing persons",
+   "pillar": "missing",
+   "src": [
+    "Reuters DNA"
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "ar": "إقرار قانون عدالة انتقالية يشمل جميع الضحايا",
+   "en": "Adopting a transitional justice law covering all victims"
+  },
+  {
+   "ar": "قبول اختصاص المحكمة الجنائية الدولية",
+   "en": "Accepting ICC jurisdiction"
+  },
+  {
+   "ar": "مكتب للمؤسسة الأممية للمفقودين داخل سوريا",
+   "en": "An IIMP office inside Syria"
+  },
+  {
+   "ar": "إطار وطني لحماية المقابر الجماعية والأدلة",
+   "en": "A national framework to protect mass graves and evidence"
+  },
+  {
+   "ar": "سجل وطني للضحايا وبرنامج تعويضات فعلي",
+   "en": "A national victims registry and an operating reparations programme"
+  }
+ ]
+}

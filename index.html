@@ -4,13 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>خريطة العدالة في سوريا | Syria Justice Map</title>
-<!-- The map lives in a single file; this page only forwards the site root to it. -->
-<meta http-equiv="refresh" content="0; url=syria-justice-map-01-2026.html">
-<link rel="canonical" href="syria-justice-map-01-2026.html">
-<script>location.replace('syria-justice-map-01-2026.html'+location.search+location.hash);</script>
-<style>body{font-family:system-ui,sans-serif;background:#F4F6FB;color:#1C2140;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}a{color:#8B5C1A;}</style>
+<meta name="description" content="خريطة تفاعلية لمنظومة الاحتجاز في سوريا 2011–2024 ومسار العدالة: مراكز الاحتجاز، المقابر الجماعية، المحاكمات، ومؤشرات العدالة الانتقالية.">
+<meta property="og:title" content="خريطة العدالة في سوريا | Syria Justice Map">
+<meta property="og:description" content="Interactive map of Syria's detention system (2011–2024) and the road to justice.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238B5C1A'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white'%3E⚖%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-<p>جارٍ فتح الخريطة… إن لم تُفتح تلقائياً <a href="syria-justice-map-01-2026.html">اضغط هنا</a>.</p>
+<header class="header">
+  <a class="brand" href="#map">
+    <span class="logo" aria-hidden="true">⚖</span>
+    <span><span class="brand-t" data-i18n="title">خريطة العدالة في سوريا</span><br><span class="brand-s" data-i18n="subtitle"></span></span>
+  </a>
+  <nav class="modes" role="tablist">
+    <button class="mode-btn" role="tab" data-mode="map" aria-selected="true"><span class="mi" aria-hidden="true">🗺</span><span data-i18n="m_map">الخريطة</span></button>
+    <button class="mode-btn" role="tab" data-mode="story" aria-selected="false"><span class="mi" aria-hidden="true">↯</span><span data-i18n="m_story">مسار الضحية</span></button>
+    <button class="mode-btn" role="tab" data-mode="trials" aria-selected="false"><span class="mi" aria-hidden="true">⚖</span><span data-i18n="m_trials">المحاكمات</span></button>
+    <button class="mode-btn" role="tab" data-mode="tj" aria-selected="false"><span class="mi" aria-hidden="true">◎</span><span data-i18n="m_tj">العدالة الانتقالية</span></button>
+  </nav>
+  <div class="tools">
+    <a class="tool-btn" href="methodology.html" data-i18n="methodology">المنهجية والبيانات</a>
+    <button class="tool-btn" id="themeBtn" aria-label="Toggle dark mode" title="☾ / ☀">☾</button>
+    <button class="tool-btn" id="langBtn" data-i18n="otherLang">EN</button>
+  </div>
+</header>
+
+<div id="loading" class="muted" style="position:fixed;inset:var(--header-h) 0 0;display:grid;place-items:center;z-index:2000;background:var(--bg)"><span data-i18n="loading">جارٍ تحميل البيانات…</span></div>
+<div id="loadError" hidden class="disclaimer" style="position:fixed;top:80px;left:20px;right:20px;z-index:2001" data-i18n="loadError"></div>
+
+<!-- MAP VIEW -->
+<main class="view active" id="view-map">
+  <aside class="sidebar" id="sidebar">
+    <div class="tabs" role="tablist">
+      <button class="tab" data-tab="filters" aria-selected="true" data-i18n="t_filters">فلاتر</button>
+      <button class="tab" data-tab="layers" aria-selected="false" data-i18n="t_layers">طبقات</button>
+      <button class="tab" data-tab="stats" aria-selected="false" data-i18n="t_stats">إحصاء</button>
+      <button class="tab" data-tab="list" aria-selected="false" data-i18n="t_list">قائمة</button>
+      <button class="tab" data-tab="legend" aria-selected="false" data-i18n="t_legend">مفتاح</button>
+    </div>
+    <div class="tab-body active" id="tab-filters">
+      <div class="fsec"><span class="flabel" data-i18n="agency"></span><div class="chips" id="agencyChips"></div></div>
+      <div class="fsec"><span class="flabel" data-i18n="governorate"></span><div class="ggrid" id="govChips"></div></div>
+      <div class="fsec"><span class="flabel" data-i18n="violation"></span><div class="chips">
+        <button class="chip plain" data-v="all" data-i18n="all"></button><button class="chip plain" data-v="torture" data-i18n="torture"></button>
+        <button class="chip plain" data-v="disappear" data-i18n="disappear"></button><button class="chip plain" data-v="death" data-i18n="death"></button>
+        <button class="chip plain" data-v="caesar" data-i18n="caesar"></button></div></div>
+      <div class="fsec"><span class="flabel" data-i18n="confidence"></span><div class="chips">
+        <button class="chip plain" data-conf="all" data-i18n="all"></button><button class="chip plain" data-conf="HIGH" data-i18n="high"></button>
+        <button class="chip plain" data-conf="MEDIUM" data-i18n="medium"></button><button class="chip plain" data-conf="LOW" data-i18n="low"></button></div></div>
+      <button class="rbtn" id="resetBtn" data-i18n="reset"></button>
+    </div>
+    <div class="tab-body" id="tab-layers">
+      <div class="layer-row"><span data-i18n="l_facilities"></span><button class="switch" role="switch" data-layer="facilities" aria-checked="true" aria-label="facilities"></button></div>
+      <div class="layer-row"><span data-i18n="l_graves"></span><button class="switch" role="switch" data-layer="graves" aria-checked="true" aria-label="graves"></button></div>
+      <div class="layer-row"><span data-i18n="l_transfers"></span><button class="switch" role="switch" data-layer="transfers" aria-checked="false" aria-label="transfers"></button></div>
+      <div class="layer-row"><span data-i18n="l_cluster"></span><button class="switch" role="switch" data-layer="cluster" aria-checked="true" aria-label="cluster"></button></div>
+      <div class="layer-row"><span data-i18n="l_size"></span><button class="switch" role="switch" data-layer="size" aria-checked="true" aria-label="size"></button></div>
+      <p class="muted" style="margin-top:10px">↪ <a href="#story" data-i18n="m_story"></a></p>
+    </div>
+    <div class="tab-body" id="tab-stats">
+      <span class="flabel" id="stYear"></span>
+      <div class="sgrid">
+        <div class="scard"><div class="scard-n num" id="stSites">—</div><div class="scard-l" data-i18n="shown"></div></div>
+        <div class="scard"><div class="scard-n num" id="stExp" style="color:#2471A3">—</div><div class="scard-l" data-i18n="iiimExp"></div></div>
+        <div class="scard"><div class="scard-n num" id="stCaesar" style="color:#8B5C1A">—</div><div class="scard-l" data-i18n="caesarSites"></div></div>
+        <div class="scard"><div class="scard-n num" id="stGovs" style="color:#1E7E4A">—</div><div class="scard-l" data-i18n="govs"></div></div>
+      </div>
+      <div class="fsec"><span class="flabel" data-i18n="byViolation"></span><div id="vBars"></div></div>
+      <div class="fsec"><span class="flabel" data-i18n="byAgency"></span><div id="agBars"></div></div>
+      <div class="fsec"><span class="flabel" data-i18n="ref"></span><div class="sgrid" id="refStats"></div></div>
+    </div>
+    <div class="tab-body" id="tab-list">
+      <input class="sbox" id="sbox" type="search" data-i18n-ph="search" aria-label="search">
+      <div id="rcnt" class="muted"></div>
+      <div id="flist"></div>
+      <div class="fsec" style="margin-top:16px"><span class="flabel" data-i18n="unmappedT"></span><div id="unmapped"></div></div>
+    </div>
+    <div class="tab-body" id="tab-legend">
+      <div class="fsec"><span class="flabel" data-i18n="legendSym"></span>
+        <div class="legend-row"><span class="dot" style="width:12px;height:12px;background:#C0392B;box-shadow:0 0 0 2px #C0392B,0 0 0 4px rgba(240,192,64,.6)"></span><span data-i18n="symCaesar"></span></div>
+        <div class="legend-row"><span class="dot" style="width:12px;height:12px;background:#566073;border:2px dashed #fff;outline:1px solid #566073"></span><span data-i18n="symVerify"></span></div>
+        <div class="legend-row"><span class="diamond"></span><span data-i18n="symGrave"></span></div>
+        <div class="legend-row"><span class="dot" style="background:#566073"></span><span class="dot" style="width:16px;height:16px;background:#566073"></span><span data-i18n="l_size"></span></div>
+      </div>
+      <p class="muted" data-i18n="footer"></p>
+      <p class="muted" style="margin-top:8px"><a href="methodology.html" data-i18n="methodology"></a></p>
+    </div>
+  </aside>
+  <div class="map-wrap">
+    <div id="map" class="leaflet-map" role="region" aria-label="map"></div>
+    <button class="stoggle" id="stoggle" aria-label="toggle sidebar">◀</button>
+  </div>
+  <div class="timeline" id="timeline">
+    <button class="play" id="playBtn" aria-label="play">▶</button>
+    <button class="tool-btn" id="allYearsBtn" data-i18n="allYears" aria-pressed="true">كل السنوات</button>
+    <div class="year num" id="yearDisplay">—</div>
+    <div class="track-wrap">
+      <div class="track" id="track"><div class="track-bg"></div><div class="track-fill" id="trackFill"></div><div class="thumb" id="thumb"></div></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <div>
+      <div class="tl-ev" id="tlEvent"></div>
+      <div class="muted"><span class="num" id="tlCount">0</span> <span data-i18n="shown"></span></div>
+    </div>
+  </div>
+</main>
+
+<!-- STORY VIEW -->
+<main class="view" id="view-story">
+  <div class="story-text" id="storyText"></div>
+  <div class="story-map"><div id="storyMap" class="leaflet-map" role="region" aria-label="story map"></div><div class="progress" id="storyProgress"></div></div>
+</main>
+
+<!-- TRIALS VIEW -->
+<main class="view page" id="view-trials"><div class="page-inner" id="trialsRoot"></div></main>
+
+<!-- TRANSITIONAL JUSTICE VIEW -->
+<main class="view page" id="view-tj"><div class="page-inner" id="tjRoot"></div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

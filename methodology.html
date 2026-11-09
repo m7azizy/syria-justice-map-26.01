@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المنهجية والبيانات المفتوحة | Syria Justice Map</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<style>
+  body{overflow:auto;}
+  .doc{max-width:860px;margin:0 auto;padding:30px 20px 70px;}
+  .doc h1{font-size:26px;margin-bottom:8px;}
+  .doc h2{font-size:18px;margin:30px 0 10px;padding-top:12px;border-top:1px solid var(--border);}
+  .doc p,.doc li{font-size:14px;line-height:1.95;color:var(--text-2);}
+  .doc ul,.doc ol{margin-inline-start:22px;}
+  .doc table{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0;}
+  .doc th,.doc td{border:1px solid var(--border);padding:7px 9px;text-align:start;vertical-align:top;}
+  .doc th{background:var(--bg-card);}
+  .doc code{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--bg-card);padding:1px 5px;border-radius:4px;direction:ltr;unicode-bidi:isolate;}
+  .dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:12px 0;}
+  .dl a{display:block;background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;color:var(--text);}
+  .dl a:hover{border-color:var(--accent);}
+  .dl b{display:block;font-size:13px;}.dl span{font-size:11px;color:var(--text-3);}
+  .en{direction:ltr;text-align:left;}
+  .cite{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12.5px;line-height:1.8;}
+</style>
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html"><span class="logo" aria-hidden="true">⚖</span>
+    <span><span class="brand-t">خريطة العدالة في سوريا</span><br><span class="brand-s">Syria Justice Map · رابطة عائلات قيصر</span></span></a>
+  <div class="tools" style="margin-inline-start:auto"><a class="tool-btn" href="index.html">← الخريطة</a><a class="tool-btn" href="#english">English</a></div>
+</header>
+<main class="doc">
+  <h1>المنهجية والبيانات المفتوحة</h1>
+  <p>الإصدار الثاني، نوفمبر 2026. تشرح هذه الصفحة من أين جاءت كل معلومة في الخريطة، وكيف صُنّفت، وما حدودها، وكيف يمكن تحميل البيانات وإعادة استخدامها.</p>
+
+  <h2>1. نطاق الخريطة</h2>
+  <ul>
+    <li>منظومة الاحتجاز التي أدارها النظام السوري السابق بين 2011 و2024: الفروع الأمنية والسجون والمستشفيات العسكرية ووحدات الجيش التي احتُجز فيها معتقلون.</li>
+    <li>المقابر الجماعية المرتبطة بهذه المنظومة.</li>
+    <li>الإجراءات القضائية ضد مسؤولين وعناصر في النظام والميليشيات الموالية له، داخل سوريا وخارجها.</li>
+    <li>مؤشرات مسار العدالة الانتقالية بعد سقوط النظام.</li>
+  </ul>
+  <p>لا تشمل الخريطة في هذا الإصدار انتهاكات الأطراف الأخرى ولا انتهاكات ما بعد ديسمبر 2024، مثل أحداث الساحل والسويداء ومحاكماتها، رغم توثيقها لدى مصادر أخرى.</p>
+
+  <h2>2. العمود الفقري: ملحق الآلية الدولية (IIIM)</h2>
+  <p>تعتمد مواقع المنشآت على الملحق B من تقرير الآلية الدولية المحايدة والمستقلة «منظومة الاحتجاز الحكومية في سوريا أداةً للقمع العنيف» (النسخة العلنية، ديسمبر 2024). استُخرج جدولا الملحق آلياً، ثم طوبقا صفاً بصف مع بيانات الخريطة.</p>
+  <table>
+    <tr><th>البند</th><th>العدد</th></tr>
+    <tr><td>منشآت حدّدتها IIIM بأسماء موثقة في وثائق حكومية</td><td class="num">111</td></tr>
+    <tr><td>منها بإحداثيات (بعضها في موقعين بسبب الانتقال)</td><td class="num">94 منشأة · 97 نقطة</td></tr>
+    <tr><td>نقاط على الخريطة من مصادر أخرى (معلّمة «بحاجة إلى تحقق»)</td><td class="num" data-count="other">—</td></tr>
+    <tr><td>منشآت حدّدتها IIIM دون إحداثيات (معروضة كقائمة)</td><td class="num" data-count="unmapped">—</td></tr>
+    <tr><td>مقابر جماعية على الخريطة</td><td class="num" data-count="graves">—</td></tr>
+  </table>
+  <p><b>عن الرقم 97 في النسخة الأولى:</b> أعلنت النسخة الأولى 97 موقعاً، بينما احتوت بياناتها فعلياً على 76. بعد المطابقة مع الملحق صارت الخريطة تضم <span class="num" data-count="points">—</span> نقطة احتجاز تمثل <span class="num" data-count="facilities">—</span> منشأة، إضافة إلى المقابر.</p>
+  <p><b>تصحيحات نتجت عن المطابقة:</b></p>
+  <ul>
+    <li>إضافة 30 منشأة كانت ناقصة، منها أفرع الأمن السياسي في حلب وحمص واللاذقية، والقسم 40، والفرع 293، ومفرزة الرقة.</li>
+    <li>فصل الفرعين 291 و293 اللذين كانا نقطة واحدة.</li>
+    <li>إزالة نقطة الفرع 256 في طرطوس، لأنها كانت تحمل إحداثيات السجن المركزي، ونقله إلى قائمة المنشآت دون إحداثيات.</li>
+    <li>توحيد مستويات الثقة مع تقييم IIIM.</li>
+    <li>تصنيف مطار النيرب وثكنة هنانو وقيادة القوى الجوية ضمن «وحدات الجيش والقوى الجوية» كما في الملحق.</li>
+  </ul>
+
+  <h2>3. معنى الحقول الأساسية</h2>
+  <table>
+    <tr><th>الحقل</th><th>المعنى</th></tr>
+    <tr><td>تجارب احتجاز (IIIM)</td><td>عدد تجارب الاحتجاز التي رواها شهود ضمن عيّنة التحليل المعمّق لدى IIIM (332 معتقلاً سابقاً). <b>ليس عدد الضحايا ولا عدد المعتقلين</b> في المنشأة، بل مؤشر على حجم التوثيق. لذلك يُستخدم لتحديد حجم الدائرة على الخريطة فقط.</td></tr>
+    <tr><td>دقة الموقع</td><td>تقييم IIIM: <b>عالية</b> عند تقاطع ثلاثة أنواع من المصادر أو أكثر، <b>متوسطة</b> لنوعين، <b>منخفضة</b> لنوع واحد. قد تشير الإحداثيات إلى المنطقة العامة للمنشأة لا إلى المبنى بدقة.</td></tr>
+    <tr><td>فترة النشاط</td><td>السنوات التي عملت فيها المنشأة تحت سيطرة النظام. المنشآت في الرقة تنتهي في 2013، وفي إدلب في 2015، تبعاً لخروج المدينتين عن سيطرته.</td></tr>
+    <tr><td>ملف قيصر</td><td>أعداد الضحايا لكل فرع وفق تصنيف رابطة عائلات المعتقلين والمفقودين (SAFMCD) الذي اعتمدته هيومن رايتس ووتش (2015).</td></tr>
+    <tr><td>بحاجة إلى تحقق</td><td>موقع أو فترة لم تؤكدها IIIM أو مصدران مستقلان. يظهر بحد متقطع على الخريطة.</td></tr>
+  </table>
+
+  <h2>4. المصادر وأولويتها</h2>
+  <ol>
+    <li>تقارير الأمم المتحدة: الآلية الدولية (IIIM)، ولجنة التحقيق (COI)، والمؤسسة المستقلة المعنية بالمفقودين (IIMP).</li>
+    <li>الأحكام القضائية ووثائق المحاكم، وتغطيتها من مراقبي المحاكمات (SJAC، ECCHR، TRIAL، JusticeInfo).</li>
+    <li>منظمات التوثيق: الشبكة السورية لحقوق الإنسان، وهيومن رايتس ووتش، ومنظمة العفو الدولية، ومركز العدالة والمساءلة، ومركز توثيق الانتهاكات.</li>
+    <li>التحقيقات الصحفية الموثقة: رويترز، و«ملف دمشق» من ICIJ وNDR، وميدل إيست آي.</li>
+  </ol>
+  <p>كل رقم في الواجهة مربوط بمصدره وتاريخه. عند تباين المصادر يُعرض نطاق لا رقم واحد، كما في تقديرات المفقودين (130 إلى 300 ألف) والمقابر الجماعية (66 إلى 88 موقعاً).</p>
+
+  <h2>5. معايير ذكر الأسماء</h2>
+  <p>لا تُذكر أسماء أشخاص إلا من صدر بحقه حكم أو لائحة اتهام أو أُحيل إلى محاكمة في إجراء قضائي موثق، مع رابط إلى المصدر. تُستخدم الأسماء المختصرة (مثل «علاء م.») كما تنشرها المحاكم الأوروبية. لا تُدرج أسماء المشتبه بهم أو الموقوفين غير المحالين إلى محاكمة.</p>
+
+  <h2>6. مؤشرات العدالة الانتقالية</h2>
+  <p>عشرون مؤشراً في ست ركائز، هي الحقيقة والعدالة والمفقودون وجبر الضرر وضمانات عدم التكرار والذاكرة. تستند إلى مذكرة الأمين العام للأمم المتحدة بشأن العدالة الانتقالية (2023)، وولاية المقرر الخاص المعني بتعزيز الحقيقة والعدالة وجبر الضرر وضمانات عدم التكرار.</p>
+  <ul>
+    <li><b>سلم الترميز:</b> 0 لم يبدأ، 1 بدأ أو على الورق، 2 تقدّم جزئي، 3 متقدّم. الأسلوب مستوحى من مشروع أدوات تقييم العدالة الانتقالية (TJET).</li>
+    <li><b>الأدلة:</b> لكل مؤشر دليل مكتوب ومصدر وتاريخ.</li>
+    <li><b>عدم الجمع:</b> لا تُجمع المؤشرات في رقم مركّب واحد، لأن ذلك يوحي بدقة غير موجودة.</li>
+    <li><b>طبيعة التقييم:</b> تقييم تحليلي لا حكم رسمي، ويُراجع مع كل إصدار.</li>
+  </ul>
+
+  <h2>7. حدود البيانات</h2>
+  <ul>
+    <li><b>عدد تجارب الاحتجاز:</b> يعكس عيّنة IIIM لا حجم الاحتجاز الفعلي. منشآت كثيرة الضحايا قد تظهر بأرقام صغيرة لقلة الناجين منها.</li>
+    <li><b>الإحداثيات:</b> قد تشير إلى المنطقة العامة. إحداثيات المقابر تقديرية، لأن مواقع بعضها لم تُنشر حمايةً للأدلة، مثل الضمير ومقبرتي مطار المزة.</li>
+    <li><b>«ملف دمشق»:</b> لم تُنشر أرقامه موزعة على الفروع، فيظهر رقمه الإجمالي فقط.</li>
+    <li><b>الفترة:</b> فترات نشاط بعض الفروع، خصوصاً في دير الزور خلال الحصار (2014–2017)، معلّمة «بحاجة إلى تحقق».</li>
+  </ul>
+
+  <h2>8. تحميل البيانات</h2>
+  <div class="dl">
+    <a href="data/open/syria-justice-map.geojson" download><b>GeoJSON</b><span>المنشآت والمقابر مع كل الحقول</span></a>
+    <a href="data/open/facilities.csv" download><b>CSV — المنشآت</b><span>جدول يُفتح في Excel وGoogle Sheets</span></a>
+    <a href="data/open/trials.csv" download><b>CSV — المحاكمات</b><span>القضايا والأحكام والمصادر</span></a>
+    <a href="data/raw/iiim-annex-b.json" download><b>ملحق IIIM مستخرجاً</b><span>الجدول الخام كما استُخرج من الملحق B</span></a>
+    <a href="data/tj-indicators.json" download><b>مؤشرات العدالة الانتقالية</b><span>JSON بالأدلة والمصادر</span></a>
+    <a href="data/sources.json" download><b>المصادر</b><span>كل المصادر مع روابطها</span></a>
+  </div>
+  <p><b>الترخيص المقترح:</b> المشاع الإبداعي، نَسب المصنَّف 4.0
+  (CC BY 4.0)،
+  مع ذكر رابطة عائلات قيصر والمصادر الأصلية. الترخيص بانتظار اعتماده من الرابطة.</p>
+
+  <h2>9. طريقة الاقتباس</h2>
+  <div class="cite">رابطة عائلات قيصر، «خريطة العدالة في سوريا»، الإصدار الثاني، نوفمبر 2026. البيانات الجغرافية: الآلية الدولية المحايدة والمستقلة، الملحق B (ديسمبر 2024).<br>
+  <span class="en">Caesar Families Association, “Syria Justice Map”, version 2, November 2026. Geodata: IIIM, Annex B (December 2024).</span></div>
+
+  <h2>10. سجل الإصدارات</h2>
+  <ul>
+    <li><b>الإصدار الثاني (نوفمبر 2026):</b> مطابقة كاملة مع ملحق IIIM، وطبقة المقابر ومسارات النقل، ومتتبع المحاكمات، ولوحة العدالة الانتقالية، والرواية التفاعلية، والبيانات المفتوحة.</li>
+    <li><b>تحديث سبتمبر 2026:</b> تصحيح فترات النشاط والمحافظات، وربط المصادر، وأول طبقة محاكمات، ودعم الهاتف.</li>
+    <li><b>النسخة الأولى (يونيو 2026):</b> نموذج أولي.</li>
+  </ul>
+
+  <h2 id="english" class="en">English summary</h2>
+  <div class="en">
+    <p><b>Scope.</b> The map covers the former Syrian government's detention system (2011–2024), related mass graves, judicial proceedings against former-regime officials and allied militia members, and post-2024 transitional-justice indicators. Other parties and post-December-2024 violations are out of scope in this release.</p>
+    <p><b>Geodata.</b> Facility locations come from IIIM Annex B (December 2024), extracted and reconciled row by row. IIIM identified 111 facilities and geolocated 94 (97 points, as three relocated). Points from other sources are flagged "needs verification"; facilities without coordinates are listed separately.</p>
+    <p><b>"IIIM experiences"</b> counts detention experiences recounted by witnesses in IIIM's in-depth sample of 332 former detainees. It is <b>not</b> a count of victims or detainees and is used only to scale map symbols.</p>
+    <p><b>Names</b> appear only for people convicted, indicted or on trial in a documented proceeding, with a link to the source.</p>
+    <p><b>Transitional justice indicators</b> (20 indicators, 6 pillars) follow the UN Secretary-General's 2023 Guidance Note and the Special Rapporteur's mandate, coded 0–3 with evidence, source and date, and are not aggregated into a composite score. They are an analytical assessment, not an official ruling.</p>
+    <p><b>Open data</b> is available above as GeoJSON and CSV. Proposed licence: CC BY 4.0, pending the Association's approval.</p>
+  </div>
+</main>
+<script type="module">
+  const get = f => fetch(`data/${f}.json`).then(r => r.json());
+  Promise.all([get('facilities'), get('unmapped-facilities'), get('graves')]).then(([f, u, g]) => {
+    const iiimFacilities = new Set(f.filter(x => x.geoSource === 'IIIM').map(x => x.relocation?.group ?? `p${x.id}`)).size;
+    const other = f.filter(x => x.geoSource !== 'IIIM').length;
+    const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`).forEach(el => { el.textContent = v; });
+    set('other', other); set('unmapped', u.length); set('graves', g.length);
+    set('points', f.length); set('facilities', iiimFacilities + other);
+  });
+</script>
+</body>
+</html>

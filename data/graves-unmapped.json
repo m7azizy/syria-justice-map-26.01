@@ -1,0 +1,29 @@
+[
+ {
+  "nameAr": "مقبرتان مشتبه بهما داخل مطار المزة العسكري",
+  "nameEn": "Two suspected graves inside Mezzeh Military Airport",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "statusAr": "محميّتان ببروتوكول مع الهيئة الوطنية للمفقودين (سبتمبر 2026)",
+  "statusEn": "Protected under a protocol with the National Commission for the Missing (Sep 2026)",
+  "noteAr": "سلّم مركز العدالة والمساءلة إحداثياتهما للهيئة ولم تُنشر",
+  "noteEn": "SJAC handed the coordinates to the Commission; they are not public",
+  "src": [
+   "SJAC Mezzeh",
+   "Mezzeh protocol"
+  ]
+ },
+ {
+  "nameAr": "مواقع رفات قرب دمشق اكتشفتها هيئة المفقودين",
+  "nameEn": "Remains sites near Damascus found by the Missing Persons Commission",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "statusAr": "قيد الفحص (2026)",
+  "statusEn": "Under examination (2026)",
+  "noteAr": "لم تُنشر مواقع دقيقة",
+  "noteEn": "No precise locations published",
+  "src": [
+   "NCMP"
+  ]
+ }
+]

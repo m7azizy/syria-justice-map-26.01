@@ -1,0 +1,86 @@
+[
+ {
+  "id": 50,
+  "nameAr": "مقبرة القطيفة الجماعية",
+  "nameEn": "Al-Qutayfah Mass Grave",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.738,
+  "lng": 36.608,
+  "coordPrecision": "approximate",
+  "yearActive": 2013,
+  "yearClosed": 2026,
+  "status": "relocated",
+  "detailAr": "من أكبر المقابر الجماعية. تقدّر منظمة فريق الطوارئ السوري (SETF) وجود 100,000 جثة على الأقل. نُقل جزء كبير منها سراً إلى الضمير في \"عملية نقل التراب\" (2019–2021) وفق تحقيق رويترز.",
+  "detailEn": "One of the largest mass graves. Syrian Emergency Task Force (SETF) estimates at least 100,000 bodies. Large parts secretly moved to Dhumair in \"Operation Move Earth\" (2019–2021) per Reuters.",
+  "sources": [
+   "SETF",
+   "Reuters",
+   "Stephen Rapp"
+  ]
+ },
+ {
+  "id": 51,
+  "nameAr": "مقبرة نجها الجماعية",
+  "nameEn": "Najha Mass Grave",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.378,
+  "lng": 36.402,
+  "coordPrecision": "approximate",
+  "yearActive": 2013,
+  "yearClosed": 2026,
+  "status": "suspected",
+  "detailAr": "مقبرة جنوب دمشق — عشرات الآلاف من الجثث في خنادق بعمق 3 أمتار وطول يصل إلى 90 متراً. نُقلت إليها الجثث من مستشفيات تشرين والمزة وحرستا حتى 2018.",
+  "detailEn": "Mass grave south of Damascus — tens of thousands of bodies in trenches 3m deep and up to 90m long. Bodies trucked from Tishreen, Mezzeh and Harasta hospitals until 2018.",
+  "sources": [
+   "AP",
+   "Stephen Rapp",
+   "ADMSP",
+   "MEE"
+  ]
+ },
+ {
+  "id": 52,
+  "nameAr": "مقبرة تضامن الجماعية",
+  "nameEn": "Tadamon Mass Grave",
+  "govAr": "دمشق",
+  "govEn": "Damascus",
+  "lat": 33.485,
+  "lng": 36.31,
+  "coordPrecision": "approximate",
+  "yearActive": 2013,
+  "yearClosed": 2026,
+  "status": "exhumation",
+  "detailAr": "مجزرة 16 أبريل 2013. يُظهر الفيديو المسرّب إعدام 41 شخصاً على الأقل، وتقدّر مصادر أخرى عدد الضحايا بنحو 288. زارت هيومن رايتس ووتش الموقع في ديسمبر 2024 ووجدت رفاتاً بشرية.",
+  "detailEn": "April 16, 2013 massacre. Leaked video shows the execution of at least 41 people; other sources estimate around 288 victims. HRW visited in December 2024 and found human remains.",
+  "sources": [
+   "Ugur Umit Ungor",
+   "HRW Tadamon",
+   "COI"
+  ]
+ },
+ {
+  "id": 53,
+  "nameAr": "مقبرة الضمير الجماعية",
+  "nameEn": "Dhumair Mass Grave",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "lat": 33.689,
+  "lng": 36.858,
+  "coordPrecision": "approximate",
+  "yearActive": 2019,
+  "yearClosed": 2026,
+  "status": "secured",
+  "detailAr": "موقع إعادة دفن الجثث المنقولة من القطيفة (2019–2021): 34 خندقاً على الأقل بطول كيلومترين. أمّنته الحكومة وفتحت تحقيقاً جنائياً (ديسمبر 2025)، والنبش مقرر في 2027.",
+  "detailEn": "Reburial site for bodies moved from al-Qutayfah (2019–2021): at least 34 trenches, 2 km long. Secured by the government with a criminal investigation opened (Dec 2025); exhumation scheduled for 2027.",
+  "sources": [
+   "Reuters",
+   "Reuters Dhumair 2025"
+  ],
+  "coordNote": {
+   "ar": "رويترز لم تنشر الموقع الدقيق؛ الإحداثيات تقديرية لمنطقة الضمير",
+   "en": "Reuters withheld the exact site; coordinates approximate the Dhumair area"
+  }
+ }
+]
