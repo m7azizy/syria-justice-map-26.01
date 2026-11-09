@@ -28,10 +28,11 @@
 <body>
 <header class="header">
   <a class="brand" href="index.html"><span class="logo" aria-hidden="true">⚖</span>
-    <span><span class="brand-t">خريطة العدالة في سوريا</span><br><span class="brand-s">Syria Justice Map · رابطة عائلات قيصر</span></span></a>
-  <div class="tools" style="margin-inline-start:auto"><a class="tool-btn" href="index.html">← الخريطة</a><a class="tool-btn" href="#english">English</a></div>
+    <span><span class="brand-t" id="brandT">خريطة العدالة في سوريا</span><br><span class="brand-s">Syria Justice Map · رابطة عائلات قيصر</span></span></a>
+  <div class="tools" style="margin-inline-start:auto"><a class="tool-btn" href="index.html" id="backBtn">← الخريطة</a><button class="tool-btn" id="langBtn" type="button">English</button></div>
 </header>
 <main class="doc">
+<div data-lang="ar">
   <h1>المنهجية والبيانات المفتوحة</h1>
   <p>الإصدار الثاني، نوفمبر 2026. تشرح هذه الصفحة من أين جاءت كل معلومة في الخريطة، وكيف صُنّفت، وما حدودها، وكيف يمكن تحميل البيانات وإعادة استخدامها.</p>
 
@@ -96,7 +97,7 @@
     <li><b>العرض:</b> يظهر الرقم مع نطاق تقريبي (± 5) ووصف نوعي، لأنه تلخيص لتقديرات ترتيبية لا قياس دقيق. القراءة الصحيحة تكون مع درجات الأركان وأدلة كل مؤشر.</li>
     <li><b>التحديث:</b> كل ثلاثة أشهر، ويُحفظ كل تقييم في سجل زمني.</li>
   </ul>
-  <p>تقييم نوفمبر 2026: <b class="num" id="stjpiNow">—</b>/100، أي «تقدّم مبكر وغير متوازن». العدالة العقابية تتقدّم أسرع من الحقيقة وجبر الضرر.</p>
+  <p>تقييم نوفمبر 2026: <b class="num" data-count="stjpi">—</b>/100، أي «تقدّم مبكر وغير متوازن». العدالة العقابية تتقدّم أسرع من الحقيقة وجبر الضرر.</p>
 
   <h2>6.1 مبادئ أخلاقية</h2>
   <ul>
@@ -133,22 +134,109 @@
 
   <h2>10. سجل الإصدارات</h2>
   <ul>
+    <li><b>الإصدار 2.2 (نوفمبر 2026):</b> فحص شامل للفلاتر والترجمة؛ أسماء عربية للجهات الأعلى في ملحق IIIM وللمصادر؛ المقابر تتبع فلتر المحافظة؛ نسخة إنجليزية كاملة من هذه الصفحة.</li>
     <li><b>الإصدار 2.1 (نوفمبر 2026):</b> دمج بحث الرابطة: مؤشر STJPI، طبقة المساءلة، 7 قضايا جديدة منها محكمة العدل الدولية، فصل «ملف دمشق»، درجات التحقق للمقابر وتعميم مواقع غير المؤمّنة منها.</li>
     <li><b>الإصدار الثاني (نوفمبر 2026):</b> مطابقة كاملة مع ملحق IIIM، وطبقة المقابر ومسارات النقل، ومتتبع المحاكمات، ولوحة العدالة الانتقالية، والرواية التفاعلية، والبيانات المفتوحة.</li>
     <li><b>تحديث سبتمبر 2026:</b> تصحيح فترات النشاط والمحافظات، وربط المصادر، وأول طبقة محاكمات، ودعم الهاتف.</li>
     <li><b>النسخة الأولى (يونيو 2026):</b> نموذج أولي.</li>
   </ul>
 
-  <h2 id="english" class="en">English summary</h2>
-  <div class="en">
-    <p><b>Scope.</b> The map covers the former Syrian government's detention system (2011–2024), related mass graves, judicial proceedings against former-regime officials and allied militia members, and post-2024 transitional-justice indicators. Other parties and post-December-2024 violations are out of scope in this release.</p>
-    <p><b>Geodata.</b> Facility locations come from IIIM Annex B (December 2024), extracted and reconciled row by row. IIIM identified 111 facilities and geolocated 94 (97 points, as three relocated). Points from other sources are flagged "needs verification"; facilities without coordinates are listed separately.</p>
-    <p><b>"IIIM experiences"</b> counts detention experiences recounted by witnesses in IIIM's in-depth sample of 332 former detainees. It is <b>not</b> a count of victims or detainees and is used only to scale map symbols.</p>
-    <p><b>Names</b> appear only for people convicted, indicted or on trial in a documented proceeding, with a link to the source.</p>
-    <p><b>STJPI.</b> The Syria Transitional Justice Progress Index scores indicators 0–4 (absent, announced/draft, institution with initial activity, partial measurable results, broad standards-compliant results), classifies them as structural, process or outcome (OHCHR model), and weights six pillars (criminal justice 25%, missing persons 25%, truth 15%, non-recurrence 15%, reparations 10%, participation &amp; memory 10%). The composite (0–100) is computed from the data and shown with a ±5 range; it is an analytical assessment by the Association, not an official ruling.</p>
-    <p><b>Ethics.</b> Unsecured mass graves are generalised to ~2 km in the map and downloads; victims' names and funerary images are not published; arrests not yet referred to court appear as unnamed facility badges.</p>
-    <p><b>Open data</b> is available above as GeoJSON and CSV. Proposed licence: CC BY 4.0, pending the Association's approval.</p>
+</div>
+<div data-lang="en" lang="en" class="en" hidden>
+  <h1>Methodology and open data</h1>
+  <p>Version 2.2, November 2026. This page explains where every item on the map comes from, how it is classified, its limits, and how to download and reuse the data. The Arabic version is the reference text; tables of sources and counts are not duplicated here.</p>
+
+  <h2>1. Scope</h2>
+  <ul>
+    <li>The detention system run by the former Syrian government between 2011 and 2024: security branches, prisons, military hospitals and army units where detainees were held.</li>
+    <li>Mass graves linked to that system.</li>
+    <li>Judicial proceedings against former-regime officials and allied militia members, in Syria and abroad.</li>
+    <li>Transitional-justice indicators after the fall of the regime.</li>
+  </ul>
+  <p>Violations by other parties and events after December 2024 (such as the coast and Suwayda events and their trials) are out of scope in this release, although other organisations document them.</p>
+
+  <h2>2. Backbone: IIIM Annex B</h2>
+  <p>Facility locations come from Annex B of the IIIM report “The Syrian Government Detention System as a Tool of Violent Repression” (public version, December 2024). Both annex tables were extracted automatically and reconciled row by row with the map data.</p>
+  <ul>
+    <li>IIIM identified <b class="num">111</b> facilities by name in government documents and geolocated <b class="num">94</b> of them (<b class="num">97</b> rows, because three facilities relocated).</li>
+    <li>Map points from other sources, flagged “needs verification”: <b class="num" data-count="other">—</b>.</li>
+    <li>IIIM facilities without coordinates, shown as a list: <b class="num" data-count="unmapped">—</b>.</li>
+    <li>Mass graves on the map: <b class="num" data-count="graves">—</b>. In total the map shows <b class="num" data-count="points">—</b> detention points representing <b class="num" data-count="facilities">—</b> facilities.</li>
+  </ul>
+  <p><b>Corrections from the reconciliation:</b> 30 missing facilities added; Branches 291 and 293 separated; the Branch 256 point in Tartus removed (it carried the central prison’s coordinates); confidence levels aligned with IIIM; airport and barracks sites reclassified as army and air-force units.</p>
+
+  <h2>3. Key fields</h2>
+  <ul>
+    <li><b>Detention experiences (IIIM):</b> experiences recounted by witnesses in IIIM’s in-depth sample of 332 former detainees. <b>Not</b> a count of victims or detainees; it only scales map symbols.</li>
+    <li><b>Location confidence:</b> IIIM’s rating — high (three or more source types), medium (two), low (one). Coordinates may point to the general area.</li>
+    <li><b>Active period:</b> years the facility operated under regime control (Raqqa ends in 2013, Idlib in 2015).</li>
+    <li><b>Caesar file:</b> victims per branch per the SAFMCD classification used by Human Rights Watch (2015).</li>
+    <li><b>Needs verification:</b> a location or period not confirmed by IIIM or two independent sources; drawn with a dashed outline.</li>
+  </ul>
+
+  <h2>4. Sources and their priority</h2>
+  <ol>
+    <li>UN reports: IIIM, the Commission of Inquiry, and the Independent Institution on Missing Persons.</li>
+    <li>Judgments and court documents, and trial monitors (SJAC, ECCHR, TRIAL International, JusticeInfo).</li>
+    <li>Documentation organisations: SNHR, Human Rights Watch, Amnesty International, SJAC, VDC.</li>
+    <li>Documented investigative journalism: Reuters, ICIJ/NDR’s “Damascus Dossier”, Middle East Eye.</li>
+  </ol>
+  <p>Every figure in the interface links to its source and date. Where sources differ, a range is shown instead of a single number (e.g. missing persons 130,000–300,000; mass-grave sites 66–88).</p>
+
+  <h2>5. Naming policy</h2>
+  <p>People are named only if convicted, indicted or referred to trial in a documented proceeding, with a source link. Abbreviated names (e.g. “Alaa M.”) are used as published by European courts. Suspects or detainees not referred to court are not named.</p>
+
+  <h2>6. Transitional Justice Progress Index (STJPI)</h2>
+  <p>Proposed by the Caesar Families Association’s research (November 2026), drawing on the UN Secretary-General’s Guidance Note on transitional justice (2023), the Special Rapporteur’s mandate, and the OHCHR human-rights indicators model.</p>
+  <ul>
+    <li><b>Scale:</b> 0 absent, 1 announced or draft, 2 institution with initial activity, 3 partial measurable results, 4 broad, standards-compliant results.</li>
+    <li><b>Indicator type:</b> structural (laws, institutions), process (activities, efforts) or outcome (actual impact).</li>
+    <li><b>Weights:</b> criminal justice 25%, missing persons and graves 25%, truth 15%, non-recurrence 15%, reparations 10%, participation and memory 10%.</li>
+    <li><b>Computation:</b> pillar score = mean of its indicators; composite = Σ(pillar score × weight) ÷ 4, giving 0–100. It is computed in the page from the data.</li>
+    <li><b>Display:</b> shown with a ±5 range and a qualitative band, since it summarises ordinal judgements rather than measuring precisely. Read it together with pillar scores and indicator evidence.</li>
+    <li><b>Updates:</b> quarterly, with each assessment kept in a time series.</li>
+  </ul>
+  <p>November 2026 assessment: <b class="num" data-count="stjpi">—</b>/100 — “early and uneven progress”. Punitive justice is moving faster than truth and reparations.</p>
+
+  <h2>6.1 Ethics</h2>
+  <ul>
+    <li>The Berkeley Protocol on digital open-source investigations and the Bournemouth Protocol on mass-grave protection are followed.</li>
+    <li>Mass graves not officially secured are generalised to about 2 km on the map and in downloads to prevent tampering with evidence; secured graves are shown as points.</li>
+    <li>Names of Damascus Dossier victims and Caesar photographs are not published, and no funerary images are shown.</li>
+    <li>Arrests not yet referred to court appear as unnamed badges on the facility. In-absentia and non-final verdicts are labelled with their status.</li>
+  </ul>
+
+  <h2>7. Data limits</h2>
+  <ul>
+    <li><b>Detention experiences</b> reflect IIIM’s sample, not actual detention volume; facilities with many victims may show small numbers because few survived.</li>
+    <li><b>Coordinates</b> may point to the general area. Grave locations are approximate; some were withheld to protect evidence (e.g. Dumayr and the Mezzeh airport graves).</li>
+    <li><b>Damascus Dossier</b> figures are not published per branch, so only the total is shown.</li>
+    <li><b>Periods</b> for some branches, notably in Deir ez-Zor during the 2014–2017 siege, are flagged “needs verification”.</li>
+  </ul>
+
+  <h2>8. Downloads</h2>
+  <div class="dl">
+    <a href="data/open/syria-justice-map.geojson" download><b>GeoJSON</b><span>Facilities and graves with all fields</span></a>
+    <a href="data/open/facilities.csv" download><b>CSV — facilities</b><span>Opens in Excel and Google Sheets</span></a>
+    <a href="data/open/trials.csv" download><b>CSV — trials</b><span>Cases, verdicts and sources</span></a>
+    <a href="data/raw/iiim-annex-b.json" download><b>IIIM annex, extracted</b><span>Raw table as extracted from Annex B</span></a>
+    <a href="data/tj-indicators.json" download><b>TJ indicators</b><span>JSON with evidence and sources</span></a>
+    <a href="data/sources.json" download><b>Sources</b><span>All sources with links</span></a>
   </div>
+  <p><b>Proposed licence:</b> CC BY 4.0, crediting the Caesar Families Association and the original sources — pending the Association’s approval.</p>
+
+  <h2>9. How to cite</h2>
+  <div class="cite">Caesar Families Association, “Syria Justice Map”, version 2, November 2026. Geodata: IIIM, Annex B (December 2024).</div>
+
+  <h2>10. Version log</h2>
+  <ul>
+    <li><b>2.2 (November 2026):</b> full audit of filters and translation; Arabic names for IIIM parent units and sources; graves follow the governorate filter; this English version.</li>
+    <li><b>2.1 (November 2026):</b> Association research merged: STJPI, accountability layer, 7 new cases incl. the ICJ, “Damascus Dossier” chapter, grave verification levels and generalised unsecured graves.</li>
+    <li><b>2.0 (November 2026):</b> full IIIM reconciliation, graves and transfer layers, trials tracker, TJ dashboard, story, open data.</li>
+    <li><b>September 2026:</b> periods and governorates corrected, sources linked, first trials layer, mobile support.</li>
+    <li><b>First version (June 2026):</b> prototype.</li>
+  </ul>
+</div>
 </main>
 <script type="module">
   const get = f => fetch(`data/${f}.json`).then(r => r.json());
@@ -161,8 +249,30 @@
   });
   get('tj-indicators').then(T => {
     const avg = p => p.indicators.reduce((s, i) => s + i.score, 0) / p.indicators.length;
-    document.getElementById('stjpiNow').textContent = Math.round(T.pillars.reduce((s, p) => s + avg(p) * p.weight, 0) / 4);
+    const v = Math.round(T.pillars.reduce((s, p) => s + avg(p) * p.weight, 0) / 4);
+    document.querySelectorAll('[data-count="stjpi"]').forEach(el => { el.textContent = v; });
   });
+  // Language follows the app's stored choice ('sjm-lang'); the toggle writes it back
+  const UI = {
+    ar: { title: 'المنهجية والبيانات المفتوحة | Syria Justice Map', brand: 'خريطة العدالة في سوريا', back: '← الخريطة', btn: 'English' },
+    en: { title: 'Methodology and open data | Syria Justice Map', brand: 'Syria Justice Map', back: '← Map', btn: 'العربية' },
+  };
+  function setLang(l) {
+    const u = UI[l];
+    document.documentElement.lang = l; document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+    document.title = u.title;
+    document.getElementById('brandT').textContent = u.brand;
+    document.getElementById('backBtn').textContent = u.back;
+    document.getElementById('langBtn').textContent = u.btn;
+    document.querySelectorAll('[data-lang]').forEach(el => { el.hidden = el.dataset.lang !== l; });
+    try { localStorage.setItem('sjm-lang', l); } catch (e) { /* storage unavailable */ }
+  }
+  let lang = 'ar';
+  try { lang = localStorage.getItem('sjm-lang') === 'en' ? 'en' : 'ar'; } catch (e) { /* storage unavailable */ }
+  if (location.hash === '#english') lang = 'en';
+  setLang(lang);
+  document.getElementById('langBtn').addEventListener('click', () => setLang(document.documentElement.lang === 'ar' ? 'en' : 'ar'));
+  try { const th = localStorage.getItem('sjm-theme'); if (th) document.documentElement.dataset.theme = th; } catch (e) { /* storage unavailable */ }
 </script>
 </body>
 </html>

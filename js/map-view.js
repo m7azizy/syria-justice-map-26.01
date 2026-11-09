@@ -29,6 +29,8 @@ export function isVisible(f) {
     (S.v === 'all' || (S.v === 'caesar' ? f.caesar : f.violations.includes(S.v))) &&
     (S.conf === 'all' || f.conf === S.conf) && yearOk(f);
 }
+// Graves are their own layer: agency/violation/confidence filters don't apply, governorate and year do
+export const graveVisible = g => (S.gov === 'all' || g.govAr === S.gov) && yearOk(g);
 
 // POPUPS ---------------------------------------------------------------------------------
 const vtag = v => `<span class="vtag vt-${v}">${t(v)}</span>`;
@@ -45,7 +47,7 @@ export function popupHtml(s) {
   ].map(([k, v]) => `<div class="prow"><span>${k}</span><span>${v}</span></div>`).join('');
   const iiim = s.iiim?.experiences ? `<div class="box box-iiim"><div class="box-h">${t('p_iiim')}</div>
     <span class="num">${s.iiim.experiences}</span> ${t('p_exp')}${s.iiim.torture != null ? ` · <span class="num">${s.iiim.torture}</span> ${t('p_tortureN')} · <span class="num">${s.iiim.inhumane}</span> ${t('p_inhumane')}` : ''}
-    ${s.iiim.parent ? `<div class="muted">${t('p_parent')}: ${esc(s.iiim.parent)}</div>` : ''}</div>` : '';
+    ${s.iiim.parent ? `<div class="muted">${t('p_parent')}: <span title="${esc(s.iiim.parent)}">${esc(L(s.iiim, 'parent') || s.iiim.parent)}</span></div>` : ''}</div>` : '';
   const caesar = s.caesar && s.caesarVictims ? `<div class="box box-caesar"><div class="box-h">📁 ${t('p_caesar')}</div>
     <span class="num">${fmt(s.caesarVictims)}</span> ${t('victims')}${s.caesarImgs ? ` · <span class="num">${fmt(s.caesarImgs)}</span> ${t('imgs')}` : ''}</div>` : '';
   const trials = (D.trialsBySite.get(s.id) || []).map(tr =>
@@ -84,7 +86,7 @@ function render() {
     m.bindPopup(() => popupHtml(f), { maxWidth: 320 });
     facLayer.addLayer(m); markers.set(f.id, m);
   }
-  const graves = S.layers.graves ? D.graves.filter(yearOk) : [];
+  const graves = S.layers.graves ? D.graves.filter(graveVisible) : [];
   for (const g of graves) {
     if (g.coordPrecision === 'generalised')
       L_.circle([g.lat, g.lng], { radius: 2000, color: '#C0392B', weight: 1.5, fillOpacity: .08, className: 'grave-area', interactive: false }).addTo(graveLayer);
@@ -286,7 +288,7 @@ export function showSite(id) {
   const s = D.sites.get(id);
   if (!s) return;
   if (s.agency !== 'GRAVE' && !isVisible(s)) { Object.assign(S, { agencies: new Set(ALL_AG), gov: 'all', v: 'all', conf: 'all', allYears: true }); paintChips(); paintTimeline(); render(); }
-  if (s.agency === 'GRAVE' && !S.layers.graves) { S.layers.graves = true; paintChips(); render(); }
+  if (s.agency === 'GRAVE' && (!S.layers.graves || !graveVisible(s))) { Object.assign(S, { gov: 'all', allYears: true }); S.layers.graves = true; paintChips(); paintTimeline(); render(); }
   if (window.matchMedia('(max-width:768px)').matches) toggleSidebar(false);
   map.flyTo([s.lat, s.lng], 14, { duration: 1 });
   map.once('moveend', () => {

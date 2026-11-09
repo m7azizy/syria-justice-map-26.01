@@ -58,7 +58,7 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   ok(await count() === facilities.length + graves.length, `all years shows every site (${facilities.length} + ${graves.length})`);
   await shot(p, 'map-ar-1280');
   await p.click('[data-gov="الرقة"]');
-  ok(await count() === facilities.filter(f => f.govEn === 'Raqqa').length + 0 + graves.length, 'Raqqa filter');
+  ok(await count() === facilities.filter(f => f.govEn === 'Raqqa').length + graves.filter(g => g.govEn === 'Raqqa').length, 'Raqqa filter (graves too)');
   await p.click('#resetBtn');
   await p.click('[data-year="2016"]');
   const in2016 = facilities.filter(f => f.yearActive <= 2016 && f.yearClosed >= 2016).length + graves.filter(g => g.yearActive <= 2016).length;
@@ -76,12 +76,23 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   await p.goto(`${base}/index.html#map&site=71`);
   await p.waitForTimeout(2200);
   const pop = await p.textContent('.leaflet-popup-content').catch(() => '');
-  ok(/عاطف نجيب/.test(pop) && pop.includes('Human Rights Watch'), 'deep link opens Daraa Political Security popup with trial and source');
+  ok(/عاطف نجيب/.test(pop) && pop.includes('هيومن رايتس ووتش'), 'deep link opens Daraa Political Security popup with trial and source');
   await shot(p, 'popup-ar-1280');
 
   await p.goto(`${base}/index.html#map&site=1`);
   await p.waitForTimeout(2200);
-  ok(/المساءلة/.test(await p.textContent('.leaflet-popup-content').catch(() => '')), 'Branch 251 popup shows the accountability box');
+  const pop251 = await p.textContent('.leaflet-popup-content').catch(() => '');
+  ok(/المساءلة/.test(pop251), 'Branch 251 popup shows the accountability box');
+  ok(pop251.includes('إدارة المخابرات العامة') && !pop251.includes('General Intelligence Directorate'), 'IIIM parent unit is in Arabic in the Arabic popup');
+  ok(await p.evaluate(() => [...document.querySelectorAll('.leaflet-popup-content .ind-src, .leaflet-popup-content div')].every(el => {
+    const names = [...el.children].filter(c => c.tagName === 'A').map(a => a.textContent);
+    return new Set(names).size === names.length;
+  })), 'no organisation repeated in a popup source line');
+  // Graves follow the governorate filter: Damascus keeps Tadamon, drops the Rif Dimashq graves
+  await p.evaluate(() => document.querySelector('#govChips [data-gov="دمشق"]').click()); await p.waitForTimeout(400);
+  const gDam = graves.filter(g => g.govAr === 'دمشق').length;
+  ok(await p.locator('#map .gmk').count() === gDam, `governorate filter applies to graves (${gDam} in Damascus)`);
+  await p.evaluate(() => document.querySelector('#govChips [data-gov="all"]').click()); await p.waitForTimeout(300);
   await p.goto(`${base}/index.html#trials`); await p.waitForTimeout(500);
   ok(await p.locator('.trial-card').count() === trials.length, `${trials.length} trial cards`);
   await p.click('[data-tf="country"][data-tv="AT"]');
@@ -134,6 +145,9 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   ok(true, 'old v1 address redirects and keeps the hash');
   await m.goto(`${base}/methodology.html`); await m.waitForTimeout(500);
   ok(await m.textContent('[data-count="points"]') === String(facilities.length), 'methodology counts filled from data');
+  await m.click('#langBtn'); await m.waitForTimeout(200);
+  ok(await m.getAttribute('html', 'dir') === 'ltr' && await m.isVisible('[data-lang="en"] h1') && !(await m.isVisible('[data-lang="ar"] h1')), 'methodology switches to a full English version');
+  ok(await m.evaluate(() => localStorage.getItem('sjm-lang')) === 'en', 'methodology language is shared with the app');
 
   await browser.close(); server.close();
   console.log(failed ? `\n${failed} check(s) failed` : '\nall checks passed');
