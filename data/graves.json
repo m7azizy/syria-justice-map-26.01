@@ -5,19 +5,25 @@
   "nameEn": "Al-Qutayfah Mass Grave",
   "govAr": "ريف دمشق",
   "govEn": "Rif Dimashq",
-  "lat": 33.738,
-  "lng": 36.608,
-  "coordPrecision": "approximate",
+  "lat": 33.74,
+  "lng": 36.61,
+  "coordPrecision": "generalised",
   "yearActive": 2013,
   "yearClosed": 2026,
   "status": "relocated",
-  "detailAr": "من أكبر المقابر الجماعية. تقدّر منظمة فريق الطوارئ السوري (SETF) وجود 100,000 جثة على الأقل. نُقل جزء كبير منها سراً إلى الضمير في \"عملية نقل التراب\" (2019–2021) وفق تحقيق رويترز.",
-  "detailEn": "One of the largest mass graves. Syrian Emergency Task Force (SETF) estimates at least 100,000 bodies. Large parts secretly moved to Dhumair in \"Operation Move Earth\" (2019–2021) per Reuters.",
+  "detailAr": "من أكبر المقابر الجماعية. تقدّر منظمة فريق الطوارئ السوري (SETF) وجود 100,000 جثة على الأقل. نُقل جزء كبير منها سراً إلى الضمير في \"عملية نقل التراب\" (2019–2021) وفق تحقيق رويترز. تُظهر صور الأقمار الصناعية أن خنادقها الستة عشر فُتحت كلها.",
+  "detailEn": "One of the largest mass graves. Syrian Emergency Task Force (SETF) estimates at least 100,000 bodies. Large parts secretly moved to Dhumair in \"Operation Move Earth\" (2019–2021) per Reuters. Satellite imagery shows all 16 of its trenches were opened.",
   "sources": [
    "SETF",
    "Reuters",
    "Stephen Rapp"
-  ]
+  ],
+  "verification": "confirmed",
+  "protected": false,
+  "coordNote": {
+   "ar": "موقع معمَّم ضمن نحو 2 كم لأن المقبرة غير مؤمّنة (حمايةً للأدلة)",
+   "en": "Location generalised to ~2 km because the grave is not secured (to protect evidence)"
+  }
  },
  {
   "id": 51,
@@ -25,9 +31,9 @@
   "nameEn": "Najha Mass Grave",
   "govAr": "ريف دمشق",
   "govEn": "Rif Dimashq",
-  "lat": 33.378,
-  "lng": 36.402,
-  "coordPrecision": "approximate",
+  "lat": 33.38,
+  "lng": 36.4,
+  "coordPrecision": "generalised",
   "yearActive": 2013,
   "yearClosed": 2026,
   "status": "suspected",
@@ -37,8 +43,15 @@
    "AP",
    "Stephen Rapp",
    "ADMSP",
-   "MEE"
-  ]
+   "MEE",
+   "ADMSP Buried"
+  ],
+  "verification": "confirmed",
+  "protected": false,
+  "coordNote": {
+   "ar": "موقع معمَّم ضمن نحو 2 كم لأن المقبرة غير مؤمّنة (حمايةً للأدلة)",
+   "en": "Location generalised to ~2 km because the grave is not secured (to protect evidence)"
+  }
  },
  {
   "id": 52,
@@ -46,19 +59,26 @@
   "nameEn": "Tadamon Mass Grave",
   "govAr": "دمشق",
   "govEn": "Damascus",
-  "lat": 33.485,
+  "lat": 33.49,
   "lng": 36.31,
-  "coordPrecision": "approximate",
+  "coordPrecision": "generalised",
   "yearActive": 2013,
   "yearClosed": 2026,
   "status": "exhumation",
-  "detailAr": "مجزرة 16 أبريل 2013. يُظهر الفيديو المسرّب إعدام 41 شخصاً على الأقل، وتقدّر مصادر أخرى عدد الضحايا بنحو 288. زارت هيومن رايتس ووتش الموقع في ديسمبر 2024 ووجدت رفاتاً بشرية.",
-  "detailEn": "April 16, 2013 massacre. Leaked video shows the execution of at least 41 people; other sources estimate around 288 victims. HRW visited in December 2024 and found human remains.",
+  "detailAr": "مجزرة 16 أبريل 2013. يُظهر الفيديو المسرّب إعدام 41 شخصاً على الأقل، وتقدّر مصادر أخرى عدد الضحايا بنحو 288. زارت هيومن رايتس ووتش الموقع في ديسمبر 2024 ووجدت رفاتاً بشرية. كُشفت مقبرة جديدة في الحي في 4 فبراير 2026.",
+  "detailEn": "April 16, 2013 massacre. Leaked video shows the execution of at least 41 people; other sources estimate around 288 victims. HRW visited in December 2024 and found human remains. A new grave was uncovered in the district on 4 February 2026.",
   "sources": [
    "Ugur Umit Ungor",
    "HRW Tadamon",
-   "COI"
-  ]
+   "COI",
+   "AA Tadamon 2026"
+  ],
+  "verification": "excavated",
+  "protected": false,
+  "coordNote": {
+   "ar": "موقع معمَّم ضمن نحو 2 كم لأن المقبرة غير مؤمّنة (حمايةً للأدلة)",
+   "en": "Location generalised to ~2 km because the grave is not secured (to protect evidence)"
+  }
  },
  {
   "id": 53,
@@ -81,6 +101,8 @@
   "coordNote": {
    "ar": "رويترز لم تنشر الموقع الدقيق؛ الإحداثيات تقديرية لمنطقة الضمير",
    "en": "Reuters withheld the exact site; coordinates approximate the Dhumair area"
-  }
+  },
+  "verification": "confirmed",
+  "protected": true
  }
 ]

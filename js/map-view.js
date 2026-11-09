@@ -1,5 +1,5 @@
 import { D, esc, srcLinks, siteName } from './data.js';
-import { t, L, fmt, getLang, AGENCIES } from './i18n.js';
+import { t, L, fmt, range, getLang, AGENCIES } from './i18n.js';
 
 const YEAR_MIN = 2011, YEAR_MAX = 2026;
 const ALL_AG = Object.keys(AGENCIES);
@@ -32,7 +32,7 @@ export function isVisible(f) {
 
 // POPUPS ---------------------------------------------------------------------------------
 const vtag = v => `<span class="vtag vt-${v}">${t(v)}</span>`;
-const period = s => `${s.yearActive}–${s.yearClosed === 2024 ? t('regimeFall') : s.yearClosed >= 2026 ? t('present') : s.yearClosed}`;
+const period = s => `\u2066${s.yearActive}–${s.yearClosed === 2024 ? t('regimeFall') : s.yearClosed >= 2026 ? t('present') : s.yearClosed}\u2069`;
 export function popupHtml(s) {
   const isGrave = s.agency === 'GRAVE';
   const ag = isGrave ? { c: '#7B1C1C', ar: t('grave'), en: t('grave') } : AGENCIES[s.agency];
@@ -41,6 +41,7 @@ export function popupHtml(s) {
     [t('p_gov'), L(s, 'gov')],
     [t('p_period'), `<span class="num">${period(s)}</span>`],
     isGrave ? [t('g_status'), t('gs_' + s.status)] : [t('p_conf'), `${t(s.conf.toLowerCase())}${s.geoSource === 'IIIM' ? ' · IIIM' : ''}`],
+    ...(isGrave ? [[t('p_verif'), t('vr_' + s.verification)], ['', s.protected ? '🛡 ' + t('p_protected') : '⚠ ' + t('p_unprotected')]] : []),
   ].map(([k, v]) => `<div class="prow"><span>${k}</span><span>${v}</span></div>`).join('');
   const iiim = s.iiim?.experiences ? `<div class="box box-iiim"><div class="box-h">${t('p_iiim')}</div>
     <span class="num">${s.iiim.experiences}</span> ${t('p_exp')}${s.iiim.torture != null ? ` · <span class="num">${s.iiim.torture}</span> ${t('p_tortureN')} · <span class="num">${s.iiim.inhumane}</span> ${t('p_inhumane')}` : ''}
@@ -49,6 +50,7 @@ export function popupHtml(s) {
     <span class="num">${fmt(s.caesarVictims)}</span> ${t('victims')}${s.caesarImgs ? ` · <span class="num">${fmt(s.caesarImgs)}</span> ${t('imgs')}` : ''}</div>` : '';
   const trials = (D.trialsBySite.get(s.id) || []).map(tr =>
     `<div><span class="num muted">${tr.date.slice(0, 7)}</span> ${esc(L(tr))} — <b>${esc(L(tr, 'verdict'))}</b></div>`).join('');
+  const acc = (s.accountability || []).map(a => `<div>• <b>${t('acc_' + a.type)}</b> <span class="num muted">${a.date}</span> — ${esc(L(a))} <span class="muted">(${srcLinks(a.src, ', ')})</span></div>`).join('');
   const reloc = s.relocation ? `<div class="muted" style="margin-top:6px">↪ ${esc(L(s.relocation))}</div>` : '';
   return `<div class="pw" dir="${getLang() === 'ar' ? 'rtl' : 'ltr'}">
     <span class="pbadge" style="background:${ag.c}22;color:${ag.c}">● ${esc(L(ag))}</span>
@@ -57,6 +59,7 @@ export function popupHtml(s) {
     <div class="pd">${esc(L(s, 'detail'))}</div>
     ${s.violations?.length || s.caesar ? `<div class="vtags">${(s.violations || []).map(vtag).join('')}${s.caesar ? vtag('caesar') : ''}</div>` : ''}
     ${iiim}${caesar}${reloc}
+    ${acc ? `<div class="box box-acc"><div class="box-h">◉ ${t('p_acc')}</div>${acc}</div>` : ''}
     ${trials ? `<div class="box box-trial"><div class="box-h">⚖ ${t('p_trials')}</div>${trials}</div>` : ''}
     ${s.needsVerification ? `<div class="box box-warn">⚠ ${t('p_verify')}</div>` : ''}
     <div class="pfoot"><button class="share" data-share="${s.id}">🔗 ${t('share')}</button>
@@ -83,6 +86,8 @@ function render() {
   }
   const graves = S.layers.graves ? D.graves.filter(yearOk) : [];
   for (const g of graves) {
+    if (g.coordPrecision === 'generalised')
+      L_.circle([g.lat, g.lng], { radius: 2000, color: '#C0392B', weight: 1.5, fillOpacity: .08, className: 'grave-area', interactive: false }).addTo(graveLayer);
     const m = L_.marker([g.lat, g.lng], { icon: graveIcon(), title: siteName(g), zIndexOffset: 500 });
     m.bindTooltip(siteName(g), { direction: 'top' });
     m.bindPopup(() => popupHtml({ ...g, agency: 'GRAVE' }), { maxWidth: 320 });
@@ -130,7 +135,7 @@ function updateStats(visible, graves) {
 function renderRef() {
   $('#refStats').innerHTML = D.stats.slice(0, 8).map(s => {
     const src = D.sources[s.src[0]];
-    const val = s.value != null ? fmt(s.value) + (s.plus ? '+' : '') : `${fmt(s.low)}–${fmt(s.high)}`;
+    const val = s.value != null ? fmt(s.value) + (s.plus ? '+' : '') : range(s.low, s.high);
     return `<a class="scard" href="${esc(src?.url || '#')}" target="_blank" rel="noopener" style="border-inline-start:3px solid ${s.color}" title="${esc(L(s, 'def'))}">
       <div class="scard-n num" style="color:${s.color}">${val}</div><div class="scard-l">${esc(L(s))} · ${esc(src?.org || '')}</div></a>`;
   }).join('');
@@ -144,7 +149,7 @@ function renderList() {
     <div class="fi-hd"><span class="dot" style="background:${AGENCIES[f.agency].c}"></span><div><div class="fi-n">${esc(siteName(f))}</div>
     <div class="fi-s">${esc(getLang() === 'ar' ? f.nameEn : f.nameAr)}</div></div></div>
     <div class="fi-meta"><span class="tag">${esc(L(f, 'gov'))}</span><span class="tag num">${f.yearActive}–${f.yearClosed}</span>
-    ${f.iiim?.experiences ? `<span class="tag">IIIM ${f.iiim.experiences}</span>` : ''}${D.trialsBySite.has(f.id) ? '<span class="tag">⚖</span>' : ''}
+    ${f.iiim?.experiences ? `<span class="tag">IIIM ${f.iiim.experiences}</span>` : ''}${D.trialsBySite.has(f.id) ? '<span class="tag">⚖</span>' : ''}${f.accountability ? '<span class="tag">◉</span>' : ''}
     ${f.needsVerification ? '<span class="tag warn">⚠</span>' : ''}</div></div>`).join('');
   $('#unmapped').innerHTML = D.unmappedFacilities.map(u => `<div class="legend-row"><span class="dot" style="background:var(--border-dark)"></span>
     <span>${esc(L(u, 'name'))}${u.experiences ? ` <span class="num muted">(${u.experiences})</span>` : ''}</span></div>`).join('') +

@@ -33,12 +33,21 @@ for (const f of facilities) {
   if (f.geoSource === 'IIIM' && !f.iiim) err(`facility #${f.id}: IIIM geolocation without iiim block`);
   if (f.geoSource !== 'IIIM' && !f.needsVerification) err(`facility #${f.id}: non-IIIM location must be flagged needsVerification`);
 }
+for (const f of facilities) for (const a of f.accountability || []) {
+  // Badges describe the facility, never a person: names belong only in trials.json
+  if (Object.keys(a).some(k => /name/i.test(k))) err(`facility #${f.id}: accountability badge must not carry a name`);
+  if (!['evidence', 'detained', 'prosecution'].includes(a.type)) err(`facility #${f.id}: unknown accountability type ${a.type}`);
+  srcOk(`facility #${f.id} accountability`, a.src);
+}
 for (const g of graves) {
+  if (!['reported', 'confirmed', 'excavated', 'identified'].includes(g.verification)) err(`grave #${g.id}: bad verification level`);
+  if (!g.protected && g.coordPrecision !== 'generalised') err(`grave #${g.id}: unsecured grave must have generalised coordinates`);
   if (ids.has(g.id)) err(`grave #${g.id}: id clashes with a facility`);
   ids.add(g.id);
   if (!inSyria(g.lat, g.lng)) err(`grave #${g.id}: coordinates outside Syria`);
 }
 for (const t of trials) {
+  if (!['universal', 'extraterritorial', 'national', 'interstate'].includes(t.jurisdiction)) err(`trial ${t.id}: bad jurisdiction`);
   for (const k of ['id', 'country', 'jurisdiction', 'status', 'date', 'ar', 'en', 'accused', 'verdictAr', 'verdictEn', 'facilityIds', 'src'])
     if (t[k] === undefined) err(`trial ${t.id}: missing ${k}`);
   // Names of people appear only when tied to an official proceeding with a cited source
@@ -50,8 +59,11 @@ for (const s of stats) {
   if (!s.date || !s.src?.length) err(`stat ${s.key}: every figure needs a date and a source`);
   srcOk(`stat ${s.key}`, s.src);
 }
+const weightSum = tj.pillars.reduce((n, p) => n + (p.weight || 0), 0);
+if (weightSum !== 100) err(`STJPI: pillar weights sum to ${weightSum}, expected 100`);
 for (const p of tj.pillars) for (const i of p.indicators) {
-  if (![0, 1, 2, 3].includes(i.score)) err(`indicator ${i.id}: score must be 0–3`);
+  if (![0, 1, 2, 3, 4].includes(i.score)) err(`indicator ${i.id}: score must be 0–4`);
+  if (!tj.types[i.type]) err(`indicator ${i.id}: type must be structural, process or outcome`);
   if (!i.date || !i.src?.length) err(`indicator ${i.id}: needs date and source`);
   srcOk(`indicator ${i.id}`, i.src);
 }
@@ -67,7 +79,7 @@ for (const c of story) {
 if (timeline.some(t => !t.ar || !t.en)) err('timeline: missing text');
 
 const unlinked = [...new Set(facilities.flatMap(f => f.sources))].filter(k => !sources[k]);
-console.log(`${facilities.length} facilities (${facilities.filter(f => f.geoSource === 'IIIM').length} IIIM-geolocated), ${graves.length} graves, ${Object.keys(sources).length} sources, ${trials.length} trials, ${stats.length} stats, ${tj.pillars.reduce((n, p) => n + p.indicators.length, 0)} TJ indicators, ${transfers.edges.length} transfer paths`);
+console.log(`${facilities.length} facilities (${facilities.filter(f => f.geoSource === 'IIIM').length} IIIM-geolocated), ${graves.length} graves, ${Object.keys(sources).length} sources, ${trials.length} trials, ${stats.length} stats, ${tj.pillars.reduce((n, p) => n + p.indicators.length, 0)} STJPI indicators, ${transfers.edges.length} transfer paths`);
 if (unlinked.length) console.log('Facility sources shown without a link:', unlinked.join(', '));
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('OK');

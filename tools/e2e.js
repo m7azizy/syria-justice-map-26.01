@@ -68,6 +68,8 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   await p.click('[data-layer="transfers"]');
   await p.waitForTimeout(300);
   ok(await p.locator('#map path.flow').count() > 0, 'transfer paths drawn');
+  const unsecured = graves.filter(g => !g.protected).length;
+  ok(await p.locator('#map path.grave-area').count() === unsecured, `${unsecured} unsecured graves drawn as generalised areas`);
   await p.click('[data-tab="list"]');
   await p.fill('#sbox', 'Palestine');
   ok(/1/.test(await p.textContent('#rcnt')), 'search by English name');
@@ -77,6 +79,9 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   ok(/عاطف نجيب/.test(pop) && pop.includes('Human Rights Watch'), 'deep link opens Daraa Political Security popup with trial and source');
   await shot(p, 'popup-ar-1280');
 
+  await p.goto(`${base}/index.html#map&site=1`);
+  await p.waitForTimeout(2200);
+  ok(/المساءلة/.test(await p.textContent('.leaflet-popup-content').catch(() => '')), 'Branch 251 popup shows the accountability box');
   await p.goto(`${base}/index.html#trials`); await p.waitForTimeout(500);
   ok(await p.locator('.trial-card').count() === trials.length, `${trials.length} trial cards`);
   await p.click('[data-tf="country"][data-tv="AT"]');
@@ -87,7 +92,12 @@ const shot = (page, name) => SHOTS && page.screenshot({ path: path.join(SHOTS, n
   ok(p.url().includes('#map&site=87') && /الحلبي/.test(await p.textContent('.leaflet-popup-content').catch(() => '')), 'trial links to its facility on the map');
 
   await p.goto(`${base}/index.html#tj`); await p.waitForTimeout(500);
-  ok(await p.locator('.pillar').count() === 6 && await p.locator('.ind').count() === 20, '6 pillars, 20 indicators');
+  const tj = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tj-indicators.json')));
+  const nInd = tj.pillars.reduce((n, q) => n + q.indicators.length, 0);
+  ok(await p.locator('.pillar').count() === tj.pillars.length && await p.locator('.ind').count() === nInd, `${tj.pillars.length} pillars, ${nInd} indicators`);
+  const avg = q => q.indicators.reduce((a, i) => a + i.score, 0) / q.indicators.length;
+  const expected = Math.round(tj.pillars.reduce((a, q) => a + avg(q) * q.weight, 0) / 4);
+  ok(+(await p.textContent('#stjpiValue')) === expected, `STJPI composite shows ${expected}/100`);
   await shot(p, 'tj-ar-1280');
 
   await p.goto(`${base}/index.html#story`); await p.waitForTimeout(1500);

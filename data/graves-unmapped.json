@@ -25,5 +25,18 @@
   "src": [
    "NCMP"
   ]
+ },
+ {
+  "nameAr": "مقبرة جسر بغداد",
+  "nameEn": "Jisr Baghdad grave",
+  "govAr": "ريف دمشق",
+  "govEn": "Rif Dimashq",
+  "statusAr": "موثقة بصور أقمار صناعية",
+  "statusEn": "Documented by satellite imagery",
+  "noteAr": "من وجهات نقل الجثث من مستشفى تشرين",
+  "noteEn": "A destination of bodies from Tishreen hospital",
+  "src": [
+   "ADMSP Buried"
+  ]
  }
 ]

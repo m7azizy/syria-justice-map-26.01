@@ -27,11 +27,15 @@ const STR = {
     byCountry: 'القضايا حسب الدولة', overTime: 'الأحكام عبر الزمن', allStatus: 'كل الحالات', allJur: 'كل أنواع الولاية',
     showOnMap: 'على الخريطة', source: 'المصدر', accused: 'المتهمون',
     tr_note: 'تظهر الأسماء فقط لمن صدر بحقهم حكم أو اتهام رسمي في إجراء قضائي موثق. الأحكام السورية تشمل أحكاماً بالإعدام ومحاكمات غيابية وجلسات سرية، وقد انتقدت منظمات حقوقية هذه الجوانب.',
-    tj_t: 'لوحة قياس العدالة الانتقالية', tj_p: 'أين وصل ملف العدالة في سوريا بعد سقوط النظام؟ عشرون مؤشراً في ست ركائز، لكل مؤشر دليله ومصدره وتاريخه.',
+    tj_t: 'لوحة قياس العدالة الانتقالية', tj_p: 'أين وصل ملف العدالة في سوريا بعد سقوط النظام؟ {n} مؤشراً في ست ركائز، لكل مؤشر دليله ومصدره وتاريخه، تُجمع في مؤشر تقدّم موزون.',
     milestones: 'محطات منذ سقوط النظام', gaps: 'ما الذي ينقص', framework: 'الإطار والمنهجية', ind: 'مؤشر', avg: 'متوسط الركيزة',
     numbers: 'الأرقام الكبرى',
     footer: 'بيانات مصادر مفتوحة لأغراض التوثيق والمساءلة. تحديث نوفمبر 2026.',
-    otherLang: 'EN', theme: 'تبديل الوضع الليلي', loading: 'جارٍ تحميل البيانات…', loadError: 'تعذّر تحميل البيانات. أعد تحميل الصفحة.',
+    otherLang: 'EN',
+    stjpiRange: 'نطاق تقريبي', stjpiNote: 'الرقم تلخيص لا قياس دقيق؛ اقرأه مع درجات الأركان وأدلتها.', target: 'هدف معلن', weight: 'الوزن', history: 'سجل التقييم',
+    j_interstate: 'بين الدول', p_acc: 'المساءلة', acc_evidence: 'تحقيق دولي', acc_detained: 'احتجاز', acc_prosecution: 'ملاحقة قضائية',
+    vr_reported: 'مُبلَّغ عنها', vr_confirmed: 'مؤكدة', vr_excavated: 'مُنقّبة', vr_identified: 'تعرّفات', p_verif: 'درجة التحقق', p_protected: 'مؤمّنة رسمياً', p_unprotected: 'غير مؤمّنة',
+    methodNote: 'ملاحظة منهجية: الملحق B يضم 97 صفاً لـ94 منشأة (3 منها انتقلت بين موقعين)، ضمن 111 منشأة حدّدتها IIIM.', theme: 'تبديل الوضع الليلي', loading: 'جارٍ تحميل البيانات…', loadError: 'تعذّر تحميل البيانات. أعد تحميل الصفحة.',
   },
   en: {
     title: 'Syria Justice Map', subtitle: 'خريطة العدالة · Caesar Families Association',
@@ -60,11 +64,15 @@ const STR = {
     byCountry: 'Cases by country', overTime: 'Verdicts over time', allStatus: 'All statuses', allJur: 'All jurisdictions',
     showOnMap: 'On the map', source: 'Source', accused: 'Accused',
     tr_note: 'Names appear only for people convicted or formally charged in a documented proceeding. Syrian judgments include death sentences, trials in absentia and closed hearings, which rights groups have criticised.',
-    tj_t: 'Transitional justice dashboard', tj_p: 'Where does justice in Syria stand after the fall of the regime? Twenty indicators across six pillars, each with its evidence, source and date.',
+    tj_t: 'Transitional justice dashboard', tj_p: 'Where does justice in Syria stand after the fall of the regime? {n} indicators across six pillars, each with its evidence, source and date, combined into a weighted progress index.',
     milestones: 'Milestones since the fall', gaps: "What's missing", framework: 'Framework & method', ind: 'indicator', avg: 'pillar average',
     numbers: 'Key figures',
     footer: 'Open-source data for documentation and accountability. Updated November 2026.',
-    otherLang: 'عربي', theme: 'Toggle dark mode', loading: 'Loading data…', loadError: 'Could not load the data. Please reload.',
+    otherLang: 'عربي',
+    stjpiRange: 'Approximate range', stjpiNote: 'A summary, not a precise measurement; read it with the pillar scores and evidence.', target: 'Stated target', weight: 'weight', history: 'Assessment history',
+    j_interstate: 'Inter-state', p_acc: 'Accountability', acc_evidence: 'International investigation', acc_detained: 'Detention', acc_prosecution: 'Prosecution',
+    vr_reported: 'Reported', vr_confirmed: 'Confirmed', vr_excavated: 'Excavated', vr_identified: 'Identifications', p_verif: 'Verification', p_protected: 'Officially secured', p_unprotected: 'Not secured',
+    methodNote: 'Method note: Annex B has 97 rows for 94 facilities (3 relocated between two sites), out of 111 facilities identified by IIIM.', theme: 'Toggle dark mode', loading: 'Loading data…', loadError: 'Could not load the data. Please reload.',
   },
 };
 
@@ -82,6 +90,7 @@ export const COUNTRIES = {
   DE: { ar: 'ألمانيا', en: 'Germany' }, FR: { ar: 'فرنسا', en: 'France' }, NL: { ar: 'هولندا', en: 'Netherlands' },
   SE: { ar: 'السويد', en: 'Sweden' }, AT: { ar: 'النمسا', en: 'Austria' }, CH: { ar: 'سويسرا', en: 'Switzerland' },
   US: { ar: 'الولايات المتحدة', en: 'United States' }, SY: { ar: 'سوريا', en: 'Syria' },
+  ICJ: { ar: 'محكمة العدل الدولية', en: 'International Court of Justice' },
 };
 export const STATUS_COLOR = { convicted: '#1E7E4A', ongoing: '#D38B1F', indicted: '#2471A3', closed: '#7A819D' };
 
@@ -90,6 +99,8 @@ const listeners = [];
 export const getLang = () => lang;
 export const t = k => STR[lang][k] ?? k;
 export const L = (o, base) => o?.[base ? base + (lang === 'ar' ? 'Ar' : 'En') : lang] ?? '';
+// Left-to-right isolate so ranges like 28–38 never flip inside Arabic text
+export const range = (a, b) => `\u2066${fmt(a)}–${fmt(b)}\u2069`;
 export const fmt = n => n == null ? '—' : n.toLocaleString(lang === 'ar' ? 'ar-SY-u-nu-latn' : 'en-US');
 export const onLang = fn => listeners.push(fn);
 export function setLang(l) {

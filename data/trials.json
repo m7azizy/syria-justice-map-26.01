@@ -1,97 +1,694 @@
 [
- {"id":"gharib","country":"DE","city":"Koblenz","cityAr":"كوبلنز","jurisdiction":"universal","status":"convicted","start":"2020-04-23","date":"2021-02-24",
-  "ar":"إياد الغريب — المحكمة الإقليمية العليا في كوبلنز","en":"Eyad al-Gharib — Koblenz Higher Regional Court",
-  "accused":[{"en":"Eyad al-Gharib","ar":"إياد الغريب"}],
-  "verdictAr":"4.5 سنوات بتهمة المساعدة في جرائم ضد الإنسانية","verdictEn":"4.5 years for aiding and abetting crimes against humanity",
-  "facilityIds":[129],"src":["Koblenz Court"]},
- {"id":"raslan","country":"DE","city":"Koblenz","cityAr":"كوبلنز","jurisdiction":"universal","status":"convicted","start":"2020-04-23","date":"2022-01-13",
-  "ar":"أنور رسلان — المحكمة الإقليمية العليا في كوبلنز","en":"Anwar Raslan — Koblenz Higher Regional Court",
-  "accused":[{"en":"Anwar Raslan","ar":"أنور رسلان"}],
-  "verdictAr":"مؤبد (4,000 حالة تعذيب، 27 قتلاً، جرائم ضد الإنسانية)","verdictEn":"Life (4,000 torture cases, 27 murders; crimes against humanity)",
-  "facilityIds":[1],"src":["Koblenz Court"]},
- {"id":"mouafak","country":"DE","city":"Berlin","cityAr":"برلين","jurisdiction":"universal","status":"convicted","date":"2023-02-23",
-  "ar":"موفق د. — المحكمة الإقليمية العليا في برلين","en":"Mouafak D. — Berlin Higher Regional Court",
-  "accused":[{"en":"Mouafak D.","ar":"موفق د."}],
-  "verdictAr":"مؤبد: هجوم بقنبلة على مدنيين في مخيم اليرموك (2014) من حاجز لميليشيا موالية للنظام","verdictEn":"Life: grenade attack on civilians in Yarmouk camp (2014) from a pro-regime militia checkpoint",
-  "facilityIds":[],"src":["Mouafak Berlin"]},
- {"id":"mustafa-a","country":"NL","city":"The Hague","cityAr":"لاهاي","jurisdiction":"universal","status":"convicted","date":"2024-01-22",
-  "ar":"مصطفى أ. (لواء القدس) — محكمة لاهاي","en":"Mustafa A. (Liwa al-Quds) — District Court of The Hague",
-  "accused":[{"en":"Mustafa A.","ar":"مصطفى أ."}],
-  "verdictAr":"12 سنة: اعتقال مدني وتسليمه للمخابرات الجوية حيث عُذّب (أُيّد استئنافاً أغسطس 2025)","verdictEn":"12 years: detaining a civilian and handing him to Air Force Intelligence, where he was tortured (upheld on appeal Aug 2025)",
-  "facilityIds":[],"src":["Mustafa A Hague"]},
- {"id":"dabbagh","country":"FR","city":"Paris","cityAr":"باريس","jurisdiction":"extraterritorial","status":"convicted","start":"2024-05-21","date":"2024-05-24",
-  "ar":"قضية الدباغ — محكمة الجنايات في باريس (غيابياً)","en":"Dabbagh case — Paris Criminal Court (in absentia)",
-  "accused":[{"en":"Ali Mamlouk","ar":"علي مملوك"},{"en":"Jamil Hassan","ar":"جميل حسن"},{"en":"Abdel Salam Mahmoud","ar":"عبد السلام محمود"}],
-  "verdictAr":"مؤبد غيابياً للثلاثة: اعتقال وإخفاء وتعذيب وقتل مازن وباتريك الدباغ","verdictEn":"Life in absentia for all three: detention, disappearance, torture and death of Mazzen and Patrick Dabbagh",
-  "facilityIds":[9],"src":["Dabbagh Paris"]},
- {"id":"us-mezzeh","country":"US","city":null,"cityAr":null,"jurisdiction":"extraterritorial","status":"indicted","date":"2024-12",
-  "ar":"لائحة اتهام أمريكية — سجن مطار المزة","en":"US indictment — Mezzeh airport prison",
-  "accused":[{"en":"Jamil Hassan","ar":"جميل حسن"},{"en":"Abdel Salam Mahmoud","ar":"عبد السلام محمود"}],
-  "verdictAr":"اتهام بجرائم حرب ضد أمريكيين ومدنيين آخرين (لم تُعقد محاكمة)","verdictEn":"Charged with war crimes against Americans and other civilians (no trial yet)",
-  "facilityIds":[9],"src":["US DOJ"]},
- {"id":"rifaat","country":"CH","city":"Bellinzona","cityAr":"بيلينزونا","jurisdiction":"universal","status":"closed","date":"2026-03-31",
-  "ar":"رفعت الأسد — المحكمة الجنائية الفيدرالية السويسرية","en":"Rifaat al-Assad — Swiss Federal Criminal Court",
-  "accused":[{"en":"Rifaat al-Assad","ar":"رفعت الأسد"}],
-  "verdictAr":"أُغلقت القضية بوفاة المتهم (مجزرة حماة 1982)","verdictEn":"Case closed on the defendant's death (Hama massacre, 1982)",
-  "facilityIds":[],"src":["TRIAL Rifaat"]},
- {"id":"ammar-a","country":"DE","city":"Stuttgart","cityAr":"شتوتغارت","jurisdiction":"universal","status":"convicted","date":"2025-06",
-  "ar":"عمار أ. — المحكمة الإقليمية العليا في شتوتغارت","en":"Ammar A. — Stuttgart Higher Regional Court",
-  "accused":[{"en":"Ammar A.","ar":"عمار أ."}],
-  "verdictAr":"مؤبد: قتل وتعذيب وتهجير في بصرى الشام على رأس ميليشيا موالية للنظام (أيّدته المحكمة الاتحادية)","verdictEn":"Life: killings, torture and displacement in Busra al-Sham leading a pro-regime militia (upheld by the Federal Court)",
-  "facilityIds":[],"src":["Ammar Stuttgart"]},
- {"id":"alaa-m","country":"DE","city":"Frankfurt","cityAr":"فرانكفورت","jurisdiction":"universal","status":"convicted","start":"2022-01-19","date":"2025-06-16",
-  "ar":"الطبيب علاء م. — المحكمة الإقليمية العليا في فرانكفورت","en":"Dr. Alaa M. — Frankfurt Higher Regional Court",
-  "accused":[{"en":"Alaa M.","ar":"علاء م."}],
-  "verdictAr":"مؤبد مع احتجاز وقائي: تعذيب وقتل معتقلين في المستشفيين 601 و608 والفرع 261","verdictEn":"Life with preventive detention: torture and killing of detainees at hospitals 601 and 608 and Branch 261",
-  "facilityIds":[11,17],"src":["Frankfurt Court"]},
- {"id":"yarmouk-koblenz","country":"DE","city":"Koblenz","cityAr":"كوبلنز","jurisdiction":"universal","status":"ongoing","start":"2025-11-19","date":"2025-11-19",
-  "ar":"محاكمة اليرموك — كوبلنز (5 متهمين)","en":"Yarmouk trial — Koblenz (5 accused)",
-  "accused":[{"en":"Jihad A.","ar":"جهاد أ."},{"en":"Mahmoud A.","ar":"محمود أ."},{"en":"Mazhar J.","ar":"مظهر ج."},{"en":"Sameer S.","ar":"سمير س."},{"en":"Wael S.","ar":"وائل س."}],
-  "verdictAr":"جارية: جرائم مرتبطة بحصار اليرموك 2012–2013","verdictEn":"Ongoing: crimes linked to the 2012–2013 siege of Yarmouk",
-  "facilityIds":[],"src":["SJAC Yarmouk"]},
- {"id":"mahmoud-s","country":"SE","city":"Solna","cityAr":"سولنا","jurisdiction":"universal","status":"convicted","start":"2024-10-20","date":"2026-05-04",
-  "ar":"محمود س. (اليرموك) — محكمة سولنا","en":"Mahmoud S. (Yarmouk) — Solna District Court",
-  "accused":[{"en":"Mahmoud S.","ar":"محمود س."}],
-  "verdictAr":"مؤبد: إطلاق النار على متظاهرين وتسليم مدنيين للأجهزة الأمنية","verdictEn":"Life: shooting at protesters and handing civilians to the security services",
-  "facilityIds":[],"src":["Solna Yarmouk"]},
- {"id":"halabi","country":"AT","city":"Vienna","cityAr":"فيينا","jurisdiction":"universal","status":"convicted","start":"2026-06-01","date":"2026-07-06",
-  "ar":"خالد الحلبي ومصعب أبو ركبة — محكمة فيينا","en":"Khaled al-Halabi and Musab Abu Rukbah — Vienna Regional Court",
-  "accused":[{"en":"Khaled al-Halabi","ar":"خالد الحلبي"},{"en":"Musab Abu Rukbah","ar":"مصعب أبو ركبة"}],
-  "verdictAr":"8 سنوات لكل منهما: تعذيب وإكراه في فرع المخابرات العامة بالرقة (2011–2013)","verdictEn":"8 years each: torture and coercion at the General Intelligence branch in Raqqa (2011–2013)",
-  "facilityIds":[87],"src":["Halabi Vienna"]},
- {"id":"najib","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"convicted","start":"2026-04-26","date":"2026-08-11",
-  "ar":"عاطف نجيب وآخرون — محكمة الجنايات الرابعة بدمشق","en":"Atef Najib et al. — Fourth Criminal Chamber, Damascus",
-  "accused":[{"en":"Atef Najib","ar":"عاطف نجيب"},{"en":"Bashar al-Assad (in absentia)","ar":"بشار الأسد (غيابياً)"},{"en":"Maher al-Assad (in absentia)","ar":"ماهر الأسد (غيابياً)"},{"en":"Fahd Jassem al-Freij (in absentia)","ar":"فهد جاسم الفريج (غيابياً)"}],
-  "verdictAr":"إعدام لنجيب وثمانية غيابياً (جرائم ضد الإنسانية): اعتقال أطفال درعا وتعذيبهم وإطلاق النار على المتظاهرين","verdictEn":"Death for Najib and eight in absentia (crimes against humanity): arrest and torture of Daraa children, shooting of protesters",
-  "facilityIds":[71],"src":["JusticeInfo trials","Najib Damascus"]},
- {"id":"wasim","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"convicted","start":"2026-06-24","date":"2026-08-18",
-  "ar":"وسيم بديع الأسد — محكمة الجنايات الرابعة بدمشق","en":"Wasim Badi'a al-Assad — Fourth Criminal Chamber, Damascus",
-  "accused":[{"en":"Wasim Badi'a al-Assad","ar":"وسيم بديع الأسد"}],
-  "verdictAr":"إعدام: قتل وتعذيب واحتجاز تعسفي عبر مجموعتين مسلحتين في المليحة (2012–2014)","verdictEn":"Death: murder, torture and arbitrary detention through two armed groups in al-Mleiha (2012–2014)",
-  "facilityIds":[],"src":["JusticeInfo trials"]},
- {"id":"hassoun","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"convicted","start":"2026-06-25","date":"2026-08-24",
-  "ar":"أحمد بدر الدين حسون — محكمة الجنايات الرابعة بدمشق","en":"Ahmad Badr al-Din Hassoun — Fourth Criminal Chamber, Damascus",
-  "accused":[{"en":"Ahmad Badr al-Din Hassoun","ar":"أحمد بدر الدين حسون"}],
-  "verdictAr":"مؤبد: التحريض على العنف عبر الخطاب العام","verdictEn":"Life: incitement to violence through public speeches",
-  "facilityIds":[],"src":["JusticeInfo trials"]},
- {"id":"burraqi","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"convicted","start":"2026-06-14","date":"2026-08-27",
-  "ar":"عبد الناصر البراقي — محكمة الجنايات الرابعة بدمشق","en":"Abdel Nasser al-Burraqi — Fourth Criminal Chamber, Damascus",
-  "accused":[{"en":"Abdel Nasser al-Burraqi","ar":"عبد الناصر البراقي"}],
-  "verdictAr":"إعدام ومصادرة أمواله: إخفاء قسري واحتجاز تعسفي وتعذيب أفضى إلى الموت (مخبر للنظام)","verdictEn":"Death and asset seizure: enforced disappearance, arbitrary detention, torture resulting in death (regime informant)",
-  "facilityIds":[],"src":["JusticeInfo trials"]},
- {"id":"abdallah-mp","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"ongoing","start":"2026-10-05","date":"2026-10-05",
-  "ar":"أكرم سلوم العبد الله (رئيس الشرطة العسكرية 2014–2015) — جلسات سرية","en":"Akram Salloum al-Abdallah (head of military police 2014–2015) — in camera",
-  "accused":[{"en":"Akram Salloum al-Abdallah","ar":"أكرم سلوم العبد الله"}],
-  "verdictAr":"جارية: قتل والمشاركة في تعذيب أفضى إلى الموت","verdictEn":"Ongoing: murder and complicity in torture resulting in death",
-  "facilityIds":[45,13],"facilityRelation":"institutional","src":["JusticeInfo trials"]},
- {"id":"salah-photographer","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"ongoing","start":"2026-10-05","date":"2026-10-05",
-  "ar":"عماد صلاح صلاح (مصوّر سابق في الشرطة العسكرية) — جلسات سرية","en":"Imad Salah Salah (former military police photographer) — in camera",
-  "accused":[{"en":"Imad Salah Salah","ar":"عماد صلاح صلاح"}],
-  "verdictAr":"جارية: إخفاء أدلة التعذيب وهويات الضحايا","verdictEn":"Ongoing: concealing evidence of torture and victims' identities",
-  "facilityIds":[],"src":["JusticeInfo trials"]},
- {"id":"khello-doctor","country":"SY","city":"Damascus","cityAr":"دمشق","jurisdiction":"national","status":"ongoing","start":"2026-10-05","date":"2026-10-05",
-  "ar":"أيمن خلو (عقيد طبيب في الأجهزة الأمنية) — جلسات سرية","en":"Ayman Khello (colonel and doctor in the security services) — in camera",
-  "accused":[{"en":"Ayman Khello","ar":"أيمن خلو"}],
-  "verdictAr":"جارية: المشاركة في القتل والتعذيب والإخفاء القسري وإصدار شهادات وفاة مزورة","verdictEn":"Ongoing: complicity in murder, torture, enforced disappearance and false death certificates",
-  "facilityIds":[],"src":["JusticeInfo trials"]}
+ {
+  "id": "gharib",
+  "country": "DE",
+  "city": "Koblenz",
+  "cityAr": "كوبلنز",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "start": "2020-04-23",
+  "date": "2021-02-24",
+  "ar": "إياد الغريب — المحكمة الإقليمية العليا في كوبلنز",
+  "en": "Eyad al-Gharib — Koblenz Higher Regional Court",
+  "accused": [
+   {
+    "en": "Eyad al-Gharib",
+    "ar": "إياد الغريب"
+   }
+  ],
+  "verdictAr": "4.5 سنوات بتهمة المساعدة في جرائم ضد الإنسانية",
+  "verdictEn": "4.5 years for aiding and abetting crimes against humanity",
+  "facilityIds": [
+   129
+  ],
+  "src": [
+   "Koblenz Court"
+  ]
+ },
+ {
+  "id": "raslan",
+  "country": "DE",
+  "city": "Koblenz",
+  "cityAr": "كوبلنز",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "start": "2020-04-23",
+  "date": "2022-01-13",
+  "ar": "أنور رسلان — المحكمة الإقليمية العليا في كوبلنز",
+  "en": "Anwar Raslan — Koblenz Higher Regional Court",
+  "accused": [
+   {
+    "en": "Anwar Raslan",
+    "ar": "أنور رسلان"
+   }
+  ],
+  "verdictAr": "مؤبد (4,000 حالة تعذيب، 27 قتلاً، جرائم ضد الإنسانية)",
+  "verdictEn": "Life (4,000 torture cases, 27 murders; crimes against humanity)",
+  "facilityIds": [
+   1
+  ],
+  "src": [
+   "Koblenz Court"
+  ]
+ },
+ {
+  "id": "mouafak",
+  "country": "DE",
+  "city": "Berlin",
+  "cityAr": "برلين",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "date": "2023-02-23",
+  "ar": "موفق د. — المحكمة الإقليمية العليا في برلين",
+  "en": "Mouafak D. — Berlin Higher Regional Court",
+  "accused": [
+   {
+    "en": "Mouafak D.",
+    "ar": "موفق د."
+   }
+  ],
+  "verdictAr": "مؤبد: هجوم بقنبلة على مدنيين في مخيم اليرموك (2014) من حاجز لميليشيا موالية للنظام",
+  "verdictEn": "Life: grenade attack on civilians in Yarmouk camp (2014) from a pro-regime militia checkpoint",
+  "facilityIds": [],
+  "src": [
+   "Mouafak Berlin"
+  ]
+ },
+ {
+  "id": "mustafa-a",
+  "country": "NL",
+  "city": "The Hague",
+  "cityAr": "لاهاي",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "date": "2024-01-22",
+  "ar": "مصطفى أ. (لواء القدس) — محكمة لاهاي",
+  "en": "Mustafa A. (Liwa al-Quds) — District Court of The Hague",
+  "accused": [
+   {
+    "en": "Mustafa A.",
+    "ar": "مصطفى أ."
+   }
+  ],
+  "verdictAr": "12 سنة: اعتقال مدني وتسليمه للمخابرات الجوية حيث عُذّب (أُيّد استئنافاً أغسطس 2025)",
+  "verdictEn": "12 years: detaining a civilian and handing him to Air Force Intelligence, where he was tortured (upheld on appeal Aug 2025)",
+  "facilityIds": [],
+  "src": [
+   "Mustafa A Hague"
+  ]
+ },
+ {
+  "id": "dabbagh",
+  "country": "FR",
+  "city": "Paris",
+  "cityAr": "باريس",
+  "jurisdiction": "extraterritorial",
+  "status": "convicted",
+  "start": "2024-05-21",
+  "date": "2024-05-24",
+  "ar": "قضية الدباغ — محكمة الجنايات في باريس (غيابياً)",
+  "en": "Dabbagh case — Paris Criminal Court (in absentia)",
+  "accused": [
+   {
+    "en": "Ali Mamlouk",
+    "ar": "علي مملوك"
+   },
+   {
+    "en": "Jamil Hassan",
+    "ar": "جميل حسن"
+   },
+   {
+    "en": "Abdel Salam Mahmoud",
+    "ar": "عبد السلام محمود"
+   }
+  ],
+  "verdictAr": "مؤبد غيابياً للثلاثة: اعتقال وإخفاء وتعذيب وقتل مازن وباتريك الدباغ",
+  "verdictEn": "Life in absentia for all three: detention, disappearance, torture and death of Mazzen and Patrick Dabbagh",
+  "facilityIds": [
+   9
+  ],
+  "src": [
+   "Dabbagh Paris"
+  ]
+ },
+ {
+  "id": "us-mezzeh",
+  "country": "US",
+  "city": null,
+  "cityAr": null,
+  "jurisdiction": "extraterritorial",
+  "status": "indicted",
+  "date": "2024-12",
+  "ar": "لائحة اتهام أمريكية — سجن مطار المزة",
+  "en": "US indictment — Mezzeh airport prison",
+  "accused": [
+   {
+    "en": "Jamil Hassan",
+    "ar": "جميل حسن"
+   },
+   {
+    "en": "Abdel Salam Mahmoud",
+    "ar": "عبد السلام محمود"
+   }
+  ],
+  "verdictAr": "اتهام بجرائم حرب ضد أمريكيين ومدنيين آخرين (لم تُعقد محاكمة)",
+  "verdictEn": "Charged with war crimes against Americans and other civilians (no trial yet)",
+  "facilityIds": [
+   9
+  ],
+  "src": [
+   "US DOJ"
+  ]
+ },
+ {
+  "id": "rifaat",
+  "country": "CH",
+  "city": "Bellinzona",
+  "cityAr": "بيلينزونا",
+  "jurisdiction": "universal",
+  "status": "closed",
+  "date": "2026-03-31",
+  "ar": "رفعت الأسد — المحكمة الجنائية الفيدرالية السويسرية",
+  "en": "Rifaat al-Assad — Swiss Federal Criminal Court",
+  "accused": [
+   {
+    "en": "Rifaat al-Assad",
+    "ar": "رفعت الأسد"
+   }
+  ],
+  "verdictAr": "أُغلقت القضية بوفاة المتهم (مجزرة حماة 1982)",
+  "verdictEn": "Case closed on the defendant's death (Hama massacre, 1982)",
+  "facilityIds": [],
+  "src": [
+   "TRIAL Rifaat"
+  ]
+ },
+ {
+  "id": "ammar-a",
+  "country": "DE",
+  "city": "Stuttgart",
+  "cityAr": "شتوتغارت",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "date": "2025-06-03",
+  "ar": "عمار أ. — المحكمة الإقليمية العليا في شتوتغارت",
+  "en": "Ammar A. — Stuttgart Higher Regional Court",
+  "accused": [
+   {
+    "en": "Ammar A.",
+    "ar": "عمار أ."
+   }
+  ],
+  "verdictAr": "مؤبد: قتل وتعذيب وتهجير في بصرى الشام على رأس ميليشيا موالية للنظام (أيّدته المحكمة الاتحادية)",
+  "verdictEn": "Life: killings, torture and displacement in Busra al-Sham leading a pro-regime militia (upheld by the Federal Court)",
+  "facilityIds": [],
+  "src": [
+   "Ammar Stuttgart",
+   "Stuttgart Reuters"
+  ]
+ },
+ {
+  "id": "alaa-m",
+  "country": "DE",
+  "city": "Frankfurt",
+  "cityAr": "فرانكفورت",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "start": "2022-01-19",
+  "date": "2025-06-16",
+  "ar": "الطبيب علاء م. — المحكمة الإقليمية العليا في فرانكفورت",
+  "en": "Dr. Alaa M. — Frankfurt Higher Regional Court",
+  "accused": [
+   {
+    "en": "Alaa M.",
+    "ar": "علاء م."
+   }
+  ],
+  "verdictAr": "مؤبد مع احتجاز وقائي: تعذيب وقتل معتقلين في المستشفيين 601 و608 والفرع 261",
+  "verdictEn": "Life with preventive detention: torture and killing of detainees at hospitals 601 and 608 and Branch 261",
+  "facilityIds": [
+   11,
+   17
+  ],
+  "src": [
+   "Frankfurt Court"
+  ]
+ },
+ {
+  "id": "yarmouk-koblenz",
+  "country": "DE",
+  "city": "Koblenz",
+  "cityAr": "كوبلنز",
+  "jurisdiction": "universal",
+  "status": "ongoing",
+  "start": "2025-11-19",
+  "date": "2025-11-19",
+  "ar": "محاكمة اليرموك — كوبلنز (5 متهمين)",
+  "en": "Yarmouk trial — Koblenz (5 accused)",
+  "accused": [
+   {
+    "en": "Jihad A.",
+    "ar": "جهاد أ."
+   },
+   {
+    "en": "Mahmoud A.",
+    "ar": "محمود أ."
+   },
+   {
+    "en": "Mazhar J.",
+    "ar": "مظهر ج."
+   },
+   {
+    "en": "Sameer S.",
+    "ar": "سمير س."
+   },
+   {
+    "en": "Wael S.",
+    "ar": "وائل س."
+   }
+  ],
+  "verdictAr": "جارية: جرائم مرتبطة بحصار اليرموك 2012–2013",
+  "verdictEn": "Ongoing: crimes linked to the 2012–2013 siege of Yarmouk",
+  "facilityIds": [],
+  "src": [
+   "SJAC Yarmouk"
+  ]
+ },
+ {
+  "id": "mahmoud-s",
+  "country": "SE",
+  "city": "Solna",
+  "cityAr": "سولنا",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "start": "2024-10-20",
+  "date": "2026-05-04",
+  "ar": "محمود س. (اليرموك) — محكمة سولنا",
+  "en": "Mahmoud S. (Yarmouk) — Solna District Court",
+  "accused": [
+   {
+    "en": "Mahmoud S.",
+    "ar": "محمود س."
+   }
+  ],
+  "verdictAr": "مؤبد: إطلاق النار على متظاهرين وتسليم مدنيين للأجهزة الأمنية",
+  "verdictEn": "Life: shooting at protesters and handing civilians to the security services",
+  "facilityIds": [],
+  "src": [
+   "Solna Yarmouk"
+  ]
+ },
+ {
+  "id": "halabi",
+  "country": "AT",
+  "city": "Vienna",
+  "cityAr": "فيينا",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "start": "2026-06-01",
+  "date": "2026-07-06",
+  "ar": "خالد الحلبي ومصعب أبو ركبة — محكمة فيينا",
+  "en": "Khaled al-Halabi and Musab Abu Rukbah — Vienna Regional Court",
+  "accused": [
+   {
+    "en": "Khaled al-Halabi",
+    "ar": "خالد الحلبي"
+   },
+   {
+    "en": "Musab Abu Rukbah",
+    "ar": "مصعب أبو ركبة"
+   }
+  ],
+  "verdictAr": "8 سنوات لكل منهما: تعذيب وإكراه في فرع المخابرات العامة بالرقة (2011–2013)",
+  "verdictEn": "8 years each: torture and coercion at the General Intelligence branch in Raqqa (2011–2013)",
+  "facilityIds": [
+   87
+  ],
+  "src": [
+   "Halabi Vienna"
+  ]
+ },
+ {
+  "id": "najib",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "convicted",
+  "start": "2026-04-26",
+  "date": "2026-08-11",
+  "ar": "عاطف نجيب وآخرون — محكمة الجنايات الرابعة بدمشق",
+  "en": "Atef Najib et al. — Fourth Criminal Chamber, Damascus",
+  "accused": [
+   {
+    "en": "Atef Najib",
+    "ar": "عاطف نجيب"
+   },
+   {
+    "en": "Bashar al-Assad (in absentia)",
+    "ar": "بشار الأسد (غيابياً)"
+   },
+   {
+    "en": "Maher al-Assad (in absentia)",
+    "ar": "ماهر الأسد (غيابياً)"
+   },
+   {
+    "en": "Fahd Jassem al-Freij (in absentia)",
+    "ar": "فهد جاسم الفريج (غيابياً)"
+   }
+  ],
+  "verdictAr": "إعدام لنجيب وثمانية غيابياً (جرائم ضد الإنسانية): اعتقال أطفال درعا وتعذيبهم وإطلاق النار على المتظاهرين",
+  "verdictEn": "Death for Najib and eight in absentia (crimes against humanity): arrest and torture of Daraa children, shooting of protesters",
+  "facilityIds": [
+   71
+  ],
+  "src": [
+   "JusticeInfo trials",
+   "Najib Damascus"
+  ]
+ },
+ {
+  "id": "wasim",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "convicted",
+  "start": "2026-06-24",
+  "date": "2026-08-18",
+  "ar": "وسيم بديع الأسد — محكمة الجنايات الرابعة بدمشق",
+  "en": "Wasim Badi'a al-Assad — Fourth Criminal Chamber, Damascus",
+  "accused": [
+   {
+    "en": "Wasim Badi'a al-Assad",
+    "ar": "وسيم بديع الأسد"
+   }
+  ],
+  "verdictAr": "إعدام: قتل وتعذيب واحتجاز تعسفي عبر مجموعتين مسلحتين في المليحة (2012–2014)",
+  "verdictEn": "Death: murder, torture and arbitrary detention through two armed groups in al-Mleiha (2012–2014)",
+  "facilityIds": [],
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "hassoun",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "convicted",
+  "start": "2026-06-25",
+  "date": "2026-08-24",
+  "ar": "أحمد بدر الدين حسون — محكمة الجنايات الرابعة بدمشق",
+  "en": "Ahmad Badr al-Din Hassoun — Fourth Criminal Chamber, Damascus",
+  "accused": [
+   {
+    "en": "Ahmad Badr al-Din Hassoun",
+    "ar": "أحمد بدر الدين حسون"
+   }
+  ],
+  "verdictAr": "مؤبد: التحريض على العنف عبر الخطاب العام",
+  "verdictEn": "Life: incitement to violence through public speeches",
+  "facilityIds": [],
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "burraqi",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "convicted",
+  "start": "2026-06-14",
+  "date": "2026-08-27",
+  "ar": "عبد الناصر البراقي — محكمة الجنايات الرابعة بدمشق",
+  "en": "Abdel Nasser al-Burraqi — Fourth Criminal Chamber, Damascus",
+  "accused": [
+   {
+    "en": "Abdel Nasser al-Burraqi",
+    "ar": "عبد الناصر البراقي"
+   }
+  ],
+  "verdictAr": "إعدام ومصادرة أمواله: إخفاء قسري واحتجاز تعسفي وتعذيب أفضى إلى الموت (مخبر للنظام)",
+  "verdictEn": "Death and asset seizure: enforced disappearance, arbitrary detention, torture resulting in death (regime informant)",
+  "facilityIds": [],
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "abdallah-mp",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "ongoing",
+  "start": "2026-10-05",
+  "date": "2026-10-05",
+  "ar": "أكرم سلوم العبد الله (رئيس الشرطة العسكرية 2014–2015) — جلسات سرية",
+  "en": "Akram Salloum al-Abdallah (head of military police 2014–2015) — in camera",
+  "accused": [
+   {
+    "en": "Akram Salloum al-Abdallah",
+    "ar": "أكرم سلوم العبد الله"
+   }
+  ],
+  "verdictAr": "جارية: قتل والمشاركة في تعذيب أفضى إلى الموت",
+  "verdictEn": "Ongoing: murder and complicity in torture resulting in death",
+  "facilityIds": [
+   45,
+   13
+  ],
+  "facilityRelation": "institutional",
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "salah-photographer",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "ongoing",
+  "start": "2026-10-05",
+  "date": "2026-10-05",
+  "ar": "عماد صلاح صلاح (مصوّر سابق في الشرطة العسكرية) — جلسات سرية",
+  "en": "Imad Salah Salah (former military police photographer) — in camera",
+  "accused": [
+   {
+    "en": "Imad Salah Salah",
+    "ar": "عماد صلاح صلاح"
+   }
+  ],
+  "verdictAr": "جارية: إخفاء أدلة التعذيب وهويات الضحايا",
+  "verdictEn": "Ongoing: concealing evidence of torture and victims' identities",
+  "facilityIds": [],
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "khello-doctor",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "ongoing",
+  "start": "2026-10-05",
+  "date": "2026-10-05",
+  "ar": "أيمن خلو (عقيد طبيب في الأجهزة الأمنية) — جلسات سرية",
+  "en": "Ayman Khello (colonel and doctor in the security services) — in camera",
+  "accused": [
+   {
+    "en": "Ayman Khello",
+    "ar": "أيمن خلو"
+   }
+  ],
+  "verdictAr": "جارية: المشاركة في القتل والتعذيب والإخفاء القسري وإصدار شهادات وفاة مزورة",
+  "verdictEn": "Ongoing: complicity in murder, torture, enforced disappearance and false death certificates",
+  "facilityIds": [],
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "ahmad-h",
+  "country": "DE",
+  "city": "Hamburg",
+  "cityAr": "هامبورغ",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "date": "2024-12-18",
+  "ar": "أحمد ح. — المحكمة الإقليمية العليا في هامبورغ",
+  "en": "Ahmad H. — Hamburg Higher Regional Court",
+  "accused": [
+   {
+    "en": "Ahmad H.",
+    "ar": "أحمد ح."
+   }
+  ],
+  "verdictAr": "10 سنوات: تعذيب واستعباد وحرمان من الحرية على رأس ميليشيا «شبيحة» في التضامن (2012–2015)",
+  "verdictEn": "10 years: torture, enslavement and deprivation of liberty as a local shabiha militia leader in Tadamon (2012–2015)",
+  "facilityIds": [],
+  "src": [
+   "SJAC Ahmad H"
+  ]
+ },
+ {
+  "id": "malek-n",
+  "country": "FR",
+  "city": "Paris",
+  "cityAr": "باريس",
+  "jurisdiction": "universal",
+  "status": "indicted",
+  "date": "2025-12-04",
+  "ar": "مالك ن. — قضاء التحقيق الفرنسي",
+  "en": "Malek N. — French investigating judges",
+  "accused": [
+   {
+    "en": "Malek N.",
+    "ar": "مالك ن."
+   }
+  ],
+  "verdictAr": "اتهام بجرائم ضد الإنسانية وتوقيف احتياطي؛ يُشتبه بانتمائه للفرع 285",
+  "verdictEn": "Charged with crimes against humanity and remanded; suspected member of Branch 285",
+  "facilityIds": [
+   6
+  ],
+  "src": [
+   "JusticeInfo who"
+  ]
+ },
+ {
+  "id": "alsheikh",
+  "country": "US",
+  "city": "Los Angeles",
+  "cityAr": "لوس أنجلوس",
+  "jurisdiction": "extraterritorial",
+  "status": "convicted",
+  "start": "2026-03",
+  "date": "2026-09-17",
+  "ar": "سمير عثمان الشيخ (مدير سجن عدرا سابقاً) — محكمة فدرالية في لوس أنجلوس",
+  "en": "Samir Ousman Alsheikh (former Adra Prison head) — US federal court, Los Angeles",
+  "accused": [
+   {
+    "en": "Samir Ousman Alsheikh",
+    "ar": "سمير عثمان الشيخ"
+   }
+  ],
+  "verdictAr": "60 سنة: تعذيب سجناء في عدرا (نحو 2005–2008) وتزوير في طلبات الهجرة",
+  "verdictEn": "60 years: torturing prisoners at Adra (c. 2005–2008) and immigration fraud",
+  "facilityIds": [
+   14
+  ],
+  "src": [
+   "DOJ Alsheikh",
+   "Al-Monitor Alsheikh"
+  ]
+ },
+ {
+  "id": "fahad-a",
+  "country": "DE",
+  "city": "Koblenz",
+  "cityAr": "كوبلنز",
+  "jurisdiction": "universal",
+  "status": "ongoing",
+  "start": "2026-04-27",
+  "date": "2026-04-27",
+  "ar": "فهد أ. (حارس سابق في فرع الخطيب) — كوبلنز",
+  "en": "Fahad A. (former al-Khatib guard) — Koblenz",
+  "accused": [
+   {
+    "en": "Fahad A.",
+    "ar": "فهد أ."
+   }
+  ],
+  "verdictAr": "جارية: 70 تهمة قتل وتعذيب أكثر من 115 معتقلاً (2011–2012)",
+  "verdictEn": "Ongoing: 70 counts of murder and torture of over 115 detainees (2011–2012)",
+  "facilityIds": [
+   1
+  ],
+  "src": [
+   "Fahad Koblenz",
+   "IIIM Bulletin 15"
+  ]
+ },
+ {
+  "id": "rafik-a",
+  "country": "NL",
+  "city": "The Hague",
+  "cityAr": "لاهاي",
+  "jurisdiction": "universal",
+  "status": "convicted",
+  "date": "2026-06-15",
+  "ar": "رفيق أ. (محقق سابق في الدفاع الوطني بالسلمية) — محكمة لاهاي",
+  "en": "Rafik A. (former NDF interrogator, Salamiyah) — District Court of The Hague",
+  "accused": [
+   {
+    "en": "Rafik A.",
+    "ar": "رفيق أ."
+   }
+  ],
+  "verdictAr": "26 سنة: تعذيب واغتصاب معتقلين (2013–2014)؛ أول إدانة هولندية بالعنف الجنسي جريمةً ضد الإنسانية",
+  "verdictEn": "26 years: torture and rape of detainees (2013–2014); first Dutch conviction for sexual violence as a crime against humanity",
+  "facilityIds": [],
+  "src": [
+   "NL Times Rafik"
+  ]
+ },
+ {
+  "id": "amjad-youssef",
+  "country": "SY",
+  "city": "Damascus",
+  "cityAr": "دمشق",
+  "jurisdiction": "national",
+  "status": "indicted",
+  "date": "2026-04-24",
+  "ar": "أمجد يوسف (الفرع 227) — مجزرة التضامن",
+  "en": "Amjad Youssef (Branch 227) — Tadamon massacre",
+  "accused": [
+   {
+    "en": "Amjad Youssef",
+    "ar": "أمجد يوسف"
+   }
+  ],
+  "verdictAr": "أُوقف في 24 أبريل 2026 وأُحيل ملفه إلى قاضي التحقيق بعد ادعاء عام",
+  "verdictEn": "Arrested 24 April 2026; file referred to the investigating judge after public prosecution",
+  "facilityIds": [
+   3,
+   52
+  ],
+  "src": [
+   "Amjad referral",
+   "TRT Amjad"
+  ]
+ },
+ {
+  "id": "icj-cat",
+  "country": "ICJ",
+  "city": "The Hague",
+  "cityAr": "لاهاي",
+  "jurisdiction": "interstate",
+  "status": "ongoing",
+  "start": "2023-06-08",
+  "date": "2023-11-16",
+  "ar": "كندا وهولندا ضد سوريا — محكمة العدل الدولية (اتفاقية مناهضة التعذيب)",
+  "en": "Canada and the Netherlands v. Syria — ICJ (Convention against Torture)",
+  "accused": [
+   {
+    "en": "Syrian Arab Republic (state responsibility)",
+    "ar": "الجمهورية العربية السورية (مسؤولية الدولة)"
+   }
+  ],
+  "verdictAr": "تدابير مؤقتة (نوفمبر 2023) تلزم الدولة بمنع التعذيب وحفظ الأدلة؛ كانت مهلة المذكرة السورية المضادة 5 أكتوبر 2026",
+  "verdictEn": "Provisional measures (Nov 2023) requiring the state to prevent torture and preserve evidence; Syria’s counter-memorial was due 5 October 2026",
+  "facilityIds": [],
+  "src": [
+   "ICJ 188"
+  ]
+ }
 ]

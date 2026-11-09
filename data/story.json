@@ -1,37 +1,226 @@
 [
- {"id":"daraa","year":2011,"view":{"center":[32.62,36.11],"zoom":13},"highlight":[71,29,101,72],"layers":["facilities"],
-  "titleAr":"درعا، مارس 2011","titleEn":"Daraa, March 2011",
-  "textAr":"اعتُقل أطفال كتبوا شعارات على جدران مدرستهم، واقتيدوا إلى فرع الأمن السياسي في درعا. من هنا بدأت الاحتجاجات، وبدأت معها حملة اعتقالات جماعية امتدت إلى كل المحافظات. في أغسطس 2026 أدانت محكمة في دمشق رئيس الفرع عاطف نجيب بجرائم ضد الإنسانية.",
-  "textEn":"Children who wrote slogans on their school walls were arrested and taken to the Political Security branch in Daraa. The protests began here, and with them a campaign of mass arrests that reached every governorate. In August 2026 a Damascus court convicted the branch head, Atef Najib, of crimes against humanity.",
-  "src":["JusticeInfo trials"]},
- {"id":"network","year":2013,"view":{"center":[34.9,38.4],"zoom":7},"highlight":[],"layers":["facilities"],
-  "titleAr":"شبكة تغطي البلاد","titleEn":"A network covering the country",
-  "textAr":"حدّدت الآلية الدولية المحايدة والمستقلة 111 منشأة احتجاز تابعة للدولة، وثّقت مواقع 94 منها. أربعة أجهزة مخابرات تعمل بالتوازي في كل محافظة، إلى جانب الشرطة العسكرية والسجون المدنية. حجم الدائرة على الخريطة يعكس عدد تجارب الاحتجاز التي وثّقها الشهود.",
-  "textEn":"The International, Impartial and Independent Mechanism identified 111 state detention facilities and geolocated 94. Four intelligence agencies operated in parallel in every governorate, alongside the military police and civilian prisons. Circle size reflects the number of detention experiences documented by witnesses.",
-  "src":["IIIM"]},
- {"id":"damascus","year":2013,"view":{"center":[33.505,36.285],"zoom":13},"highlight":[2,3,4,5,9,41,1,6],"layers":["facilities"],
-  "titleAr":"قلب المنظومة: دمشق","titleEn":"The heart of the system: Damascus",
-  "textAr":"في كيلومترات قليلة تتجاور الفروع 215 و227 و248 و291 للمخابرات العسكرية، وفرع فلسطين 235، والفرعان 251 و285 للمخابرات العامة. أكثر من 80% من جثث صور قيصر جاءت من الفرعين 215 و227 وحدهما.",
-  "textEn":"Within a few kilometres sit Military Intelligence branches 215, 227, 248 and 291, the Palestine Branch 235, and General Intelligence branches 251 and 285. More than 80% of the bodies in the Caesar photos came from branches 215 and 227 alone.",
-  "src":["IIIM","HRW","SAFMCD"]},
- {"id":"caesar","year":2013,"view":{"center":[33.53,36.29],"zoom":12},"highlight":[11,10,16],"layers":["facilities","transfers"],
-  "titleAr":"من الفرع إلى المستشفى: صور قيصر","titleEn":"From branch to hospital: the Caesar photos",
-  "textAr":"وثّق مصوّر الشرطة العسكرية «قيصر» جثث 6,786 معتقلاً على الأقل في المستشفى العسكري 601 ومستشفى تشرين بين 2011 و2013. على كل جثة رقم الفرع الذي مات فيه المعتقل. الخطوط تُظهر مسار الجثث من الفروع إلى المستشفيات.",
-  "textEn":"The military police photographer 'Caesar' documented the bodies of at least 6,786 detainees at Military Hospital 601 and Tishreen Hospital between 2011 and 2013. Each body carried the number of the branch where the detainee died. The lines show the bodies' path from branches to hospitals.",
-  "src":["HRW"]},
- {"id":"saydnaya","year":2015,"view":{"center":[33.6,36.33],"zoom":11},"highlight":[13,10],"layers":["facilities","transfers"],
-  "titleAr":"صيدنايا: «المسلخ البشري»","titleEn":"Saydnaya: the 'human slaughterhouse'",
-  "textAr":"بعد محاكمات صورية أمام محكمة الميدان العسكرية، أُعدم شنقاً ما بين 5,000 و13,000 شخص في صيدنايا بين 2011 و2015 بحسب منظمة العفو الدولية. نُقلت جثثهم إلى مستشفى تشرين ثم إلى المقابر الجماعية.",
-  "textEn":"After sham trials before the Military Field Court, between 5,000 and 13,000 people were hanged at Saydnaya between 2011 and 2015, according to Amnesty International. Their bodies were taken to Tishreen Hospital and then to mass graves.",
-  "src":["Amnesty 2017"]},
- {"id":"graves","year":2021,"view":{"center":[33.55,36.6],"zoom":9},"highlight":[50,51,53],"layers":["facilities","graves","transfers"],
-  "titleAr":"المقابر و«عملية نقل التراب»","titleEn":"The graves and 'Operation Move Earth'",
-  "textAr":"حملت شاحنات مبرّدة الجثث إلى نجها والقطيفة حتى 2018. وبين 2019 و2021 نقل النظام جثث القطيفة سراً إلى صحراء الضمير لإخفاء الأدلة، في 34 خندقاً على الأقل بطول كيلومترين.",
-  "textEn":"Refrigerated trucks carried bodies to Najha and al-Qutayfah until 2018. Between 2019 and 2021 the regime secretly moved the al-Qutayfah bodies to the Dhumair desert to hide the evidence, in at least 34 trenches two kilometres long.",
-  "src":["MEE","Reuters"]},
- {"id":"justice","year":2026,"view":{"center":[34.9,38.4],"zoom":7},"highlight":[1,9,11,17,71,87,129],"layers":["facilities","graves"],
-  "titleAr":"السقوط وطريق العدالة","titleEn":"The fall and the road to justice",
-  "textAr":"في 8 ديسمبر 2024 فُتحت السجون وأُفرج عن نحو 24,200 شخص، وبقي أكثر من 112 ألفاً مجهولي المصير. منذ ذلك الحين صدرت أحكام في ألمانيا وفرنسا والنمسا والسويد وسوريا ضد مسؤولين عن هذه الفروع، وبدأت أولى عمليات التعرّف على المفقودين بالحمض النووي. المواقع المضاءة ارتبطت بمحاكمات.",
-  "textEn":"On 8 December 2024 the prisons were opened and about 24,200 people freed; more than 112,000 remained missing. Since then, courts in Germany, France, Austria, Sweden and Syria have convicted officials linked to these branches, and the first DNA identifications of the missing have begun. Highlighted sites are linked to trials.",
-  "src":["SNHR 2024 release","Reuters DNA"]}
+ {
+  "id": "daraa",
+  "year": 2011,
+  "view": {
+   "center": [
+    32.62,
+    36.11
+   ],
+   "zoom": 13
+  },
+  "highlight": [
+   71,
+   29,
+   101,
+   72
+  ],
+  "layers": [
+   "facilities"
+  ],
+  "titleAr": "درعا، مارس 2011",
+  "titleEn": "Daraa, March 2011",
+  "textAr": "اعتُقل أطفال كتبوا شعارات على جدران مدرستهم، واقتيدوا إلى فرع الأمن السياسي في درعا. من هنا بدأت الاحتجاجات، وبدأت معها حملة اعتقالات جماعية امتدت إلى كل المحافظات. في أغسطس 2026 أدانت محكمة في دمشق رئيس الفرع عاطف نجيب بجرائم ضد الإنسانية.",
+  "textEn": "Children who wrote slogans on their school walls were arrested and taken to the Political Security branch in Daraa. The protests began here, and with them a campaign of mass arrests that reached every governorate. In August 2026 a Damascus court convicted the branch head, Atef Najib, of crimes against humanity.",
+  "src": [
+   "JusticeInfo trials"
+  ]
+ },
+ {
+  "id": "network",
+  "year": 2013,
+  "view": {
+   "center": [
+    34.9,
+    38.4
+   ],
+   "zoom": 7
+  },
+  "highlight": [],
+  "layers": [
+   "facilities"
+  ],
+  "titleAr": "شبكة تغطي البلاد",
+  "titleEn": "A network covering the country",
+  "textAr": "حدّدت الآلية الدولية المحايدة والمستقلة 111 منشأة احتجاز تابعة للدولة، وثّقت مواقع 94 منها. أربعة أجهزة مخابرات تعمل بالتوازي في كل محافظة، إلى جانب الشرطة العسكرية والسجون المدنية. حجم الدائرة على الخريطة يعكس عدد تجارب الاحتجاز التي وثّقها الشهود.",
+  "textEn": "The International, Impartial and Independent Mechanism identified 111 state detention facilities and geolocated 94. Four intelligence agencies operated in parallel in every governorate, alongside the military police and civilian prisons. Circle size reflects the number of detention experiences documented by witnesses.",
+  "src": [
+   "IIIM"
+  ]
+ },
+ {
+  "id": "damascus",
+  "year": 2013,
+  "view": {
+   "center": [
+    33.505,
+    36.285
+   ],
+   "zoom": 13
+  },
+  "highlight": [
+   2,
+   3,
+   4,
+   5,
+   9,
+   41,
+   1,
+   6
+  ],
+  "layers": [
+   "facilities"
+  ],
+  "titleAr": "قلب المنظومة: دمشق",
+  "titleEn": "The heart of the system: Damascus",
+  "textAr": "في كيلومترات قليلة تتجاور الفروع 215 و227 و248 و291 للمخابرات العسكرية، وفرع فلسطين 235، والفرعان 251 و285 للمخابرات العامة. أكثر من 80% من جثث صور قيصر جاءت من الفرعين 215 و227 وحدهما.",
+  "textEn": "Within a few kilometres sit Military Intelligence branches 215, 227, 248 and 291, the Palestine Branch 235, and General Intelligence branches 251 and 285. More than 80% of the bodies in the Caesar photos came from branches 215 and 227 alone.",
+  "src": [
+   "IIIM",
+   "HRW",
+   "SAFMCD"
+  ]
+ },
+ {
+  "id": "caesar",
+  "year": 2013,
+  "view": {
+   "center": [
+    33.53,
+    36.29
+   ],
+   "zoom": 12
+  },
+  "highlight": [
+   11,
+   10,
+   16
+  ],
+  "layers": [
+   "facilities",
+   "transfers"
+  ],
+  "titleAr": "من الفرع إلى المستشفى: صور قيصر",
+  "titleEn": "From branch to hospital: the Caesar photos",
+  "textAr": "وثّق مصوّر الشرطة العسكرية «قيصر» جثث 6,786 معتقلاً على الأقل في المستشفى العسكري 601 ومستشفى تشرين بين 2011 و2013. على كل جثة رقم الفرع الذي مات فيه المعتقل. الخطوط تُظهر مسار الجثث من الفروع إلى المستشفيات.",
+  "textEn": "The military police photographer 'Caesar' documented the bodies of at least 6,786 detainees at Military Hospital 601 and Tishreen Hospital between 2011 and 2013. Each body carried the number of the branch where the detainee died. The lines show the bodies' path from branches to hospitals.",
+  "src": [
+   "HRW"
+  ]
+ },
+ {
+  "id": "dossier",
+  "year": 2024,
+  "view": {
+   "center": [
+    33.53,
+    36.31
+   ],
+   "zoom": 12
+  },
+  "highlight": [
+   16
+  ],
+  "layers": [
+   "facilities",
+   "transfers"
+  ],
+  "titleAr": "من قيصر إلى «ملف دمشق»",
+  "titleEn": "From Caesar to the Damascus Dossier",
+  "textAr": "انتهت صور قيصر عام 2013، لكن الموت في الاحتجاز لم ينتهِ. «ملف دمشق» الذي كشفته NDR وICIJ في ديسمبر 2025 يضم أكثر من 33 ألف صورة لـ10,212 معتقلاً قضوا بين 2015 و2024، صُوّر شبه جميعهم في مستشفى حرستا العسكري، من الشرطة العسكرية والمخابرات الجوية والعسكرية والأمن السياسي وفرع فلسطين.",
+  "textEn": "The Caesar photos end in 2013, but death in detention did not. The Damascus Dossier revealed by NDR and ICIJ in December 2025 holds more than 33,000 photos of 10,212 detainees who died between 2015 and 2024, nearly all photographed at Harasta Military Hospital, from the military police, air force and military intelligence, political security and the Palestine Branch.",
+  "src": [
+   "WaPo Dossier",
+   "ICIJ Damascus Dossier"
+  ]
+ },
+ {
+  "id": "saydnaya",
+  "year": 2015,
+  "view": {
+   "center": [
+    33.6,
+    36.33
+   ],
+   "zoom": 11
+  },
+  "highlight": [
+   13,
+   10
+  ],
+  "layers": [
+   "facilities",
+   "transfers"
+  ],
+  "titleAr": "صيدنايا: «المسلخ البشري»",
+  "titleEn": "Saydnaya: the 'human slaughterhouse'",
+  "textAr": "بعد محاكمات صورية أمام محكمة الميدان العسكرية، أُعدم شنقاً ما بين 5,000 و13,000 شخص في صيدنايا بين 2011 و2015 بحسب منظمة العفو الدولية. نُقلت جثثهم إلى مستشفى تشرين ثم إلى المقابر الجماعية.",
+  "textEn": "After sham trials before the Military Field Court, between 5,000 and 13,000 people were hanged at Saydnaya between 2011 and 2015, according to Amnesty International. Their bodies were taken to Tishreen Hospital and then to mass graves.",
+  "src": [
+   "Amnesty 2017"
+  ]
+ },
+ {
+  "id": "graves",
+  "year": 2021,
+  "view": {
+   "center": [
+    33.55,
+    36.6
+   ],
+   "zoom": 9
+  },
+  "highlight": [
+   50,
+   51,
+   53
+  ],
+  "layers": [
+   "facilities",
+   "graves",
+   "transfers"
+  ],
+  "titleAr": "المقابر و«عملية نقل التراب»",
+  "titleEn": "The graves and 'Operation Move Earth'",
+  "textAr": "حملت شاحنات مبرّدة الجثث إلى نجها والقطيفة حتى 2018. وبين 2019 و2021 نقل النظام جثث القطيفة سراً إلى صحراء الضمير لإخفاء الأدلة، في 34 خندقاً على الأقل بطول كيلومترين.",
+  "textEn": "Refrigerated trucks carried bodies to Najha and al-Qutayfah until 2018. Between 2019 and 2021 the regime secretly moved the al-Qutayfah bodies to the Dhumair desert to hide the evidence, in at least 34 trenches two kilometres long.",
+  "src": [
+   "MEE",
+   "Reuters"
+  ]
+ },
+ {
+  "id": "justice",
+  "year": 2026,
+  "view": {
+   "center": [
+    34.9,
+    38.4
+   ],
+   "zoom": 7
+  },
+  "highlight": [
+   1,
+   9,
+   11,
+   17,
+   71,
+   87,
+   129,
+   14
+  ],
+  "layers": [
+   "facilities",
+   "graves"
+  ],
+  "titleAr": "السقوط وطريق العدالة",
+  "titleEn": "The fall and the road to justice",
+  "textAr": "في 8 ديسمبر 2024 فُتحت السجون وأُفرج عن نحو 24,200 شخص، وبقي أكثر من 112 ألفاً مجهولي المصير. منذ ذلك الحين صدرت أحكام في ألمانيا وفرنسا والنمسا والسويد وسوريا ضد مسؤولين عن هذه الفروع، وبدأت أولى عمليات التعرّف على المفقودين بالحمض النووي. المواقع المضاءة ارتبطت بمحاكمات. انتهى «قانون قيصر» في ديسمبر 2025، ولم تنتهِ «قضية قيصر».",
+  "textEn": "On 8 December 2024 the prisons were opened and about 24,200 people freed; more than 112,000 remained missing. Since then, courts in Germany, France, Austria, Sweden and Syria have convicted officials linked to these branches, and the first DNA identifications of the missing have begun. Highlighted sites are linked to trials. The Caesar Act ended in December 2025; the Caesar case has not.",
+  "src": [
+   "SNHR 2024 release",
+   "Reuters DNA",
+   "Caesar Act repeal"
+  ]
+ }
 ]

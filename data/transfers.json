@@ -1,18 +1,192 @@
 {
- "note":{"ar":"مسارات موثقة فقط بين أنواع المواقع. السهم يعني أن المصدر يذكر نقل معتقلين أو جثث بين الموقعين، لا أن كل الضحايا مرّوا به.","en":"Documented paths only. An arrow means the source reports detainees or bodies moving between the two sites, not that every victim followed it."},
- "edges":[
-  {"from":2,"to":11,"kind":"bodies","years":"2011–2013","ar":"جثث معتقلي الفرع 215 سُجّلت في المستشفى 601 (صور قيصر)","en":"Bodies of Branch 215 detainees registered at Hospital 601 (Caesar photos)","src":["HRW","SAFMCD"]},
-  {"from":3,"to":11,"kind":"bodies","years":"2011–2013","ar":"جثث معتقلي الفرع 227 (صور قيصر)","en":"Bodies of Branch 227 detainees (Caesar photos)","src":["HRW","SAFMCD"]},
-  {"from":41,"to":11,"kind":"bodies","years":"2011–2013","ar":"جثث معتقلي الفرع 216 (صور قيصر)","en":"Bodies of Branch 216 detainees (Caesar photos)","src":["HRW","SAFMCD"]},
-  {"from":4,"to":11,"kind":"bodies","years":"2011–2013","ar":"جثث معتقلي فرع فلسطين 235 (صور قيصر)","en":"Bodies of Palestine Branch 235 detainees (Caesar photos)","src":["HRW","SAFMCD"]},
-  {"from":9,"to":11,"kind":"bodies","years":"2011–2013","ar":"جثث معتقلي المخابرات الجوية (نحو 350 في صور قيصر)","en":"Bodies of Air Force Intelligence detainees (~350 in the Caesar photos)","src":["HRW","SAFMCD"]},
-  {"from":1,"to":16,"kind":"bodies","years":"2011–2013","ar":"جثث ضحايا الفرع 251 سُجّلت في مستشفى حرستا العسكري","en":"Bodies of Branch 251 victims registered at Harasta Military Hospital","src":["HRW"]},
-  {"from":13,"to":10,"kind":"bodies","years":"2011–2015","ar":"جثث من أُعدموا في صيدنايا نُقلت إلى مستشفى تشرين العسكري","en":"Bodies of those executed at Saydnaya taken to Tishreen Military Hospital","src":["Amnesty 2017"]},
-  {"from":10,"to":51,"kind":"burial","years":"2011–2018","ar":"شاحنات مبرّدة من مستشفى تشرين إلى مقبرة نجها","en":"Refrigerated trucks from Tishreen to the Najha grave","src":["MEE"]},
-  {"from":10,"to":50,"kind":"burial","years":"2011–2018","ar":"شاحنات مبرّدة من مستشفى تشرين إلى القطيفة","en":"Refrigerated trucks from Tishreen to al-Qutayfah","src":["MEE"]},
-  {"from":11,"to":51,"kind":"burial","years":"2011–2018","ar":"من المستشفى 601 إلى نجها","en":"From Hospital 601 to Najha","src":["MEE"]},
-  {"from":11,"to":50,"kind":"burial","years":"2011–2018","ar":"من المستشفى 601 إلى القطيفة","en":"From Hospital 601 to al-Qutayfah","src":["MEE"]},
-  {"from":16,"to":50,"kind":"burial","years":"2011–2018","ar":"من مستشفى حرستا إلى القطيفة","en":"From Harasta hospital to al-Qutayfah","src":["MEE"]},
-  {"from":50,"to":53,"kind":"relocation","years":"2019–2021","ar":"«عملية نقل التراب»: نقل الجثث سراً من القطيفة إلى الضمير","en":"'Operation Move Earth': bodies secretly moved from al-Qutayfah to Dhumair","src":["Reuters"]}
+ "note": {
+  "ar": "مسارات موثقة فقط بين أنواع المواقع. السهم يعني أن المصدر يذكر نقل معتقلين أو جثث بين الموقعين، لا أن كل الضحايا مرّوا به.",
+  "en": "Documented paths only. An arrow means the source reports detainees or bodies moving between the two sites, not that every victim followed it."
+ },
+ "edges": [
+  {
+   "from": 2,
+   "to": 11,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث معتقلي الفرع 215 سُجّلت في المستشفى 601 (صور قيصر)",
+   "en": "Bodies of Branch 215 detainees registered at Hospital 601 (Caesar photos)",
+   "src": [
+    "HRW",
+    "SAFMCD"
+   ]
+  },
+  {
+   "from": 3,
+   "to": 11,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث معتقلي الفرع 227 (صور قيصر)",
+   "en": "Bodies of Branch 227 detainees (Caesar photos)",
+   "src": [
+    "HRW",
+    "SAFMCD"
+   ]
+  },
+  {
+   "from": 41,
+   "to": 11,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث معتقلي الفرع 216 (صور قيصر)",
+   "en": "Bodies of Branch 216 detainees (Caesar photos)",
+   "src": [
+    "HRW",
+    "SAFMCD"
+   ]
+  },
+  {
+   "from": 4,
+   "to": 11,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث معتقلي فرع فلسطين 235 (صور قيصر)",
+   "en": "Bodies of Palestine Branch 235 detainees (Caesar photos)",
+   "src": [
+    "HRW",
+    "SAFMCD"
+   ]
+  },
+  {
+   "from": 9,
+   "to": 11,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث معتقلي المخابرات الجوية (نحو 350 في صور قيصر)",
+   "en": "Bodies of Air Force Intelligence detainees (~350 in the Caesar photos)",
+   "src": [
+    "HRW",
+    "SAFMCD"
+   ]
+  },
+  {
+   "from": 1,
+   "to": 16,
+   "kind": "bodies",
+   "years": "2011–2013",
+   "ar": "جثث ضحايا الفرع 251 سُجّلت في مستشفى حرستا العسكري",
+   "en": "Bodies of Branch 251 victims registered at Harasta Military Hospital",
+   "src": [
+    "HRW"
+   ]
+  },
+  {
+   "from": 13,
+   "to": 10,
+   "kind": "bodies",
+   "years": "2011–2015",
+   "ar": "جثث من أُعدموا في صيدنايا نُقلت إلى مستشفى تشرين العسكري",
+   "en": "Bodies of those executed at Saydnaya taken to Tishreen Military Hospital",
+   "src": [
+    "Amnesty 2017"
+   ]
+  },
+  {
+   "from": 10,
+   "to": 51,
+   "kind": "burial",
+   "years": "2011–2018",
+   "ar": "شاحنات مبرّدة من مستشفى تشرين إلى مقبرة نجها",
+   "en": "Refrigerated trucks from Tishreen to the Najha grave",
+   "src": [
+    "MEE"
+   ]
+  },
+  {
+   "from": 10,
+   "to": 50,
+   "kind": "burial",
+   "years": "2011–2018",
+   "ar": "شاحنات مبرّدة من مستشفى تشرين إلى القطيفة",
+   "en": "Refrigerated trucks from Tishreen to al-Qutayfah",
+   "src": [
+    "MEE"
+   ]
+  },
+  {
+   "from": 11,
+   "to": 51,
+   "kind": "burial",
+   "years": "2011–2018",
+   "ar": "من المستشفى 601 إلى نجها",
+   "en": "From Hospital 601 to Najha",
+   "src": [
+    "MEE"
+   ]
+  },
+  {
+   "from": 11,
+   "to": 50,
+   "kind": "burial",
+   "years": "2011–2018",
+   "ar": "من المستشفى 601 إلى القطيفة",
+   "en": "From Hospital 601 to al-Qutayfah",
+   "src": [
+    "MEE"
+   ]
+  },
+  {
+   "from": 16,
+   "to": 50,
+   "kind": "burial",
+   "years": "2011–2018",
+   "ar": "من مستشفى حرستا إلى القطيفة",
+   "en": "From Harasta hospital to al-Qutayfah",
+   "src": [
+    "MEE"
+   ]
+  },
+  {
+   "from": 50,
+   "to": 53,
+   "kind": "relocation",
+   "years": "2019–2021",
+   "ar": "«عملية نقل التراب»: نقل الجثث سراً من القطيفة إلى الضمير",
+   "en": "'Operation Move Earth': bodies secretly moved from al-Qutayfah to Dhumair",
+   "src": [
+    "Reuters"
+   ]
+  },
+  {
+   "from": 45,
+   "to": 16,
+   "kind": "bodies",
+   "years": "2015–2024",
+   "ar": "جثث معتقلين لدى الشرطة العسكرية صُوّرت في مستشفى حرستا («ملف دمشق»)",
+   "en": "Bodies of military police detainees photographed at Harasta hospital (Damascus Dossier)",
+   "src": [
+    "WaPo Dossier",
+    "ICIJ FAQ"
+   ]
+  },
+  {
+   "from": 9,
+   "to": 16,
+   "kind": "bodies",
+   "years": "2015–2024",
+   "ar": "جثث معتقلين لدى المخابرات الجوية صُوّرت في مستشفى حرستا («ملف دمشق»)",
+   "en": "Bodies of Air Force Intelligence detainees photographed at Harasta hospital (Damascus Dossier)",
+   "src": [
+    "WaPo Dossier",
+    "ICIJ FAQ"
+   ]
+  },
+  {
+   "from": 4,
+   "to": 16,
+   "kind": "bodies",
+   "years": "2015–2024",
+   "ar": "جثث معتقلين لدى فرع فلسطين صُوّرت في مستشفى حرستا («ملف دمشق»)",
+   "en": "Bodies of Palestine Branch detainees photographed at Harasta hospital (Damascus Dossier)",
+   "src": [
+    "WaPo Dossier",
+    "ICIJ FAQ"
+   ]
+  }
  ]
 }

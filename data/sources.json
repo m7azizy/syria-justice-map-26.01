@@ -363,5 +363,150 @@
   "org": "US Treasury OFAC",
   "title": "OFAC sanctions designations",
   "url": "https://ofac.treasury.gov/"
+ },
+ "DOJ Alsheikh": {
+  "org": "US Department of Justice",
+  "title": "Former Syrian prison official sentenced for torture and immigration fraud (Sep 2026)",
+  "url": "https://www.justice.gov/opa/pr/former-syrian-prison-official-sentenced-torture-and-immigration-fraud"
+ },
+ "Al-Monitor Alsheikh": {
+  "org": "Al-Monitor",
+  "title": "Former Assad official sentenced to 60 years in US for torture",
+  "url": "https://www.al-monitor.com/originals/2026/09/former-assad-official-sentenced-60-years-us-torture"
+ },
+ "NL Times Rafik": {
+  "org": "NL Times",
+  "title": "Hague court gives ex-Syrian interrogator 26 years (Jun 2026)",
+  "url": "https://nltimes.nl/2026/06/15/hague-court-gives-ex-syrian-interrogator-26-years-crimes-including-rape-torture"
+ },
+ "IIIM Bulletin 15": {
+  "org": "IIIM / UN",
+  "title": "IIIM Bulletin N° 15",
+  "url": "https://iiim.un.org/iiim-bulletin-n-15/"
+ },
+ "IIIM first evidence": {
+  "org": "IIIM / UN",
+  "title": "First Evidence Collection Conducted in Syria (Feb 2026)",
+  "url": "https://iiim.un.org/first-evidence-collection-conducted-in-syria/"
+ },
+ "Fahad Koblenz": {
+  "org": "AFP via Yahoo",
+  "title": "Syrian man on trial in Germany for deaths of 70 prisoners in Damascus",
+  "url": "https://www.yahoo.com/news/articles/syrian-man-trial-germany-deaths-140823316.html"
+ },
+ "SJAC Ahmad H": {
+  "org": "SJAC",
+  "title": "Inside the Ahmad H. Trial #22: Ten-Year Sentence",
+  "url": "https://syriaaccountability.org/inside-the-ahmad-h-trial-22-ten-year-sentence-for-crimes-against-humanity-and-war-crimes/"
+ },
+ "JusticeInfo who": {
+  "org": "JusticeInfo.net",
+  "title": "Justice for Syria: who is doing what?",
+  "url": "https://www.justiceinfo.net/en/153370-justice-for-syria-who-is-doing-what.html"
+ },
+ "ICJ 188": {
+  "org": "International Court of Justice",
+  "title": "Application of the Convention against Torture (Canada and the Netherlands v. Syria)",
+  "url": "https://www.icj-cij.org/case/188"
+ },
+ "Stuttgart Reuters": {
+  "org": "Reuters via US News",
+  "title": "Syrian man handed life sentence in Germany for war crimes (Jun 2025)",
+  "url": "https://www.usnews.com/news/world/articles/2025-06-03/syrian-man-handed-life-sentence-in-germany-for-war-crimes"
+ },
+ "Amjad referral": {
+  "org": "Syrian Observer",
+  "title": "Amjad Youssef’s confession puts the Tadamon massacre back at the center",
+  "url": "https://syrianobserver.com/syrian-actors/amjad-youssefs-confession-puts-the-tadamon-massacre-back-at-the-center-of-syrias-justice-debate.html"
+ },
+ "TRT Amjad": {
+  "org": "TRT World",
+  "title": "Syria says it has arrested key suspect in 2013 Tadamon massacre",
+  "url": "https://www.trtworld.com/article/7cd53a3e8fdb"
+ },
+ "Enab Sasa": {
+  "org": "Enab Baladi",
+  "title": "Arrest of former Sa’sa branch chief (Dec 2025)",
+  "url": "https://english.enabbaladi.net/archives/2025/12/arrest-of-former-sasa-branch-chief-under-the-previous-regime/"
+ },
+ "Enab arrests 2026": {
+  "org": "Enab Baladi",
+  "title": "Arrests target senior Assad regime figures (May 2026)",
+  "url": "https://english.enabbaladi.net/archives/2026/05/arrests-target-senior-assad-regime-figures/"
+ },
+ "WaPo Dossier": {
+  "org": "Washington Post",
+  "title": "Trove of Syrian military photos shows 10,000 victims",
+  "url": "https://www.washingtonpost.com/world/interactive/2025/syria-assad-deaths-torture-photos/"
+ },
+ "ICIJ FAQ": {
+  "org": "ICIJ",
+  "title": "Frequently asked questions about the Damascus Dossier",
+  "url": "https://www.icij.org/investigations/damascus-dossier/syria-damascus-dossier-investigation-faqs/"
+ },
+ "ADMSP Buried": {
+  "org": "ADMSP",
+  "title": "Buried in Silence (2023)",
+  "url": "https://www.admsp.org/wp-content/uploads/2023/10/BURIED-IN-SILENCE.pdf"
+ },
+ "AA Tadamon 2026": {
+  "org": "Anadolu",
+  "title": "New mass grave uncovered in Syrian capital (Feb 2026)",
+  "url": "https://www.aa.com.tr/en/middle-east/new-mass-grave-uncovered-in-syrian-capital/3820592"
+ },
+ "North Press 3548": {
+  "org": "North Press",
+  "title": "Syrian Interior Ministry arrests 3,548 Assad regime military personnel (Jun 2026)",
+  "url": "https://npasyria.com/en/138408/"
+ },
+ "Slate 500": {
+  "org": "Slate",
+  "title": "Syria is hoping to hold 500 war crimes trials in the next five years (May 2026)",
+  "url": "https://slate.com/news-and-politics/2026/05/bashar-al-assad-war-crimes-trial-syria.html"
+ },
+ "CIJA": {
+  "org": "CIJA",
+  "title": "Commission for International Justice and Accountability — Syrian regime",
+  "url": "https://www.cijaonline.org/syrian-regime"
+ },
+ "Frontline ICMP": {
+  "org": "PBS Frontline",
+  "title": "Syrian war human toll: deaths, disappearances, mass graves",
+  "url": "https://www.pbs.org/wgbh/frontline/article/syrian-war-human-toll-deaths-disappearances-mass-graves-displacement/"
+ },
+ "SNHR June 2025": {
+  "org": "SNHR",
+  "title": "45,342 torture deaths, 45,032 in former-regime centres (Jun 2025)",
+  "url": "https://snhr.org/blog/2025/06/26/on-the-international-day-in-support-of-victims-of-torture-new-information-reveals-the-deaths-of-thousands-of-forcibly-disappeared-persons-in-the-detention-centers-of-the-former-syrian-regime-raising/"
+ },
+ "Caesar Act repeal": {
+  "org": "The National",
+  "title": "Trump signs bill that includes repeal of Caesar Act (Dec 2025)",
+  "url": "https://www.thenationalnews.com/news/us/2025/12/10/syria-caesar-act-repeal/"
+ },
+ "Cassation 2025": {
+  "org": "SJAC",
+  "title": "French court rules justice begins where sovereignty ends (Jul 2025)",
+  "url": "https://syriaaccountability.org/french-court-rules-justice-begins-where-sovereignty-ends-even-for-assad/"
+ },
+ "IIIM Bulletin 14": {
+  "org": "IIIM / UN",
+  "title": "IIIM Bulletin N° 14 (Arabic detention report)",
+  "url": "https://iiim.un.org/iiim-bulletin-n-14/"
+ },
+ "Bournemouth Protocol": {
+  "org": "MaGPIE",
+  "title": "Bournemouth Protocol on Mass Grave Protection and Investigation",
+  "url": "https://magpie.bournemouth.ac.uk/an-emerging-agenda-for-review-five-years-from-the-publication-of-the-bournemouth-protocol-on-mass-grave-protection-and-investigations/"
+ },
+ "OHCHR indicators": {
+  "org": "OHCHR",
+  "title": "Human Rights Indicators: A Guide to Measurement and Implementation (2012)",
+  "url": "https://www.ohchr.org/en/publications/policy-and-methodological-publications/human-rights-indicators-guide-measurement-and"
+ },
+ "Association research": {
+  "org": "Caesar Families Association",
+  "title": "Syria Justice Map — Phase 2 internal research (Nov 2026)",
+  "url": "https://caesarfamilies.org/en/syria-justice-map-first-edition/"
  }
 }

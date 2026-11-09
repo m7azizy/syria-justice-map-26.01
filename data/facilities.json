@@ -36,7 +36,18 @@
    "inhumane": 28,
    "parent": "General Intelligence Directorate",
    "category": "General Intelligence Facilities"
-  }
+  },
+  "accountability": [
+   {
+    "type": "evidence",
+    "date": "2026-02-20",
+    "ar": "أول جمع أدلة ميداني للآلية الدولية داخل سوريا",
+    "en": "First IIIM on-site evidence collection inside Syria",
+    "src": [
+     "IIIM first evidence"
+    ]
+   }
+  ]
  },
  {
   "id": 2,
@@ -117,7 +128,18 @@
    "inhumane": 34,
    "parent": "Military Intelligence Department",
    "category": "Military Intelligence Facilities"
-  }
+  },
+  "accountability": [
+   {
+    "type": "prosecution",
+    "date": "2026-04-24",
+    "ar": "عنصر سابق فيه محال إلى قاضي التحقيق بشأن مجزرة التضامن",
+    "en": "A former member referred to the investigating judge over the Tadamon massacre",
+    "src": [
+     "Amjad referral"
+    ]
+   }
+  ]
  },
  {
   "id": 4,
@@ -371,7 +393,8 @@
    "IIIM",
    "HRW",
    "SJAC",
-   "MEE"
+   "MEE",
+   "ADMSP Buried"
   ],
   "geoSource": "IIIM",
   "iiim": {
@@ -586,13 +609,15 @@
   ],
   "caesar": true,
   "yearActive": 2011,
-  "yearClosed": 2018,
-  "detailAr": "استُخدم لتسجيل جثث ضحايا فرع 251. من المستشفيات التي نُقلت منها الجثث إلى نجها والقطيفة حتى 2018.",
-  "detailEn": "Used to register Branch 251 victims. One of the hospitals from which bodies were trucked to Najha and Qutayfah until 2018.",
+  "yearClosed": 2024,
+  "detailAr": "استُخدم لتسجيل جثث ضحايا فرع 251. من المستشفيات التي نُقلت منها الجثث إلى نجها والقطيفة حتى 2018. وفي «ملف دمشق» (2015–2024) صُوّرت في هذا المستشفى جثث شبه جميع من ماتوا في الاحتجاز، من الشرطة العسكرية والمخابرات الجوية والعسكرية والأمن السياسي وفرع فلسطين.",
+  "detailEn": "Used to register Branch 251 victims. One of the hospitals from which bodies were trucked to Najha and Qutayfah until 2018. In the Damascus Dossier (2015–2024), nearly all bodies of those who died in detention were photographed here, from the military police, air force and military intelligence, political security and the Palestine Branch.",
   "sources": [
    "IIIM",
    "HRW",
-   "MEE"
+   "MEE",
+   "WaPo Dossier",
+   "ICIJ FAQ"
   ],
   "geoSource": "IIIM",
   "iiim": {
@@ -605,7 +630,8 @@
    "inhumane": 2,
    "parent": "Medical Services Directorate",
    "category": "Hospitals"
-  }
+  },
+  "damascusDossier": true
  },
  {
   "id": 17,
@@ -1388,7 +1414,18 @@
    "group": 42,
    "ar": "نُقل الفرع إلى موقع ثانٍ عام 2013 (IIIM).",
    "en": "Branch relocated to a second site in 2013 (IIIM)."
-  }
+  },
+  "accountability": [
+   {
+    "type": "detained",
+    "date": "2025-12-30",
+    "ar": "رئيس الفرع السابق قيد الاحتجاز",
+    "en": "Former branch head in detention",
+    "src": [
+     "Enab Sasa"
+    ]
+   }
+  ]
  },
  {
   "id": 43,
@@ -2653,6 +2690,17 @@
   "detailEn": "Facility identified by IIIM: 2 documented detention experiences, including 1 of torture/ill-treatment and 1 of inhumane conditions.",
   "sources": [
    "IIIM"
+  ],
+  "accountability": [
+   {
+    "type": "detained",
+    "date": "2026-05",
+    "ar": "رئيس الفرع السابق قيد الاحتجاز",
+    "en": "Former branch head in detention",
+    "src": [
+     "Enab arrests 2026"
+    ]
+   }
   ]
  },
  {
@@ -3191,7 +3239,18 @@
    "group": 42,
    "ar": "نُقل الفرع إلى موقع ثانٍ عام 2013 (IIIM).",
    "en": "Branch relocated to a second site in 2013 (IIIM)."
-  }
+  },
+  "accountability": [
+   {
+    "type": "detained",
+    "date": "2025-12-30",
+    "ar": "رئيس الفرع السابق قيد الاحتجاز",
+    "en": "Former branch head in detention",
+    "src": [
+     "Enab Sasa"
+    ]
+   }
+  ]
  },
  {
   "id": 118,
